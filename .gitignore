@@ -24,3 +24,10 @@ Versuch*/*.toc
 Versuch*/*.synctex.gz
 Versuch*/*.out
 Versuch*/messwerte/*.log
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.aux
+*.log
+*.out
