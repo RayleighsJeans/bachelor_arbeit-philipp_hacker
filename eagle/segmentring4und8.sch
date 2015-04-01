@@ -151,76 +151,28 @@ drill 1.4 mm</description>
 <busses>
 </busses>
 <nets>
-<net name="E1" class="0">
+<net name="N$4" class="0">
 <segment>
 <pinref part="E1" gate="1" pin="MP"/>
 <wire x1="63.5" y1="35.56" x2="63.5" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="E2" class="0">
+<net name="N$5" class="0">
 <segment>
 <pinref part="E2" gate="1" pin="MP"/>
 <wire x1="68.58" y1="35.56" x2="68.58" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="E3" class="0">
+<net name="N$6" class="0">
 <segment>
 <pinref part="E3" gate="1" pin="MP"/>
 <wire x1="76.2" y1="35.56" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="E4" class="0">
+<net name="N$7" class="0">
 <segment>
 <pinref part="E4" gate="1" pin="MP"/>
 <wire x1="81.28" y1="35.56" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="7" class="0">
-<segment>
-<pinref part="7" gate="1" pin="MP"/>
-<wire x1="93.98" y1="35.56" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="8" class="0">
-<segment>
-<pinref part="8" gate="1" pin="MP"/>
-<wire x1="101.6" y1="35.56" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="5" class="0">
-<segment>
-<pinref part="5" gate="1" pin="MP"/>
-<wire x1="111.76" y1="35.56" x2="111.76" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="6" class="0">
-<segment>
-<pinref part="6" gate="1" pin="MP"/>
-<wire x1="121.92" y1="35.56" x2="121.92" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="3" class="0">
-<segment>
-<pinref part="3" gate="1" pin="MP"/>
-<wire x1="132.08" y1="35.56" x2="132.08" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="4" class="0">
-<segment>
-<pinref part="4" gate="1" pin="MP"/>
-<wire x1="142.24" y1="35.56" x2="142.24" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="1" class="0">
-<segment>
-<pinref part="1" gate="1" pin="MP"/>
-<wire x1="152.4" y1="35.56" x2="152.4" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="2" class="0">
-<segment>
-<pinref part="2" gate="1" pin="MP"/>
-<wire x1="165.1" y1="35.56" x2="165.1" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
