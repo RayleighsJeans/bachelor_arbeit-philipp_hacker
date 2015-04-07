@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.635" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.635" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -293,9 +293,9 @@ design rules under a new name.</description>
 <signals>
 <signal name="E3">
 <via x="39" y="128.5" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="33.5" y1="109" x2="39" y2="128.5" width="0.4064" layer="16" curve="132.762374"/>
-<wire x1="33.5" y1="109" x2="33.5" y2="32" width="0.4064" layer="16"/>
-<wire x1="33.5" y1="32" x2="32" y2="30.5" width="0.4064" layer="16"/>
+<wire x1="36.1" y1="109.5" x2="39" y2="128.5" width="0.6096" layer="16" curve="132.762374"/>
+<wire x1="36.1" y1="109.5" x2="36.1" y2="32.3" width="0.6096" layer="16"/>
+<wire x1="36.1" y1="32.3" x2="32" y2="30.5" width="0.6096" layer="16"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="31.75" y="129.82" curve="-90"/>
 <vertex x="40.75" y="120.82"/>
@@ -305,243 +305,173 @@ design rules under a new name.</description>
 </signal>
 <signal name="E2">
 <via x="24" y="113.5" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="31" y1="109.7" x2="24" y2="113.5" width="0.4064" layer="16" curve="-22.161207"/>
-<wire x1="31" y1="109.7" x2="31" y2="38" width="0.4064" layer="16"/>
-<wire x1="31" y1="38" x2="30" y2="37" width="0.4064" layer="16"/>
-<wire x1="30" y1="37" x2="30" y2="27" width="0.4064" layer="16"/>
-<wire x1="30" y1="27" x2="31.5" y2="25.5" width="0.4064" layer="16"/>
+<wire x1="30" y1="109.8" x2="24" y2="113.5" width="0.6096" layer="16" curve="-22.161207"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="22.75" y="120.82" curve="90"/>
 <vertex x="31.75" y="111.82"/>
 <vertex x="31.75" y="108.82" curve="-90"/>
 <vertex x="19.75" y="120.82"/>
 </polygon>
+<wire x1="30" y1="109.8" x2="30" y2="40.3" width="0.6096" layer="16"/>
+<wire x1="30" y1="40.3" x2="30" y2="40.2" width="0.6096" layer="16"/>
+<wire x1="30" y1="39.7" x2="28.8" y2="38.5" width="0.6096" layer="16"/>
+<wire x1="28.8" y1="28.2" x2="31.5" y2="25.5" width="0.6096" layer="16"/>
+<wire x1="28.8" y1="38.5" x2="28.8" y2="28.2" width="0.6096" layer="16"/>
+<wire x1="30" y1="39.7" x2="30" y2="40.2" width="0.6096" layer="16"/>
 </signal>
 <signal name="E1">
 <via x="24.5" y="128.5" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="30" y1="109" x2="24.5" y2="128.5" width="0.4064" layer="16" curve="-130.49829"/>
-<wire x1="30" y1="109" x2="30" y2="38" width="0.4064" layer="16"/>
-<wire x1="30" y1="38" x2="29" y2="37" width="0.4064" layer="16"/>
-<wire x1="29" y1="37" x2="29" y2="26.5" width="0.4064" layer="16"/>
-<wire x1="29" y1="26.5" x2="30" y2="25.5" width="0.4064" layer="16"/>
-<wire x1="30" y1="25.5" x2="30" y2="22" width="0.4064" layer="16"/>
-<wire x1="30" y1="22" x2="31.5" y2="20.5" width="0.4064" layer="16"/>
+<wire x1="27.5" y1="109.5" x2="24.5" y2="128.5" width="0.6096" layer="16" curve="-130.49829"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="31.75" y="129.82" curve="90"/>
 <vertex x="22.75" y="120.82"/>
 <vertex x="19.75" y="120.82" curve="-90"/>
 <vertex x="31.75" y="132.82"/>
 </polygon>
+<wire x1="27.5" y1="109.5" x2="27.5" y2="39.8" width="0.6096" layer="16"/>
+<wire x1="27.5" y1="39.8" x2="26.2" y2="38.5" width="0.6096" layer="16"/>
+<wire x1="30" y1="22" x2="30.1" y2="21.9" width="0.4064" layer="16"/>
+<wire x1="30.1" y1="21.9" x2="31.5" y2="20.5" width="0.6096" layer="16"/>
+<wire x1="26.2" y1="38.5" x2="26.2" y2="25.8" width="0.6096" layer="16"/>
+<wire x1="26.2" y1="25.8" x2="30" y2="22" width="0.6096" layer="16"/>
 </signal>
 <signal name="E4">
 <via x="39" y="113" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="32.5" y1="109.7" x2="39" y2="113" width="0.4064" layer="16" curve="20.505911"/>
-<wire x1="32.5" y1="109.7" x2="32.5" y2="37.5" width="0.4064" layer="16"/>
-<wire x1="32.5" y1="37.5" x2="32" y2="35.5" width="0.4064" layer="16"/>
+<wire x1="33.6" y1="109.8" x2="39" y2="113" width="0.6096" layer="16" curve="20.505911"/>
+<wire x1="33.6" y1="109.8" x2="33.6" y2="35.6" width="0.6096" layer="16"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="31.75" y="111.82" curve="90"/>
 <vertex x="40.75" y="120.82"/>
 <vertex x="43.75" y="120.82" curve="-90"/>
 <vertex x="31.75" y="108.82"/>
 </polygon>
-</signal>
-<signal name="GND">
-<polygon width="0.4064" layer="16" isolate="0.25">
-<vertex x="31.8" y="111.9"/>
-<vertex x="31.9" y="111.9" curve="90"/>
-<vertex x="40.7" y="120.7" curve="90"/>
-<vertex x="31.7" y="129.7"/>
-<vertex x="31.7" y="134.6" curve="-90"/>
-<vertex x="45.6" y="120.7" curve="-91.259204"/>
-<vertex x="31.8" y="107.2"/>
-</polygon>
-<polygon width="0.4064" layer="16" isolate="0.25">
-<vertex x="31.7" y="111.9"/>
-<vertex x="31.6" y="111.9" curve="-90"/>
-<vertex x="22.8" y="120.7"/>
-<vertex x="22.8" y="121" curve="-90"/>
-<vertex x="31.6" y="129.8"/>
-<vertex x="31.6" y="134.6"/>
-<vertex x="31.4" y="134.6" curve="90"/>
-<vertex x="17.5" y="120.7" curve="92.053391"/>
-<vertex x="31.7" y="107"/>
-</polygon>
-<polygon width="0.4064" layer="16" isolate="0.25">
-<vertex x="27.9" y="107.4"/>
-<vertex x="35.5" y="107.4"/>
-<vertex x="35.5" y="2.2"/>
-<vertex x="28" y="2.2"/>
-</polygon>
-<polygon width="0.4064" layer="16">
-<vertex x="78.75" y="111.83"/>
-<vertex x="79.12" y="111.83" curve="90"/>
-<vertex x="87.79" y="120.5" curve="91.468226"/>
-<vertex x="78.7" y="129.36"/>
-<vertex x="78.73" y="129.36"/>
-<vertex x="78.73" y="134.21" curve="-90"/>
-<vertex x="92.29" y="120.55"/>
-<vertex x="92.29" y="120.5" curve="-90"/>
-<vertex x="78.75" y="106.96"/>
-</polygon>
-<polygon width="0.4064" layer="16">
-<vertex x="74" y="108"/>
-<vertex x="83.8" y="108"/>
-<vertex x="83.8" y="36.1"/>
-<vertex x="74" y="36.1"/>
-</polygon>
-<polygon width="0.4064" layer="16">
-<vertex x="74" y="36.1"/>
-<vertex x="71.8" y="36.1"/>
-<vertex x="71.8" y="9.6"/>
-<vertex x="71.8" y="1.9"/>
-<vertex x="86.3" y="1.9"/>
-<vertex x="86.3" y="36.1"/>
-</polygon>
+<wire x1="33.6" y1="35.6" x2="31.8" y2="35.6" width="0.6096" layer="16"/>
 </signal>
 <signal name="7">
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="78.84" y="129.42" curve="90"/>
-<vertex x="69.74" y="120.82"/>
-<vertex x="66.74" y="120.82" curve="-90"/>
-<vertex x="78.74" y="132.82"/>
-</polygon>
-<wire x1="75.9" y1="52.09" x2="75.9" y2="35.26" width="0.4064" layer="16"/>
-<wire x1="75.9" y1="35.26" x2="73.35" y2="32.71" width="0.4064" layer="16"/>
-<wire x1="73.35" y1="32.71" x2="73.35" y2="29.04" width="0.4064" layer="16"/>
-<wire x1="73.35" y1="29.04" x2="74.3" y2="28.09" width="0.4064" layer="16"/>
-<wire x1="74.3" y1="28.09" x2="74.3" y2="25.61" width="0.4064" layer="16"/>
-<wire x1="74.3" y1="25.61" x2="74.89" y2="25.02" width="0.4064" layer="16"/>
-<wire x1="74.89" y1="25.02" x2="74.89" y2="22.27" width="0.4064" layer="16"/>
-<wire x1="74.89" y1="22.27" x2="76.84" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="75.9" y1="101.3" x2="75.9" y2="52.1" width="0.4064" layer="16"/>
-<wire x1="75.9" y1="106.6" x2="75.9" y2="101.4" width="0.4064" layer="16"/>
-<via x="69.4575" y="124.5825" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="76.0725" y1="109.1475" x2="69.4575" y2="124.5825" width="0.4064" layer="16" curve="-110.547706"/>
-<wire x1="75.913" y1="109.1475" x2="75.913" y2="106.575" width="0.4064" layer="16"/>
-<wire x1="75.9" y1="106.6" x2="75.913" y2="106.575" width="0" layer="19" extent="16-16"/>
-<wire x1="75.9" y1="101.3" x2="75.9" y2="101.4" width="0" layer="19" extent="16-16"/>
-<wire x1="75.9" y1="52.09" x2="75.9" y2="52.1" width="0" layer="19" extent="16-16"/>
-<wire x1="76.0725" y1="109.1475" x2="75.913" y2="109.1475" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="8">
-<wire x1="81.585" y1="109.1475" x2="88.2" y2="124.95" width="0.4064" layer="16" curve="110.547706"/>
-<wire x1="81.585" y1="109.1475" x2="81.585" y2="35.6475" width="0.4064" layer="16"/>
-<wire x1="81.585" y1="35.6475" x2="84.1575" y2="33.075" width="0.4064" layer="16"/>
-<wire x1="84.1575" y1="33.075" x2="84.1575" y2="29.4" width="0.4064" layer="16"/>
-<wire x1="84.1575" y1="29.4" x2="83.4225" y2="28.665" width="0.4064" layer="16"/>
-<wire x1="83.4225" y1="28.665" x2="83.4225" y2="25.725" width="0.4064" layer="16"/>
-<wire x1="83.4225" y1="25.725" x2="82.6875" y2="24.99" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="24.99" x2="82.6875" y2="22.4175" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="22.4175" x2="80.4825" y2="20.2125" width="0.4064" layer="16"/>
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="78.74" y="129.82" curve="-90"/>
-<vertex x="87.74" y="120.82"/>
-<vertex x="90.74" y="120.82" curve="90"/>
-<vertex x="78.74" y="132.52"/>
-</polygon>
-<via x="88.2" y="124.5825" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="88.2" y1="124.5825" x2="88.2" y2="124.95" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="5">
-<wire x1="76.65" y1="35.72" x2="76.65" y2="35.11" width="0.4064" layer="16"/>
-<wire x1="76.65" y1="35.11" x2="74.08" y2="32.54" width="0.4064" layer="16"/>
-<wire x1="74.08" y1="32.54" x2="74.08" y2="29.41" width="0.4064" layer="16"/>
-<wire x1="74.08" y1="29.41" x2="74.97" y2="28.52" width="0.4064" layer="16"/>
-<wire x1="74.97" y1="28.52" x2="74.97" y2="26" width="0.4064" layer="16"/>
-<wire x1="74.97" y1="26" x2="76.84" y2="24.13" width="0.4064" layer="16"/>
-<wire x1="76.65" y1="106.45" x2="76.65" y2="50.05" width="0.4064" layer="16"/>
-<wire x1="76.65" y1="50.05" x2="76.65" y2="50" width="0.4064" layer="16"/>
-<wire x1="76.65" y1="50" x2="76.65" y2="35.75" width="0.4064" layer="16"/>
-<wire x1="76.645" y1="109.8825" x2="76.645" y2="106.575" width="0.4064" layer="16"/>
-<via x="69.09" y="116.4975" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="76.44" y1="109.8825" x2="69.09" y2="116.4975" width="0.4064" layer="16" curve="-49.180202"/>
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="69.74" y="120.82" curve="90"/>
-<vertex x="78.74" y="111.82"/>
-<vertex x="78.74" y="108.82" curve="-90"/>
-<vertex x="66.74" y="120.82"/>
-</polygon>
-<wire x1="76.65" y1="106.45" x2="76.645" y2="106.575" width="0" layer="19" extent="16-16"/>
-<wire x1="76.65" y1="35.72" x2="76.65" y2="35.75" width="0" layer="19" extent="16-16"/>
-<wire x1="76.44" y1="109.8825" x2="76.645" y2="109.8825" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="6">
-<via x="88.2" y="116.4975" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="80.85" y1="109.8825" x2="88.2" y2="116.4975" width="0.4064" layer="16" curve="49.180202"/>
-<wire x1="80.85" y1="109.8825" x2="80.85" y2="35.28" width="0.4064" layer="16"/>
-<wire x1="80.85" y1="35.28" x2="83.4225" y2="32.7075" width="0.4064" layer="16"/>
-<wire x1="83.4225" y1="32.7075" x2="83.4225" y2="29.7675" width="0.4064" layer="16"/>
-<wire x1="83.4225" y1="29.7675" x2="82.6875" y2="29.0325" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="29.0325" x2="82.6875" y2="26.0925" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="26.0925" x2="80.4825" y2="23.8875" width="0.4064" layer="16"/>
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="78.74" y="111.82" curve="90"/>
-<vertex x="87.74" y="120.82"/>
-<vertex x="90.74" y="120.82" curve="-90"/>
-<vertex x="78.74" y="108.82"/>
-</polygon>
-</signal>
-<signal name="3">
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="69.74" y="120.82" curve="90"/>
-<vertex x="78.74" y="111.82"/>
-<vertex x="78.74" y="108.82" curve="-90"/>
-<vertex x="66.74" y="120.82"/>
-</polygon>
-<wire x1="77.37" y1="106.64" x2="77.37" y2="34.92" width="0.4064" layer="16"/>
-<wire x1="77.37" y1="34.92" x2="74.89" y2="32.44" width="0.4064" layer="16"/>
-<wire x1="74.89" y1="32.44" x2="74.89" y2="29.89" width="0.4064" layer="16"/>
-<wire x1="74.89" y1="29.89" x2="76.84" y2="27.94" width="0.4064" layer="16"/>
-<wire x1="77.375" y1="110.6175" x2="77.375" y2="106.575" width="0.4064" layer="16"/>
-<via x="74.97" y="111.3525" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="77.175" y1="110.6175" x2="74.97" y2="111.3525" width="0.4064" layer="16"/>
-<wire x1="77.37" y1="106.64" x2="77.375" y2="106.575" width="0" layer="19" extent="16-16"/>
-<wire x1="77.175" y1="110.6175" x2="77.375" y2="110.6175" width="0" layer="19" extent="16-16"/>
-</signal>
-<signal name="4">
-<polygon width="0.4064" layer="1" isolate="0.5">
-<vertex x="78.74" y="111.82" curve="90"/>
-<vertex x="87.74" y="120.82"/>
-<vertex x="90.74" y="120.82" curve="-90"/>
-<vertex x="78.74" y="108.82"/>
-</polygon>
-<via x="82.6875" y="111.3525" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="80.115" y1="110.6175" x2="82.6875" y2="111.3525" width="0.4064" layer="16"/>
-<wire x1="80.115" y1="110.6175" x2="80.115" y2="34.9125" width="0.4064" layer="16"/>
-<wire x1="80.115" y1="34.9125" x2="82.6875" y2="32.34" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="32.34" x2="82.6875" y2="30.135" width="0.4064" layer="16"/>
-<wire x1="82.6875" y1="30.135" x2="80.4825" y2="27.93" width="0.4064" layer="16"/>
-</signal>
-<signal name="1">
-<wire x1="78.1" y1="90.25" x2="78.1" y2="33" width="0.4064" layer="16"/>
-<wire x1="78.1" y1="33" x2="76.85" y2="31.75" width="0.4064" layer="16"/>
-<wire x1="78.105" y1="111.3525" x2="74.93" y2="130.175" width="0.4064" layer="16" curve="-143.773138"/>
-<wire x1="78.105" y1="111.3525" x2="78.105" y2="90.32875" width="0.4064" layer="16"/>
+<via x="74.6025" y="130.095" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="71.755" y1="105.41" x2="74.73" y2="130.175" width="0.6096" layer="16" curve="-144.037726"/>
+<wire x1="71.755" y1="105.41" x2="71.755" y2="38.735" width="0.6096" layer="16"/>
+<wire x1="71.755" y1="38.735" x2="68.58" y2="35.56" width="0.6096" layer="16"/>
+<wire x1="68.58" y1="35.56" x2="68.58" y2="26.67" width="0.6096" layer="16"/>
+<contactref element="7" pad="MP"/>
+<wire x1="68.58" y1="26.67" x2="76.835" y2="20.32" width="0.6096" layer="16"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="78.74" y="129.4525" curve="90"/>
 <vertex x="69.74" y="120.82"/>
 <vertex x="66.74" y="120.82" curve="-90"/>
 <vertex x="78.84" y="132.5525"/>
 </polygon>
-<via x="74.6025" y="130.095" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="78.1" y1="90.25" x2="78.105" y2="90.32875" width="0" layer="19" extent="16-16"/>
-<wire x1="74.6025" y1="130.095" x2="74.93" y2="130.175" width="0" layer="19" extent="16-16"/>
+<wire x1="74.6025" y1="130.095" x2="74.73" y2="130.175" width="0" layer="19" extent="16-16"/>
 </signal>
-<signal name="2">
-<wire x1="79.38" y1="90.405" x2="79.38" y2="33.075" width="0.4064" layer="16"/>
-<wire x1="79.38" y1="33.075" x2="80.85" y2="31.605" width="0.4064" layer="16"/>
-<wire x1="79.375" y1="106.68" x2="79.375" y2="90.17" width="0.4064" layer="16"/>
-<wire x1="79.38" y1="111.3525" x2="79.38" y2="106.575" width="0.4064" layer="16"/>
-<via x="82.6875" y="130.095" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="79.38" y1="111.3525" x2="82.6875" y2="130.095" width="0.4064" layer="16" curve="143.773138"/>
+<signal name="1">
+<contactref element="1" pad="MP"/>
+<wire x1="76.835" y1="31.75" x2="77.47" y2="32.385" width="0.6096" layer="16"/>
+<wire x1="77.47" y1="32.385" x2="77.47" y2="110.49" width="0.6096" layer="16"/>
+<wire x1="77.47" y1="110.49" x2="75.565" y2="110.49" width="0.6096" layer="16"/>
+<wire x1="75.565" y1="110.49" x2="74.93" y2="111.125" width="0.6096" layer="16"/>
+<via x="74.77" y="111.3525" extent="1-16" drill="0.6" shape="square"/>
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="69.74" y="120.82" curve="90"/>
+<vertex x="78.74" y="111.82"/>
+<vertex x="78.74" y="108.82" curve="-90"/>
+<vertex x="66.74" y="120.82"/>
+</polygon>
+<wire x1="74.77" y1="111.3525" x2="74.93" y2="111.125" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="5">
+<via x="69.4575" y="124.5825" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="73.66" y1="106.68" x2="69.415" y2="124.46" width="0.6096" layer="16" curve="-94.042978"/>
+<wire x1="73.66" y1="106.68" x2="73.66" y2="37.465" width="0.6096" layer="16"/>
+<wire x1="73.66" y1="37.465" x2="71.12" y2="34.925" width="0.6096" layer="16"/>
+<wire x1="71.12" y1="34.925" x2="71.12" y2="27.94" width="0.6096" layer="16"/>
+<contactref element="5" pad="MP"/>
+<wire x1="71.12" y1="27.94" x2="76.835" y2="24.13" width="0.6096" layer="16"/>
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="78.84" y="129.42" curve="90"/>
+<vertex x="69.74" y="120.82"/>
+<vertex x="66.74" y="120.82" curve="-90"/>
+<vertex x="78.74" y="132.82"/>
+</polygon>
+<wire x1="69.4575" y1="124.5825" x2="69.415" y2="124.46" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="6">
+<via x="88.2" y="124.5825" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="88.265" y1="124.46" x2="83.82" y2="106.68" width="0.6096" layer="16" curve="-94.042978"/>
+<wire x1="83.82" y1="106.68" x2="83.82" y2="37.465" width="0.6096" layer="16"/>
+<wire x1="83.82" y1="37.465" x2="86.36" y2="34.925" width="0.6096" layer="16"/>
+<wire x1="86.36" y1="34.925" x2="86.36" y2="27.94" width="0.6096" layer="16"/>
+<contactref element="6" pad="MP"/>
+<wire x1="86.36" y1="27.94" x2="80.645" y2="24.13" width="0.6096" layer="16"/>
 <polygon width="0.4064" layer="1" isolate="0.5">
 <vertex x="78.74" y="129.4525" curve="-90"/>
 <vertex x="87.74" y="120.4525"/>
 <vertex x="90.74" y="120.4525" curve="90"/>
 <vertex x="78.74" y="132.4525"/>
 </polygon>
-<wire x1="79.38" y1="106.575" x2="79.375" y2="106.68" width="0" layer="19" extent="16-16"/>
-<wire x1="79.38" y1="90.405" x2="79.375" y2="90.17" width="0" layer="19" extent="16-16"/>
+<wire x1="88.2" y1="124.5825" x2="88.265" y2="124.46" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="8">
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="78.74" y="129.42" curve="-90"/>
+<vertex x="87.74" y="120.82"/>
+<vertex x="90.74" y="120.82" curve="90"/>
+<vertex x="78.74" y="132.52"/>
+</polygon>
+<wire x1="82.55" y1="130.175" x2="85.725" y2="105.41" width="0.6096" layer="16" curve="-144.037726"/>
+<wire x1="85.725" y1="105.41" x2="85.725" y2="38.735" width="0.6096" layer="16"/>
+<wire x1="85.725" y1="38.735" x2="88.9" y2="35.56" width="0.6096" layer="16"/>
+<wire x1="88.9" y1="35.56" x2="88.9" y2="26.67" width="0.6096" layer="16"/>
+<contactref element="8" pad="MP"/>
+<wire x1="88.9" y1="26.67" x2="80.645" y2="20.32" width="0.6096" layer="16"/>
+<via x="82.6875" y="130.095" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="82.6875" y1="130.095" x2="82.55" y2="130.175" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="3">
+<via x="69.09" y="116.4975" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="75.565" y1="107.315" x2="75.565" y2="36.195" width="0.6096" layer="16"/>
+<wire x1="75.565" y1="36.195" x2="73.66" y2="34.29" width="0.6096" layer="16"/>
+<wire x1="73.66" y1="34.29" x2="73.66" y2="29.845" width="0.6096" layer="16"/>
+<contactref element="3" pad="MP"/>
+<wire x1="73.66" y1="29.845" x2="76.835" y2="27.94" width="0.6096" layer="16"/>
+<wire x1="75.565" y1="107.315" x2="69.015" y2="116.205" width="0.6096" layer="16" curve="-34.905027"/>
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="69.74" y="120.82" curve="90"/>
+<vertex x="78.74" y="111.82"/>
+<vertex x="78.74" y="108.82" curve="-90"/>
+<vertex x="66.74" y="120.82"/>
+</polygon>
+<wire x1="69.09" y1="116.4975" x2="69.015" y2="116.205" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="4">
+<wire x1="88.265" y1="116.205" x2="81.915" y2="107.315" width="0.6096" layer="16" curve="-34.905027"/>
+<wire x1="81.915" y1="107.315" x2="81.915" y2="36.195" width="0.6096" layer="16"/>
+<wire x1="81.915" y1="36.195" x2="83.82" y2="34.29" width="0.6096" layer="16"/>
+<wire x1="83.82" y1="34.29" x2="83.82" y2="29.845" width="0.6096" layer="16"/>
+<contactref element="4" pad="MP"/>
+<wire x1="83.82" y1="29.845" x2="80.645" y2="27.94" width="0.6096" layer="16"/>
+<via x="88.2" y="116.4975" extent="1-16" drill="0.6" shape="square"/>
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="78.74" y="111.82" curve="90"/>
+<vertex x="87.74" y="120.82"/>
+<vertex x="90.74" y="120.82" curve="-90"/>
+<vertex x="78.74" y="108.82"/>
+</polygon>
+<wire x1="88.2" y1="116.4975" x2="88.265" y2="116.205" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="2">
+<wire x1="80.01" y1="110.49" x2="81.915" y2="110.49" width="0.6096" layer="16"/>
+<wire x1="81.915" y1="110.49" x2="82.55" y2="111.125" width="0.6096" layer="16"/>
+<wire x1="80.01" y1="110.49" x2="80.01" y2="32.385" width="0.6096" layer="16"/>
+<contactref element="2" pad="MP"/>
+<wire x1="80.01" y1="32.385" x2="80.645" y2="31.75" width="0.6096" layer="16"/>
+<via x="82.6875" y="111.3525" extent="1-16" drill="0.6" shape="square"/>
+<polygon width="0.4064" layer="1" isolate="0.5">
+<vertex x="78.74" y="111.82" curve="90"/>
+<vertex x="87.74" y="120.82"/>
+<vertex x="90.74" y="120.82" curve="-90"/>
+<vertex x="78.74" y="108.82"/>
+</polygon>
+<wire x1="82.6875" y1="111.3525" x2="82.55" y2="111.125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$4">
 <contactref element="E1" pad="MP"/>
@@ -555,20 +485,6 @@ design rules under a new name.</description>
 <signal name="N$7">
 <contactref element="E4" pad="MP"/>
 </signal>
-<signal name="N$8">
-<polygon width="0.4064" layer="16">
-<vertex x="78.75" y="129.37"/>
-<vertex x="78.38" y="129.37" curve="90"/>
-<vertex x="69.71" y="120.7" curve="91.468226"/>
-<vertex x="78.8" y="111.84"/>
-<vertex x="78.77" y="111.84"/>
-<vertex x="78.77" y="107.19"/>
-<vertex x="78.67" y="106.99" curve="-90"/>
-<vertex x="65.21" y="120.65"/>
-<vertex x="65.21" y="120.7" curve="-90"/>
-<vertex x="78.75" y="134.24"/>
-</polygon>
-</signal>
 <signal name="S$1">
 <wire x1="46.5" y1="120.8" x2="13" y2="120.8" width="0.4064" layer="1"/>
 <wire x1="13" y1="120.8" x2="13" y2="120.7" width="0.4064" layer="1"/>
@@ -578,14 +494,15 @@ design rules under a new name.</description>
 <signal name="S$2">
 <wire x1="31.8" y1="120.7" x2="31.8" y2="104.8" width="0.4064" layer="1"/>
 </signal>
+<signal name="S$4">
+<wire x1="89.1" y1="130.9" x2="89" y2="130.9" width="0.4064" layer="1"/>
+<wire x1="89" y1="130.9" x2="67.8" y2="109.7" width="0.4064" layer="1"/>
+</signal>
 <signal name="S$3">
 <wire x1="78.8" y1="134.7" x2="78.8" y2="120.6" width="0.4064" layer="1"/>
 <wire x1="78.8" y1="105.6" x2="78.8" y2="120.6" width="0.4064" layer="1"/>
 <wire x1="78.8" y1="120.6" x2="95" y2="120.6" width="0.4064" layer="1"/>
 <wire x1="60.8" y1="120.6" x2="78.8" y2="120.6" width="0.4064" layer="1"/>
-<wire x1="78.8" y1="120.6" x2="89.1" y2="130.9" width="0.4064" layer="1"/>
-<wire x1="89.1" y1="130.9" x2="89" y2="130.9" width="0.4064" layer="1"/>
-<wire x1="89" y1="130.9" x2="67.8" y2="109.7" width="0.4064" layer="1"/>
 <wire x1="78.8" y1="120.6" x2="89.4" y2="110" width="0.4064" layer="1"/>
 <wire x1="78.8" y1="120.6" x2="68.4" y2="131" width="0.4064" layer="1"/>
 </signal>
