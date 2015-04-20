@@ -5,17 +5,19 @@
 % with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 % The lincense itself can be found at <https://www.gnu.org/licenses/fdl-1.3>.
 
-\documentclass[numbers=noenddot,12pt,a4paper,bibtotoc]{scrartcl}
+\documentclass[numbers=noenddot,a4paper,bibtotoc]{scrartcl}
 
 \usepackage[greek,ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
+\usepackage{scrpage2}
 \usepackage{libertine}
 \usepackage{ziffer}
 \usepackage{graphicx}
 \usepackage{units}
 \usepackage[infoshow]{tabularx}
+\usepackage[all]{xy}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{wrapfig}
@@ -26,7 +28,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage{lscape}
-\usepackage{hyperref}
+\usepackage[backref=page]{hyperref}
 \usepackage{csquotes}
 
 \renewcommand{\thefigure}{Abb. \arabic{figure}}
@@ -38,7 +40,7 @@
 \newcommand{\num}[1]{$\left[\text{#1}\right]$}
 \newcommand{\degree}{^\circ}
 \newcommand{\diff}{\textnormal{d}}
-\newcommand{\tenpo}[1]{\cdot 10^{#1}}
+\newcommand{\tenpo}[1]{ 10^{#1}}
 \newcommand{\greek}[1]{\greektext#1\latintext}
 \newcommand{\ix}[1]{_\text{#1}}
 \newcommand{\imag}{\mathbf{i}}
@@ -67,7 +69,7 @@
 	
 	\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.35\textwidth]{figs/unilogo_NEU_schwarz.eps}
+			\includegraphics[width=0.35\textwidth]{/home/ba-hacker/ba_hdd/git/bachelor_arbeit-philipp_hacker/figs/unilogo_NEU_schwarz.eps}
 	\end{figure}
 	
 	\vspace{0.5cm}
@@ -113,14 +115,55 @@
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
 	
+		\subsection{Staub-Dynamik im Plasma}
 		
+				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
+				
+				\subsubsection{Gravitation und elektrische Feldstärke}
+				
+				Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder in Höhen von mehr als $\unit[80]{km}$.
+				
+					\begin{align}
+						F\ix{G}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
+					\end{align}
+				
+				($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius $\rho\ix{S}$ - Massendichte des Staubes; $g$ - Erdbeschleunigung)\\
+				Natürlich wirkt auf die, durch das ionisierte Gas elektrisch geladenen Partikel eine elektrische Kraft $F\ix{E}$, welche aus dem äußeren Feld $E$ der Plasma-Elektroden folgt. Eine elektrische Wechselwirkung mit dem Plasma tritt aufgrund der Quasineutralität nicht auf: innerhalb einer \tilt{Debye-Kugel} sind die Veränderung zu schnell, als dass das träge Staubteilchen diesen folgen könnte. 
+				
+					\begin{align}
+					F\ix{E}=Q\ix{S} E=4 \pi \epsilon\ix{0} a \Phi\ix{fl} E
+					\end{align}
+		
+				($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)
+				Diese beiden Kräfte heben sich gerade in der Randschicht einer sog. Radiofrequenz-Entladung (\tilt{rf discharge}) auf, da sie für eine oben liegende Kathode antiparallel stehen. Zu beachten ist hierbei der stark unterschiedliche Einfluss des Teilchenradius - $\propto a^3$ und $\propto a$.\\
+								
+				\subsubsection{Abschirmung und Polarisationskräfte}
+				
+				Die große negative Aufladung der Staubteilchen sorgt über die Coulomb-Wechselwirkung mit den auf das Partikel zuströmenden Ionen dafür, das sich eine Konzentration derer lokal stark ändert. Es entsteht eine Wolke aus langsamen Ionen die quasi in der näheren Umgebung um das Teilchen verbleiben, jedoch nicht mit diesem interagiert und es nach außen hin vor dem Einfall schnellerer pos. Ladungen abschirmen. Somit gibt es keine direkte Rückwirkung der Wolke auf das Partikel, sofern dessen sphärische Symmetrie gegeben ist. Gilt dies nicht, so entsteht ein Multipol- bzw. Dipolmoment $\vec{p}$, welches danach strebt, sich in Richtung des Feldes $\vec{E}$ auszurichten. Damit wirkt eine Kraft $F\ix{Dip}$ (für ein Dipolmoment) auf das Staubteilchen zurück, welche mit dem Gradienten der Richtungsdifferenz zwischen $\vec{p}$ und $\vec{E}$ geht.
+
+					\begin{align}
+						\centering
+						\vec{F}\ix{Dip}&=\vec{\nabla}\left(\vec{p}\vec{E}\right)\\
+						&=\grad{pE} \nonumber
+					\end{align}
+
 	\newpage
 	
 	\section{Durchführung}\label{sec:durch}
 	
-		
 	\newpage
 	
 	\section{Auswertung}\label{sec:auswert}
+	
+	\newpage
+	
+	\section{Literatur}\label{sec:lit}
+	
+		\bibliography{all_melzer.bib}
+		\bibliographystyle{unsrt}
+	
+	\newpage
+	
+	\section{Anhang}\label{sec:anhang}
 	
 \end{document}
