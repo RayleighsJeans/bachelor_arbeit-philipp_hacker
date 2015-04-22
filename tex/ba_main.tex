@@ -5,7 +5,7 @@
 % with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 % The lincense itself can be found at <https://www.gnu.org/licenses/fdl-1.3>.
 
-\documentclass[numbers=noenddot,a4paper,bibtotoc]{scrartcl}
+\documentclass[numbers=noenddot,a4paper]{scrartcl}
 
 \usepackage[greek,ngerman]{babel}
 \usepackage[T1]{fontenc}
@@ -24,16 +24,17 @@
 \usepackage{upgreek}
 \usepackage{esint}
 \usepackage{float}
-\usepackage{wrapfig}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage{lscape}
 \usepackage[backref=page]{hyperref}
 \usepackage{csquotes}
+\usepackage[printonlyused,withpage,footnote]{acronym}
 
 \renewcommand{\thefigure}{Abb. \arabic{figure}}
+\renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
 
-\captionsetup[wrapfigure]{name=}
+%\captionsetup[wrapfigure]{name=}
 \captionsetup[figure]{name=}
 
 \newcommand{\nummat}[1]{\left[\text{#1}\right]}
@@ -60,11 +61,15 @@
 \begin{document}
 	
 	\maketitle
-	\centering 
-	Institut für Physik\\
-	mathematisch-naturwissenschaftliche Fakultät\\
-	Universität Greifswald
 	
+	\begin{center}
+		
+		Institut für Physik\\
+		mathematisch-naturwissenschaftliche Fakultät\\
+		Universität Greifswald
+		
+	\end{center}
+	 
 	\vspace{0.5cm}
 	
 	\begin{figure}[H]
@@ -75,6 +80,7 @@
 	\vspace{0.5cm}
 	
 	\begin{center}
+			
 			\hspace{-0.55cm} Erst-Gutachter: Prof. Dr. André Melzer \\ \vspace{0.25cm} %TODO Name Erst-Gutachter
 			
 			Zweit-Gutachter: Prof. Dr. Lutz Schweikhard \\ \vspace{0.25cm} %TODO Name Zweit-Gutachter
@@ -110,16 +116,17 @@
 	
 	\section{Motivation}\label{sec:einleitung}
 	
+		Test der Literaturbibliothek \cite{Thomas94}
 		
 	\newpage
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
 	
-		\subsection{Staub-Dynamik im Plasma}
+		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
 				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
 				
-				\subsubsection{Gravitation und elektrische Feldstärke}
+				\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
 				
 				Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder in Höhen von mehr als $\unit[80]{km}$.
 				
@@ -127,24 +134,43 @@
 						F\ix{G}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
 					\end{align}
 				
-				($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius $\rho\ix{S}$ - Massendichte des Staubes; $g$ - Erdbeschleunigung)\\
+				($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - \mbox{Erdbeschleunigung})\\
 				Natürlich wirkt auf die, durch das ionisierte Gas elektrisch geladenen Partikel eine elektrische Kraft $F\ix{E}$, welche aus dem äußeren Feld $E$ der Plasma-Elektroden folgt. Eine elektrische Wechselwirkung mit dem Plasma tritt aufgrund der Quasineutralität nicht auf: innerhalb einer \tilt{Debye-Kugel} sind die Veränderung zu schnell, als dass das träge Staubteilchen diesen folgen könnte. 
 				
 					\begin{align}
 					F\ix{E}=Q\ix{S} E=4 \pi \epsilon\ix{0} a \Phi\ix{fl} E
 					\end{align}
 		
-				($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)
+				($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)\\
 				Diese beiden Kräfte heben sich gerade in der Randschicht einer sog. Radiofrequenz-Entladung (\tilt{rf discharge}) auf, da sie für eine oben liegende Kathode antiparallel stehen. Zu beachten ist hierbei der stark unterschiedliche Einfluss des Teilchenradius - $\propto a^3$ und $\propto a$.\\
 								
-				\subsubsection{Abschirmung und Polarisationskräfte}
+				\subsubsection{Abschirmung und Polarisationskräfte}\label{subsub:abschirm}
 				
 				Die große negative Aufladung der Staubteilchen sorgt über die Coulomb-Wechselwirkung mit den auf das Partikel zuströmenden Ionen dafür, das sich eine Konzentration derer lokal stark ändert. Es entsteht eine Wolke aus langsamen Ionen die quasi in der näheren Umgebung um das Teilchen verbleiben, jedoch nicht mit diesem interagiert und es nach außen hin vor dem Einfall schnellerer pos. Ladungen abschirmen. Somit gibt es keine direkte Rückwirkung der Wolke auf das Partikel, sofern dessen sphärische Symmetrie gegeben ist. Gilt dies nicht, so entsteht ein Multipol- bzw. Dipolmoment $\vec{p}$, welches danach strebt, sich in Richtung des Feldes $\vec{E}$ auszurichten. Damit wirkt eine Kraft $F\ix{Dip}$ (für ein Dipolmoment) auf das Staubteilchen zurück, welche mit dem Gradienten der Richtungsdifferenz zwischen $\vec{p}$ und $\vec{E}$ geht.
 
 					\begin{align}
 						\centering
 						\vec{F}\ix{Dip}&=\vec{\nabla}\left(\vec{p}\vec{E}\right)\\
-						&=\grad{pE} \nonumber
+						&{\overset{\vec{p}\,||\vec{E}}{=}}\grad{pE} \nonumber
+					\end{align}
+					
+				Das besagte Dipolmoment entsteht u.a. durch die diversen, gerichteten Ladungsprozesse in dem Plasma. Ein Partikel, welches in der Randschicht eingefangen und von einer Ionenwolke umgeben wird, 'sieht' unterschiedliche \tilt{Debye}-Längen über und unter sich aufgrund der lokalen Feldrichtung und der stark vom Mittelwert abweichenden Ionen- und Elektronendichten. Somit ändert sich offensichtlich die Plasmadichte innerhalb des Volumens einer Kugel mit dem, nun ortsabhängigen Radius $\lambda\ix{D}\left(\vec{r}\right)$. Insgesamt folgt daraus eine neue Bestimmungsgleichung für das Potential und damit auch eine neue Kraft $F\ix{E}$.
+				
+					\begin{align}
+						\Delta \Phi\left(\vec{r}\right)-\frac{\Phi\left(\vec{r}\right)}{\lambda\ix{D}^2\left(\vec{r}\right)}=\frac{Q\ix{s}}{\epsilon\ix{0}}\delta\left(\vec{r}\right) \\
+						F\ix{E}=\underbrace{Q\ix{S}E}_{\text{(I)}}-\underbrace{\frac{Q\ix{S}^2}{8\pi\epsilon\ix{0}}\frac{\nabla\lambda\ix{D}\left(\vec{r}\right)}{\lambda\ix{D}^2}}_{\text{(II)}}
+					\end{align}
+				
+				Hierbei stellt (I) die normale Komponente dar und (II) ist zusätzliche Kraft durch die Deformation der Ionenwolke in Richtung kleinerer \tilt{Debye}-Längen $\lambda\ix{D}\left(\vec{r}\right)$. Die Kraft $F\ix{E}$ kann also dadurch größer oder kleiner werden. Hinzu kommt, dass der veränderte Parameter $\lambda\ix{D}$ von der Driftgeschwindigkeit $u\ix{I}$ abhängt, welche die Ionenwolke maßgeblich beeinflusst. Ist jedoch $u\ix{I}<v\ix{th,I}$ so kann man annehmen, dass die Ionenwolke besteht und $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,I}$ gilt.\\
+				Sind die Ionen jedoch schneller, womit $u\ix{I}>>v\ix{th,I}$ wird, so können sie nicht mehr vom Feld des Partikels 'gefangen' werden und damit die Ionenwolke bilden. So gilt folglich $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,e}$.\\
+				Insgesamt ist der Einfluss der Polarisation vernachlässigbar klein, solange die Teilchen eine Größe von einigen hundert $\unit{\mu m}$ nicht übersteigen.
+
+			\subsubsection{Ionen-/Neutralgasreibung}\label{subsub:reibung}
+
+				Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
+				
+					\begin{align}
+						F\ix{drag}=\frac{\diff N \Delta p}{\diff t}=\Delta p n \sigma v\ix{rel}
 					\end{align}
 
 	\newpage
@@ -165,5 +191,11 @@
 	\newpage
 	
 	\section{Anhang}\label{sec:anhang}
+	
+%		\subsection{Abkürzungsverzeichnis}\label{subsec:abkurz}
+%		
+%			\begin{acronym}
+%				
+%			\end{acronym}
 	
 \end{document}
