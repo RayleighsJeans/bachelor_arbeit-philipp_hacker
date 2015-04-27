@@ -74,7 +74,7 @@
 	
 	\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.35\textwidth]{/home/ba-hacker/ba_hdd/git/bachelor_arbeit-philipp_hacker/figs/unilogo_NEU_schwarz.eps}
+			\includegraphics[width=0.35\textwidth]{/home/pha/git/bachelor_arbeit-philipp_hacker/figs/unilogo_NEU_schwarz.eps}
 	\end{figure}
 	
 	\vspace{0.5cm}
@@ -121,6 +121,8 @@
 	\newpage
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
+	
+		\subsection{Aufladung von Staubpartikeln in einem Plasma}\label{subsec:ströme}
 	
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
@@ -171,6 +173,32 @@
 				
 					\begin{align}
 						F\ix{drag}=\frac{\diff N \Delta p}{\diff t}=\Delta p n \sigma v\ix{rel}
+					\end{align}
+					
+				Man spricht hierbei auch von \tilt{ambipolarer Diffusion}, da die Ionenströme und damit auch die Ionenreibung zu beiden Polen führen. Man kann diese aus 2 Teilen aufbauen: direkte Kollisionen mit den Ionen $F\ix{dir}$ und deren Coulomb-Streuung an den Feldern der neg. geladenen Staubpartikel. Im folgenden soll das sog. \tilt{Barnes-Modell} eingeführt werden, welches die besagte Ionenreibung beschreibt.
+				
+				\paragraph{Ionenreibung: \tilt{Barnes-Modell}}
+				
+				Für die Bestimmung von $F\ix{dir}$ wird angenommen, dass nur die Ionen, welche für eine Ladungsänderung der Partikel sorgen, auch diese direkt treffen. Im Rückblick auf die Bestimmung der Ionenströme in \ref{subsec:ströme} wird die Kraft durch Kollisionen zu
+				
+					\begin{align}
+						F\ix{dir}=\pi a^2m\ix{I}\tilde{v}n\ix{I}u\ix{I}\left(1-\frac{2e\Phi\ix{Fl}}{m\ix{I}\tilde{v}^2}\right)\,\,.
+					\end{align}
+					
+				($n\ix{I}$ - Ionenkonzentration; $u\ix{I}$ - Ionen-Driftgeschwindigkeit; $m\ix{I}$ - Ionenmasse)\\
+				Das Produkt aus Masse und mittlerer Geschwindigkeit der Ionen $m\ix{I}\tilde{v}=m\ix{I}\sqrt{u\ix{I}^2+v\ix{Th,I}^2}$ entspricht dem Impulsübertrag.\\
+				Für die Coulomb-Streuung müssen alle diejenigen Ionen miteinbezogen werden, welche mit dem Feld des Staubes 'stoßen'. Hierfür wird der Streuquerschnitt $\tilde{\sigma}$ der Ionen-Elektronen-Wechselwirkung auf den aktuellen Fall angepasst.
+				
+					\begin{align}
+						\tilde{\sigma}=4\pi b_{\frac{\pi}{2}}^2\ln\left(\Lambda\right)=&\,4\pi b_{\frac{\pi}{2}}^2\ln\left(\frac{\lambda\ix{D}}{b_{\frac{\pi}{2}}}\right) \\
+						b_{\frac{\pi}{2}}=&\,\frac{e^2}{4\pi\epsilon\ix{0}m\ix{I}v^2} \nonumber
+					\end{align}
+					
+				Der Stoßparameter $b_{\frac{\pi}{2}}$ beschreibt eine Ablenkung um $\unit[90]{\degree}$. Für die Ionenreibung müssen weitere Bedingungen mit eingebunden werden: die Coulomb-Streuung außerhalb der Ionenwolke ist irrelevant, die Staubpartikel haben eine endliche Ausdehnung und damit existiert ein minimaler Stoßparameter $b\ix{k}$. Damit wird das gesuchte $\sigma$ zu
+				
+					\begin{align}
+						\sigma=\int_{b\ix{k}}^{\lambda\ix{D}}\tilde{\sigma}\diff\left(\frac{\lambda\ix{D}}{b_{\frac{\pi}{2}}}\right)=&\,4\pi b_{\frac{\pi}{2}}^2\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \nonumber \\
+						\overset{*}{=}&\,\frac{2\pi a^2 e^2\Phi\ix{Fl}^2}{m\ix{I}\tilde{v}^3}n\ix{I}u\ix{I}\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \, \, .
 					\end{align}
 
 	\newpage
