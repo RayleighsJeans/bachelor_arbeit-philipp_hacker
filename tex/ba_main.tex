@@ -74,7 +74,7 @@
 	
 	\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.35\textwidth]{/home/pha/git/bachelor_arbeit-philipp_hacker/figs/unilogo_NEU_schwarz.eps}
+			\includegraphics[width=0.35\textwidth]{figs/unilogo_NEU_schwarz.eps}
 	\end{figure}
 	
 	\vspace{0.5cm}
@@ -116,8 +116,6 @@
 	
 	\section{Motivation}\label{sec:einleitung}
 	
-		Test der Literaturbibliothek \cite{Thomas94}
-		
 	\newpage
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
@@ -186,7 +184,7 @@
 					\end{align}
 					
 				($n\ix{I}$ - Ionenkonzentration; $u\ix{I}$ - Ionen-Driftgeschwindigkeit; $m\ix{I}$ - Ionenmasse)\\
-				Das Produkt aus Masse und mittlerer Geschwindigkeit der Ionen $m\ix{I}\tilde{v}=m\ix{I}\sqrt{u\ix{I}^2+v\ix{Th,I}^2}$ entspricht dem Impulsübertrag.\\
+				Das Produkt aus Masse und mittlerer Geschwindigkeit der Ionen $m\ix{I}\tilde{v}=m\ix{I}\sqrt{u\ix{I}^2+v\ix{th,I}^2}$ entspricht dem Impulsübertrag.\\
 				Für die Coulomb-Streuung müssen alle diejenigen Ionen miteinbezogen werden, welche mit dem Feld des Staubes 'stoßen'. Hierfür wird der Streuquerschnitt $\tilde{\sigma}$ der Ionen-Elektronen-Wechselwirkung auf den aktuellen Fall angepasst.
 				
 					\begin{align}
@@ -198,9 +196,28 @@
 				
 					\begin{align}
 						\sigma=\int_{b\ix{k}}^{\lambda\ix{D}}\tilde{\sigma}\diff\left(\frac{\lambda\ix{D}}{b_{\frac{\pi}{2}}}\right)=&\,4\pi b_{\frac{\pi}{2}}^2\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \nonumber \\
-						\overset{*}{=}&\,\frac{2\pi a^2 e^2\Phi\ix{Fl}^2}{m\ix{I}\tilde{v}^3}n\ix{I}u\ix{I}\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \, \, .
+						F\ix{Coul}\overset{*}{=}&\,\frac{2\pi a^2 e^2\Phi\ix{Fl}^2}{m\ix{I}\tilde{v}^3}n\ix{I}u\ix{I}\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \, \, .
 					\end{align}
-
+					
+				Wobei in * für die vollständige Coulomb-Kraft durch Ionen $F\ix{Coul}$ auf ein Partikel benutzt wurde, dass dieses mit Ladung $Z\ix{S}e=Q\ix{S}$ als Kugelkondensator als $Q\ix{S}=4\pi\epsilon\ix{0}a\Phi\ix{Fl}$ ausgedrückt werden kann. Wichtig zu beachten ist jedoch, dass nur Ionen einen Beitrag leisten, die innerhalb eines Stoßparameters $\lambda\ix{D}\approx\lambda\ix{D,e}$ am \tilt{target} vorbei fliegen.\\
+				Die gesamte Kraft durch Ionen auf die Staubteilchen ist somit die Summe der Kräfte aus direkten Stößen und Coulomb-Kollisionen $F\ix{Ion}=F\ix{dir}+F\ix{Coul}$, welche zusammen dargestellt sind in \ref{img:ionkräfte}.
+				
+					\begin{figure}
+						\centering
+						\includegraphics[height=0.4\textwidth,width=0.6\textwidth]{figs/forcesandtrappingmelzer.png}
+						\caption{Berechnete Kräfte $F\ix{Coul}$, $F\ix{dir}$ und die Summe beider auf einer doppelt-logarithmischen Skala.}\label{img:ionkräfte}
+					\end{figure}
+					
+			\subsection{Neutralgasreibung}
+			
+				Die Stöße mit den Neutralgasatomen können, ebenso wie die mit Ionen, als Kraft durch Reibung aufgefasst werden. Diese sorgen insbesondere für eine Verlangsamung der Bewegung der Staubteilchen. Die Kraft $F\ix{N}$ wird, in ähnlicher Weise wie $F\ix{dir}$, durch einen Impulsübertrag über einen Strom von Neutralgasteilchen auf einen effektiven Querschnitt ausgedrückt.
+				
+					\begin{align}
+						F\ix{N}=-\delta\frac{4}{3}\pi a^3m\ix{N}v\ix{th,N}n\ix{N}v\ix{S}
+					\end{align}
+					
+				($m\ix{N}$ - Neutralgasatommasse; $v\ix{th,N}$ - thermische Geschw. der Neutralgasatome; $n\ix{N}$ - Neutralgasdichte; $v\ix{S}$ - Staubteilchengeschw.)\\
+				Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.
 	\newpage
 	
 	\section{Durchführung}\label{sec:durch}
