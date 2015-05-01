@@ -131,7 +131,7 @@
 				Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder in Höhen von mehr als $\unit[80]{km}$.
 				
 					\begin{align}
-						F\ix{G}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
+						F\ix{g}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
 					\end{align}
 				
 				($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - \mbox{Erdbeschleunigung})\\
@@ -165,7 +165,7 @@
 				Sind die Ionen jedoch schneller, womit $u\ix{I}>>v\ix{th,I}$ wird, so können sie nicht mehr vom Feld des Partikels 'gefangen' werden und damit die Ionenwolke bilden. So gilt folglich $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,e}$.\\
 				Insgesamt ist der Einfluss der Polarisation vernachlässigbar klein, solange die Teilchen eine Größe von einigen hundert $\unit{\mu m}$ nicht übersteigen.
 
-			\subsubsection{Ionen-/Neutralgasreibung}\label{subsub:reibung}
+			\subsubsection{Ionen-Neutralgasreibung}\label{subsub:reibung}
 
 				Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
 				
@@ -200,7 +200,7 @@
 					\end{align}
 					
 				Wobei in * für die vollständige Coulomb-Kraft durch Ionen $F\ix{Coul}$ auf ein Partikel benutzt wurde, dass dieses mit Ladung $Z\ix{S}e=Q\ix{S}$ als Kugelkondensator als $Q\ix{S}=4\pi\epsilon\ix{0}a\Phi\ix{Fl}$ ausgedrückt werden kann. Wichtig zu beachten ist jedoch, dass nur Ionen einen Beitrag leisten, die innerhalb eines Stoßparameters $\lambda\ix{D}\approx\lambda\ix{D,e}$ am \tilt{target} vorbei fliegen.\\
-				Die gesamte Kraft durch Ionen auf die Staubteilchen ist somit die Summe der Kräfte aus direkten Stößen und Coulomb-Kollisionen $F\ix{Ion}=F\ix{dir}+F\ix{Coul}$, welche zusammen dargestellt sind in \ref{img:ionkräfte}.
+				Die gesamte Kraft durch Ionen auf die Staubteilchen ist somit die Summe der Kräfte aus direkten Stößen und Coulomb-Kollisionen $F\ix{ion}=F\ix{dir}+F\ix{Coul}$, welche zusammen dargestellt sind in \ref{img:ionkräfte}.
 				
 					\begin{figure}
 						\centering
@@ -208,7 +208,7 @@
 						\caption{Berechnete Kräfte $F\ix{Coul}$, $F\ix{dir}$ und die Summe beider auf einer doppelt-logarithmischen Skala.}\label{img:ionkräfte}
 					\end{figure}
 					
-			\subsection{Neutralgasreibung}
+			\subsubsection{Neutralgasreibung}
 			
 				Die Stöße mit den Neutralgasatomen können, ebenso wie die mit Ionen, als Kraft durch Reibung aufgefasst werden. Diese sorgen insbesondere für eine Verlangsamung der Bewegung der Staubteilchen. Die Kraft $F\ix{N}$ wird, in ähnlicher Weise wie $F\ix{dir}$, durch einen Impulsübertrag über einen Strom von Neutralgasteilchen auf einen effektiven Querschnitt ausgedrückt.
 				
@@ -217,7 +217,52 @@
 					\end{align}
 					
 				($m\ix{N}$ - Neutralgasatommasse; $v\ix{th,N}$ - thermische Geschw. der Neutralgasatome; $n\ix{N}$ - Neutralgasdichte; $v\ix{S}$ - Staubteilchengeschw.)\\
-				Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.
+				Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.\\
+				Für den berühmten \tilt{Milikan}-Öltropfen-Versuch zur Bestimmung der Ladung eines Elektrons wurde, 1924 von \tilt{P. S. Epstein}, ebenso ein Ausdruck für die Kraft durch Neutralgasreibung bestimmt. Dabei ist $\beta$ der Reibungskoeffiziént und $\rho\ix{S}$ die Dichte des Staubmediums.
+				
+					\begin{align}
+						F\ix{N}=-m\ix{S}\beta v\ix{S}=-m\ix{S}v\ix{S}\delta\frac{8}{\pi}\frac{p}{a\rho\ix{S}v\ix{th,N}}
+					\end{align}
+					
+			\subsubsection{Thermophoretische Kraft}\label{subsub:therm}
+	
+				In einer Plasmakammer kann, durch Aufheizung oder Abkühlung einer der Elektroden bzw. Kammerbegrenzungen ein, bspw. der Gravitation oder dem elektrischen Feld entgegen gerichteter Temperaturgradient angelegt werden.\\
+				Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\mu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} genutzt (siehe \ref{sec:yukawaclust}).
+				
+					\begin{align}
+						F\ix{th}=-\frac{32}{15}\frac{a^2 \kappa\ix{N}}{v\ix{th,N}}\grad{T} \label{eq:therm}
+					\end{align}
+					
+			\subsubsection{Kraft durch \tilt{Laser}-Einstrahlung}
+			
+				Der Einsatz von \tilt{Laser} (\fett{L}ight \fett{A}mplification by \fett{S}timulated \fett{E}mission of \fett{R}adiation) hat in Versuchen zu kolloidalen Plasmen verschiedene Gründe: einerseits wird der \tilt{target}-Bereich mit ihnen ausgeleuchtet, andererseits können unterschiedliche dynamische Eigenschaften des Staubes untersucht werden.\\
+				Die Manipulation von eingefangenen Teilchen wird bspw. durch die Fokussierung eines \tilt{Laser}strahls auf ein Partikel realisiert. Hierbei spielt der Impulsübertrag der Photonen mit Impuls $p\ix{Ph}$, welcher dem Strahlungsdruck $p\ix{Strahl}$ entspricht und die photophoretische Kraft $F\ix{ph}$ eine Rolle.
+				
+					\begin{align}
+						p\ix{Strahl}=\frac{\diff p\ix{ph}}{A\ix{L}\diff t}=&\frac{\diff N\ix{ph}}{A\ix{La}\diff t}\frac{h}{\lambda}=\frac{I\ix{L}}{c} \nonumber \\
+						F\ix{Strahl}=&\gamma\frac{I}{c}\pi a^2 \label{eq:strahl}
+					\end{align}
+					
+				($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
+				Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert.\\
+				Geht man davon, dass die Photonendichte nicht isotrop über die Querschnittsfläche $A\ix{L}$ ist, so existiert ein Intensitätsgradient über die Strecke eines Strahlradius. Somit treten innerhalb der Strahlungsfläche auf ein Partikel unterschiedliche Kräfte durch den \tilt{Laser} auf: im Mittel treffen mehr Photonen das Partikel auf der Seite, welcher dem Strahlmittelpunkt zugewandt ist, als auf der entgegengesetzten. Somit entsteht eine Kraft, welche senkrecht auf der \tilt{Laser}-Richtung steht und zum Strahllot zeigt. Ein \tilt{Laser}-Strahl kann also zum Einfang von (einem) ausgewählten Partikeln benutzt werden.\\
+				Bei der photophoretischen Kraft wird die resultierende Dynamik aus dem, durch die Stöße mit Photonen erzeugten Temperaturgradienten über ein einzelnes Partikel beschrieben. Wie bereits erläutert, liegt ein Strahldichtegradient für eine Fläche von $A\ix{S}$ vor, woraus eine unterschiedliche Staubaufheizung durch die Stoßreibung folgt.\\
+				Treffen nun Neutralgasatome auf die heißere Seite, so werden sie dort schneller reflektiert, als von der kälteren. Die Differenz des Impulsübertrags resultiert in der photophoretischen Kraft, die entgegen des Gradienten der Photonendichte und damit in Richtung der heißen Seite der Partikel zeigt. Je nach der Absorptionsfähigkeit besitzen die Teilchen unterschiedliche Temperaturgradienten. Somit stellt sich eine heiße Front aus den Teilchen auf, welche eine gute Absorption und somit insgesamt höhere Temperatur aufweisen. Für diese Partikel zeigt $F\ix{ph}$ in Richtung des Strahls. Analog wirkt die photophoretische Kraft für schlecht absorbierende Teilchen in entgegengesetzte Richtung. Somit ergibt sich $F\ix{ph}$ in Gl. (\ref{eq:photoph}) mit dem Wärmeleitungskoeffizienten $\kappa\ix{S}$ des Staubes, dem Gasdruck $p$ und der Gastemperatur $T$.
+				
+					\begin{align}
+						F\ix{ph}=\frac{\pi a^2 p I\ix{L}}{6\left(pav\ix{th,n}+\kappa\ix{S}T\right)} \label{eq:photoph}
+					\end{align}
+				
+			\subsubsection{Einfang und Gleichgewicht}
+				
+				\begin{figure}
+					\centering
+					\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
+					\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$ )}
+				\end{figure}
+				
+		\subsection{Finite Yukawa-Cluster}\label{sec:yukawaclust}
+					
 	\newpage
 	
 	\section{Durchführung}\label{sec:durch}
