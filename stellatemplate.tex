@@ -1,0 +1,150 @@
+%Hier schreibe ich kurz die Lizenz hin, falls das mal im Netz landen sollte o.ä.. Diese besagt eigentlich nur, dass dies mein geistiges Gut ist aber unter Vorbehalt und Kennzeichnung auch bearbeitet bzw. verbessert werden kann.
+
+% Copyright (C)  2015  Philipp Hacker.
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% The lincense itself can be found at <https://www.gnu.org/licenses/fdl-1.3>.
+
+\documentclass[numbers=noenddot,a4paper]{scrartcl}
+
+%Hier oben (documentclass) kannst du dein Dokument grundlegend definieren. In den {} Klammer kannst du den Typus des Doc's festlegen! Hier die Auswahl:
+%
+%Standardklassen
+%article - für kleinere Schriftwerke meist ohne Titelblatt und nur mit einseitigem Druck
+%report - für mittlere Schriftwerke meist mit Titelblatt und einseitigem Druck
+%book - für große Schriftwerke meist mit Titelblatt und zweiseitigem Druck
+%letter - für Briefe
+%
+%KOMA-Script-Klassen
+%scrartcl - für kleinere Schriftwerke meist ohne Titelblatt und nur mit einseitigem Druck
+%scrreprt - für mittlere Schriftwerke meist mit Titelblatt und einseitigem Druck
+%scrbook - für große Schriftwerke meist mit Titelblatt und zweiseitigem Druck
+%scrlttr2 - für Briefe.
+%
+%Weitere Dokumentenklassen
+%Es gibt noch sehr viele weitere Dokumentklassen, die speziellen Zwecken dienen, beispielsweise:
+%beamer, powerdot - Präsentationen à la Powerpoint, doch mit LaTeX-Möglichkeiten
+%amsart, amsbook - Spezial-Klassen für mathematische Dokumente
+%extarticle, extbook, extreport, extletter - entsprechen den Standardklassen mit Erweiterungen für größere oder kleinere Schrift
+%moderncv, europecv - Lebensläufe für Bewerbungen verfassen
+%flashcards - Erstellung von doppelseitigen Karteikärtchen zum Lernen
+%
+%Die Optionen in den [] Klammern sind äußerst vielseitig und hängen entsprechend auch ganz von deinem Dokument-Typ ab. Diese musst du dir dann selbst zusammen suchen.
+
+
+%Hier folgen nun diverse Pakete (packages) die mit \usepackage{package} initialisiert werden und damit dann dem Editor für dieses Dokument bereit stehen. Es gilt wieder: in Hülle und Fülle und für jeden etwas dabei! Also: wenn du etwas brauchst, bzw. du etwas nicht so machen kannst, wie du möchtest und das Programm dich mit Fehlermeldungen bombardiert, so kannst du durch Inkludieren von bestimmen Paketen dir neue Möglichkeiten schaffen.
+
+\usepackage[greek,ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%Das wichtigste für dich sicherlich: die Formatierung! Also beginnen wir mit dem Pakte geometry. Das hat sich dann prinzipiell so, dass man den Aufruf \usepackage[option1,option2,option3,option4...]{geometry} macht, wobei die optionJ,optionK usw. deine Wünsche bezüglich der Dokumentgeometrie (hah!) sind. Hier die Möglichkeiten:
+%
+%(Beachte bitte immer, das ein A4 Blatt eine Breite von 21cm und Höhe von 29.7cm hat! Es gilt also 21cm=left+width+right usw.. Außerdem: du kannst als Option auch gleich a4paper nehmen, dann weiß der Editor gleich, mit was für Maßen er umzugehen hat.)
+%
+%Option                   Bedeutung
+%
+%top                        Distanz von oberstem Text zu Blattoberkante
+%bottom                  analog für Blattunterkante
+%textheight             Höhe des gesamten Schriftblocks auf der Seite
+%textwidth              Breite des Textblockes
+%paperheight          Höhe des Papiers
+%left                        Distanz von linker Kante des Schriftblocks bis zur linken Blattkante
+%right                      analog für rechte Kante
+%headsep               Abstand der Kopfzeile (falls vorhanden) von der ersten Textzeile
+%headheight           maximale Höhe der Kopfzeile
+%marginparsep      Abstand für die rechte Textkante zu einer Anmerkung zum Text auf der rechten Seite
+%marginparwidth   Breite der Anmerkung am rechten Textrand
+%footskip                analog zu headsep, nur für Fußzeile
+
+%Du kannst auch den foot (Fußzeile) und den head (Kopfzeile) mit in den Textblock, den du durch textheight usw. definiert hast, mithineinziehen mit dem Befehlen includehead und includefoot als Optionen.
+%Günstig ist es also, wenn du es beispielhaft so machst:
+%\usepackage[textheight=15cm, textwidth=15cm, footskip=0.5cm, headsep=1.0cm]{geometry}.
+
+\usepackage[]{geometry} %TODO Formatierung machen (siehe vorheriger Abschnitt!)
+\usepackage{scrpage2}
+\usepackage{libertine}
+\usepackage{ziffer}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage[infoshow]{tabularx}
+\usepackage[all]{xy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{upgreek}
+\usepackage{esint}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{lscape}
+\usepackage[backref=page]{hyperref}
+\usepackage{csquotes}
+\usepackage[printonlyused,withpage,footnote]{acronym}
+
+\renewcommand{\thefigure}{Abb. \arabic{figure}}  %Kürzel für Abbildungen ändern
+
+\captionsetup[figure]{name=}
+
+\newcommand{\nummat}[1]{\left[\text{#1}\right]}
+\newcommand{\num}[1]{$\left[\text{#1}\right]$}
+\newcommand{\degree}{^\circ}  %Befehl für das Zeichen 'in Grad'
+\newcommand{\diff}{\textnormal{d}}  %Befehl für das totale Differential d/dx
+\newcommand{\tenpo}[1]{ 10^{#1}}  %Befehl für die Zehner-Potenz
+\newcommand{\greek}[1]{\greektext#1\latintext}  %Befehl für griechischen Text
+\newcommand{\ix}[1]{_\text{#1}}  %Befehl für einen aufrechten Index
+\newcommand{\imag}{\mathbf{i}} %Befehl für die imagninäre Einheit (fett)
+\newcommand{\tilt}[1]{\textit{#1}}  %kürzerer Befehl für kursiv
+\newcommand{\grad}[1]{\textit{grad}\left(#1\right)}  %Befehl für Gradienten
+\newcommand{\divergenz}[1]{\textit{div}\left(#1\right)}  %Befehl für Divergenz
+\newcommand{\euler}{\mathnormal{e}}  %Befehl für die eulersche Zahl
+\newcommand{\fett}[1]{\textbf{#1}}  %Befehl für fette Schrift
+
+\setcounter{section}{-1} 
+
+%Setzt die Nummer/Nummerierung der Kapitel fest, wobei die Zahl x in {} das versteckte 'erste' Kapitel ist und somit das erste selbst erzeugte die x+1 ist.
+%Das kannst du auch übrigens in der ersten {} für page (Seitenzahl) usw. machen.
+
+%Hier unten siehst du sog. TODO's: diese sind essentiell, weil du dort immer einträgst, was du unbedingt machen musst und was das Dokument letztendlich verifiziert.
+
+\title{} %TODO Name des Dokuments
+\author{} %TODO Name des Verfassers
+\date{\today} %mit \today 'callst' du immer das aktuelle Datum (Systemzeit des PCs/MACs) zum Zeitpunkt der letzten kompilierung (wenn man aus dem was du hier machst, ein .pdf erzeugst).
+
+\begin{document} %Gaaaaaaanz wichtig!!!
+	
+Also hier hast du eine ganz grobe Vorlage für alle deine Dokumente, die du schreiben möchtest!
+Zitate gehen so :  \enquote{Zitate sind für'n Arsch!} oder auch, wenn du es eingerückt haben willst (zentriert):
+
+	\begin{quote}
+	\tilt{	\enquote{Immer noch kacke!}}
+	\end{quote}
+	
+	\begin{flushright}
+	\tilt{- Philipp Hacker (geiler Hengst)}
+	\end{flushright} 
+
+%	\begin{figure}[H] 
+%Umgebung für ein Bild, das H in den Klammern bedeutet nur, das es genau dahin gezwungen wird (in der Größe die du einstellst) wo du es auch aufgerufen hast!
+%		\centering 
+%Zentrierung!
+%		\includegraphics[Optionen wie z.Bsp.: width=(hier Zahl, sonst 1)\textwidth, height=(hier Zahl, sonst 1)\textwidth]{Name bzw. Pfad zu deinem Bild (am besten in den selben Ordner packen, wo du auch schreibst)}
+%		\caption{Hier ist die Bildunterschrift zu sehen!}
+%		\label{img:... Verweis (unsichtbar) auf die Abbildung, die du mit \ref{img:...} im Text aufrufen kannst ( in der Form: Abb. (xxx) )}
+%	\end{figure}
+
+\section{Testkapitel}
+\subsection{Test-Unterkapitel}
+\subsubsection{Test-Unter-Unterkapitel}
+\paragraph{Abschnitt ohne Nummerierung}
+\subsection*{Unter-Kapitelüberschrift ohne Nummerierung und Aufnahme in das Inhaltsverzeichnis} %geht auch mit section usw.
+
+\section{Quellen}
+
+%	\num{I} -- Hier kommt jetzt die Quelle hin für die römische Ziffer I in der  Klammer!
+% mit \num{arg1} kannst du eine weitere Quelle der bel. römischen Ziffer arg1 hinzufügen (natürlich reinschreiben)
+% im Fließtext kannst du mit 'Testwort$^{\nummat{I}}$' für deine Quelle \num{I} eine hochgestellte, eckige Klammer mit der römischen Ziffer erzeugen, sodass dort dann angemerkt ist, dass hier die Quelle benutzt wurde
+
+\end{document} %Bitte niiiiiiiiemals ausversehen löschen, sonst mörder-abfuck!!!
