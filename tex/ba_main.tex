@@ -205,7 +205,7 @@
 					\begin{figure}
 						\centering
 						\includegraphics[height=0.4\textwidth,width=0.6\textwidth]{figs/forcesandtrappingmelzer.png}
-						\caption{Berechnete Kräfte $F\ix{Coul}$, $F\ix{dir}$ und die Summe beider auf einer doppelt-logarithmischen Skala.}\label{img:ionkräfte}
+						\caption{Berechnete Kräfte $F\ix{Coul}$ (\tilt{Coulomb}), $F\ix{dir}$ (\tilt{collection}) und die Summe beider auf einer doppelt-logarithmischen Skala.}\label{img:ionkräfte}
 					\end{figure}
 					
 			\subsubsection{Neutralgasreibung}
@@ -257,15 +257,23 @@
 				
 			\subsubsection{Einfang und Gleichgewicht}
 			
-				In \ref{img:kräfte} sind einmal einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
-				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Für $a>> \unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Die Ionenreibung $F\ix{ion}$ kann in solchen Fällen ignoriert werden.\\
-				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum eine Rolle. I	
+				In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
+				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
+				Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
+				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.\\
+				In \
+				
 					\begin{figure}
 						\centering
 						\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
-						\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$ )\\
-							\underline{links}: Teilchen mit $a\approx\unit[\tenpo{-9}]{m}$  \underline{rechts}: $a\approx\unit[\tenpo{-6}]{m}$ } \label{img:kräfte}
+						\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$)} \label{img:kräfte}
 					\end{figure}
+					
+					\begin{figure}
+						\centering
+						\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
+					\end{figure}
+					
 				
 		\subsection{Finite Yukawa-Cluster}\label{sec:yukawaclust}
 					
