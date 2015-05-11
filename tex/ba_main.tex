@@ -1,4 +1,4 @@
-% Copyright (C)  2015  Philipp Hacker.
+	% Copyright (C)  2015  Philipp Hacker.
 % Permission is granted to copy, distribute and/or modify this document
 % under the terms of the GNU Free Documentation License, Version 1.3
 % or any later version published by the Free Software Foundation;
@@ -167,7 +167,7 @@
 
 			\subsubsection{Ionen-Neutralgasreibung}\label{subsub:reibung}
 
-				Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
+				Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom oder auch "`Ionenwind"'. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
 				
 					\begin{align}
 						F\ix{drag}=\frac{\diff N \Delta p}{\diff t}=\Delta p n \sigma v\ix{rel}
@@ -261,7 +261,9 @@
 				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
 				Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
 				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.\\
-				In \
+				In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
+				Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Hierbei sind die Ionen bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer. Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
+				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der Orientierungen von Thermophorese und Ionenwind-Kraft entsteht. Diese zeigen gerade wiederum aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. 
 				
 					\begin{figure}
 						\centering
@@ -272,6 +274,8 @@
 					\begin{figure}
 						\centering
 						\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
+						\caption{Schemata für dein Einfang von Staub mit (a): $a\approx\unit[\tenpo{-5}]{m}$ (b): $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
+						\label{img:kräfterichtungen}
 					\end{figure}
 					
 				
