@@ -121,6 +121,18 @@
 	\section{Physikalische Grundlagen}\label{sec:physg}
 	
 		\subsection{Aufladung von Staubpartikeln in einem Plasma}\label{subsec:ströme}
+		
+			Die Ladung eines Fremdteilchens (Staub) in einem Plasma ist eine dynamische Größe. Sie ist zeitlich veränderlich, als auch abhängig von den Plasmaparametern, den Partikeleigenschaften sowie dessen Trajektorie in der Entladung. Offensichtlich ergibt sich die Ladung eines Teilchens zum Zeitpunkt $t$ aus den Ladungsströmen $I\ix{k}$ der Plasmaspezies auf das Partikel bis zu diesem Zeitpunkt. Im folgenden genügt es, dieses Problem auf einer Zeitskala zu betrachten, in der man die Ladung als konstant unter dem Einfluss der Ströme annehmen kann. Damit werden diese ebenfalls stationär und es gilt für ein einzelnes Teilchens die \tilt{Kirchhoff'sche Knotenregel}, wobei der Staub ein Knoten sei:
+			
+				\begin{align}
+					\sum_{\text{k}} I\ix{k}\left(\Phi\ix{fl}\right)=\frac{\diff Q\ix{S}}{\diff t} ß,\, . \label{eq:float}
+				\end{align}
+
+		Die Elektronen und Ionen im Plasma strömen aufgrund ihrer thermischen Bewegung auf das Fremdteilchen und verleihen diesem über Stöße eine Ladung $Q\ix{S}$, wobei sich für das Partikel ein elektrostatisches Potential $\Phi\ix{fl}$ einstellt, bei dem Gl. (\ref{eq:float}) gilt. Die Ladungsspezies kommen dabei im allgemeinen aus Sekundär-,Photo-, oder Feldemissionen, wobei die dominanten Ströme die des Plasmas selbst sind. Hier soll es ausreichen, die Beschreibung der Plasmaströme nach  \tilt{Langmuir} und \tilt{Mott-Smith} mit dem sog. \tilt{orbital motion limit}-Modell \cite{Langmuir26} vorzunehmen. 
+		
+		\subsubsection*{OML-Modell}
+			
+		Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen, höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt.
 	
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
@@ -180,7 +192,7 @@
 				Für die Bestimmung von $F\ix{dir}$ wird angenommen, dass nur die Ionen, welche für eine Ladungsänderung der Partikel sorgen, auch diese direkt treffen. Im Rückblick auf die Bestimmung der Ionenströme in \ref{subsec:ströme} wird die Kraft durch Kollisionen zu
 				
 					\begin{align}
-						F\ix{dir}=\pi a^2m\ix{I}\tilde{v}n\ix{I}u\ix{I}\left(1-\frac{2e\Phi\ix{Fl}}{m\ix{I}\tilde{v}^2}\right)\,\,.
+						F\ix{dir}=\pi a^2m\ix{I}\tilde{v}n\ix{I}u\ix{I}\left(1-\frac{2e\Phi\ix{fl}}{m\ix{I}\tilde{v}^2}\right)\,\,.
 					\end{align}
 					
 				($n\ix{I}$ - Ionenkonzentration; $u\ix{I}$ - Ionen-Driftgeschwindigkeit; $m\ix{I}$ - Ionenmasse)\\
@@ -196,10 +208,10 @@
 				
 					\begin{align}
 						\sigma=\int_{b\ix{k}}^{\lambda\ix{D}}\tilde{\sigma}\diff\left(\frac{\lambda\ix{D}}{b_{\frac{\pi}{2}}}\right)=&\,4\pi b_{\frac{\pi}{2}}^2\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \nonumber \\
-						F\ix{Coul}\overset{*}{=}&\,\frac{2\pi a^2 e^2\Phi\ix{Fl}^2}{m\ix{I}\tilde{v}^3}n\ix{I}u\ix{I}\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \, \, .
+						F\ix{Coul}\overset{*}{=}&\,\frac{2\pi a^2 e^2\Phi\ix{fl}^2}{m\ix{I}\tilde{v}^3}n\ix{I}u\ix{I}\ln\left(\frac{\lambda\ix{D}^2+b_{\frac{\pi}{2}}^2}{b\ix{k}^2+b_{\frac{\pi}{2}}^2}\right)^{1/2} \, \, .
 					\end{align}
 					
-				Wobei in * für die vollständige Coulomb-Kraft durch Ionen $F\ix{Coul}$ auf ein Partikel benutzt wurde, dass dieses mit Ladung $Z\ix{S}e=Q\ix{S}$ als Kugelkondensator als $Q\ix{S}=4\pi\epsilon\ix{0}a\Phi\ix{Fl}$ ausgedrückt werden kann. Wichtig zu beachten ist jedoch, dass nur Ionen einen Beitrag leisten, die innerhalb eines Stoßparameters $\lambda\ix{D}\approx\lambda\ix{D,e}$ am \tilt{target} vorbei fliegen.\\
+				Wobei in * für die vollständige Coulomb-Kraft durch Ionen $F\ix{Coul}$ auf ein Partikel benutzt wurde, dass dieses mit Ladung $Z\ix{S}e=Q\ix{S}$ als Kugelkondensator als $Q\ix{S}=4\pi\epsilon\ix{0}a\Phi\ix{fl}$ ausgedrückt werden kann. Wichtig zu beachten ist jedoch, dass nur Ionen einen Beitrag leisten, die innerhalb eines Stoßparameters $\lambda\ix{D}\approx\lambda\ix{D,e}$ am \tilt{target} vorbei fliegen.\\
 				Die gesamte Kraft durch Ionen auf die Staubteilchen ist somit die Summe der Kräfte aus direkten Stößen und Coulomb-Kollisionen $F\ix{ion}=F\ix{dir}+F\ix{Coul}$, welche zusammen dargestellt sind in \ref{img:ionkräfte}.
 				
 					\begin{figure}
@@ -270,7 +282,7 @@
 				
 				In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
 				Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc}, siehe \ref{subsec:coulombkristall}) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Hierbei sind die Ionen bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer. Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
-				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen von Thermophorese und Ionenwind-Kraft zur elektrostatischen Wechselwirkung Kammer -- Plasma. Diese zeigen gerade wiederum aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.
+				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Thermophorese und Ionenwind-Kraft zeigen (selbe ARgumentation wie zu Teil (a)) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
 				
 					\begin{figure}[H]
 						\centering
