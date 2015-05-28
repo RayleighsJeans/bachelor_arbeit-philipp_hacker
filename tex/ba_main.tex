@@ -130,7 +130,7 @@
 
 		Die Elektronen und Ionen im Plasma strömen aufgrund ihrer thermischen Bewegung auf das Fremdteilchen und verleihen diesem über Stöße eine Ladung $Q\ix{S}$, wobei sich für das Partikel ein elektrostatisches Potential $\Phi\ix{fl}$ einstellt, bei dem Gl. (\ref{eq:float}) gilt. Die Ladungsspezies kommen dabei im allgemeinen aus Sekundär-,Photo-, oder Feldemissionen, wobei die dominanten Ströme die des Plasmas selbst sind. Hier soll es ausreichen, die Plasmaströme nach  \tilt{Langmuir} und \tilt{Mott-Smith} mit dem sog. \tilt{orbital motion limit}-Modell \cite{Langmuir26} zu beschreiben. 
 		
-		\subsubsection*{OML-Modell}
+		\subsubsection{OML-Modell}
 			
 		Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<\ix{k}$ landet dieses auf dem Staubteilchen.\\
 		Da vorausgesetzt wird, dass keine Stöße vor dem Target geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt:
@@ -147,17 +147,32 @@
 			\end{align}
 			
 		Der zugehörige Streuquerschnitt für die Streuung eines Teilchenstroms an einem Staubpartikel wird damit zu $\sigma\ix{k}=\pi b\ix{k}^2$, welcher größer als die geometrische Querschnittsfläche $\pi a^2$.\\
-		Der Ladungsträgerstrom, welcher letztendlich den Parameter der Partikelladung bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten aus Teilchen der Geschwindigkeiten $v\ix{j}$:
+		Der (differentielle) Ladungsträgerstrom $\diff I\ix{j}$, welcher schließlich den Parameter der Partikelladung bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten von Teilchen der Geschwindigkeiten $v\ix{j}$, gewichtet mit ihren zugehörigen Wechselwirkungsquerschnitten $\sigma\ix{j}$ und (hier: maxwellartigen) Verteilungen $f\left(v\ix{j}\right)$:
 		
 			\begin{align}
-				\diff I\ix{j}=\sigma\ix{j}\left(v\ix{j}\right)n\ix{j}v\ix{j}f\left(v\ix{j}\right)\diff v\ix{j} \nonumber \\
-				\text{Ionen: } I\ix{I}
+				\diff I\ix{j}=\sigma\ix{j}&\left(v\ix{j}\right)n\ix{j}v\ix{j}f\left(v\ix{j}\right)\diff v\ix{j} \nonumber \\
+				\text{Ionen: } I\ix{I}&=\pi a^2n\ix{I}e\sqrt{\frac{8k\ix{B}T\ix{I}}{\pi m\ix{I}}}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right) \label{eq:ionenstrom} \\
+				\text{Elektronen: } I\ix{e}&=-\pi a^2n\ix{e}e\sqrt{\frac{8k\ix{B}T\ix{e}}{\pi m\ix{e}}}\exp\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{e}}\right) \label{eq:elektronenstrom}
 			\end{align}
+			
+		($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
+		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-\frac{2e\Phi\ix{P}}{m\ix{e}}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können.\\
+		Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
+		
+		\subsubsection{Neutralgas-Ionen-Stöße}
+		
+		Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich viele Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln. In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit
+		
+			\begin{align}
+				\frac{R}{l\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N}
+			\end{align}
+			
+		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße)\\
+		In einem Abstand $R$ um ein Staubteilchen
 	
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
 				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
-				
 				\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
 				
 				Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder auf der \tilt{International Space Station}.
