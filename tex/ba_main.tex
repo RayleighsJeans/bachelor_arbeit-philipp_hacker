@@ -161,14 +161,20 @@
 		
 		\subsubsection{Neutralgas-Ionen-Stöße}
 		
-		Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich viele Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln. In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit
+		Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich viele Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln.
+		\\In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit zwischen Ionen und Neutralgasatomen
 		
 			\begin{align}
-				\frac{R}{l\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N}
+				\frac{R}{l\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
 			\end{align}
 			
-		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße)\\
-		In einem Abstand $R$ um ein Staubteilchen
+		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße; \mbox{$\lambda\ix{mfp}$ - mittlere freie Wegl\"ange})\\
+		Durch eine Sph\"are mit diesem Radius flie{\ss}t nun neben dem thermischen Ionenstrom $I\ix{th}$ noch ein weiterer Strom $I\ix{S}$ auf Grund der St\"o{\ss}e mit dem Neutralgas. Die Ionen der Geschwindigkeit $v\ix{th,I}$, welche sich ohne Wechselwirkung mit dem Gas der Entladung am Target vorbei bewegen w\"urden, werden mit der Sto{\ss}wahrscheinlichkeit aus Gl. (\ref{eq:wahrschein}) in Richtung des Staubteilchens abgelenkt und tragen somit zum Ladungsstrom auf dieses bei. Der Gesamtladungsstrom durch Ionen entspricht der Summe der beiden Str\"ome:
+		
+			\begin{align}
+				I\ix{th}=&\pi R^{2}n\ix{N}ev\ix{th,I} \quad I\ix{S}=\pi R^2n\ix{N}ev\ix{th,I}\left(Rn\ix{N}\sigma\ix{N,I}\right) \\
+				&I\ix{ges}=\pi a^{2}n\ix{I}ev\ix{th,I}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+\frac{R^{3}}{\lambda\ix{mfp}a^{3}}\right)
+			\end{align}
 	
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
