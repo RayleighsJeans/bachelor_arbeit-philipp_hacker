@@ -130,7 +130,7 @@
 
 		Die Elektronen und Ionen im Plasma strömen aufgrund ihrer thermischen Bewegung auf das Fremdteilchen und verleihen diesem über Stöße eine Ladung $Q\ix{S}$, wobei sich für das Partikel ein elektrostatisches Potential $\Phi\ix{fl}$ einstellt, bei dem Gl. (\ref{eq:float}) gilt. Die Ladungsspezies kommen dabei im allgemeinen aus Sekundär-,Photo-, oder Feldemissionen, wobei die dominanten Ströme die des Plasmas selbst sind. Hier soll es ausreichen, die Plasmaströme nach  \tilt{Langmuir} und \tilt{Mott-Smith} mit dem sog. \tilt{orbital motion limit}-Modell \cite{Langmuir26} zu beschreiben. 
 		
-		\subsubsection{OML-Modell}
+		\subsubsection{OML-Modell}\label{subsub:oml}
 			
 		Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<\ix{k}$ landet dieses auf dem Staubteilchen.\\
 		Da vorausgesetzt wird, dass keine Stöße vor dem Target geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt:
@@ -168,7 +168,12 @@
 			\end{align}
 			
 		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße)\\
-		In einem Abstand $R$ um ein Staubteilchen
+		\\
+		Durch die Sphäre mit Radius $R$ um ein Staubteilchen fließt nun, neben dem thermischen Ionenstrom $I\ix{th}$ (siehe u.a. \ref{subsub:oml}), zusätzlich noch ein Strom aus durch Stöße abgelenkte Ionen $I\ix{S}$.
+		
+			\begin{align}
+				I\ix{th}=\pi R^2n\ix{I}ev\ix{th,I} \quad I\ix{S}=\pi R^2 n\ix{I}ev\ix{th,I}n\ix{N}\sigma\ix{I,N}
+			\end{align}
 	
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
