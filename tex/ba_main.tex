@@ -9,6 +9,7 @@
 
 \usepackage[greek,ngerman]{babel}
 \usepackage[T1]{fontenc}
+%\usepackage[applemac]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage{scrpage2}
@@ -156,7 +157,7 @@
 			\end{align}
 			
 		($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
-		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-\frac{2e\Phi\ix{P}}{m\ix{e}}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können.\\
+		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-\frac{2e\Phi\ix{P}}{m\ix{e}}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{\frac{8k\ix{B}T\ix{j}}{\pi m\ix{j}}}$ die thermischen Geschwindikeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
 		Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
 		
 		\subsubsection{Neutralgas-Ionen-Stöße}
@@ -167,24 +168,24 @@
 			\begin{align}
 				\frac{R}{l\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
 			\end{align}
-			
-<<<<<<< HEAD
-		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße)\\
-		\\
-		Durch die Sphäre mit Radius $R$ um ein Staubteilchen fließt nun, neben dem thermischen Ionenstrom $I\ix{th}$ (siehe u.a. \ref{subsub:oml}), zusätzlich noch ein Strom aus durch Stöße abgelenkte Ionen $I\ix{S}$.
-		
-			\begin{align}
-				I\ix{th}=\pi R^2n\ix{I}ev\ix{th,I} \quad I\ix{S}=\pi R^2 n\ix{I}ev\ix{th,I}n\ix{N}\sigma\ix{I,N}
-=======
+						
 		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße; \mbox{$\lambda\ix{mfp}$ - mittlere freie Wegl\"ange})\\
 		Durch eine Sph\"are mit diesem Radius flie{\ss}t nun neben dem thermischen Ionenstrom $I\ix{th}$ noch ein weiterer Strom $I\ix{S}$ auf Grund der St\"o{\ss}e mit dem Neutralgas. Die Ionen der Geschwindigkeit $v\ix{th,I}$, welche sich ohne Wechselwirkung mit dem Gas der Entladung am Target vorbei bewegen w\"urden, werden mit der Sto{\ss}wahrscheinlichkeit aus Gl. (\ref{eq:wahrschein}) in Richtung des Staubteilchens abgelenkt und tragen somit zum Ladungsstrom auf dieses bei. Der Gesamtladungsstrom durch Ionen entspricht der Summe der beiden Str\"ome:
 		
 			\begin{align}
 				I\ix{th}=&\pi R^{2}n\ix{N}ev\ix{th,I} \quad I\ix{S}=\pi R^2n\ix{N}ev\ix{th,I}\left(Rn\ix{N}\sigma\ix{N,I}\right) \\
 				&I\ix{ges}=\pi a^{2}n\ix{I}ev\ix{th,I}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+\frac{R^{3}}{\lambda\ix{mfp}a^{3}}\right)
->>>>>>> e2d476128048e77a767017c1fa2db68e0eda9c94
 			\end{align}
 	
+		Auf der Oberfl\"ache der '\tilt{Sto{\ss}sph\"are}' $\mathbb{S}\ix{R}$ hat das \tilt{Yukawa}-Potential des Staubteilchens gerade die Energie der thermischen Ionenbewegung (Gl. (\ref{eq:bestimmR})), womit diese gerade noch in dessen Einfang geraten. Mit dem daraus bestimmten $R$ folgt ein diskreter Ionenstrom auf das Partikel mit R\"ucksicht auf die Ionen-Neutralgaswechselwirkung (Gl. (\ref{eq:ionstromkorr})).
+		
+			\begin{align}
+				\frac{k\ix{B}T\ix{I}}{e}=&\frac{Z\ix{S}e}{4\pi\epsilon\ix{0}R}\exp\left(\frac{R}{\lambda\ix{D}}\right) \label{eq:bestimmR} \\
+				I\ix{I}=\pi a^{2} n\ix{I}e v\ix{th,I}&\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+0,1\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right)^{2}\frac{\lambda\ix{D}}{\lambda\ix{mfp}}\right) \label{eq:ionstromkorr}
+			\end{align}
+			
+		Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.
+			
 		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
 		
 				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
