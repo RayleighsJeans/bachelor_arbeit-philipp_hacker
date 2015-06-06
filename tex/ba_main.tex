@@ -14,6 +14,7 @@
 \usepackage{fullpage}
 \usepackage{scrpage2}
 \usepackage{libertine}
+%\usepackage{braket}
 \usepackage{ziffer}
 \usepackage{graphicx}
 \usepackage{units}
@@ -133,16 +134,35 @@
 %					\label{img:randschicht}
 %				\end{figure}
 
-		\subsubsection{Child-Langmuir-Gesetz}
+		\subsubsection{Child-Langmuir-Gesetz} \label{subsub:child-lang}
 		
 			Bla.	
 			
 		\subsubsection{Bohm-Kriterien}
 		
 			Es stellt sich u.a. die Frage, warum sich diese Randschicht, in der die Elektronendichte stark abnimmt und gegen die Grenze verschwindet, nicht in das gesamte Plasma durch eine R\"uckwirkung ausbreitet. Das hei{\ss}t also: Warum und wann ist die Randschicht(-grenze) stabil?\\
-			Man stelle sich nun ein (mechanisches) Ein-Teilchen-Problem vor, bei welchem eine Gleichgewichtsanalyse vorgenommen wird. Das Potential habe ein Extremum, maximal oder minimal, an welchem die Punktmasse sich befindet. F\"ur die Behandlung des Randschicht-Problems sind nur Potentiale mit parabelartigen Maxima interessant, womit aus einer kleinen St\"orung eine gro{\ss}e Kraft auf das Teilchen folgt.
-						
-		\subsection{Aufladung von Staubpartikeln in einem Plasma}\label{subsec:ströme}
+			Man stelle sich nun ein (mechanisches) Ein-Teilchen-Problem vor, bei welchem eine Gleichgewichtsanalyse vorgenommen wird. Das Potential habe ein Extremum - maximal oder minimal - an welchem die Punktmasse sich befindet. F\"ur die Behandlung des Randschicht-Problems sind nur Potentiale mit umgekehrt-parabelartigen Maxima interessant (siehe \ref{img:parab}), womit aus einer kleinen St\"orung eine gro{\ss}e Kraft auf das Teilchen folgt. In diesem Fall kann man also von einer Instabilit\"at sprechen.\\
+			Der Bezug zur Plasmarandschicht wird deutlich, wenn man die Differentialgleichung des mechanischen Problems mit der Poissongleichung des Potentials in der Rand- bzw. Vorschicht - siehe Gl. (\ref{eq:pseudo}) vergleicht. Dabei stellt $\Psi\left(\Phi\right)$ ein Pseudopotential dar, welches in seiner Bedeutung vergleichbar mit der mechanischen Variante $V\left(\vec{r}\right)$ ist.
+			
+				\begin{align}
+					m\frac{\diff^{2}\vec{r}}{\diff t^{2}}=-\frac{\diff V}{\diff\vec{r}} \Leftrightarrow \Delta_{\vec{r}}\,\Phi=-\frac{\diff\Psi}{\diff\Phi}=f\left(\Phi\right) \label{eq:pseudo}
+				\end{align}
+				
+			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist Gleichung (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden (siehe Gl. (\ref{eq:beding2})).
+			
+				\begin{align}
+					\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}<0 \label{eq:beding}
+				\end{align}
+				
+%				\vspace{-0.3cm}
+				
+				\begin{align}
+					\frac{\diff^{2} \Psi}{\diff\Phi^{2}}=&\frac{\diff f\left(\Phi\right)}{\diff \Phi}=\frac{\diff}{\diff\Phi}\left(\frac{\rho}{\epsilon\ix{0}}\right)=\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right) \nonumber \\
+					=&\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}\exp\left(\frac{e\Phi\left(x\right)}{k\ix{B}T\ix{e}}\right)-\frac{e}{m\ix{I}u\ix{0,I}^{2}}\left(1-\frac{2e\Phi\left(x\right)}{m\ix{I}u\ix{0,I}^{2}}\right)^{-\frac{3}{2}}\right) \label{eq:beding2} \\
+					\Phi=0 \hspace{0.3cm} \Rightarrow  u\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}} \label{eq:bohmkriteins}
+				\end{align}
+				
+		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
 		
 			Die Ladung eines Fremdteilchens (Staub) in einem Plasma ist eine dynamische Größe. Sie ist zeitlich veränderlich, als auch abhängig von den Plasmaparametern, den Partikeleigenschaften sowie dessen Trajektorie in der Entladung. Offensichtlich ergibt sich die Ladung eines Teilchens zum Zeitpunkt $t$ aus den Ladungsströmen $I\ix{k}$ der Plasmaspezies auf das Partikel bis zu diesem Zeitpunkt. Im folgenden genügt es, dieses Problem auf einer Zeitskala zu betrachten, in der man die Ladung als konstant unter dem Einfluss der Ströme annehmen kann. Damit werden diese ebenfalls stationär und es gilt für ein einzelnes Teilchens die \tilt{Kirchhoff'sche Knotenregel}, wobei der Staub ein Knoten sei:
 			
@@ -207,7 +227,7 @@
 			
 		Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.
 			
-		\subsection{Staub-Dynamik im Plasma}\label{subsec:dynamik}
+		\subsection{Staub-Dynamik}\label{subsec:dynamik}
 		
 				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
 				\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
