@@ -52,6 +52,8 @@
 \newcommand{\divergenz}[1]{\textit{div}\left(#1\right)}
 \newcommand{\euler}{\mathnormal{e}}
 \newcommand{\fett}[1]{\textbf{#1}}
+\newcommand{\einnup}{\hspace{0.2cm}}
+\newcommand{\einnum}{\hspace{-0.2cm}}
 
 \title{Bachelor-Arbeit zum Thema \enquote{Modenanregung in \tilt{Yukawa}-Bällen}} %TODO Name
 \author{Philipp Hacker} %TODO Author
@@ -125,7 +127,7 @@
 		\subsection{Grenzschichten von Plasmen}
 		
 			Die Grenzschichten zu Metallen von Plasmen sind dunkler, als die eigentliche Entladung. Dies ist auf einen Elektronenmangel zur\"uckruf\"uhren, da diese sonst im Hauptvolumen die Neutralgasatome zur Fluoreszenz anregen. Damit kann die Quasineutralit\"at der Entladung dort nicht mehr gelten und es entsteht eine positive Raumladungszone.\\
-			Auf Grund der wesentlich gr\"o{\ss}eren Beweglichtkeit $\mu\ix{e}$ (wegen der kleineren Masse) und thermischen Geschwindigkeit $v\ix{th,e}$ der Elektronen wird eine Wand in einem Plasma h\"aufiger von diesen getroffen, als von den korrespondierenden Ionen. Betrachtet man nur die Oberfl\"ache dieser, so kann man annehmen, dass die Begrenzung einer Gasentlandung negativ aufgeladen ist. Das Potential, welches station\"ar unter dem Einfluss eines ``konstanten'' Plasmas wird, hei{\ss}t \tilt{floating}-Potential $\Phi{W,fl}$.
+			Auf Grund der wesentlich gr\"o{\ss}eren Beweglichtkeit $\mu\ix{e}$ und thermischen Geschwindigkeit $v\ix{th,e}$, wird eine Wand in einem Plasma h\"aufiger von Elektronen getroffen, als von den korrespondierenden Ionen. Betrachtet man nur die Oberfl\"ache dieser, so kann man annehmen, dass die Begrenzung einer Gasentlandung negativ aufgeladen ist. Das Potential, welches station\"ar unter dem Einfluss eines ``konstanten'' Plasmas wird, hei{\ss}t \tilt{floating}-Potential $\Phi\ix{W,fl}$.
 			
 %				\begin{figure}
 %					\centering
@@ -145,21 +147,14 @@
 			Der Bezug zur Plasmarandschicht wird deutlich, wenn man die Differentialgleichung des mechanischen Problems mit der Poissongleichung des Potentials in der Rand- bzw. Vorschicht - siehe Gl. (\ref{eq:pseudo}) vergleicht. Dabei stellt $\Psi\left(\Phi\right)$ ein Pseudopotential dar, welches in seiner Bedeutung vergleichbar mit der mechanischen Variante $V\left(\vec{r}\right)$ ist.
 			
 				\begin{align}
-					m\frac{\diff^{2}\vec{r}}{\diff t^{2}}=-\frac{\diff V}{\diff\vec{r}} \Leftrightarrow \Delta_{\vec{r}}\,\Phi=-\frac{\diff\Psi}{\diff\Phi}=f\left(\Phi\right) \label{eq:pseudo}
+					m\frac{\diff^{2}\vec{r}}{\diff t^{2}}=-\frac{\diff V}{\diff\vec{r}} \quad \Leftrightarrow \quad \Delta_{\vec{r}}\,\Phi=-\frac{\diff\Psi}{\diff\Phi}=f\left(\Phi\right)\hspace{-0.3cm}\overset{Poisson}{\overset{\mid}{=}}\hspace{-0.3cm}\frac{\rho}{\epsilon\ix{0}} \label{eq:pseudo}
 				\end{align}
 				
-			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist Gleichung (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden (siehe Gl. (\ref{eq:beding2})).
+			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung  in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohmkriterium}.
 			
 				\begin{align}
-					\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}<0 \label{eq:beding}
-				\end{align}
-				
-%				\vspace{-0.3cm}
-				
-				\begin{align}
-					\frac{\diff^{2} \Psi}{\diff\Phi^{2}}=&\frac{\diff f\left(\Phi\right)}{\diff \Phi}=\frac{\diff}{\diff\Phi}\left(\frac{\rho}{\epsilon\ix{0}}\right)=\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right) \nonumber \\
-					=&\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}\exp\left(\frac{e\Phi\left(x\right)}{k\ix{B}T\ix{e}}\right)-\frac{e}{m\ix{I}u\ix{0,I}^{2}}\left(1-\frac{2e\Phi\left(x\right)}{m\ix{I}u\ix{0,I}^{2}}\right)^{-\frac{3}{2}}\right) \label{eq:beding2} \\
-					\Phi=0 \hspace{0.3cm} \Rightarrow  u\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}} \label{eq:bohmkriteins}
+					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}u\ix{0,I}^{2}}\right) \label{eq:beding} \\
+					\Rightarrow \quad u\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
 				\end{align}
 				
 		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
