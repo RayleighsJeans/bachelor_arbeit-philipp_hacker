@@ -1,10 +1,6 @@
 
 function [mask, data]=plasmaglw_anls(pathname,messungxy,name,format,winkelaufloesung,nn)
 
-close all
-
-warning off
-
 tic
 
 N = winkelaufloesung;
@@ -28,7 +24,6 @@ Z = zeros(height, length, 'int32');
     imagesc(imcomplement(Z));
     title('Erstellen der Maske für die Intensitätsanalyse','FontSize',12);
     [x,y]=ginput(3);
-    close gcf;
 
 mid = [int32(x(1)),int16(y(1))];
 rin = int32(sqrt((x(2)-x(1))^2+(y(1)-y(2))^2));
@@ -62,8 +57,6 @@ end
 
 mask=int32(((delta.^2>rin.^2) & (delta.^2<rout.^2)));
 
-imagesc((Z'.*mask)');
-
 data = zeros(N,nn+1, 'double');
 
 intens=zeros(N,2, 'double');
@@ -71,19 +64,19 @@ intens=zeros(N,2, 'double');
 for k = 1:nn
 
     disp(k)
-    nstr=num2str(k,'%05d');
+    nstr=num2str(k-1,'%05d');
     fnamein=strcat(pathname,'/',name,nstr,format);
-    I = int32(imread(fnamein));
+    I = int32(imcomplement(imread(fnamein)));
 
-    tmp1 = I'.*mask;
+    tmp = I'.*mask;
     
     for i = 1:length
         
         for j = 1:height
 
-            if (tmp1(i,j)>0)
+            if (tmp(i,j)>0);
 
-                intens(ang_bin(i,j),1)= intens(ang_bin(i,j),1)+ I(j,i);
+                intens(ang_bin(i,j),1)= intens(ang_bin(i,j),1)+ tmp(j,i);
 
                 intens(ang_bin(i,j),2)=intens(ang_bin(i,j),2)+ 1;
 
@@ -91,19 +84,29 @@ for k = 1:nn
 
             end
             
-            data(ang_bin(i,j),nn+1) =(winkel(i,j)+pi);
+            data(ang_bin(i,j),nn+1) =360*(winkel(i,j)+pi)/(2*pi);
             
             data(:,k) = intens(:,1)./(intens(:,2));
-
+            
         end
        
     end
     
 end
 
+%keyboard
+
+X = linspace(1,nn,nn);
+
+imagesc((Z'.*mask)');
+
+imagesc(X,data(:,nn+1),data(:,1:nn));
+
 save(sprintf('%s//%s_%s_mask.mat',pathname,messungxy,name), 'mask');
 save(sprintf('%s//%s_%s_data.mat',pathname,messungxy,name), 'data');
 
 toc
+
+clear
 
 end

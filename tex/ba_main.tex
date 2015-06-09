@@ -138,7 +138,24 @@
 
 		\subsubsection{Child-Langmuir-Gesetz} \label{subsub:child-lang}
 		
-			Bla.	
+			Bla.
+			
+				\begin{figure}[H]
+					\centering
+					\begin{subfigure}[b]{0.6\textwidth}
+						\centering
+						\includegraphics[width=0.7\textwidth,height=0.5\textwidth]{figs/randschichtpiel.png}
+						\caption{}
+						\label{img:dichterand}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.375\textwidth}
+						\centering
+						\includegraphics[width=0.8\textwidth,height=0.8\textwidth]{figs/parabelpiel.png}
+						\caption{}
+						\label{img:parab}
+					\end{subfigure}
+					\caption{\fett{(a)}: Dichten-Verlauf in der Grenzschicht zu einer Metalloberfläche. In einer bestimmten Entfernung $d$ zur Wand fällt die Elektronendichte praktisch auf 0, woraus die lokale Aufhebung der Quasineutralität folgt. \fett{(b)}: (Eindimensionales) Harmonisches Potential mit extremaler Instabilität. Kleine Auslenkungen sorgen für große Kräfte.}
+				\end{figure}
 			
 		\subsubsection{Bohm-Kriterien}
 		
@@ -150,12 +167,16 @@
 					m\frac{\diff^{2}\vec{r}}{\diff t^{2}}=-\frac{\diff V}{\diff\vec{r}} \quad \Leftrightarrow \quad \Delta_{\vec{r}}\,\Phi=-\frac{\diff\Psi}{\diff\Phi}=f\left(\Phi\right)\hspace{-0.3cm}\overset{Poisson}{\overset{\mid}{=}}\hspace{-0.3cm}\frac{\rho}{\epsilon\ix{0}} \label{eq:pseudo}
 				\end{align}
 				
-			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung  in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohmkriterium}.
+			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung  in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohm-Kriterium}.
 			
 				\begin{align}
 					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}u\ix{0,I}^{2}}\right) \label{eq:beding} \\
 					\Rightarrow \quad u\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
 				\end{align}
+				
+			($v\ix{B,I}$ - \tilt{Bohm}-Geschwindigkeit; $u\ix{0,I}$ - Ionen-Driftgeschwindigkeit; $T\ix{e}$ - Elektronentemperatur; $m\ix{I}$ - Ionenmasse)\\
+			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=\frac{u\ix{0,I}}{v\ix{B,I}}$ angegeben werden.\\
+			Um zu erläutern, warum die Randschicht sich als Rückwirkung nicht in das Plasma ausdehnt, betrachten wir die Teilchenbewegung aus der Vor-Randschicht.
 				
 		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
 		
