@@ -1,5 +1,5 @@
 
-function [mask, data]=plasmaglw_anls(pathname,messungxy,name,format,winkelaufloesung,nn)
+function [mask, data]=plasmaglw_anls(pathname,messungxy,name,format,winkelaufloesung,nn,frequenz,fps)
 
 tic
 
@@ -7,14 +7,14 @@ N = winkelaufloesung;
 
 [height,length] = size(imread(strcat(pathname,'/',name,num2str(1,'%05i'),format)));
 
-Z = zeros(height, length, 'int32');
+Z = zeros(height, length, 'double');
 
     for k = 1:1
         nstr=num2str(k,'%05i');
         fnamein=strcat(pathname,'/',name,nstr,format);
         Size = size(imread(fnamein));
         fprintf('Größe=%d %d\n', Size);
-        Z = int32(imread(fnamein));
+        Z = double(imread(fnamein));
     end
     
     
@@ -25,9 +25,9 @@ Z = zeros(height, length, 'int32');
     title('Erstellen der Maske für die Intensitätsanalyse','FontSize',12);
     [x,y]=ginput(3);
 
-mid = [int32(x(1)),int16(y(1))];
-rin = int32(sqrt((x(2)-x(1))^2+(y(1)-y(2))^2));
-rout = int32(sqrt((x(3)-x(1))^2+(y(1)-y(3))^2));
+mid = [(x(1)),(y(1))];
+rin = (sqrt((x(2)-x(1))^2+(y(1)-y(2))^2));
+rout = (sqrt((x(3)-x(1))^2+(y(1)-y(3))^2));
 
 
 fprintf('Mitte=%d %d\n', mid);
@@ -36,34 +36,44 @@ fprintf('r_in=%d\n', rin);
 
 fprintf('r_out=%d\n', rout);
 
-delta = zeros(length, height, 'int32');
+delta = zeros(length, height, 'double');
 
-res_width=2*pi/N;
+res_ang=2*pi/N;
+
+res_rad=rout/N;
 
 
 for i = 1:length
     
     for j = 1:height
 
-        delta(i,j) = int32(sqrt(double((i-mid(1)).^2+(j-mid(2)).^2)));
+        delta(i,j) = (sqrt(double((i-mid(1)).^2+(j-mid(2)).^2)));
 
         winkel(i,j)=(atan2(double(j-mid(2)),double(i-mid(1))));
 
-        ang_bin(i,j)=floor(winkel(i,j)/res_width)+N/2+1;
+        ang_bin(i,j)=floor(winkel(i,j)/res_ang)+N/2+1;
+        
+        rad_bin(i,j)=floor(delta(i,j)/res_rad)+1;
 
     end
 
 end
 
-mask=int32(((delta.^2>rin.^2) & (delta.^2<rout.^2)));
+mask=(((delta.^2>rin.^2) & (delta.^2<rout.^2)));
 
 data = zeros(N,nn+1, 'double');
 
-intens=zeros(N,2, 'double');
+data2 = zeros(N,nn+1, 'double');
+
+intens1=zeros(N,2, 'double');
+
+intens2=zeros(N,2, 'double');
+
+frames = floor(fps/frequenz)+1;
 
 Mean_Image=zeros(length,height);
 
-for k=2:11
+for k=2:frames+1
     
     nstr=num2str(k-1,'%05d');
     fnamein=strcat(pathname,'/',name,nstr,format);
@@ -72,16 +82,16 @@ for k=2:11
     
 end
 
-Mean_Image=Mean_Image/10;
-    
+Mean_Image=Mean_Image/(frames+1);
 
 for k = 2:nn
 
     disp(k)
     nstr=num2str(k-1,'%05d');
     fnamein=strcat(pathname,'/',name,nstr,format);
-    I = int32(imcomplement(imread(fnamein)));
-    intens=zeros(N,2);
+    I = double(imcomplement(imread(fnamein)));
+%    intens1=zeros(N,2);
+    intens2=zeros(N,2);
 
     tmp = I'.*mask;
     
@@ -91,9 +101,13 @@ for k = 2:nn
 
             if (tmp(i,j)>0);
 
-                intens(ang_bin(i,j),1)= intens(ang_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
+%                intens1(ang_bin(i,j),1)= intens1(ang_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
 
-                intens(ang_bin(i,j),2)=intens(ang_bin(i,j),2)+ 1;
+%                intens1(ang_bin(i,j),2)=intens1(ang_bin(i,j),2)+ 1;
+                
+                intens2(rad_bin(i,j),1)= intens2(rad_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
+
+                intens2(rad_bin(i,j),2)=intens2(rad_bin(i,j),2)+1;               
 
             else
 
@@ -104,17 +118,21 @@ for k = 2:nn
        
     end
             
-    data(:,k) = intens(:,1)./(intens(:,2));
+%    data1(:,k) = intens1(:,1)./(intens1(:,2));
+    
+    data2(:,k) = intens2(:,1)./(intens2(:,2));
     
 end
 
-data(:,nn+1) =360*linspace(0,1,N);
+%data1(:,nn+1) = 360*linspace(0,1,N);
+
+data2(:,nn+1) = rout*linspace(0,1,N);
 
 X = linspace(1,nn,nn);
 
-imagesc((Z'.*mask)');
+%imagesc((Z'.*mask)');
 
-imagesc(X,data(:,nn+1),data(:,1:nn));
+imagesc(X,data2(:,nn+1),data2(:,2:nn));
 
 save(sprintf('%s//%s_%s_mask.mat',pathname,messungxy,name), 'mask');
 save(sprintf('%s//%s_%s_data.mat',pathname,messungxy,name), 'data');
