@@ -61,12 +61,27 @@ data = zeros(N,nn+1, 'double');
 
 intens=zeros(N,2, 'double');
 
-for k = 1:nn
+Mean_Image=zeros(length,height);
+
+for k=2:11
+    
+    nstr=num2str(k-1,'%05d');
+    fnamein=strcat(pathname,'/',name,nstr,format);
+    I = double(imcomplement(imread(fnamein)));
+    Mean_Image=Mean_Image+I';
+    
+end
+
+Mean_Image=Mean_Image/10;
+    
+
+for k = 2:nn
 
     disp(k)
     nstr=num2str(k-1,'%05d');
     fnamein=strcat(pathname,'/',name,nstr,format);
     I = int32(imcomplement(imread(fnamein)));
+    intens=zeros(N,2);
 
     tmp = I'.*mask;
     
@@ -76,25 +91,24 @@ for k = 1:nn
 
             if (tmp(i,j)>0);
 
-                intens(ang_bin(i,j),1)= intens(ang_bin(i,j),1)+ tmp(j,i);
+                intens(ang_bin(i,j),1)= intens(ang_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
 
                 intens(ang_bin(i,j),2)=intens(ang_bin(i,j),2)+ 1;
 
             else
 
             end
-            
-            data(ang_bin(i,j),nn+1) =360*(winkel(i,j)+pi)/(2*pi);
-            
-            data(:,k) = intens(:,1)./(intens(:,2));
-            
+             
         end
+        
        
     end
+            
+    data(:,k) = intens(:,1)./(intens(:,2));
     
 end
 
-%keyboard
+data(:,nn+1) =360*linspace(0,1,N);
 
 X = linspace(1,nn,nn);
 
