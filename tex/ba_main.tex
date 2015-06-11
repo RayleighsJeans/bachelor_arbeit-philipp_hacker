@@ -126,7 +126,7 @@
 	
 		\subsection{Grenzschichten von Plasmen}
 		
-			Die Grenzschichten zu Metallen von Plasmen sind dunkler, als die eigentliche Entladung. Dies ist auf einen Elektronenmangel zur\"uckruf\"uhren, da diese sonst im Hauptvolumen die Neutralgasatome zur Fluoreszenz anregen. Damit kann die Quasineutralit\"at der Entladung dort nicht mehr gelten und es entsteht eine positive Raumladungszone.\\
+			Die Grenzschichten Plasmen zu Metallen sind dunkler, als die eigentliche Entladung. Dies ist auf einen Elektronenmangel zur\"uckruf\"uhren. Im Hauptvolumen werden Neutralgasatome durch die Wechselwirkung mit den Elektronen zur Fluoreszenz angeregt. Die Quasineutralit\"at der Entladung kann dort somit nicht mehr gelten. Es folgt, dass eine Randschicht automatisch eine positive Raumladungszone ist. \\
 			Auf Grund der wesentlich gr\"o{\ss}eren Beweglichtkeit $\mu\ix{e}$ und thermischen Geschwindigkeit $v\ix{th,e}$, wird eine Wand in einem Plasma h\"aufiger von Elektronen getroffen, als von den korrespondierenden Ionen. Betrachtet man nur die Oberfl\"ache dieser, so kann man annehmen, dass die Begrenzung einer Gasentlandung negativ aufgeladen ist. Das Potential, welches station\"ar unter dem Einfluss eines ``konstanten'' Plasmas wird, hei{\ss}t \tilt{floating}-Potential $\Phi\ix{W,fl}$.
 			
 %				\begin{figure}
@@ -138,7 +138,24 @@
 
 		\subsubsection{Child-Langmuir-Gesetz} \label{subsub:child-lang}
 		
-			Bla.
+		Die negative Aufladung einer Begrenzung eines Plasmas soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll\frac{k\ix{B}T\ix{e}}{e}\,$. Hier soll die Betrachtung in einer Dimension ausreichen - es lässt sich leicht der dreidimensionale Zusammenhang daraus erweitern. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ wie
+		
+			\begin{align}
+				n\ix{e}\left(x\right)=n\ix{e}\left(-d\right)f\ix{B}\left(\Phi\right)=n\ix{e}\left(-d\right)\exp\left(\frac{e\left(\Phi\left(x\right)-\Phi\left(-d\right)\right)}{k\ix{B}T\ix{e}}\right)
+			\end{align}
+			
+		Die Elektronendichte fällt damit exponentiell in Richtung der Wand ab. Das bedeutet, dass nur noch vorrangig Ionen ungehindert einströmen können. Es ist anzunehmen, dass die Randschichtausdehnung $d\ll\lambda\ix{mfp}$ die mittlere freie Weglänge des Plasma ist und die Ionen stoßfrei in darin eintreten.\\
+		An der Grenze zur Vorschicht (siehe \ref{img:dichterand}) haben die Ionen die Geschwindigkeit $v\ix{I,0}$ und das Potential der Wand verschwindet gerade. Für den Dichteverlauf der Ionen folgt:
+		
+			\begin{align}
+				n\ix{I}\left(x\right)=n\ix{I}\left(-d\right)\left(1-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{\frac{1}{2}}
+			\end{align}
+			
+		Nimmt man weiterhin an, dass die kinetische Energie $\frac{m\ix{I}v\ix{I,0}^2}{2}\ll |e\Phi\left(x\right)|$ die Beschleunigung in der Randschicht ist, folgt somit als Bestimmungsgleichung Gl. (\ref{eq:potential}) für $\Phi\left(x\right)$ nach Poisson. Um dabei das korrekte Potential in der Grenzschicht zu erhalten, muss die Rückwirkung der Ionen auf dieses beachtet werden.
+		
+			\begin{align}
+				\Delta\Phi\cong-\frac{en\ix{I}\left(-d\right)}{\epsilon\ix{0}}\left(-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{-\frac{1}{2}}
+			\end{align}
 			
 				\begin{figure}[H]
 					\centering
@@ -170,13 +187,34 @@
 			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung  in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:child-lang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohm-Kriterium}.
 			
 				\begin{align}
-					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}u\ix{0,I}^{2}}\right) \label{eq:beding} \\
-					\Rightarrow \quad u\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
+					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\epsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\epsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}v\ix{0,I}^{2}}\right) \label{eq:beding} \\
+					\Rightarrow \quad v\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
 				\end{align}
 				
-			($v\ix{B,I}$ - \tilt{Bohm}-Geschwindigkeit; $u\ix{0,I}$ - Ionen-Driftgeschwindigkeit; $T\ix{e}$ - Elektronentemperatur; $m\ix{I}$ - Ionenmasse)\\
-			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=\frac{u\ix{0,I}}{v\ix{B,I}}$ angegeben werden.\\
-			Um zu erläutern, warum die Randschicht sich als Rückwirkung nicht in das Plasma ausdehnt, betrachten wir die Teilchenbewegung aus der Vor-Randschicht.
+			($v\ix{B,I}$ - \tilt{Bohm}-Geschwindigkeit; $v\ix{0,I}$ - Ionen-Driftgeschwindigkeit; $T\ix{e}$ - Elektronentemperatur; $m\ix{I}$ - Ionenmasse)\\
+			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=\frac{v\ix{0,I}}{v\ix{B,I}}$ angegeben werden.\\
+			Um zu erläutern, warum die Randschicht sich als Rückwirkung nicht in das Plasma ausdehnt, betrachten wir die Teilchenbewegung aus der Vor-Randschicht. Hier existiert ein elektrisches Feld, welches die Ionen auf die Geschwindigkeit $v\ix{B}$ in Richtung Wand beschleunigt. Außerdem gilt in ihr noch die Quasineutralitäts-Bedingung:
+			
+				\begin{align}
+					n\ix{I}\left(x\right)=n\ix{I,0}\exp\left(\frac{e\Phi\left(x\right)}{k\ix{B}T\ix{e}}\right)=n\ix{e}\left(x\right)\,\, .
+				\end{align}
+				
+			Hierbei ist $\Phi\left(x\right)$ das Potential der Vorschicht aus Abschnitt  (\ref{subsub:child-lang}). 
+			Da Stöße der Frequenz $\nu\ix{N,I}$ der Ionen mit den Neutralgasatomen einen nicht vernachlässigbaren Einfluss auf deren Strom haben, muss die Geschwindigkeitsverteilung umgeschrieben werden.
+			
+				\begin{align}
+					\frac{\diff v\ix{I}}{\diff x}=\frac{\nu\ix{N,I}v\ix{I}^2}{v\ix{B}^2-v\ix{I}^2} \label{eq:geschwindverteil}
+				\end{align}
+				
+			Aus der Singularität von Gl. (\ref{eq:geschwindverteil}) in $v\ix{I}=v\ix{B}$ und der Kenntnis über das Wandpotential lässt sich die Ausdehnung der Randschicht $d$ bestimmen. Offensichtlich werden Ionen mit einer Geschwindigkeit $v\ix{I}<v\ix{B}$ in der Vorschicht beschleunigt. Geschwindigkeiten größer als die Bohm-Geschwindigkeit kommen dort nicht vor, da dies nach Gl (\ref{eq:bohmkriteins}) nur in der Randschicht der Fall sein darf. \\
+			Zusammen mit dem ersten \tilt{Bohm-Kriterium} folgt, dass am Übergang der Vor- zur Randschicht die Ionen $v\ix{B}$ erreichen müssen, damit sich eine positive Raumladungszone ausbilden kann.
+			
+				\begin{align}
+					M=1 \quad \Leftrightarrow \quad v\ix{I}\left(-d\right)=v\ix{B} \label{eq:bohmkritzwei}
+				\end{align}
+				
+			Lokal heißt das, dass bei $x=-d$ die Dichten bereits auf $\approx0,66n\ix{e,0}$ abgefallen sind (siehe \ref{img:dichterand}) und das Potential durch die Aufladung der Wand circa $-\frac{k\ix{B}T\ix{e}}{2e}$ beträgt.\\
+			Ein Plasma "`sieht"' damit seine Randschicht nicht, da sich die notwendige Dynamik der entsprechenden Ladungsträger auf diese beschränkt und sich nicht beliebig ausdehnen kann. Mit anderen Worten: eine Randschicht bildet sich nur an Orten des Elektronenmangels und lokal negativer Potentiale aus.
 				
 		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
 		
@@ -362,7 +400,7 @@
 				
 					\begin{align}
 						p\ix{Strahl}=\frac{\diff p\ix{ph}}{A\ix{L}\diff t}=&\frac{\diff N\ix{ph}}{A\ix{La}\diff t}\frac{h}{\lambda}=\frac{I\ix{L}}{c} \nonumber \\
-						F\ix{Strahl}=&\gamma\frac{I}{c}\pi a^2 \label{eq:strahl}
+						F\ix{Strahl}=&\gamma\frac{I\ix{L}}{c}\pi a^2 \label{eq:strahl}
 					\end{align}
 					
 				($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\

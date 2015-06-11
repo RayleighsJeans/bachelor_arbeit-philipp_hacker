@@ -1,9 +1,11 @@
 
-function [mask, data]=plasmaglw_anls(pathname,messungxy,name,format,winkelaufloesung,nn,frequenz,fps)
+function [Z, X, data1, data2, Mean_Image, ang_bin, rad_bin, mask, frames]=plasmaglw_anls(pathname,messungxy,name,format,angres,radres,nn,frequenz,fps)
 
 tic
 
-N = winkelaufloesung;
+N = angres;
+
+M = radres;
 
 [height,length] = size(imread(strcat(pathname,'/',name,num2str(1,'%05i'),format)));
 
@@ -40,7 +42,7 @@ delta = zeros(length, height, 'double');
 
 res_ang=2*pi/N;
 
-res_rad=rout/N;
+res_rad=rout/M;
 
 
 for i = 1:length
@@ -90,7 +92,7 @@ for k = 2:nn
     nstr=num2str(k-1,'%05d');
     fnamein=strcat(pathname,'/',name,nstr,format);
     I = double(imcomplement(imread(fnamein)));
-%    intens1=zeros(N,2);
+    intens1=zeros(N,2);
     intens2=zeros(N,2);
 
     tmp = I'.*mask;
@@ -101,9 +103,9 @@ for k = 2:nn
 
             if (tmp(i,j)>0);
 
-%                intens1(ang_bin(i,j),1)= intens1(ang_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
+                intens1(ang_bin(i,j),1)= intens1(ang_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
 
-%                intens1(ang_bin(i,j),2)=intens1(ang_bin(i,j),2)+ 1;
+                intens1(ang_bin(i,j),2)=intens1(ang_bin(i,j),2)+ 1;
                 
                 intens2(rad_bin(i,j),1)= intens2(rad_bin(i,j),1)+ (tmp(i,j)-Mean_Image(i,j));
 
@@ -118,24 +120,25 @@ for k = 2:nn
        
     end
             
-%    data1(:,k) = intens1(:,1)./(intens1(:,2));
+    data1(:,k) = intens1(:,1)./(intens1(:,2));
     
     data2(:,k) = intens2(:,1)./(intens2(:,2));
     
 end
 
-%data1(:,nn+1) = 360*linspace(0,1,N);
+data1(:,nn+1) = 360*linspace(0,1,N);
 
 data2(:,nn+1) = rout*linspace(0,1,N);
 
 X = linspace(1,nn,nn);
 
-%imagesc((Z'.*mask)');
+Z = (Z'.*mask)';
 
-imagesc(X,data2(:,nn+1),data2(:,2:nn));
+%imagesc(X,data2(:,nn+1),data2(:,2:nn));
 
-save(sprintf('%s//%s_%s_mask.mat',pathname,messungxy,name), 'mask');
-save(sprintf('%s//%s_%s_data.mat',pathname,messungxy,name), 'data');
+%imagesc(X,data1(:,nn+1),data1(:,2:nn));
+
+save(sprintf('%s//%s_%s_output.mat',pathname,messungxy,name), 'Z', 'X', 'data1', 'data2', 'Mean_Image', 'ang_bin', 'rad_bin', 'mask', 'frames');
 
 toc
 
