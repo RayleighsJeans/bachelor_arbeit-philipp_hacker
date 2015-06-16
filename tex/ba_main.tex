@@ -124,12 +124,57 @@
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
 	
-		\subsection{Kapazitive Radiofrequenz-Plasmen}
+		\subsection{Kapazitiv gekoppelte Radiofrequenz-Plasmen}
 		
-			Der in diesem Versuch genutzte Aufbau entspricht dem eines kapazitiv gekoppelten Niederdruck-Radiofreuquenz-Plasmas. Hierbei ist die Entladung wie ein horizontal ausgerichteter Parallel-Plattenkondensator angeordnet, wobei das Dielektrikum das Plasma sei, die untere Elektrode mit einem Signal im $\unit{MHz}$-Bereich betrieben wird und die andere auf Massepotential liegt. Das elektrische Feld resultiert hierbei aus den Oberflächenladungen der Elektroden, wobei mit unterschiedlichen \tilt{rf}-Signalen (\tilt{radio frequency}) auch verschiedene Betriebsregime realisiert werden: im $\alpha$-Regime findet Ionisation auf Grund von Elektronenlawinen statt. Im $\gamma$-Regime erfolgt die Emission von Sekundärelektronen in die Entladung durch einen Strom von Ionen auf die getriebene Elektrode.\\
-			Die \tilt{rf}-Spannung sorgt weiterhin für die nötige Homogenität des Plasmas, da aufgrund dessen (wie im $\gamma$-Regime) ein Verschiebungsstrom zwischen Entladungsvolumen und Elektrode fließt und damit die Kontaktierung dieser sehr isotrop gestaltet. In Aufbauten, in welchen die Flächen der Elektroden nicht gleich sind, fließt wegen der unterschiedlichen Potentialverläufe in den Randschichten (siehe Abschn. (\ref{sub:rand})) eine Gleichspannung, die sogenannte \tilt{self-bias}. Das ist insbesondere der Fall für das Experiment dieser Arbeit, da hier die gesamte Kammer als Elektrode zur Masse dient.\\
-			Einem Plasma kann man eine, für \tilt{rf}-Spannungen nicht verschwindende Impedanz 
+			Der in diesem Versuch genutzte Aufbau entspricht dem eines kapazitiv gekoppelten Niederdruck-Radiofreuquenz-Plasmas. Hierbei ist die Entladung wie ein horizontal ausgerichteter, paralleler Plattenkondensator angeordnet, wobei das Dielektrikum das Plasma sei, die untere Elektrode mit einem Signal im $\unit{MHz}$-Bereich betrieben wird und die andere auf Massepotential liegt. Das elektrische Feld resultiert hierbei aus den Oberflächenladungen der Elektroden, wobei mit unterschiedlichen \tilt{rf}-Signalen (\tilt{radio frequency}) auch verschiedene Betriebsregime realisiert werden: im $\alpha$-Regime findet Ionisation auf Grund von Elektronenlawinen statt. Im $\gamma$-Regime erfolgt die Emission von Sekundärelektronen in die Entladung durch einen Strom von Ionen auf die getriebene Elektrode.\\
+			Die \tilt{rf}-Spannung sorgt weiterhin für die nötige Homogenität des Plasmas, da aufgrund dessen (wie im $\gamma$-Regime) ein Verschiebungsstrom zwischen Entladungsvolumen und Elektrode fließt (siehe Abschn. (\ref{subsub:self-bias})) und damit die Kontaktierung dieser sehr isotrop gestaltet. In Aufbauten, in welchen die Flächen der Elektroden nicht gleich sind, fließt wegen der unterschiedlichen Potentialverläufe in den Randschichten (siehe Abschn. (\ref{sub:rand})) zusätzlich eine Gleichspannung, die sogenannte \tilt{self-bias}. Das ist insbesondere der Fall für das Experiment dieser Arbeit, da hier die gesamte Kammer als Elektrode zur Masse dient.
+
+		\subsubsection{Verschiebungsstrom und \tilt{self-bias}} \label{subsub:self-bias}
+		
+		\subsubsection*{Verschiebungsstrom}
+	
+		Die Elektronen eines Plasmas über einer \tilt{rf}-getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$ der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$. Nimmt man an, dass die Randschicht der Dicke $a$ frei von Elektronen ist (siehe Abschn. (\ref{sub:rand})) und die Ionendichte dort konstant $n\ix{0,I}$, so folgt für das elektrische Feld der positiven Raumladungszone an der Kammerwand $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$. Lädt sich die Entladungsbegrenzung nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasmavolumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält.\\
+		Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdichte $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$:
+		
+			\begin{align}
+				\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,.
+			\end{align}
 			
+		\subsubsection*{\tilt{self-bias}}
+		
+				\begin{figure}
+					\centering
+					\begin{subfigure}[b]{0.48\textwidth}
+						\centering
+						\includegraphics[width=0.7\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel1.png}
+						\caption{}
+						\label{img:ungleichesplasma}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.48\textwidth}
+						\centering
+						\includegraphics[width=0.4\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel2.png}
+						\caption{}
+						\label{img:ersatzschaltbild}
+					\end{subfigure}
+					\caption{\fett{(a)}:Schema eines Plasmas mit ungleichen Elektrodenflächen. Die obere ist hierbei kleiner und gleichzeitig mit dem \tilt{rf}-Signal betrieben. \fett{(b)}:Ersatzschaltbild einer Entladung mit der \tilt{bulk}-Impedanz $Z\ix{P}$ (Hauptvolumen) und den Randschichten: eine Diode als Symbol für den "`Elektronenfluss"' aus der Schicht hinaus, der Widerstand $R\ix{j}$ als Ionenstrom und die Kapazität $C\ix{j}$ der pos. Raumladungszone.}
+				\end{figure}
+		
+			Einem Plasma kann man eine, für \tilt{rf}-Spannungen der Frequenz $\omega$ nicht verschwindende Impedanz $Z\ix{P}$ zuordnen. Für das Entladungsvolumen der Permittivität $\varepsilon\ix{P}$, der Kapazität $C\ix{P}$ auf der Querschnittsfläche $A$ und Dicke $b$, in welcher die freien Elektronen mit der Frequenz $\nu\ix{e,N}$ mit den Neutralgasatomen stoßen, gilt:
+			
+			\begin{align}
+			\varepsilon\ix{P}=1-&\frac{\omega\ix{P,e}^2}{\omega\left(\omega-\imag\nu\ix{e,N}\right)} \quad \quad C\ix{P}=\varepsilon\ix{P}C\ix{0}=\varepsilon\ix{P}\varepsilon\ix{0}\frac{A}{b} \\
+			&Z\ix{P}=\left(\imag\omega C\ix{P}+ \frac{1}{\frac{1}{\omega\ix{P,e}^2C\ix{0}}\left(\nu\ix{e,N}+\imag\omega\right)}\right)^{-1}
+			\end{align}
+			
+			Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`elektronisches Schaltkreises"' der Entladung gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
+			Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ und das Plasmapotential $\Phi\ix{P}$:
+			
+				\begin{align}
+					U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right)
+				\end{align}
+				
+			
+
 		\subsection{Grenzschichten einer Entladung}\label{sub:rand}
 		
 			Im Hauptvolumen eines Plasmas werden die Neutralgasatome durch Wechselwirkungen mit den Elektronen zur Fluoreszenz angeregt. Die Grenzschichten von Gasentladung zu Metallen sind jedoch dunkler, als das eigentliche Plasma. Dies ist somit auf einen Elektronenmangel zur\"uckruf\"uhren. Die Quasineutralit\"at kann dort somit nicht mehr gelten. Es folgt, dass eine Randschicht automatisch eine positive Raumladungszone ist. \\
@@ -137,7 +182,7 @@
 
 		\subsubsection{Child-Langmuir-Gesetz} \label{subsub:childlang}
 		
-		Die negative Aufladung einer Wand in einem Plasmas soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll\frac{k\ix{B}T\ix{e}}{e}\,$. Die Betrachtung in einer Dimension soll hier genügen - es lässt sich leicht der dreidimensionale Zusammenhang daraus erweitern. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ ("`\tilt{boltzmann-artige}"' Elektronen) wie
+		Die negative Aufladung einer Wand in einem Plasmas soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll k\ix{B}T\ix{e}/e\,$. Die Betrachtung in einer Dimension soll hier genügen - es lässt sich leicht der dreidimensionale Zusammenhang daraus erweitern. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ ("`\tilt{boltzmann-artige}"' Elektronen) wie
 		
 			\begin{align}
 				n\ix{e}\left(x\right)=n\ix{e}\left(-d\right)f\ix{B}\left(\Phi\right)=n\ix{e}\left(-d\right)\exp\left(\frac{e\left(\Phi\left(x\right)-\Phi\left(-d\right)\right)}{k\ix{B}T\ix{e}}\right) \, .
@@ -150,7 +195,7 @@
 				n\ix{I}\left(x\right)=n\ix{I}\left(-d\right)\left(1-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{\frac{1}{2}}
 			\end{align}
 			
-		Nimmt man weiterhin an, dass die kinetische Energie $\frac{m\ix{I}v\ix{I,0}^2}{2}\ll |e\Phi\left(x\right)|$ die Beschleunigung in der Randschicht ist, folgt somit die Bestimmungsgleichung (\ref{eq:potential}) für $\Phi\left(x\right)$ nach Poisson. Um dabei das korrekte Potential in der Grenzschicht zu erhalten, muss die Rückwirkung der Ionen auf dieses beachtet werden.
+		Nimmt man weiterhin an, dass die kinetische Energie $m\ix{I}v\ix{I,0}^2/2\ll |e\Phi\left(x\right)|$ die Beschleunigung in der Randschicht ist, folgt somit die Bestimmungsgleichung (\ref{eq:potential}) für $\Phi\left(x\right)$ nach Poisson. Um dabei das korrekte Potential in der Grenzschicht zu erhalten, muss die Rückwirkung der Ionen auf dieses beachtet werden.
 		
 			\begin{align}
 				\Delta\Phi\cong-\frac{en\ix{I}\left(-d\right)}{\varepsilon\ix{0}}\left(-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{-\frac{1}{2}} \label{eq:potential}
@@ -203,7 +248,7 @@
 				\end{align}
 				
 			($v\ix{B,I}$ - \tilt{Bohm}-Geschwindigkeit; $v\ix{0,I}$ - Ionen-Driftgeschwindigkeit; $T\ix{e}$ - Elektronentemperatur; $m\ix{I}$ - Ionenmasse)\\
-			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=\frac{v\ix{0,I}}{v\ix{B,I}}$ angegeben werden.\\
+			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=v\ix{0,I}/v\ix{B,I}$ angegeben werden.\\
 			Um zu erläutern, warum die Randschicht sich als Rückwirkung nicht in das Plasma ausdehnt, betrachten wir die Teilchenbewegung aus der Vor-Randschicht. Hier existiert ein elektrisches Feld, welches die Ionen auf die Geschwindigkeit $v\ix{B}$ in Richtung Wand beschleunigt. Außerdem gilt in ihr noch die Quasineutralitäts-Bedingung:
 			
 				\begin{align}
@@ -224,7 +269,7 @@
 					M=1 \quad \Leftrightarrow \quad v\ix{I}\left(-d\right)=v\ix{B} \label{eq:bohmkritzwei}
 				\end{align}
 				
-			Lokal heißt das, dass bei $x=-d$ die Dichten bereits auf $\approx0,66n\ix{e,0}$ abgefallen sind (siehe \ref{img:dichterand}) und das Potential durch die Aufladung der Wand circa $-\frac{k\ix{B}T\ix{e}}{2e}$ beträgt.\\
+			Lokal heißt das, dass bei $x=-d$ die Dichten bereits auf $\approx0,66n\ix{e,0}$ abgefallen sind (siehe \ref{img:dichterand}) und das Potential durch die Aufladung der Wand circa $-k\ix{B}T\ix{e}/2e$ beträgt.\\
 			Ein Plasma "`sieht"' damit seine Randschicht nicht, da sich die notwendige Dynamik der entsprechenden Ladungsträger auf diese beschränkt und sich nicht beliebig ausdehnen kann. Mit anderen Worten: eine Randschicht bildet sich nur an Orten des Elektronenmangels und lokal negativer Potentiale aus.
 				
 		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
@@ -270,7 +315,7 @@
 			\end{align}
 			
 		($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
-		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-\frac{2e\Phi\ix{P}}{m\ix{e}}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{\frac{8k\ix{B}T\ix{j}}{\pi m\ix{j}}}$ die thermischen Geschwindikeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
+		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-2e\Phi\ix{P}/m\ix{e}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{8k\ix{B}T\ix{j}/\pi m\ix{j}}$ die thermischen Geschwindikeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
 		Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
 		
 		\subsubsection{Neutralgas-Ionen-Stöße}
