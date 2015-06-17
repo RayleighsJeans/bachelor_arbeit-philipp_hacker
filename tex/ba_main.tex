@@ -167,13 +167,17 @@
 			\end{align}
 			
 			Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`elektronisches Schaltkreises"' der Entladung gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
-			Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ und das Plasmapotential $\Phi\ix{P}$:
+			Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ über die Entladung und das Plasmapotential $\Phi\ix{P}$:
 			
 				\begin{align}
-					U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right)
+					U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right) \label{eq:selfbiaseins}
 				\end{align}
 				
+			Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es entsteht sozusagen ein Kurzschluss in der Region der Randschicht, wenn das Plasmapotential negativ im Vergleich zur Elektrode wird. Es folgt somit mit Gl. (\ref{eq:selfbiaseins}) zusammen:
 			
+				\begin{align}
+					\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0
+				\end{align}
 
 		\subsection{Grenzschichten einer Entladung}\label{sub:rand}
 		
