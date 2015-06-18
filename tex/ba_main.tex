@@ -134,7 +134,7 @@
 		\subsubsection*{Verschiebungsstrom}
 	
 		Die Elektronen eines Plasmas über einer \tilt{rf}-getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$ der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$. Nimmt man an, dass die Randschicht der Dicke $a$ frei von Elektronen ist (siehe Abschn. (\ref{sub:rand})) und die Ionendichte dort konstant $n\ix{0,I}$, so folgt für das elektrische Feld der positiven Raumladungszone an der Kammerwand $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$. Lädt sich die Entladungsbegrenzung nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasmavolumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält.\\
-		Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdichte $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$:
+		Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdicke $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$:
 		
 			\begin{align}
 				\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,.
@@ -176,9 +176,19 @@
 			Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es entsteht sozusagen ein Kurzschluss in der Region der Randschicht, wenn das Plasmapotential negativ im Vergleich zur Elektrode wird. Es folgt somit mit Gl. (\ref{eq:selfbiaseins}) zusammen:
 			
 				\begin{align}
-					\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0
+					\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0\, \, . \label{eq:ungleichungen}
 				\end{align}
-
+				
+			Liegt die getriebene Elektrode ohne zwischengeschalteten ``Puffer'' direkt an der \tilt{rf}-Signalquelle, so gilt zumindest f\"ur eine Ungleichung aus (\ref{eq:ungleichungen}) die Gleichheit. Wird hingegen die Elektrode kapazitiv gekoppelt, dh. zwischen diese und den Generator ein Kondensator geschaltet, so kann in einer Periode der \tilt{rf}-Anregung kein Nettostrom von der Quelle flie{\ss}en.\\
+			W\"ahrend einer Periode flie{\ss}en deswegen gleiche Elektronenstr\"ome auf beide Elektroden, was zur Folge hat, dass das minimale Plasmapotential das Massepotential wid und das maximale zu dem der Anregung. F\"ur den Gleichspannungsanteil, \tilt{self-bias} $U\ix{GS}$ und das mittlere Plasmapotential $\overline{\Phi\ix{P}}$ folgt:
+			
+				\begin{align}
+					\overline{\Phi\ix{P}}=\frac{1}{2}\left(U\ix{GS}+U\ix{rf}\right) \quad \quad U\ix{GS}=\frac{C\ix{1}-C\ix{2}}{C\ix{1}+C\ix{2}}U\ix{rf} \,\, .\label{eq:selfbiaszwei} 
+				\end{align}
+				
+			Diese Zusammenh\"ange gelten allgemein f\"ur dieses Experiment. Die Anregungsfreuquenz $\omega$ liegt in diesem Fall bei $\unit[13,56]{MHz}$.\\
+			Ist die Frequenz klein respektive \"ublicher Zeitskalen der Entladung, so wird der Strom aus den verdr\"angten Elektronen $j\ix{L}$ gr\"o{\ss}er als der Verschiebungsstrom durch die Randschichtschwankung $j\ix{V}\,$. 
+			
 		\subsection{Grenzschichten einer Entladung}\label{sub:rand}
 		
 			Im Hauptvolumen eines Plasmas werden die Neutralgasatome durch Wechselwirkungen mit den Elektronen zur Fluoreszenz angeregt. Die Grenzschichten von Gasentladung zu Metallen sind jedoch dunkler, als das eigentliche Plasma. Dies ist somit auf einen Elektronenmangel zur\"uckruf\"uhren. Die Quasineutralit\"at kann dort somit nicht mehr gelten. Es folgt, dass eine Randschicht automatisch eine positive Raumladungszone ist. \\
