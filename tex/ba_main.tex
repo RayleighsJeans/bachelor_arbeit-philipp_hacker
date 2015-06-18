@@ -125,7 +125,7 @@
 	
 	\section{Physikalische Grundlagen}\label{sec:physg}
 	
-		\subsection{Kapazitiv gekoppelte Radiofrequenz-Plasmen}
+		\subsection{Kapazitiv gekoppelte Radiofrequenz-Plasmen} \label{sub:kaprfplasm}
 		
 			Der in diesem Versuch genutzte Aufbau entspricht dem eines kapazitiv gekoppelten Niederdruck-Radiofreuquenz-Plasmas.\\
 			Ein Plasma ist ein quasineutrales Gas aus freien Ladungsträgern und, dem Ionisierungsgrad der Entladung entsprechend, neutralen Atomen oder Molekülen. Die Spezies der Ladungen sind im allgemeinen Elektronen und Ionen, wobei der Begriff quasineutral die Bedingung $n\ix{e}=n\ix{I}$ der Dichten auf einer speziellen Längenskala fordert (siehe unten). Für ein Plasma gibt es verschiedene physikalischen Kenngrößen, welche in Tabelle \ref{tab:kenngroessen} inklusive ihrer Bedeutungen einmal zusammengefasst wurden.\\
@@ -142,7 +142,7 @@
 							
 							\hline thermisches Geschwindigkeit & $v\ix{th,j}^2=\frac{k\ix{B}T\ix{j}}{m\ix{j}}$ & mittlere Geschwindigkeit aus der Definition der kinetischen Gastheorie \\ 
 							
-							\hline mittlerer Teilchenabstand & $b=\frac{\hbar}{m\ix{j}v\ix{th,j}}$ & gemittelter Teilchenabstand, entspricht thermischer \mbox{\tilt{deBroglie}-Wellenlänge} \\ 
+							\hline mittlerer Teilchenabstand & $b=\frac{\hbar}{m\ix{j}v\ix{th,j}}$ & gemittelter Teilchenabstand, entspricht thermischer \mbox{\tilt{de-Broglie}-Wellenlänge} \\ 
 							
 							\hline Yukawa-Potential & $\Phi=\frac{Q}{4\pi\varepsilon|\vec{r}|}\euler^{-\frac{|\vec{r}|}{\lambda\ix{D}}}$ & elektrostatisches Wechselwirkungspotential einer Probeladung $Q$ in einem Plasma (Vergleich Pionen-Austausch) \\
 							
@@ -341,7 +341,7 @@
 			Lokal heißt das, dass bei $x=-d$ die Dichten bereits auf $\approx0,66n\ix{e,0}$ abgefallen sind (siehe \ref{img:dichterand}) und das Potential durch die Aufladung der Wand circa $-k\ix{B}T\ix{e}/2e$ beträgt.\\
 			Ein Plasma "`sieht"' damit seine Randschicht nicht, da sich die notwendige Dynamik der entsprechenden Ladungsträger auf diese beschränkt und sich nicht beliebig ausdehnen kann. Mit anderen Worten: eine Randschicht bildet sich nur an Orten des Elektronenmangels und lokal negativer Potentiale aus.
 				
-		\subsection{Aufladung von Staubpartikeln}\label{subsec:ströme}
+		\subsection{Aufladung von Staubpartikeln}\label{sub:ströme}
 		
 			Die Ladung eines Fremdteilchens (Staub) in einem Plasma ist eine dynamische Größe. Sie ist zeitlich veränderlich, als auch abhängig von den Plasmaparametern, den Partikeleigenschaften sowie dessen Trajektorie in der Entladung. Offensichtlich ergibt sich die Ladung eines Teilchens zum Zeitpunkt $t$ aus den Ladungsströmen $I\ix{k}$ der Plasmaspezies auf das Partikel bis zu diesem Zeitpunkt. Im folgenden genügt es, dieses Problem auf einer Zeitskala zu betrachten, in der man die Ladung als konstant unter dem Einfluss der Ströme annehmen kann. Damit werden diese ebenfalls stationär und es gilt für ein einzelnes Teilchens die \tilt{Kirchhoff'sche Knotenregel}, wobei der Staub ein Knoten sei:
 			
@@ -413,7 +413,7 @@
 			
 		Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.
 			
-		\subsection{Staub-Dynamik}\label{subsec:dynamik}
+		\subsection{Staub-Dynamik}\label{sub:dynamik}
 		
 				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
 				\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
@@ -467,7 +467,7 @@
 				
 				\paragraph{Ionenreibung: \tilt{Barnes-Modell}}
 				
-				Für die Bestimmung von $F\ix{dir}$ wird angenommen, dass nur die Ionen, welche für eine Ladungsänderung der Partikel sorgen, auch diese direkt treffen. Im Rückblick auf die Bestimmung der Ionenströme in \ref{subsec:ströme} wird die Kraft durch Kollisionen zu
+				Für die Bestimmung von $F\ix{dir}$ wird angenommen, dass nur die Ionen, welche für eine Ladungsänderung der Partikel sorgen, auch diese direkt treffen. Im Rückblick auf die Bestimmung der Ionenströme in \ref{sub:ströme} wird die Kraft durch Kollisionen zu
 				
 					\begin{align}
 						F\ix{dir}=\pi a^2m\ix{I}\tilde{v}n\ix{I}u\ix{I}\left(1-\frac{2e\Phi\ix{fl}}{m\ix{I}\tilde{v}^2}\right)\,\,.
@@ -518,7 +518,7 @@
 			\subsubsection{Thermophoretische Kraft}\label{subsub:therm}
 	
 				In einer Plasmakammer kann, durch Aufheizung oder Abkühlung einer der Elektroden bzw. Kammerbegrenzungen ein, bspw. der Gravitation oder dem elektrischen Feld entgegen gerichteter Temperaturgradient angelegt werden.\\
-				Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\mu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} genutzt (siehe \ref{subsec:yukawaclust}).
+				Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\mu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} genutzt (siehe \ref{sub:yukawaclust}).
 				
 					\begin{align}
 						F\ix{th}=-\frac{32}{15}\frac{a^2 \kappa\ix{N}}{v\ix{th,N}}\grad{T} \label{eq:therm}
@@ -537,8 +537,7 @@
 					\end{align}
 					
 				($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
-				Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert.\\
-				Geht man davon, dass die Photonendichte nicht isotrop über die Querschnittsfläche $A\ix{L}$ ist, so existiert ein Intensitätsgradient über die Strecke eines Strahlradius. Somit treten innerhalb der Strahlungsfläche auf ein Partikel unterschiedliche Kräfte durch den \tilt{Laser} auf: im Mittel treffen mehr Photonen das Partikel auf der Seite, welcher dem Strahlmittelpunkt zugewandt ist, als auf der entgegengesetzten. Somit entsteht eine Kraft, welche senkrecht auf der \tilt{Laser}-Richtung steht und zum Strahllot zeigt. Ein \tilt{Laser}-Strahl kann also zum Einfang von (einem) ausgewählten Partikeln benutzt werden.\\
+				Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert. Ein \tilt{Laser}-Strahl kann u.a., auf Grund der anisotropen Photonendichte (\tilt{gaussian bandwidth}) über den Querschnitt, zum Einfang von (einem) ausgewählten Partikeln benutzt werden.
 				Bei der photophoretischen Kraft wird die resultierende Dynamik aus dem, durch die Stöße mit Photonen erzeugten Temperaturgradienten über ein einzelnes Partikel beschrieben. Wie bereits erläutert, liegt ein Strahldichtegradient für eine Fläche von $A\ix{S}$ vor, woraus eine unterschiedliche Staubaufheizung durch die Stoßreibung folgt.\\
 				Treffen nun Neutralgasatome auf die heißere Seite, so werden sie dort schneller reflektiert, als von der kälteren. Die Differenz des Impulsübertrags resultiert in der photophoretischen Kraft, die entgegen des Gradienten der Photonendichte und damit in Richtung der heißen Seite der Partikel zeigt. Je nach der Absorptionsfähigkeit besitzen die Teilchen unterschiedliche Temperaturgradienten. Somit stellt sich eine heiße Front aus den Teilchen auf, welche eine gute Absorption und somit insgesamt höhere Temperatur aufweisen. Für diese Partikel zeigt $F\ix{ph}$ in Richtung des Strahls. Analog wirkt die photophoretische Kraft für schlecht absorbierende Teilchen in entgegengesetzte Richtung. Somit ergibt sich $F\ix{ph}$ in Gl. (\ref{eq:photoph}) mit dem Wärmeleitungskoeffizienten $\kappa\ix{S}$ des Staubes, dem Gasdruck $p$ und der Gastemperatur $T$.
 				
@@ -546,34 +545,33 @@
 						F\ix{ph}=\frac{\pi a^2 p I\ix{L}}{6\left(pav\ix{th,N}+\kappa\ix{S}T\right)} \label{eq:photoph}
 					\end{align}
 				
-			\subsubsection{Einfang und Gleichgewicht}
-			
-				In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
-				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
-				Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
-				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.		
-						
+			\subsubsection{Einfang und Gleichgewicht}\label{subub:einfang}
+					
 					\begin{figure}
 						\centering
 						\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
 						\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$)} \label{img:kräfte}
 					\end{figure}
-				
-				In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
-				Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc}an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Hierbei sind die Ionen bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer. Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
-				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Thermophorese und Ionenwind-Kraft zeigen (selbe ARgumentation wie zu Teil (a)) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
-				
+			
+				In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
+				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
+				Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
+				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.		
+					
 					\begin{figure}[H]
 						\centering
 						\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
-						\caption{Schemata für dein Einfang von Staub mit (a): $a\approx\unit[\tenpo{-5}]{m}$ (b): $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
+						\caption{Schemata für dein Einfang von Staub mit \fett{(a)}: $a\approx\unit[\tenpo{-5}]{m}$ (\fett{b)}: $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
 						\label{img:kräfterichtungen}
 					\end{figure}
-					
 				
-		\subsection{Finite Yukawa-Cluster}\label{subsec:yukawaclust}
+				In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
+				Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc}) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Die Ionen sind dabei bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer (siehe Abschn. \ref{sub:rand}). Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
+				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Thermophorese und Ionenwind-Kraft zeigen (selbe Argumentation wie zu Teil \fett{(a)}) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
 
-			
+		\subsection{Finite Yukawa-Cluster}\label{sub:yukawaclust}
+
+			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem finden sich in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, wieder. Doch 
 
 	\newpage
 	
