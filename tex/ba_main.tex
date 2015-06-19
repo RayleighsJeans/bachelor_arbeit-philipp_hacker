@@ -142,11 +142,12 @@
 							
 							\hline thermisches Geschwindigkeit & $v\ix{th,j}^2=\frac{k\ix{B}T\ix{j}}{m\ix{j}}$ & mittlere Geschwindigkeit aus der Definition der kinetischen Gastheorie \\ 
 							
-							\hline mittlerer Teilchenabstand & $b=\frac{\hbar}{m\ix{j}v\ix{th,j}}$ & gemittelter Teilchenabstand, entspricht thermischer \mbox{\tilt{de-Broglie}-Wellenlänge} \\ 
+							\hline mittlerer Teilchenabstand & $\overline{b}=\frac{\hbar}{m\ix{j}v\ix{th,j}}$ & gemittelter Teilchenabstand, entspricht thermischer \mbox{\tilt{de-Broglie}-Wellenlänge} \\ 
 							
 							\hline Yukawa-Potential & $\Phi=\frac{Q}{4\pi\varepsilon|\vec{r}|}\euler^{-\frac{|\vec{r}|}{\lambda\ix{D}}}$ & elektrostatisches Wechselwirkungspotential einer Probeladung $Q$ in einem Plasma (Vergleich Pionen-Austausch) \\
 							
 							\hline
+							
 						\end{tabular}
 					\caption{Plasmaphysikalische Kenngrößen. Der Index $j$ bestimmt die Ladungsträgerspezies mit den entsprechenden Massen und Ladungen.}
 					\label{tab:kenngroessen}
@@ -155,95 +156,95 @@
 			Wie bereits erwähnt greift dieses Experiment auf die Erzeugung einer Gasentladung zurück. Hierbei ist der Versuch wie ein horizontal ausgerichteter, paralleler Plattenkondensator angeordnet (siehe \ref{img:ungleichesplasma}), wobei das Dielektrikum das Plasma sei, die untere Elektrode mit einem Signal im $\unit{MHz}$-Bereich betrieben wird und die andere auf Massepotential liegt. Das elektrische Feld resultiert hierbei aus den Oberflächenladungen der Elektroden, wobei mit unterschiedlichen \tilt{rf}-Signalen (\tilt{radio frequency}) auch verschiedene Betriebsregime realisiert, e.g. Ladungsträger erzeugt bzw. vernichtet werden.\\
 			Die \tilt{rf}-Spannung sorgt weiterhin für die nötige Homogenität des Plasmas, da aufgrund dessen (wie im $\gamma$-Regime) ein Verschiebungsstrom zwischen Entladungsvolumen und Elektrode fließt (siehe Abschn. \ref{subsub:self-bias}) und damit die Kontaktierung dieser sehr isotrop gestaltet. In Aufbauten, in welchen die Flächen der Elektroden nicht gleich sind, fließt wegen der unterschiedlichen Potentialverläufe in den Randschichten (siehe Abschn. \ref{sub:rand}) zusätzlich eine Gleichspannung, die sogenannte \tilt{self-bias} - siehe Abschn. \ref{subsub:self-bias}. Das ist insbesondere der Fall für das Experiment dieser Arbeit, da hier die gesamte Kammer als Elektrode zur Masse dient und die andere entsprechend kapazitiv an die Erregung gekoppelt ist.
 		
-		\subsubsection{Verschiebungsstrom} \label{subsub:verschieb}
-		
-			\begin{wrapfigure}{r}{0.4\textwidth}
-				\centering
-				\includegraphics[width=0.47\textwidth,height=0.54\textwidth]{figs/verschiebpiel.png}
-				\caption{Verlauf der Dichten, des Elektrischen Feldes und des zug. Potentials (eindimensional) in einer Entladung mit zwei gegenüberliegenden Randschichten.}
-				\label{img:verschieb}
-			\end{wrapfigure}
-	
-		Die Elektronen eines Plasmas über einer \tilt{rf}-getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$ der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$. Nimmt man an, dass die Randschicht der Dicke $a$ frei von Elektronen ist (siehe Abschn. \ref{sub:rand}) und die Ionendichte dort konstant $n\ix{0,I}$ ist, so folgt für das elektrische Feld der positiven Raumladungszone an der Kammerwand $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$ - siehe \ref{img:verschieb}. Lädt sich die Entladungsbegrenzung nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasmavolumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält.\\
-		Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdicke $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$:
-		
-			\begin{align}
-				\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,.
-			\end{align}
-			
-		\subsubsection{\tilt{self-bias}}  \label{subsub:self-bias}
-		
-				\begin{figure}
-					\centering
-					\begin{subfigure}[b]{0.48\textwidth}
+				\subsubsection{Verschiebungsstrom} \label{subsub:verschieb}
+				
+					\begin{wrapfigure}{r}{0.4\textwidth}
 						\centering
-						\includegraphics[width=0.7\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel1.png}
-						\caption{}
-						\label{img:ungleichesplasma}
-					\end{subfigure}
-					\begin{subfigure}[b]{0.48\textwidth}
-						\centering
-						\includegraphics[width=0.4\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel2.png}
-						\caption{}
-						\label{img:ersatzschaltbild}
-					\end{subfigure}
-					\caption{\fett{(a)}:Schema eines Plasmas mit ungleichen Elektrodenflächen. Die obere ist hierbei kleiner und gleichzeitig mit dem \tilt{rf}-Signal betrieben. \fett{(b)}:Ersatzschaltbild einer Entladung mit der \tilt{bulk}-Impedanz $Z\ix{P}$ (Hauptvolumen) und den Randschichten: eine Diode als Symbol für den "`Elektronenfluss"' aus der Schicht hinaus, der Widerstand $R\ix{j}$ als Ionenstrom und die Kapazität $C\ix{j}$ der pos. Raumladungszone.}
-				\end{figure}
-		
-			Einem Plasma kann man eine, für \tilt{rf}-Spannungen der Frequenz $\omega$ nicht verschwindende Impedanz $Z\ix{P}$ zuordnen. Für das Entladungsvolumen der Permittivität $\varepsilon\ix{P}$, der Kapazität $C\ix{P}$ auf der Querschnittsfläche $A$ und Dicke $b$, in welcher die freien Elektronen mit der Frequenz $\nu\ix{e,N}$ mit den Neutralgasatomen stoßen, gilt:
+						\includegraphics[width=0.47\textwidth,height=0.54\textwidth]{figs/verschiebpiel.png}
+						\caption{Verlauf der Dichten, des Elektrischen Feldes und des zug. Potentials (eindimensional) in einer Entladung mit zwei gegenüberliegenden Randschichten.}
+						\label{img:verschieb}
+					\end{wrapfigure}
 			
-			\begin{align}
-			\varepsilon\ix{P}=1-&\frac{\omega\ix{P,e}^2}{\omega\left(\omega-\imag\nu\ix{e,N}\right)} \quad \quad C\ix{P}=\varepsilon\ix{P}C\ix{0}=\varepsilon\ix{P}\varepsilon\ix{0}\frac{A}{b} \\
-			&Z\ix{P}=\left(\imag\omega C\ix{P}+ \frac{1}{\frac{1}{\omega\ix{P,e}^2C\ix{0}}\left(\nu\ix{e,N}+\imag\omega\right)}\right)^{-1}
-			\label{eq:bulkimpedanz}
-			\end{align}
-			
-			Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`elektronisches Schaltkreises"' der Entladung gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
-			Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} (siehe Gl. (\ref{eq:bulkimpedanz})) vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ über die Entladung und das Plasmapotential $\Phi\ix{P}$:
-			
-				\begin{align}
-					U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right) \label{eq:selfbiaseins}
-				\end{align}
+				Die Elektronen eines Plasmas über einer \tilt{rf}-getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$ der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$. Nimmt man an, dass die Randschicht der Dicke $a$ frei von Elektronen ist (siehe Abschn. \ref{sub:rand}) und die Ionendichte dort konstant $n\ix{0,I}$ ist, so folgt für das elektrische Feld der positiven Raumladungszone an der Kammerwand $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$ - siehe \ref{img:verschieb}. Lädt sich die Entladungsbegrenzung nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasmavolumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält.\\
+				Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdicke $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$:
 				
-			Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es entsteht sozusagen ein Kurzschluss in der Region der Randschicht, wenn das Plasmapotential negativ im Vergleich zur Elektrode wird. Es folgt somit mit Gl. (\ref{eq:selfbiaseins}) zusammen:
-			
-				\begin{align}
-					\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0\, \, . \label{eq:ungleichungen}
-				\end{align}
+					\begin{align}
+						\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,.
+					\end{align}
+					
+				\subsubsection{\tilt{self-bias}}  \label{subsub:self-bias}
 				
-			Liegt die getriebene Elektrode ohne zwischengeschalteten ``Puffer'' direkt an der \tilt{rf}-Signalquelle, so gilt zumindest f\"ur eine Ungleichung aus (\ref{eq:ungleichungen}) die Gleichheit. Wird hingegen die Elektrode kapazitiv gekoppelt, dh. zwischen diese und den Generator ein Kondensator geschaltet, so kann in einer Periode der \tilt{rf}-Anregung kein Nettostrom von der Quelle flie{\ss}en. Deswegen gibt es gleiche Elektronenstr\"ome auf beide Elektroden, was zur Folge hat, dass das minimale Plasmapotential das Massepotential wird und das maximale zu dem der Anregung. F\"ur den Gleichspannungsanteil, \tilt{self-bias} $U\ix{GS}$ und das mittlere Plasmapotential $\overline{\Phi\ix{P}}$ folgt:
-			
-				\begin{align}
-					\overline{\Phi\ix{P}}=\frac{1}{2}\left(U\ix{GS}+U\ix{rf}\right) \quad \quad U\ix{GS}=\frac{C\ix{1}-C\ix{2}}{C\ix{1}+C\ix{2}}U\ix{rf} \,\, .\label{eq:selfbiaszwei} 
-				\end{align}
-				
-			Diese Zusammenh\"ange gelten allgemein f\"ur dieses Experiment.\\
-			Ist die Frequenz klein respektive \"ublicher Zeitskalen der Entladung, so wird der Strom aus den verdr\"angten Elektronen $j\ix{L}$ gr\"o{\ss}er als der Verschiebungsstrom durch die Randschichtschwankung $j\ix{V}\,$. Demzufolge wird der Strom aus Elektronen auf die getriebenen Elektrode, im Vergleich zu dem aus Ionen, durch einen Maxwell-Faktor in Abhängigkeit der angelegten Spannung verkleinert. Die Impedanz der Randschicht über der Elektrode ist demnach wesentlich größer als die der anderen bzw. der Wände. Mit den Gl. (\ref{eq:selfbiaseins}) und (\ref{eq:ungleichungen}) folgt, dass das Plasmapotential näherungsweise verschwindet und deswegen nur die Kontinuität für den Strom auf die getriebene Elektrode erhalten sein muss. Der \tilt{self-bias} bei kleinen Anregungsfrequenzen ergibt sich in Gl. (\ref{eq:selfbiasdrei}) ($\mathbf{J}\ix{0}$ \tilt{Bessel-Funktion}). 
-			
-				\begin{align}
-					U\ix{GS}=\frac{k\ix{B}T\ix{e}}{e}\ln\left[\mathbf{J}\ix{0}\left(\frac{eU\ix{rf}}{k\ix{B}T\ix{e}}\right)\right] \label{eq:selfbiasdrei}
-				\end{align}
-				
-			In \ref{img:imagundreal} ist der Spannungsverlauf beispielhaft dargestellt. Der \tilt{self-bias} verschwindet demnach nie für Elektrodenspannungen  $U\ix{rf}\neq0$ und ist damit eine feste Größe in einer Radiofrequenz-Entladung, welche über kapazitive Bauteile betrieben werden.
-				
-				\begin{figure}
-					\centering
-						\begin{subfigure}[t]{0.45\textwidth}
+						\begin{figure}
 							\centering
-							\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/selfbiasselbst.png}
-							\caption{}
-							\label{img:imagundreal}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.45\textwidth}
+							\begin{subfigure}[b]{0.48\textwidth}
+								\centering
+								\includegraphics[width=0.7\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel1.png}
+								\caption{}
+								\label{img:ungleichesplasma}
+							\end{subfigure}
+							\begin{subfigure}[b]{0.48\textwidth}
+								\centering
+								\includegraphics[width=0.4\textwidth,height=0.8\textwidth]{figs/schaltbildselfbiaspiel2.png}
+								\caption{}
+								\label{img:ersatzschaltbild}
+							\end{subfigure}
+							\caption{\fett{(a)}:Schema eines Plasmas mit ungleichen Elektrodenflächen. Die obere ist hierbei kleiner und gleichzeitig mit dem \tilt{rf}-Signal betrieben. \fett{(b)}:Ersatzschaltbild einer Entladung mit der \tilt{bulk}-Impedanz $Z\ix{P}$ (Hauptvolumen) und den Randschichten: eine Diode als Symbol für den "`Elektronenfluss"' aus der Schicht hinaus, der Widerstand $R\ix{j}$ als Ionenstrom und die Kapazität $C\ix{j}$ der pos. Raumladungszone.}
+						\end{figure}
+				
+					Einem Plasma kann man eine, für \tilt{rf}-Spannungen der Frequenz $\omega$ nicht verschwindende Impedanz $Z\ix{P}$ zuordnen. Für das Entladungsvolumen der Permittivität $\varepsilon\ix{P}$, der Kapazität $C\ix{P}$ auf der Querschnittsfläche $A$ und Dicke $b$, in welcher die freien Elektronen mit der Frequenz $\nu\ix{e,N}$ mit den Neutralgasatomen stoßen, gilt:
+					
+					\begin{align}
+					\varepsilon\ix{P}=1-&\frac{\omega\ix{P,e}^2}{\omega\left(\omega-\imag\nu\ix{e,N}\right)} \quad \quad C\ix{P}=\varepsilon\ix{P}C\ix{0}=\varepsilon\ix{P}\varepsilon\ix{0}\frac{A}{b} \\
+					&Z\ix{P}=\left(\imag\omega C\ix{P}+ \frac{1}{\frac{1}{\omega\ix{P,e}^2C\ix{0}}\left(\nu\ix{e,N}+\imag\omega\right)}\right)^{-1}
+					\label{eq:bulkimpedanz}
+					\end{align}
+					
+					Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`elektronisches Schaltkreises"' der Entladung gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
+					Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} (siehe Gl. (\ref{eq:bulkimpedanz})) vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ über die Entladung und das Plasmapotential $\Phi\ix{P}$:
+					
+						\begin{align}
+							U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right) \label{eq:selfbiaseins}
+						\end{align}
+						
+					Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es entsteht sozusagen ein Kurzschluss in der Region der Randschicht, wenn das Plasmapotential negativ im Vergleich zur Elektrode wird. Es folgt somit mit Gl. (\ref{eq:selfbiaseins}) zusammen:
+					
+						\begin{align}
+							\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0\, \, . \label{eq:ungleichungen}
+						\end{align}
+						
+					Liegt die getriebene Elektrode ohne zwischengeschalteten ``Puffer'' direkt an der \tilt{rf}-Signalquelle, so gilt zumindest f\"ur eine Ungleichung aus (\ref{eq:ungleichungen}) die Gleichheit. Wird hingegen die Elektrode kapazitiv gekoppelt, dh. zwischen diese und den Generator ein Kondensator geschaltet, so kann in einer Periode der \tilt{rf}-Anregung kein Nettostrom von der Quelle flie{\ss}en. Deswegen gibt es gleiche Elektronenstr\"ome auf beide Elektroden, was zur Folge hat, dass das minimale Plasmapotential das Massepotential wird und das maximale zu dem der Anregung. F\"ur den Gleichspannungsanteil, \tilt{self-bias} $U\ix{GS}$ und das mittlere Plasmapotential $\overline{\Phi\ix{P}}$ folgt:
+					
+						\begin{align}
+							\overline{\Phi\ix{P}}=\frac{1}{2}\left(U\ix{GS}+U\ix{rf}\right) \quad \quad U\ix{GS}=\frac{C\ix{1}-C\ix{2}}{C\ix{1}+C\ix{2}}U\ix{rf} \,\, .\label{eq:selfbiaszwei} 
+						\end{align}
+						
+					Diese Zusammenh\"ange gelten allgemein f\"ur dieses Experiment.\\
+					Ist die Frequenz klein respektive \"ublicher Zeitskalen der Entladung, so wird der Strom aus den verdr\"angten Elektronen $j\ix{L}$ gr\"o{\ss}er als der Verschiebungsstrom durch die Randschichtschwankung $j\ix{V}\,$. Demzufolge wird der Strom aus Elektronen auf die getriebenen Elektrode, im Vergleich zu dem aus Ionen, durch einen Maxwell-Faktor in Abhängigkeit der angelegten Spannung verkleinert. Die Impedanz der Randschicht über der Elektrode ist demnach wesentlich größer als die der anderen bzw. der Wände. Mit den Gl. (\ref{eq:selfbiaseins}) und (\ref{eq:ungleichungen}) folgt, dass das Plasmapotential näherungsweise verschwindet und deswegen nur die Kontinuität für den Strom auf die getriebene Elektrode erhalten sein muss. Der \tilt{self-bias} bei kleinen Anregungsfrequenzen ergibt sich in Gl. (\ref{eq:selfbiasdrei}) ($\mathbf{J}\ix{0}$ \tilt{Bessel-Funktion}). 
+					
+						\begin{align}
+							U\ix{GS}=\frac{k\ix{B}T\ix{e}}{e}\ln\left[\mathbf{J}\ix{0}\left(\frac{eU\ix{rf}}{k\ix{B}T\ix{e}}\right)\right] \label{eq:selfbiasdrei}
+						\end{align}
+						
+					In \ref{img:imagundreal} ist der Spannungsverlauf beispielhaft dargestellt. Der \tilt{self-bias} verschwindet demnach nie für Elektrodenspannungen  $U\ix{rf}\neq0$ und ist damit eine feste Größe in einer Radiofrequenz-Entladung, welche über kapazitive Bauteile betrieben werden.
+						
+						\begin{figure}
 							\centering
-							\includegraphics[width=0.7\textwidth,height=0.7\textwidth]{figs/kapazitivekopplungohneschemapiel.png}
-							\vspace{-0.1cm}
-							\caption{}
-							\label{img:kapazitivgekoppelt}
-						\end{subfigure}
-						\caption{\fett{(a)}:Gleichspannungsanteil \tilt{self-bias} bei gegebenen Spannungen der Anregung $U\ix{rf}$, siehe Gl. (\ref{eq:selfbiasdrei}). \mbox{\fett{(b)}: Schema des} Potential- und Spannungsverlauf einer direkt und kapazitiv gekoppelten \tilt{rf}-Elektrode.}
-				\end{figure}
-			
+								\begin{subfigure}[t]{0.45\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/selfbiasselbst.png}
+									\caption{}
+									\label{img:imagundreal}
+								\end{subfigure}
+								\begin{subfigure}[t]{0.45\textwidth}
+									\centering
+									\includegraphics[width=0.7\textwidth,height=0.7\textwidth]{figs/kapazitivekopplungohneschemapiel.png}
+									\vspace{-0.1cm}
+									\caption{}
+									\label{img:kapazitivgekoppelt}
+								\end{subfigure}
+								\caption{\fett{(a)}:Gleichspannungsanteil \tilt{self-bias} bei gegebenen Spannungen der Anregung $U\ix{rf}$, siehe Gl. (\ref{eq:selfbiasdrei}). \mbox{\fett{(b)}: Schema des} Potential- und Spannungsverlauf einer direkt und kapazitiv gekoppelten \tilt{rf}-Elektrode.}
+						\end{figure}
+					
 		\subsection{Grenzschichten einer Entladung}\label{sub:rand}
 		
 			Im Hauptvolumen eines Plasmas werden die Neutralgasatome durch Wechselwirkungen mit den Elektronen zur Fluoreszenz angeregt. Die Grenzschichten von Gasentladung zu Metallen sind jedoch dunkler, als das eigentliche Plasma. Dies ist somit auf einen Elektronenmangel zur\"uckruf\"uhren, ähnlich wie in Abschn. \ref{subsub:verschieb} argumentiert. Die Quasineutralit\"at kann dort somit nicht mehr gelten. Es folgt, dass eine Randschicht automatisch eine positive Raumladungszone ist. \\
@@ -351,120 +352,121 @@
 
 		Die Elektronen und Ionen im Plasma strömen aufgrund ihrer thermischen Bewegung auf das Fremdteilchen und verleihen diesem über Stöße eine Ladung $Q\ix{S}$, wobei sich für das Partikel ein elektrostatisches Potential $\Phi\ix{fl}$ einstellt, bei dem Gl. (\ref{eq:float}) gilt. Die Ladungsspezies kommen dabei im allgemeinen aus Sekundär-,Photo-, oder Feldemissionen, wobei die dominanten Ströme die des Plasmas selbst sind. Hier soll es ausreichen, die Plasmaströme nach  \tilt{Langmuir} und \tilt{Mott-Smith} mit dem sog. \tilt{orbital motion limit}-Modell \cite{Langmuir26} zu beschreiben. 
 		
-		\subsubsection{OML-Modell}\label{subsub:oml}
-					
-					\begin{figure}
-						\centering
-						\includegraphics[width=0.7\textwidth, height=0.3\textwidth]{figs/orbitalmotionlimitmelzer.png}
-						\caption{OML-Beschreibung eines, auf ein Staubpartikel einströmendes Ions. Der kritische Stoßparameter, für welcher eine Kollision stattfindet, ist $b\ix{k}$. Er ist im Vergleich zum geometrischen Querschnitt aufgrund der Coulomb-Wechselwirkung vergrößert.}
-						\label{img:oml}
-					\end{figure}
-			
-		Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<b\ix{k}$ landet dieses auf dem Staubteilchen.\\
-		Da vorausgesetzt wurde, dass keine Stöße vor dem Target geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt:
-		
-			\begin{align}
-				|\vec{L}|=|\vec{r}\times\vec{p}|=m\ix{I}v\ix{I}a=m\ix{i}v\ix{i,0}b\ix{k} \label{eq:impulserhaltung} \\
-				E\ix{I}=\frac{m\ix{I}}{2}v\ix{I}^2+e\Phi\ix{fl}=\frac{m\ix{I}}{2}v\ix{I,0}^2 \label{eq:energieerhaltung}
-			\end{align}
-			
-		In Gl.(\ref{eq:impulserhaltung}) und (\ref{eq:energieerhaltung}) stehen jeweils die linken Seiten für den Zeitpunkt des Auftreffens und die rechten für das Einlaufen aus dem Unendlichen. Durch Umformungen lässt sich ein Ausdruck für den kritischen Stoßparameter, in Abhängigkeit vom Partikelradius und dem \tilt{floating}-Potential aufgestellt werden.
-		
-			\begin{align}
-				b\ix{k}^2=a^2\left(1-\frac{e\Phi\ix{fl}}{\frac{m\ix{I}}{2}v\ix{I,0}^2}\right) \label{eq:krit}
-			\end{align}
-			
-		Der zugehörige Streuquerschnitt für die Streuung eines Teilchenstroms an einem Staubpartikel wird damit zu $\sigma\ix{k}=\pi b\ix{k}^2$, welcher größer als die geometrische Querschnittsfläche $\pi a^2$. Dem liegt die Coulomb-Wechselwirkung der Stoßpartner zu Grunde.\\
-		Der (differentielle) Ladungsträgerstrom $\diff I\ix{j}$, welcher schließlich den Parameter der Partikelladung bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten von Teilchen der Geschwindigkeiten $v\ix{j}$, gewichtet mit ihren zugehörigen Wechselwirkungsquerschnitten $\sigma\ix{j}$ und (hier: maxwellartigen) Verteilungen $f\left(v\ix{j}\right)$:
-		
-			\begin{align}
-				\diff I\ix{j}=\sigma\ix{j}&\left(v\ix{j}\right)n\ix{j}v\ix{j}f\left(v\ix{j}\right)\diff v\ix{j} \nonumber \\
-				\text{Ionen: } I\ix{I}&=\pi a^2n\ix{I}e\sqrt{\frac{8k\ix{B}T\ix{I}}{\pi m\ix{I}}}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right) \label{eq:ionenstrom} \\
-				\text{Elektronen: } I\ix{e}&=-\pi a^2n\ix{e}e\sqrt{\frac{8k\ix{B}T\ix{e}}{\pi m\ix{e}}}\exp\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{e}}\right) \label{eq:elektronenstrom}
-			\end{align}
-			
-		($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
-		Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-2e\Phi\ix{P}/m\ix{e}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{8k\ix{B}T\ix{j}/\pi m\ix{j}}$ die thermischen Geschwindikeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
-		Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
-		
-		\subsubsection{Neutralgas-Ionen-Stöße}
-		
-		Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich viele Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln.
-		\\In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit zwischen Ionen und Neutralgasatomen
-		
-			\begin{align}
-				\frac{R}{l\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
-			\end{align}
+			\subsubsection{OML-Modell}\label{subsub:oml}
 						
-		($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße; \mbox{$\lambda\ix{mfp}$ - mittlere freie Wegl\"ange})\\
-		Durch eine Sph\"are mit diesem Radius flie{\ss}t nun neben dem thermischen Ionenstrom $I\ix{th}$ noch ein weiterer Strom $I\ix{S}$ auf Grund der St\"o{\ss}e mit dem Neutralgas. Die Ionen der Geschwindigkeit $v\ix{th,I}$, welche sich ohne Wechselwirkung mit dem Gas der Entladung am Target vorbei bewegen w\"urden, werden mit der Sto{\ss}wahrscheinlichkeit aus Gl. (\ref{eq:wahrschein}) in Richtung des Staubteilchens abgelenkt und tragen somit zum Ladungsstrom auf dieses bei. Der Gesamtladungsstrom durch Ionen entspricht der Summe der beiden Str\"ome:
-		
-			\begin{align}
-				I\ix{th}=&\pi R^{2}n\ix{N}ev\ix{th,I} \quad I\ix{S}=\pi R^2n\ix{N}ev\ix{th,I}\left(Rn\ix{N}\sigma\ix{N,I}\right) \\
-				&I\ix{ges}=\pi a^{2}n\ix{I}ev\ix{th,I}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+\frac{R^{3}}{\lambda\ix{mfp}a^{3}}\right)
-			\end{align}
-	
-		Auf der Oberfl\"ache der '\tilt{Sto{\ss}sph\"are}' $\mathbb{S}\ix{R}$ hat das \tilt{Yukawa}-Potential des Staubteilchens gerade die Energie der thermischen Ionenbewegung (Gl. (\ref{eq:bestimmR})), womit diese gerade noch in dessen Einfang geraten. Mit dem daraus bestimmten $R$ folgt ein diskreter Ionenstrom auf das Partikel mit R\"ucksicht auf die Ionen-Neutralgaswechselwirkung (Gl. (\ref{eq:ionstromkorr})).
-		
-			\begin{align}
-				\frac{k\ix{B}T\ix{I}}{e}=&\frac{Z\ix{S}e}{4\pi\varepsilon\ix{0}R}\exp\left(\frac{R}{\lambda\ix{D}}\right) \label{eq:bestimmR} \\
-				I\ix{I}=\pi a^{2} n\ix{I}e v\ix{th,I}&\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+0,1\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right)^{2}\frac{\lambda\ix{D}}{\lambda\ix{mfp}}\right) \label{eq:ionstromkorr}
-			\end{align}
+						\begin{figure}
+							\centering
+							\includegraphics[width=0.7\textwidth, height=0.3\textwidth]{figs/orbitalmotionlimitmelzer.png}
+							\caption{OML-Beschreibung eines, auf ein Staubpartikel einströmendes Ions. Der kritische Stoßparameter, für welcher eine Kollision stattfindet, ist $b\ix{k}$. Er ist im Vergleich zum geometrischen Querschnitt aufgrund der Coulomb-Wechselwirkung vergrößert.}
+							\label{img:oml}
+						\end{figure}
+				
+			Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<b\ix{k}$ landet dieses auf dem Staubteilchen.\\
+			Da vorausgesetzt wurde, dass keine Stöße vor dem Target geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt:
 			
-		Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.
+				\begin{align}
+					|\vec{L}|=|\vec{r}\times\vec{p}|=m\ix{I}v\ix{I}a=m\ix{i}v\ix{i,0}b\ix{k} \label{eq:impulserhaltung} \\
+					E\ix{I}=\frac{m\ix{I}}{2}v\ix{I}^2+e\Phi\ix{fl}=\frac{m\ix{I}}{2}v\ix{I,0}^2 \label{eq:energieerhaltung}
+				\end{align}
+				
+			In Gl.(\ref{eq:impulserhaltung}) und (\ref{eq:energieerhaltung}) stehen jeweils die linken Seiten für den Zeitpunkt des Auftreffens und die rechten für das Einlaufen aus dem Unendlichen. Durch Umformungen lässt sich ein Ausdruck für den kritischen Stoßparameter, in Abhängigkeit vom Partikelradius und dem \tilt{floating}-Potential aufgestellt werden.
 			
+				\begin{align}
+					b\ix{k}^2=a^2\left(1-\frac{e\Phi\ix{fl}}{\frac{m\ix{I}}{2}v\ix{I,0}^2}\right) \label{eq:krit}
+				\end{align}
+				
+			Der zugehörige Streuquerschnitt für die Streuung eines Teilchenstroms an einem Staubpartikel wird damit zu $\sigma\ix{k}=\pi b\ix{k}^2$, welcher größer als die geometrische Querschnittsfläche $\pi a^2$. Dem liegt die Coulomb-Wechselwirkung der Stoßpartner zu Grunde.\\
+			Der (differentielle) Ladungsträgerstrom $\diff I\ix{j}$, welcher schließlich den Parameter der Partikelladung bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten von Teilchen der Geschwindigkeiten $v\ix{j}$, gewichtet mit ihren zugehörigen Wechselwirkungsquerschnitten $\sigma\ix{j}$ und (hier: maxwellartigen) Verteilungen $f\left(v\ix{j}\right)$:
+			
+				\begin{align}
+					\diff I\ix{j}=\sigma\ix{j}&\left(v\ix{j}\right)n\ix{j}v\ix{j}f\left(v\ix{j}\right)\diff v\ix{j} \nonumber \\
+					\text{Ionen: } I\ix{I}&=\pi a^2n\ix{I}e\sqrt{\frac{8k\ix{B}T\ix{I}}{\pi m\ix{I}}}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right) \label{eq:ionenstrom} \\
+					\text{Elektronen: } I\ix{e}&=-\pi a^2n\ix{e}e\sqrt{\frac{8k\ix{B}T\ix{e}}{\pi m\ix{e}}}\exp\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{e}}\right) \label{eq:elektronenstrom}
+				\end{align}
+				
+			($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
+			Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretische damit stoßen (respektiv der Geschwindigkeitsverteilung und dem Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-2e\Phi\ix{P}/m\ix{e}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{8k\ix{B}T\ix{j}/\pi m\ix{j}}$ die thermischen Geschwindikeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
+			Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
+			
+			\subsubsection{Neutralgas-Ionen-Stöße}
+			
+			Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich viele Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln.
+			\\In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit zwischen Ionen und Neutralgasatomen
+			
+				\begin{align}
+					\frac{R}{l\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
+				\end{align}
+							
+			($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße; \mbox{$\lambda\ix{mfp}$ - mittlere freie Wegl\"ange})\\
+			Durch eine Sph\"are mit diesem Radius flie{\ss}t nun neben dem thermischen Ionenstrom $I\ix{th}$ noch ein weiterer Strom $I\ix{S}$ auf Grund der St\"o{\ss}e mit dem Neutralgas. Die Ionen der Geschwindigkeit $v\ix{th,I}$, welche sich ohne Wechselwirkung mit dem Gas der Entladung am Target vorbei bewegen w\"urden, werden mit der Sto{\ss}wahrscheinlichkeit aus Gl. (\ref{eq:wahrschein}) in Richtung des Staubteilchens abgelenkt und tragen somit zum Ladungsstrom auf dieses bei. Der Gesamtladungsstrom durch Ionen entspricht der Summe der beiden Str\"ome:
+			
+				\begin{align}
+					I\ix{th}=&\pi R^{2}n\ix{N}ev\ix{th,I} \quad I\ix{S}=\pi R^2n\ix{N}ev\ix{th,I}\left(Rn\ix{N}\sigma\ix{N,I}\right) \\
+					&I\ix{ges}=\pi a^{2}n\ix{I}ev\ix{th,I}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+\frac{R^{3}}{\lambda\ix{mfp}a^{3}}\right)
+				\end{align}
+		
+			Auf der Oberfl\"ache der '\tilt{Sto{\ss}sph\"are}' $\mathbb{S}\ix{R}$ hat das \tilt{Yukawa}-Potential des Staubteilchens gerade die Energie der thermischen Ionenbewegung (Gl. (\ref{eq:bestimmR})), womit diese gerade noch in dessen Einfang geraten. Mit dem daraus bestimmten $R$ folgt ein diskreter Ionenstrom auf das Partikel mit R\"ucksicht auf die Ionen-Neutralgaswechselwirkung (Gl. (\ref{eq:ionstromkorr})).
+			
+				\begin{align}
+					\frac{k\ix{B}T\ix{I}}{e}=&\frac{Z\ix{S}e}{4\pi\varepsilon\ix{0}R}\exp\left(\frac{R}{\lambda\ix{D}}\right) \label{eq:bestimmR} \\
+					I\ix{I}=\pi a^{2} n\ix{I}e v\ix{th,I}&\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+0,1\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}\right)^{2}\frac{\lambda\ix{D}}{\lambda\ix{mfp}}\right) \label{eq:ionstromkorr}
+				\end{align}
+				
+			Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.
+				
 		\subsection{Staub-Dynamik}\label{sub:dynamik}
-		
-				In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse auf die Dynamik komplexer Plasmen vorgestellt und beschrieben.\\
-				\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
-				
-				Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder auf der \tilt{International Space Station}.
-				
-					\begin{align}
-						F\ix{g}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
-					\end{align}
-				
-				($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - \mbox{Erdbeschleunigung})\\
-				Natürlich wirkt auf die, durch das ionisierte Gas elektrisch geladenen Partikel eine elektrische Kraft $F\ix{E}$, welche aus dem äußeren Feld $E$ der Plasma-Elektroden folgt. Eine elektrische Wechselwirkung mit dem Plasma tritt aufgrund der Quasineutralität nicht auf: innerhalb einer \tilt{Debye-Kugel} sind die Veränderung zu schnell, als dass das träge Staubteilchen diesen folgen könnte. 
-				
-					\begin{align}
-					F\ix{E}=Q\ix{S} E=4 \pi \varepsilon\ix{0} a \Phi\ix{fl} E
-					\end{align}
-		
-				($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)\\
-				Diese beiden Kräfte heben sich gerade in der Randschicht einer sog. Radiofrequenz-Entladung (\tilt{rf discharge}) auf, da sie für eine oben liegende Kathode antiparallel stehen. Zu beachten ist hierbei der stark unterschiedliche Einfluss des Teilchenradius - $\propto a^3$ und $\propto a$.\\
-								
-				\subsubsection{Abschirmung und Polarisationskräfte}\label{subsub:abschirm}
-				
-				Die große negative Aufladung der Staubteilchen sorgt über die Coulomb-Wechselwirkung mit den auf das Partikel zuströmenden Ionen dafür, das sich eine Konzentration derer lokal stark ändert. Es entsteht eine Wolke aus langsamen Ionen die quasi in der näheren Umgebung um das Teilchen verbleiben, jedoch nicht mit diesem interagiert und es nach außen hin vor dem Einfall schnellerer pos. Ladungen abschirmen. Somit gibt es keine direkte Rückwirkung der Wolke auf das Partikel, sofern dessen sphärische Symmetrie gegeben ist. Gilt dies nicht, so entsteht ein Multipol- bzw. Dipolmoment $\vec{p}$, welches danach strebt, sich in Richtung des Feldes $\vec{E}$ auszurichten. Damit wirkt eine Kraft $F\ix{Dip}$ (für ein Dipolmoment) auf das Staubteilchen zurück, welche mit dem Gradienten der Richtungsdifferenz zwischen $\vec{p}$ und $\vec{E}$ geht.
+	
+			In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse und Kenngrößen der Dynamik komplexer Plasmen vorgestellt und beschrieben. Insbesondere ist dieser Abschnitt wichtig für das Verständnis über die Bildung und Stabilität sog. \tilt{Yukawa-Cluster}. Dabei handelt es sich um ein System aus wenigen Staubteilchen, welche sich in einem äußeren, harmonischen Potential -  analog zum Schalenmodell des Atoms - anordnen. Diese sollen des Weiteren genauer in Abschnitt \ref{sub:yukawaclust} beschrieben werden.
+			
+			\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
+			
+			Betrachtet man ein Experiment, welches am Erdboden in Nähe der Meereshöhe durchgeführt wird, so muss offensichtlich die vollständige Gravitationskraft berücksichtigt werden. Dies gilt bspw. nicht für Versuche unter Mikrogravitation während Parabelflügen oder auf der \tilt{International Space Station}.
+			
+				\begin{align}
+					F\ix{g}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
+				\end{align}
+			
+			($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - \mbox{Erdbeschleunigung})\\
+			Natürlich wirkt auf die, durch das ionisierte Gas elektrisch geladenen Partikel eine elektrische Kraft $F\ix{E}$, welche aus dem äußeren Feld $E$ der Plasma-Elektroden folgt. Eine elektrische Wechselwirkung mit dem Plasma tritt aufgrund der Quasineutralität nicht auf: innerhalb einer \tilt{Debye-Kugel} sind die Veränderung zu schnell, als dass das träge Staubteilchen diesen folgen könnte. 
+			
+				\begin{align}
+				F\ix{E}=Q\ix{S} E=4 \pi \varepsilon\ix{0} a \Phi\ix{fl} E
+				\end{align}
+	
+			($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)\\
+			Diese beiden Kräfte heben sich gerade in der Randschicht einer sog. Radiofrequenz-Entladung (\tilt{rf discharge}) auf, da sie für eine oben liegende Kathode antiparallel stehen. Zu beachten ist hierbei der stark unterschiedliche Einfluss des Teilchenradius - $\propto a^3$ und $\propto a$.\\
+							
+			\subsubsection{Abschirmung und Polarisationskräfte}\label{subsub:abschirm}
+			
+			Die große negative Aufladung der Staubteilchen sorgt über die Coulomb-Wechselwirkung mit den auf das Partikel zuströmenden Ionen dafür, das sich eine Konzentration derer lokal stark ändert. Es entsteht eine Wolke aus langsamen Ionen die quasi in der näheren Umgebung um das Teilchen verbleiben, jedoch nicht mit diesem interagiert und es nach außen hin vor dem Einfall schnellerer pos. Ladungen abschirmen. Somit gibt es keine direkte Rückwirkung der Wolke auf das Partikel, sofern dessen sphärische Symmetrie gegeben ist. Gilt dies nicht, so entsteht ein Multipol- bzw. Dipolmoment $\vec{p}$, welches danach strebt, sich in Richtung des Feldes $\vec{E}$ auszurichten. Damit wirkt eine Kraft $F\ix{Dip}$ (für ein Dipolmoment) auf das Staubteilchen zurück, welche mit dem Gradienten der Richtungsdifferenz zwischen $\vec{p}$ und $\vec{E}$ geht.
 
-					\begin{align}
-						\centering
-						\vec{F}\ix{Dip}&=\vec{\nabla}\left(\vec{p}\vec{E}\right)\\
-						&{\overset{\vec{p}\,||\vec{E}}{=}}\grad{pE} \nonumber
-					\end{align}
-					
-				Das besagte Dipolmoment entsteht u.a. durch die diversen, gerichteten Ladungsprozesse in dem Plasma. Ein Partikel, welches in der Randschicht eingefangen und von einer Ionenwolke umgeben wird, 'sieht' unterschiedliche \tilt{Debye}-Längen über und unter sich aufgrund der lokalen Feldrichtung und der stark vom Mittelwert abweichenden Ionen- und Elektronendichten. Somit ändert sich offensichtlich die Plasmadichte innerhalb des Volumens einer Kugel mit dem, nun ortsabhängigen Radius $\lambda\ix{D}\left(\vec{r}\right)$. Insgesamt folgt daraus eine neue Bestimmungsgleichung für das Potential und damit auch eine neue Kraft $F\ix{E}$.
+				\begin{align}
+					\centering
+					\vec{F}\ix{Dip}&=\vec{\nabla}\left(\vec{p}\vec{E}\right)\\
+					&{\overset{\vec{p}\,||\vec{E}}{=}}\grad{pE} \nonumber
+				\end{align}
 				
-					\begin{align}
-						\Delta \Phi\left(\vec{r}\right)-\frac{\Phi\left(\vec{r}\right)}{\lambda\ix{D}^2\left(\vec{r}\right)}=\frac{Q\ix{s}}{\varepsilon\ix{0}}\delta\left(\vec{r}\right) \\
-						F\ix{E}=\underbrace{Q\ix{S}E}_{\text{(I)}}-\underbrace{\frac{Q\ix{S}^2}{8\pi\varepsilon\ix{0}}\frac{\nabla\lambda\ix{D}\left(\vec{r}\right)}{\lambda\ix{D}^2}}_{\text{(II)}}
-					\end{align}
-				
-				Hierbei stellt (I) die normale Komponente dar und (II) ist zusätzliche Kraft durch die Deformation der Ionenwolke in Richtung kleinerer \tilt{Debye}-Längen $\lambda\ix{D}\left(\vec{r}\right)$. Die Kraft $F\ix{E}$ kann also dadurch größer oder kleiner werden. Hinzu kommt, dass der veränderte Parameter $\lambda\ix{D}$ von der Driftgeschwindigkeit $u\ix{I}$ abhängt, welche die Ionenwolke maßgeblich beeinflusst. Ist jedoch $u\ix{I}<v\ix{th,I}$ so kann man annehmen, dass die Ionenwolke besteht und $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,I}$ gilt.\\
-				Sind die Ionen jedoch schneller, womit $u\ix{I}>>v\ix{th,I}$ wird, so können sie nicht mehr vom Feld des Partikels 'gefangen' werden und damit die Ionenwolke bilden. So gilt folglich $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,e}$.\\
-				Insgesamt ist der Einfluss der Polarisation vernachlässigbar klein, solange die Teilchen eine Größe von einigen hundert $\unit{\mu m}$ nicht übersteigen.
+			Das besagte Dipolmoment entsteht u.a. durch die diversen, gerichteten Ladungsprozesse in dem Plasma. Ein Partikel, welches in der Randschicht eingefangen und von einer Ionenwolke umgeben wird, 'sieht' unterschiedliche \tilt{Debye}-Längen über und unter sich aufgrund der lokalen Feldrichtung und der stark vom Mittelwert abweichenden Ionen- und Elektronendichten. Somit ändert sich offensichtlich die Plasmadichte innerhalb des Volumens einer Kugel mit dem, nun ortsabhängigen Radius $\lambda\ix{D}\left(\vec{r}\right)$. Insgesamt folgt daraus eine neue Bestimmungsgleichung für das Potential und damit auch eine neue Kraft $F\ix{E}$.
+			
+				\begin{align}
+					\Delta \Phi\left(\vec{r}\right)-\frac{\Phi\left(\vec{r}\right)}{\lambda\ix{D}^2\left(\vec{r}\right)}=\frac{Q\ix{s}}{\varepsilon\ix{0}}\delta\left(\vec{r}\right) \\
+					F\ix{E}=\underbrace{Q\ix{S}E}_{\text{(I)}}-\underbrace{\frac{Q\ix{S}^2}{8\pi\varepsilon\ix{0}}\frac{\nabla\lambda\ix{D}\left(\vec{r}\right)}{\lambda\ix{D}^2}}_{\text{(II)}}
+				\end{align}
+			
+			Hierbei stellt (I) die normale Komponente dar und (II) ist zusätzliche Kraft durch die Deformation der Ionenwolke in Richtung kleinerer \tilt{Debye}-Längen $\lambda\ix{D}\left(\vec{r}\right)$. Die Kraft $F\ix{E}$ kann also dadurch größer oder kleiner werden. Hinzu kommt, dass der veränderte Parameter $\lambda\ix{D}$ von der Driftgeschwindigkeit $u\ix{I}$ abhängt, welche die Ionenwolke maßgeblich beeinflusst. Ist jedoch $u\ix{I}<v\ix{th,I}$ so kann man annehmen, dass die Ionenwolke besteht und $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,I}$ gilt.\\
+			Sind die Ionen jedoch schneller, womit $u\ix{I}>>v\ix{th,I}$ wird, so können sie nicht mehr vom Feld des Partikels 'gefangen' werden und damit die Ionenwolke bilden. So gilt folglich $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,e}$.\\
+			Insgesamt ist der Einfluss der Polarisation vernachlässigbar klein, solange die Teilchen eine Größe von einigen hundert $\unit{\mu m}$ nicht übersteigen.
 
-			\subsubsection{Ionen-Neutralgasreibung}\label{subsub:reibung}
+		\subsubsection{Ionen-Neutralgasreibung}\label{subsub:reibung}
 
-				Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom oder auch "`Ionenwind"'. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
+			Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom oder auch "`Ionenwind"'. Weiterhin bewegen sich mit ihrer thermischen Geschwindigkeit die Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
+			
+				\begin{align}
+					F\ix{drag}=\frac{\diff N \Delta p}{\diff t}=\Delta p n \sigma v\ix{rel}
+				\end{align}
 				
-					\begin{align}
-						F\ix{drag}=\frac{\diff N \Delta p}{\diff t}=\Delta p n \sigma v\ix{rel}
-					\end{align}
-					
-				Man spricht hierbei auch von \tilt{ambipolarer Diffusion}, da die Ionenströme und damit auch die Ionenreibung zu beiden Polen führen. Man kann diese aus 2 Teilen aufbauen: direkte Kollisionen mit den Ionen $F\ix{dir}$ und deren Coulomb-Streuung an den Feldern der neg. geladenen Staubpartikel. Im folgenden soll das sog. \tilt{Barnes-Modell} eingeführt werden, welches die besagte Ionenreibung beschreibt.
-				
+			Man spricht hierbei auch von \tilt{ambipolarer Diffusion}, da die Ionenströme und damit auch die Ionenreibung zu beiden Polen führen. Man kann diese aus 2 Teilen aufbauen: direkte Kollisionen mit den Ionen $F\ix{dir}$ und deren Coulomb-Streuung an den Feldern der neg. geladenen Staubpartikel. Im folgenden soll das sog. \tilt{Barnes-Modell} eingeführt werden, welches die besagte Ionenreibung beschreibt.
+			
 				\paragraph{Ionenreibung: \tilt{Barnes-Modell}}
 				
 				Für die Bestimmung von $F\ix{dir}$ wird angenommen, dass nur die Ionen, welche für eine Ladungsänderung der Partikel sorgen, auch diese direkt treffen. Im Rückblick auf die Bestimmung der Ionenströme in \ref{sub:ströme} wird die Kraft durch Kollisionen zu
@@ -498,81 +500,138 @@
 						\includegraphics[height=0.4\textwidth,width=0.6\textwidth]{figs/forcesandtrappingmelzer.png}
 						\caption{Berechnete Kräfte $F\ix{Coul}$ (\tilt{Coulomb}), $F\ix{dir}$ (\tilt{collection}) und die Summe beider auf einer doppelt-logarithmischen Skala.}\label{img:ionkräfte}
 					\end{figure}
-					
-			\subsubsection{Neutralgasreibung}
+				
+		\subsubsection{Neutralgasreibung}
+		
+			Die Stöße mit den Neutralgasatomen können, ebenso wie die mit Ionen, als Kraft durch Reibung aufgefasst werden. Diese sorgen insbesondere für eine Verlangsamung der Bewegung der Staubteilchen. Die Kraft $F\ix{N}$ wird, in ähnlicher Weise wie $F\ix{dir}$, durch einen Impulsübertrag über einen Strom von Neutralgasteilchen auf einen effektiven Querschnitt ausgedrückt.
 			
-				Die Stöße mit den Neutralgasatomen können, ebenso wie die mit Ionen, als Kraft durch Reibung aufgefasst werden. Diese sorgen insbesondere für eine Verlangsamung der Bewegung der Staubteilchen. Die Kraft $F\ix{N}$ wird, in ähnlicher Weise wie $F\ix{dir}$, durch einen Impulsübertrag über einen Strom von Neutralgasteilchen auf einen effektiven Querschnitt ausgedrückt.
+				\begin{align}
+					F\ix{N}=-\delta\frac{4}{3}\pi a^3m\ix{N}v\ix{th,N}n\ix{N}v\ix{S}
+				\end{align}
 				
-					\begin{align}
-						F\ix{N}=-\delta\frac{4}{3}\pi a^3m\ix{N}v\ix{th,N}n\ix{N}v\ix{S}
-					\end{align}
-					
-				($m\ix{N}$ - Neutralgasatommasse; $v\ix{th,N}$ - thermische Geschw. der Neutralgasatome; $n\ix{N}$ - Neutralgasdichte; $v\ix{S}$ - Staubteilchengeschw.)\\
-				Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.\\
-				Für den berühmten \tilt{Milikan}-Öltropfen-Versuch zur Bestimmung der Ladung eines Elektrons wurde, 1924 von \tilt{P. S. Epstein}, ebenso ein Ausdruck für die Kraft durch Neutralgasreibung bestimmt. Dabei ist $\beta$ der Reibungskoeffiziént und $\rho\ix{S}$ die Dichte des Staubmediums.
-				
-					\begin{align}
-						F\ix{N}=-m\ix{S}\beta v\ix{S}=-m\ix{S}v\ix{S}\delta\frac{8}{\pi}\frac{p}{a\rho\ix{S}v\ix{th,N}}
-					\end{align}
-					
-			\subsubsection{Thermophoretische Kraft}\label{subsub:therm}
-	
-				In einer Plasmakammer kann, durch Aufheizung oder Abkühlung einer der Elektroden bzw. Kammerbegrenzungen ein, bspw. der Gravitation oder dem elektrischen Feld entgegen gerichteter Temperaturgradient angelegt werden.\\
-				Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\mu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} genutzt (siehe \ref{sub:yukawaclust}).
-				
-					\begin{align}
-						F\ix{th}=-\frac{32}{15}\frac{a^2 \kappa\ix{N}}{v\ix{th,N}}\grad{T} \label{eq:therm}
-					\end{align}
-					
-				Es sei erwähnt -  über die Zustandsgleichung für ideale Gase $pV=Nk\ix{B}T$ ersichtlich -, dass bei einer höheren Temperatur die Dichte des Neutralgases sinkt. Experimentell findet man daher, dass die verminderte Dichte zu einer niedrigeren Stoßintensität führt und damit den Effekt der Thermophorese in etwa gerade kompensiert. Trotzdem bleibt die Methode des Temperaturgradienten ein wichtiges Mittel zum Einfang des Staubes und Ausgleich der Gravitationskraft.
-					
-			\subsubsection{Kraft durch \tilt{Laser}-Einstrahlung}
+			($m\ix{N}$ - Neutralgasatommasse; $v\ix{th,N}$ - thermische Geschw. der Neutralgasatome; $n\ix{N}$ - Neutralgasdichte; $v\ix{S}$ - Staubteilchengeschw.)\\
+			Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.\\
+			Für den berühmten \tilt{Milikan}-Öltropfen-Versuch zur Bestimmung der Ladung eines Elektrons wurde, 1924 von \tilt{P. S. Epstein}, ebenso ein Ausdruck für die Kraft durch Neutralgasreibung bestimmt. Dabei ist $\beta$ der Reibungskoeffiziént und $\rho\ix{S}$ die Dichte des Staubmediums.
 			
-				Der Einsatz von \tilt{Laser} (\fett{L}ight \fett{A}mplification by \fett{S}timulated \fett{E}mission of \fett{R}adiation) hat in Versuchen zu kolloidalen Plasmen verschiedene Gründe: einerseits wird der \tilt{target}-Bereich mit ihnen ausgeleuchtet, andererseits können unterschiedliche dynamische Eigenschaften des Staubes untersucht werden.\\
-				Die Manipulation von eingefangenen Teilchen wird bspw. durch die Fokussierung eines \tilt{Laser}strahls auf ein Partikel realisiert. Hierbei spielt der Impulsübertrag der Photonen mit Impuls $p\ix{Ph}$, welcher dem Strahlungsdruck $p\ix{Strahl}$ entspricht und die photophoretische Kraft $F\ix{ph}$ eine Rolle.
+				\begin{align}
+					F\ix{N}=-m\ix{S}\beta v\ix{S}=-m\ix{S}v\ix{S}\delta\frac{8}{\pi}\frac{p}{a\rho\ix{S}v\ix{th,N}}
+				\end{align}
 				
-					\begin{align}
-						p\ix{Strahl}=\frac{\diff p\ix{ph}}{A\ix{L}\diff t}=&\frac{\diff N\ix{ph}}{A\ix{La}\diff t}\frac{h}{\lambda}=\frac{I\ix{L}}{c} \nonumber \\
-						F\ix{Strahl}=&\gamma\frac{I\ix{L}}{c}\pi a^2 \label{eq:strahl}
-					\end{align}
-					
-				($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
-				Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert. Ein \tilt{Laser}-Strahl kann u.a., auf Grund der anisotropen Photonendichte (\tilt{gaussian bandwidth}) über den Querschnitt, zum Einfang von (einem) ausgewählten Partikeln benutzt werden.
-				Bei der photophoretischen Kraft wird die resultierende Dynamik aus dem, durch die Stöße mit Photonen erzeugten Temperaturgradienten über ein einzelnes Partikel beschrieben. Wie bereits erläutert, liegt ein Strahldichtegradient für eine Fläche von $A\ix{S}$ vor, woraus eine unterschiedliche Staubaufheizung durch die Stoßreibung folgt.\\
-				Treffen nun Neutralgasatome auf die heißere Seite, so werden sie dort schneller reflektiert, als von der kälteren. Die Differenz des Impulsübertrags resultiert in der photophoretischen Kraft, die entgegen des Gradienten der Photonendichte und damit in Richtung der heißen Seite der Partikel zeigt. Je nach der Absorptionsfähigkeit besitzen die Teilchen unterschiedliche Temperaturgradienten. Somit stellt sich eine heiße Front aus den Teilchen auf, welche eine gute Absorption und somit insgesamt höhere Temperatur aufweisen. Für diese Partikel zeigt $F\ix{ph}$ in Richtung des Strahls. Analog wirkt die photophoretische Kraft für schlecht absorbierende Teilchen in entgegengesetzte Richtung. Somit ergibt sich $F\ix{ph}$ in Gl. (\ref{eq:photoph}) mit dem Wärmeleitungskoeffizienten $\kappa\ix{S}$ des Staubes, dem Gasdruck $p$ und der Gastemperatur $T$.
-				
-					\begin{align}
-						F\ix{ph}=\frac{\pi a^2 p I\ix{L}}{6\left(pav\ix{th,N}+\kappa\ix{S}T\right)} \label{eq:photoph}
-					\end{align}
-				
-			\subsubsection{Einfang und Gleichgewicht}\label{subub:einfang}
-					
-					\begin{figure}
-						\centering
-						\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
-						\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$)} \label{img:kräfte}
-					\end{figure}
+		\subsubsection{Thermophoretische Kraft}\label{subsub:therm}
+
+			In einer Plasmakammer kann, durch Aufheizung oder Abkühlung einer der Elektroden bzw. Kammerbegrenzungen ein, bspw. der Gravitation oder dem elektrischen Feld entgegen gerichteter Temperaturgradient angelegt werden.\\
+			Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\mu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} genutzt (siehe \ref{sub:yukawaclust}).
 			
-				In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
-				Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
-				Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
-				Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.		
-					
-					\begin{figure}[H]
-						\centering
-						\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
-						\caption{Schemata für dein Einfang von Staub mit \fett{(a)}: $a\approx\unit[\tenpo{-5}]{m}$ (\fett{b)}: $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
-						\label{img:kräfterichtungen}
-					\end{figure}
+				\begin{align}
+					F\ix{th}=-\frac{32}{15}\frac{a^2 \kappa\ix{N}}{v\ix{th,N}}\grad{T} \label{eq:therm}
+				\end{align}
 				
-				In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
-				Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc}) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Die Ionen sind dabei bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer (siehe Abschn. \ref{sub:rand}). Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
-				Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Thermophorese und Ionenwind-Kraft zeigen (selbe Argumentation wie zu Teil \fett{(a)}) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
+			Es sei erwähnt -  über die Zustandsgleichung für ideale Gase $pV=Nk\ix{B}T$ ersichtlich -, dass bei einer höheren Temperatur die Dichte des Neutralgases sinkt. Experimentell findet man daher, dass die verminderte Dichte zu einer niedrigeren Stoßintensität führt und damit den Effekt der Thermophorese in etwa gerade kompensiert. Trotzdem bleibt die Methode des Temperaturgradienten ein wichtiges Mittel zum Einfang des Staubes und Ausgleich der Gravitationskraft.
+				
+		\subsubsection{Kraft durch \tilt{Laser}-Einstrahlung}
+		
+			Der Einsatz von \tilt{Laser} (\fett{L}ight \fett{A}mplification by \fett{S}timulated \fett{E}mission of \fett{R}adiation) hat in Versuchen zu kolloidalen Plasmen verschiedene Gründe: einerseits wird der \tilt{target}-Bereich mit ihnen ausgeleuchtet, andererseits können unterschiedliche dynamische Eigenschaften des Staubes untersucht werden.\\
+			Die Manipulation von eingefangenen Teilchen wird bspw. durch die Fokussierung eines \tilt{Laser}strahls auf ein Partikel realisiert. Hierbei spielt der Impulsübertrag der Photonen mit Impuls $p\ix{Ph}$, welcher dem Strahlungsdruck $p\ix{Strahl}$ entspricht und die photophoretische Kraft $F\ix{ph}$ eine Rolle.
+			
+				\begin{align}
+					p\ix{Strahl}=\frac{\diff p\ix{ph}}{A\ix{L}\diff t}=&\frac{\diff N\ix{ph}}{A\ix{La}\diff t}\frac{h}{\lambda}=\frac{I\ix{L}}{c} \nonumber \\
+					F\ix{Strahl}=&\gamma\frac{I\ix{L}}{c}\pi a^2 \label{eq:strahl}
+				\end{align}
+				
+			($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
+			Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert. Ein \tilt{Laser}-Strahl kann u.a., auf Grund der anisotropen Photonendichte (\tilt{gaussian bandwidth}) über den Querschnitt, zum Einfang von (einem) ausgewählten Partikeln benutzt werden.
+			Bei der photophoretischen Kraft wird die resultierende Dynamik aus dem, durch die Stöße mit Photonen erzeugten Temperaturgradienten über ein einzelnes Partikel beschrieben. Wie bereits erläutert, liegt ein Strahldichtegradient für eine Fläche von $A\ix{S}$ vor, woraus eine unterschiedliche Staubaufheizung durch die Stoßreibung folgt.\\
+			Treffen nun Neutralgasatome auf die heißere Seite, so werden sie dort schneller reflektiert, als von der kälteren. Die Differenz des Impulsübertrags resultiert in der photophoretischen Kraft, die entgegen des Gradienten der Photonendichte und damit in Richtung der heißen Seite der Partikel zeigt. Je nach der Absorptionsfähigkeit besitzen die Teilchen unterschiedliche Temperaturgradienten. Somit stellt sich eine heiße Front aus den Teilchen auf, welche eine gute Absorption und somit insgesamt höhere Temperatur aufweisen. Für diese Partikel zeigt $F\ix{ph}$ in Richtung des Strahls. Analog wirkt die photophoretische Kraft für schlecht absorbierende Teilchen in entgegengesetzte Richtung. Somit ergibt sich $F\ix{ph}$ in Gl. (\ref{eq:photoph}) mit dem Wärmeleitungskoeffizienten $\kappa\ix{S}$ des Staubes, dem Gasdruck $p$ und der Gastemperatur $T$.
+			
+				\begin{align}
+					F\ix{ph}=\frac{\pi a^2 p I\ix{L}}{6\left(pav\ix{th,N}+\kappa\ix{S}T\right)} \label{eq:photoph}
+				\end{align}
+			
+		\subsubsection{Einfang und Gleichgewicht}\label{subub:einfang}
+				
+				\begin{figure}
+					\centering
+					\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
+					\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$)} \label{img:kräfte}
+				\end{figure}
+		
+			In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
+			Für Teilchen mit einem Radius im Bereich von einigen $\unit{\mu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der positiven Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}\ll1$ ist, gilt dies nur lokal.\\
+			Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
+			Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.		
+				
+				\begin{figure}[H]
+					\centering
+					\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
+					\caption{Schemata für dein Einfang von Staub mit \fett{(a)}: $a\approx\unit[\tenpo{-5}]{m}$ (\fett{b)}: $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
+					\label{img:kräfterichtungen}
+				\end{figure}
+			
+			In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. \\
+			Abbildungsteil (a) zeigt dabei den Einfang von $\unit{\mu m}$-großen Teilchen in einer kleinen, lokalisierten Randschicht. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc}) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Die Ionen sind dabei bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer (siehe Abschn. \ref{sub:rand}). Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
+			Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Thermophorese und Ionenwind-Kraft zeigen (selbe Argumentation wie zu Teil \fett{(a)}) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
 
 		\subsection{Finite Yukawa-Cluster}\label{sub:yukawaclust}
+		
+				\begin{figure}[t]
+					\centering
+					\begin{subfigure}[b]{0.3\textwidth}
+						\centering
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/rot00013ungestrt.png}
+						\caption{}
+						\label{img:rechts}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.3\textwidth}
+						\centering
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/gruen05006ungestrt.png}
+						\caption{}
+						\label{img:links}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.3\textwidth}
+						\centering
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/gelb00011ungestrt.png}
+						\caption{}
+						\label{img:oben}
+					\end{subfigure}
+					\caption{Aufnahmen aus 3 verschiedenen, orthogonalen Raumrichtungen eines \tilt{Yukawa-Balls} mit $N=26$ Teilchen. Das System befindet sich bei niedrigen Gasdrücken ($\approx\unit[6-10]{Pa}$) in einer Argon-Entladung unter einem Kupferring, welcher sich im Plasma auf $\Phi\ix{fl}$ aufgeladen hat. \fett{(a)}: Ansicht aus der Ebene des Clusters \fett{(b)}: von oben \fett{(c)}: andere Richtung in der Ebene}
+				\end{figure}
 
-			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem finden sich in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, wieder. Doch 
+			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem sind in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, beschrieben worden. Damit kennen wir die Dynamik eines einzelnen Staubteilchen in einem Plasma und unter welchen Bedingungen ein Einfang gegeben ist, jedoch wissen wir nichts über das kollektive Verhalten der bereits besprochenen \tilt{Yukawa-Cluster}. Wann und wo sind diese - falls ein solcher Zustand existiert - stabil? Wie ist ihr Verhalten bei Störungen des externen Potentials? Dieser Abschnitt soll sich mit diesen Fragen auseinander setzen.
+			
+				 \subsubsection{Struktur}
+				 
+						 \begin{figure}
+						 	\centering
+						 	\begin{subfigure}[t]{0.48\textwidth}
+						 		\centering
+						 		\includegraphics[width=1.1\textwidth,height=0.3\textheight]{figs/einfangpotnu.png}
+						 		\caption{}
+						 		\label{img:potential}
+						 	\end{subfigure}
+						 	\begin{subfigure}[t]{0.48\textwidth}
+						 		\centering
+						 		\includegraphics[width=0.9\textwidth,height=0.3\textheight]{figs/gammaphasetransmelzer.png}
+						 		\caption{}
+						 		\label{img:gamma}
+						 	\end{subfigure}
+						 	\caption{\fett{(a)}: \fett{(b)}:}
+						 \end{figure}
+				 
+					 Ein \tilt{Yukawa-Ball} kann durch das Erzeugen eines externen Potentials eingefangen werden: beispielsweise durch räumliche Begrenzung mit einer Küvette oder einem Ring, welche sich im Plasma aufladen und damit eine nach innen gerichtete, elektrische Kraft auf den ebenfalls negativ geladenen Cluster ausüben. Das aus Kräfte auf den Staub resultierende Potential kann als harmonisch angenommen werden, e.g.:
+					 
+						 \begin{align}
+						 	V\left(\vec{r}\ix{j}\right)=\frac{m\ix{S}\omega\ix{0}^2}{2}\begin{pmatrix} 1 \\ \alpha\ix{y}  \\ \alpha\ix{z} \end{pmatrix} \vec{r}\ix{j}^2
+						 \end{align}
 
+					,wobei $\alpha\ix{k}=\omega\ix{k}^2/\omega\ix{x}^2$ die relative der Richtung $k\in\left\lbrace x,y,z\right\rbrace$ und $\omega\ix{0}=\omega\ix{x}$ die absolute Einfangstärke ist. In \ref{img:potential} ist das Potential, in dessen globalen Minimums sich der Cluster bildet, für eine feste Höhe über der getriebenen Elektrode dargestellt.\\
+					Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund unendlich vieler Elektronen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung mit seinen Nachbarn, respektive der thermischen Energie dieses Partikels. 
+					Für eine Kopplung $\Gamma\geq\Gamma\ix{k}\simeq168$ liegen kristalline Systeme vor. Für einen kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine "`korrektere"' Größe, da sich finite Staubcluster in hexagonalen bzw. pentagonalen Zellen auf den Schalen des Balls anordnen. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme eine energetisch günstige fcc- (\tilt{face centered cubic}) bzw. bcc-Struktur (\tilt{body centered cubic}) an.
+					
+						\begin{align}
+							\Gamma=\frac{Z\ix{S}e^2}{4\pi\varepsilon\ix{0}b\ix{WS}k\ix{B}T\ix{S}}  \,\,; \quad \Gamma\ix{C,eff}=\Gamma\exp\left(-\frac{b\ix{WS}}{\lambda\ix{D}}\right) \label{eq:kopplung}
+						\end{align}
+					
+									
 	\newpage
 	
 	\section{Durchführung}\label{sec:durch}
