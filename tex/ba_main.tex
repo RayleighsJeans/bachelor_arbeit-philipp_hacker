@@ -16,6 +16,7 @@
 \usepackage{libertine}
 %\usepackage{braket}
 \usepackage{ziffer}
+\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{units}
 \usepackage[infoshow]{tabularx}
@@ -551,7 +552,16 @@
 				
 				\begin{figure}
 					\centering
-					\includegraphics[width=1\textwidth,height=0.5\textwidth]{figs/allforcesequlibriummelzer.png}
+					\begin{subfigure}[t]{0.49\textwidth}
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerlinks.png}
+						\caption{}
+						\label{img:linkseq}
+					\end{subfigure}
+					\begin{subfigure}[t]{0.49\textwidth}
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerrechts.png}
+						\caption{}
+						\label{img:rechtseq}
+					\end{subfigure}
 					\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{5}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$)} \label{img:kräfte}
 				\end{figure}
 		
@@ -560,9 +570,20 @@
 			Für $a\gg\unit[1]{\mu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
 			Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.		
 				
-				\begin{figure}[H]
+				\begin{figure}
 					\centering
-					\includegraphics[width=\textwidth,height=0.5\textwidth]{figs/directionsofforcesandtrappingmelzer.png}
+					\begin{subfigure}[b]{0.45\textwidth}
+						\hspace{0.3cm}
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/directionsofforcesandtrappingmelzerlinks.png}
+						\caption{}
+						\label{img:linksdirection}
+					\end{subfigure}
+					\begin{subfigure}[b]{0.45\textwidth}
+						\hspace{-0.2cm}
+						\includegraphics[width=\textwidth,height=\textwidth]{figs/directionsofforcesandtrappingmelzerrechts.png}
+						\caption{}
+						\label{img:rechtsdirection}
+					\end{subfigure}
 					\caption{Schemata für dein Einfang von Staub mit \fett{(a)}: $a\approx\unit[\tenpo{-5}]{m}$ (\fett{b)}: $a\approx\unit[\tenpo{-9}]{m}$ bzw. unter Mikrogravitation. Es wurden die wichtigsten Kräfte und deren Richtungen eingezeichnet.}
 					\label{img:kräfterichtungen}
 				\end{figure}
@@ -596,7 +617,7 @@
 					\caption{Aufnahmen aus 3 verschiedenen, orthogonalen Raumrichtungen eines \tilt{Yukawa-Balls} mit $N=26$ Teilchen. Das System befindet sich bei niedrigen Gasdrücken ($\approx\unit[6-10]{Pa}$) in einer Argon-Entladung unter einem Kupferring, welcher sich im Plasma auf $\Phi\ix{fl}$ aufgeladen hat. \fett{(a)}: Ansicht aus der Ebene des Clusters \fett{(b)}: von oben \fett{(c)}: andere Richtung in der Ebene}
 				\end{figure}
 
-			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem sind in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, beschrieben worden. Damit kennen wir die Dynamik eines einzelnen Staubteilchen in einem Plasma und unter welchen Bedingungen ein Einfang gegeben ist, jedoch wissen wir nichts über das kollektive Verhalten der bereits besprochenen \tilt{Yukawa-Cluster}. Wann und wo sind diese - falls ein solcher Zustand existiert - stabil? Wie ist ihr Verhalten bei Störungen des externen Potentials? Dieser Abschnitt soll sich mit diesen Fragen auseinander setzen.
+			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem sind in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, beschrieben worden. Damit kennen wir die Dynamik eines einzelnen Staubteilchen in einem Plasma und unter welchen Bedingungen ein Einfang gegeben ist, jedoch wissen wir nichts über das kollektive Verhalten der bereits besprochenen \tilt{Yukawa-Cluster}. Wann und wo sind diese - falls ein solcher Zustand existiert - stabil? Wie ist ihr Verhalten bei Störungen des externen Potentials? Dieser Abschnitt soll sich mit diesen Fragen, in Bezug auf einen Versuch unter den Bedingugen aus \ref{img:linksdirection}, auseinander setzen.
 			
 				 \subsubsection{Struktur}
 				 
@@ -617,22 +638,81 @@
 						 	\caption{\fett{(a)}: \fett{(b)}:}
 						 \end{figure}
 				 
-					 Ein \tilt{Yukawa-Ball} kann durch das Erzeugen eines externen Potentials eingefangen werden: beispielsweise durch räumliche Begrenzung mit einer Küvette oder einem Ring, welche sich im Plasma aufladen und damit eine nach innen gerichtete, elektrische Kraft auf den ebenfalls negativ geladenen Cluster ausüben. Das aus Kräfte auf den Staub resultierende Potential kann als harmonisch angenommen werden, e.g.:
+					 Ein \tilt{Yukawa-Ball} kann durch das Erzeugen eines externen Potentials eingefangen werden: beispielsweise durch räumliche Begrenzung mit einer Küvette oder einem Ring, welche sich im Plasma aufladen und damit eine nach innen gerichtete, elektrische Kraft auf den ebenfalls negativ geladenen Cluster ausüben. Das aus den Kräften auf die Staubpartikel resultierende Potential kann als harmonisch angenommen werden, e.g.:
 					 
 						 \begin{align}
 						 	V\left(\vec{r}\ix{j}\right)=\frac{m\ix{S}\omega\ix{0}^2}{2}\begin{pmatrix} 1 \\ \alpha\ix{y}  \\ \alpha\ix{z} \end{pmatrix} \vec{r}\ix{j}^2
 						 \end{align}
 
-					,wobei $\alpha\ix{k}=\omega\ix{k}^2/\omega\ix{x}^2$ die relative der Richtung $k\in\left\lbrace x,y,z\right\rbrace$ und $\omega\ix{0}=\omega\ix{x}$ die absolute Einfangstärke ist. In \ref{img:potential} ist das Potential, in dessen globalen Minimums sich der Cluster bildet, für eine feste Höhe über der getriebenen Elektrode dargestellt.\\
+					,wobei $\alpha\ix{k}=\omega\ix{k}^2/\omega\ix{x}^2$ die relative der Richtung $k\in\left\lbrace x,y,z\right\rbrace$ und $\omega\ix{0}=\omega\ix{x}$ die absolute Einfangstärke ist. In \ref{img:potential} ist das Potential, in dessen globalen Minimums sich der Cluster in diesem Experiment bildet, für eine feste Höhe über der getriebenen Elektrode dargestellt. Für eine geeignete Anordnung strebt man einen isotropen Einfang mit $\omega\ix{x}=\omega\ix{y}=\omega\ix{z}$ an.\\
 					Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund der Ionen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung eines Teilchens mit seinen Nachbarn in Einheiten der thermischen Energie. 
-					Für eine Kopplung $\Gamma\geq\Gamma\ix{k}\simeq168$ liegen kristalline Systeme vor. Für einen kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine "`korrektere"' Größe, da sich finite Staubcluster in hexagonalen bzw. pentagonalen Zellen auf den Schalen des Balls anordnen. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme eine energetisch günstige fcc- (\tilt{face centered cubic}) bzw. bcc-Struktur (\tilt{body centered cubic}) an.
+					Für eine Kopplung $\Gamma\geq\Gamma\ix{k}\simeq168$ liegen kristalline Systeme vor. Für einen kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Das heißt, dass ein System aus Staubpartikeln "`schmelzen"' kann, bringt man durch Lasereinstrahlung o.ä. gezielt Energie in den Cluster ein und verringert damit die Ordnung bzw. erhöht die thermische Bewegung. Dabei verschwindet zuerst die Winkelabhängigkeit, was das Auflösen der kristallartigen Strukturen innerhalb des Clusters zur Folge hat (zum Beispiel \cite{Thomas96}).\\
+					Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine korrektere Größe, da sich der Staub in hexagonalen bzw. pentagonalen Zellen auf den konzentrischen Sphären des Clusters anordnet. Die Zusammensetzung eines solchen, \tilt{finiten Yukawa-Systems} ähnelt stark dem Orbital- bzw. Schalenmodell der Atomphysik. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme eine energetisch günstige fcc- (\tilt{face centered cubic}) bzw. bcc-Struktur (\tilt{body centered cubic}) an.
 					
 						\begin{align}
 							\Gamma=\frac{Z\ix{S}e^2}{4\pi\varepsilon\ix{0}b\ix{WS}k\ix{B}T\ix{S}}  \,\,; \quad \Gamma\ix{C,eff}=\Gamma\exp\left(-\frac{b\ix{WS}}{\lambda\ix{D}}\right) \label{eq:kopplung}
 						\end{align}
 						
-					Der effektive Parameter reiner Coulomb-Wechselwirkungen $\Gamma\ix{C,eff}$ entspricht einer modifizierten Kopplung mit Rücksicht auf die Abschirmung durch die Ionenwolke (\cite{Lampe00}, \cite{Schweigert00d}) um ein Partikel bzw. den Cluster. Aus diesem Grund führt man die Abschirmstärke $\kappa=b\ix{WS}/\lambda\ix{D}$ ein, welche angibt, in welcher Entfernung das Teilchen der Ladung $Q$ vom restlichen Plasma nicht mehr "`zu sehen"' ist. Außerdem folgt daraus der Zusammenhang für die Phasengrenze in \ref{img:gamma} $\Gamma\left(\kappa\right)$: für große \tilt{Wigner-Seitz}-Radien bzw. sehr kleine Debye-Längen verschwindet die Wechselwirkung zwischen den Staubteilchen nahezu vollständig. Das Yukawa-Potential geht für diesen Fall in das harter Kugeln über (bspw. van-der-Waals-Gastheorie etc.).
-									
+					Der effektive Parameter reiner Coulomb-Wechselwirkungen $\Gamma\ix{C,eff}$ entspricht einer modifizierten Kopplung mit Rücksicht auf die Abschirmung durch die Ionenwolke (\cite{Lampe00}, \cite{Schweigert00d}) um ein Partikel bzw. den Cluster. Aus diesem Grund führt man die Abschirmstärke $\kappa=b\ix{WS}/\lambda\ix{D}$ ein, welche angibt, um wie viel die elektrostatische Wechselwirkung mit einem Teilchen der Ladung $Q$ innerhalb einer Elementarzelle der Staubpartikel abgeschwächt ist. Außerdem folgt daraus der Zusammenhang für die Phasengrenze in \ref{img:gamma} $\Gamma\left(\kappa\right)$: für große \tilt{Wigner-Seitz}-Radien bzw. sehr kleine Debye-Längen verschwindet die Wechselwirkung zwischen den Staubteilchen nahezu vollständig. Das Yukawa-Potential geht für diesen Fall in das harter Kugeln über (bspw. van-der-Waals-Gastheorie etc.).\\
+					Abschließend sei erwähnt, das die bisher genannten Eigenschaften u.U. stark von der Art der Wechselwirkung bzw. der Teilchenzahl abhängen: die Betrachtungen vernachlässigen vollständig den Einfluss einer \tilt{Elektronenerschöpfung} (\cite{Melzer07}) und gehen von reiner Coulomb- oder Yukawa-Wechselwirkung aus. Die Besetzungszahlen der Sphären des Clusters können jedoch für die verschiedenen Potentiale stark variieren, was u.a. eine Folge unterschiedlicher Abschirmungen ist.
+					
+				\subsubsection{Dynamik- und Modenanalyse}
+				
+					Auf Grundlage der strukturellen Überlegungen des vorherigen Abschnittes, kann eine Analyse der dynamischen Eigenschaften eines solchen finiten Yukawa-Systems erfolgen. Diese beruht auf der Entwicklung eines \tilt{Modenspektrums} dieses Clusters, wobei im Gegensatz zu ausgedehnten System darin nur eine endliche Zahl von Moden vorhanden sind. Statt einer Dispersionsrelation für Wellen bestimmt man demnach Schwingungsmoden, welche den Grenzen und Randbedingungen des Clusters bzw. des Einfangs genügen. Mit der Normierung auf Abstandseinheiten $r\ix{0}$ und Energieeinheiten $E\ix{0}$ folgt Gl. (\ref{eq:energie}). Die erste Summe stellt den kinetischen Anteil der Energie des $i$-ten Teilchens im Rahmen eines harmonischen Oszillators dar. Die Yukawa-Abstoßung im zweiten Teil kommt aus der elektrostatischen Wechselwirkung innerhalb des Staubkristalls, weswegen $\kappa=r\ix{0}/\lambda\ix{D}$ und $r\ix{ij}=|\vec{r}\ix{i}-\vec{r}\ix{j}|$.
+					
+						\begin{align}
+							E=\sum_{i=1}^{N}\vec{r}\ix{i}\,^2+&\sum_{i<j}^{N}\frac{\exp\left(-\kappa r\ix{ij}\right)}{r\ix{ij}} \label{eq:energie} \\
+							r\ix{0}=\left(\frac{2Z\ix{S}^2e^2}{4\pi\varepsilon\ix{0}m\ix{S}\omega\ix{0}^2}\right)^{1/3} \quad &\quad E\ix{0}=\left(\frac{Z\ix{S}^2e^4m\ix{S}\omega\ix{0}^2}{8\pi\varepsilon\ix{0}}\right)^{1/3} \nonumber
+						\end{align}
+					
+					Ausgehend von der normierten Gesamtenergie $E$ eines N-Teilchen-Clusters lässt sich, als Analogon zur Taylor-Entwicklung, durch Approximation um ein Equilibrium die sog. \tilt{Hesse-Matrix} in Gl. (\ref{eq:matrix}) als dynamische Matrix $A\in\text{Mat}\left(3N\times3N\right)$ aufstellen. Hinter dieser Formulierung steht die Idee, dass jede Bewegung als anteilige Überlagerung der Schwingungsmoden verstanden werden kann. Somit steht in $A$ für alle Teilchenkoordinaten $i,j$ die 2. Ordnung der Entwicklung um das Gleichgewicht. Löst man für diese das Eigenwertproblem, so erhält man mit $\vec{\nu}\ix{p}$ und $\omega\ix{p}$ den Modenvektor und -frequenz der Mode $p$.
+					
+						\begin{align}
+							A=
+							\begin{pmatrix}
+							\frac{\partial^2 E}{\partial x\ix{i} \partial x\ix{j}} & \cdots & \frac{\partial^2 E}{\partial x\ix{i} \partial z\ix{j}} \\ 
+							\vdots & \ddots & \vdots \\ 
+							\frac{\partial^2 E}{\partial z\ix{i} \partial x\ix{j}} & \cdots & \frac{\partial^2 E}{\partial z\ix{i} \partial z\ix{j}}
+							\end{pmatrix} 
+							\quad \text{mit} \quad \frac{\partial^2 E}{\partial x\ix{i}\partial y\ix{j}}&=
+							\begin{pmatrix}
+							\frac{\partial^2 E}{\partial x\ix{1} \partial x\ix{1}} & \cdots & \frac{\partial^2 E}{\partial x\ix{1} \partial y\ix{N}} \\ 
+							\vdots & \ddots & \vdots \\ 
+							\frac{\partial^2 E}{\partial x\ix{N} \partial y\ix{1}} & \cdots & \frac{\partial^2 E}{\partial x\ix{N} \partial y\ix{N}}
+							\end{pmatrix}
+							\label{eq:matrix} \\
+							\left(A-\omega\ix{p}^2I_{(3N)}\right)\vec{\nu}\ix{p}&=0 \label{eq:ewp} \\ 
+							\text{wobei} \quad \vec{\nu}\ix{p}^\top=\left(x\ix{1,p},\dots,x\ix{N,p},y\ix{1,p},\dots\right) \quad &\text{bzw.} \quad \vec{\nu}\ix{i,p}^\top=\left(x\ix{i,p},y\ix{i,p},z\ix{i,p}\right) \nonumber
+						\end{align}
+						
+					Aus der Lösung von Gl. (\ref{eq:ewp}) um $A$ erhält man folglich $3N$ Modenfrequenzen und -vektoren. Den Anteil, den eine jede Mode $p$ an der Bewegung eines Teilchens $i$ hat, erhält man durch die Projektion des Vektors der Geschwindigkeit $\vec{v}\ix{i}\left(t\right)$ auf die Modenvektoren $\vec{\nu}\ix{i,p}$. Anders herum: den Anteil der Mode an der Clusterbewegung, ob thermisch oder extern angeregt, erhält man aus der Summe aller Anteile an den Teilchenbewegungen (siehe Gl. (\ref{eq:summe})). Die Energie, welche in der Mode $p$ der Frequenz $\omega$ gespeichert ist, ergibt sich über die Fouriertransformation zu $S\ix{p}\left(\omega\right)$.
+					
+						\begin{align}
+							f\ix{p}&\left(t\right)=\sum_{i=1}^{N}\vec{v}\ix{i}\left(t\right)\vec{\nu}\ix{i,p} \label{eq:summe} \\
+							S\ix{p}\left(\omega\right)&=\left.\left.\frac{2}{T}\right|\int_{0}^{T}f\ix{p}\left(t\right)\exp\left(i\omega t\right)\diff t\right|^2 \label{eq:energiedicht}
+						\end{align}
+						
+					\begin{figure}
+						\centering
+						\begin{subfigure}[b]{0.48\textwidth}
+							\centering
+							\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvenergie3teilchenmelzer.png}
+							\caption{}
+							\label{img:spektrum}
+						\end{subfigure}
+						\begin{subfigure}[b]{0.48\textwidth}
+							\centering
+							\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvektoren3teilchenmelzer.png}
+							\caption{}
+							\label{img:moden}
+						\end{subfigure}
+						\caption{\fett{(a)}: Modenspektrum für einen 3-Teilchen-Cluster. Die weißen Punkte entsprechen theoretisch errechneten Werten der Modenfrequenzen. Die Bereiche von $S\ix{p}\left(\omega\right)\rightarrow0$ treten bei der Eigenfrequenz auf. \fett{(b)}: Eigenvektoren ($\vec{\nu}\ix{i,p}$) für $N=3$. Die Modenfrequenz ist auf die Einfangstärke $\omega\ix{0}$ normiert.}
+					\end{figure}
+					
+					Die spektrale Energiedichte aus Gl. (\ref{eq:energiedicht}) wird in \ref{img:spektrum} für einen sehr simplen Cluster aus $N=3$ Teilchen dargestellt. Passend dazu sind in \ref{img:moden} die Modenvektoren der drei Staubpartikel eingezeichnet. Insbesondere sind dort Moden gezeigt, welche allgemein für alle Cluster auftreten: \tilt{breathing}, \tilt{slosh} und Rotation. $p=1$ zeigt die \tilt{breathing}-Mode: alle Teilchen entfernen sich vom Clusterschwerpunkt, wobei dieser jedoch fest bleibt. Die Frequenz $\omega\ix{breath}$ hängt schwach von $N$ ab und steigt mit der Abschirmung $\kappa$. Mode $p=2$ ist die Rotationsmode. Ihre Eigenfrequenz ist $0$, da es für diese keine rückstellenden Kräfte gibt. In $p=3$ und $p=4$ sind \tilt{kink}-Moden gezeigt. Nummer 5 und 6 stellen \tilt{slosh}-Moden dar: das System führt eine Schwerpunktstranslation aus, wobei alle Partikel sich in die selbe Richtung bewegen.
+					
+					
+										
 	\newpage
 	
 	\section{Durchführung}\label{sec:durch}
