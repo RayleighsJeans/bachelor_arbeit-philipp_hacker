@@ -16,7 +16,6 @@
 \usepackage{libertine}
 %\usepackage{braket}
 \usepackage{ziffer}
-\usepackage{mathtools}
 \usepackage{graphicx}
 \usepackage{units}
 \usepackage[infoshow]{tabularx}
@@ -645,8 +644,7 @@
 						 \end{align}
 
 					,wobei $\alpha\ix{k}=\omega\ix{k}^2/\omega\ix{x}^2$ die relative der Richtung $k\in\left\lbrace x,y,z\right\rbrace$ und $\omega\ix{0}=\omega\ix{x}$ die absolute Einfangstärke ist. In \ref{img:potential} ist das Potential, in dessen globalen Minimums sich der Cluster in diesem Experiment bildet, für eine feste Höhe über der getriebenen Elektrode dargestellt. Für eine geeignete Anordnung strebt man einen isotropen Einfang mit $\omega\ix{x}=\omega\ix{y}=\omega\ix{z}$ an.\\
-					Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund der Ionen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung eines Teilchens mit seinen Nachbarn in Einheiten der thermischen Energie. 
-					Für eine Kopplung $\Gamma\geq\Gamma\ix{k}\simeq168$ liegen kristalline Systeme vor. Für einen kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Das heißt, dass ein System aus Staubpartikeln "`schmelzen"' kann, bringt man durch Lasereinstrahlung o.ä. gezielt Energie in den Cluster ein und verringert damit die Ordnung bzw. erhöht die thermische Bewegung. Dabei verschwindet zuerst die Winkelabhängigkeit, was das Auflösen der kristallartigen Strukturen innerhalb des Clusters zur Folge hat (zum Beispiel \cite{Thomas96}).\\
+					Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund der Ionen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung eines Teilchens mit seinen Nachbarn in Einheiten der thermischen Energie. Für ein $\Gamma>1$ spricht man von einer starken Kopplung innerhalb des Clusters bzw. des Plasmas. Mit $\Gamma\geq\Gamma\ix{k}\simeq168$ liegen kristalline Systeme vor. Bei einem kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Das heißt, dass ein System aus Staubpartikeln "`schmelzen"' kann, bringt man durch Lasereinstrahlung o.ä. gezielt Energie in den Cluster ein und verringert damit die Ordnung bzw. erhöht die thermische Bewegung. Dabei verschwindet zuerst die Winkelabhängigkeit, was das Auflösen der kristallartigen Strukturen innerhalb des Clusters zur Folge hat (zum Beispiel \cite{Thomas96}).\\
 					Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine korrektere Größe, da sich der Staub in hexagonalen bzw. pentagonalen Zellen auf den konzentrischen Sphären des Clusters anordnet. Die Zusammensetzung eines solchen, \tilt{finiten Yukawa-Systems} ähnelt stark dem Orbital- bzw. Schalenmodell der Atomphysik. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme eine energetisch günstige fcc- (\tilt{face centered cubic}) bzw. bcc-Struktur (\tilt{body centered cubic}) an.
 					
 						\begin{align}
@@ -658,7 +656,8 @@
 					
 				\subsubsection{Dynamik- und Modenanalyse}
 				
-					Auf Grundlage der strukturellen Überlegungen des vorherigen Abschnittes, kann eine Analyse der dynamischen Eigenschaften eines solchen finiten Yukawa-Systems erfolgen. Diese beruht auf der Entwicklung eines \tilt{Modenspektrums} dieses Clusters, wobei im Gegensatz zu ausgedehnten System darin nur eine endliche Zahl von Moden vorhanden sind. Statt einer Dispersionsrelation für Wellen bestimmt man demnach Schwingungsmoden, welche den Grenzen und Randbedingungen des Clusters bzw. des Einfangs genügen. Mit der Normierung auf Abstandseinheiten $r\ix{0}$ und Energieeinheiten $E\ix{0}$ folgt Gl. (\ref{eq:energie}). Die erste Summe stellt den kinetischen Anteil der Energie des $i$-ten Teilchens im Rahmen eines harmonischen Oszillators dar. Die Yukawa-Abstoßung im zweiten Teil kommt aus der elektrostatischen Wechselwirkung innerhalb des Staubkristalls, weswegen $\kappa=r\ix{0}/\lambda\ix{D}$ und $r\ix{ij}=|\vec{r}\ix{i}-\vec{r}\ix{j}|$.
+					Auf Grundlage der strukturellen Überlegungen des vorherigen Abschnittes, kann eine Analyse der dynamischen Eigenschaften eines solchen finiten Yukawa-Systems erfolgen. Diese beruht auf der Entwicklung eines \tilt{Modenspektrums} dieses Clusters, wobei im Gegensatz zu ausgedehnten System darin nur eine endliche Zahl von Moden vorhanden sind. Statt einer Dispersionsrelation für Wellen bestimmt man demnach Schwingungsmoden, welche den Grenzen und Randbedingungen des Clusters bzw. des Einfangs genügen.\\
+					Mit der Normierung auf Abstandseinheiten $r\ix{0}$ und Energieeinheiten $E\ix{0}$ folgt Gl. (\ref{eq:energie}). Die erste Summe stellt den kinetischen Anteil der Energie des $i$-ten Teilchens im Rahmen eines harmonischen Oszillators dar. Die Yukawa-Abstoßung im zweiten Teil kommt aus der elektrostatischen Wechselwirkung innerhalb des Staubkristalls, weswegen $\kappa=r\ix{0}/\lambda\ix{D}$ und $r\ix{ij}=|\vec{r}\ix{i}-\vec{r}\ix{j}|$ gilt.
 					
 						\begin{align}
 							E=\sum_{i=1}^{N}\vec{r}\ix{i}\,^2+&\sum_{i<j}^{N}\frac{\exp\left(-\kappa r\ix{ij}\right)}{r\ix{ij}} \label{eq:energie} \\
@@ -685,32 +684,46 @@
 							\text{wobei} \quad \vec{\nu}\ix{p}^\top=\left(x\ix{1,p},\dots,x\ix{N,p},y\ix{1,p},\dots\right) \quad &\text{bzw.} \quad \vec{\nu}\ix{i,p}^\top=\left(x\ix{i,p},y\ix{i,p},z\ix{i,p}\right) \nonumber
 						\end{align}
 						
-					Aus der Lösung von Gl. (\ref{eq:ewp}) um $A$ erhält man folglich $3N$ Modenfrequenzen und -vektoren. Den Anteil, den eine jede Mode $p$ an der Bewegung eines Teilchens $i$ hat, erhält man durch die Projektion des Vektors der Geschwindigkeit $\vec{v}\ix{i}\left(t\right)$ auf die Modenvektoren $\vec{\nu}\ix{i,p}$. Anders herum: den Anteil der Mode an der Clusterbewegung, ob thermisch oder extern angeregt, erhält man aus der Summe aller Anteile an den Teilchenbewegungen (siehe Gl. (\ref{eq:summe})). Die Energie, welche in der Mode $p$ der Frequenz $\omega$ gespeichert ist, ergibt sich über die Fouriertransformation zu $S\ix{p}\left(\omega\right)$.
+					Aus der Lösung von Gl. (\ref{eq:ewp}) um $A$ erhält man folglich $3N$ Modenfrequenzen und -vektoren. Den Anteil, den eine jede Mode $p$ an der Bewegung eines Teilchens $i$ hat, erhält man durch die Projektion des Vektors der Geschwindigkeit $\vec{v}\ix{i}\left(t\right)$ auf die Modenvektoren $\vec{\nu}\ix{i,p}$. Anders herum: den Anteil der Mode an der Clusterbewegung, ob thermisch oder extern angeregt, erhält man aus der Summe aller Anteile an den Teilchenbewegungen (siehe Gl. (\ref{eq:summe})). Die Energie, welche in der Mode $p$ bei der Frequenz $\omega$ gespeichert ist, ergibt sich über die Fouriertransformation dieses Bewegungsanteils zu $S\ix{p}\left(\omega\right)$.
 					
 						\begin{align}
 							f\ix{p}&\left(t\right)=\sum_{i=1}^{N}\vec{v}\ix{i}\left(t\right)\vec{\nu}\ix{i,p} \label{eq:summe} \\
 							S\ix{p}\left(\omega\right)&=\left.\left.\frac{2}{T}\right|\int_{0}^{T}f\ix{p}\left(t\right)\exp\left(i\omega t\right)\diff t\right|^2 \label{eq:energiedicht}
 						\end{align}
 						
-					\begin{figure}
-						\centering
-						\begin{subfigure}[b]{0.48\textwidth}
+						\begin{figure}
 							\centering
-							\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvenergie3teilchenmelzer.png}
-							\caption{}
-							\label{img:spektrum}
-						\end{subfigure}
-						\begin{subfigure}[b]{0.48\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvektoren3teilchenmelzer.png}
-							\caption{}
-							\label{img:moden}
-						\end{subfigure}
-						\caption{\fett{(a)}: Modenspektrum für einen 3-Teilchen-Cluster. Die weißen Punkte entsprechen theoretisch errechneten Werten der Modenfrequenzen. Die Bereiche von $S\ix{p}\left(\omega\right)\rightarrow0$ treten bei der Eigenfrequenz auf. \fett{(b)}: Eigenvektoren ($\vec{\nu}\ix{i,p}$) für $N=3$. Die Modenfrequenz ist auf die Einfangstärke $\omega\ix{0}$ normiert.}
-					\end{figure}
+							\begin{subfigure}[b]{0.48\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvenergie3teilchenmelzer.png}
+								\caption{}
+								\label{img:spektrum}
+							\end{subfigure}
+							\begin{subfigure}[b]{0.48\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.3\textheight]{figs/modenvektoren3teilchenmelzer.png}
+								\caption{}
+								\label{img:moden}
+							\end{subfigure}
+							\caption{\fett{(a)}: Modenspektrum für einen 3-Teilchen-Cluster. Die weißen Punkte entsprechen theoretisch errechneten Werten der Modenfrequenzen. Die Bereiche von $S\ix{p}\left(\omega\right)\rightarrow0$ treten bei der Eigenfrequenz auf. \fett{(b)}: Eigenvektoren ($\vec{\nu}\ix{i,p}$) für $N=3$. Die Modenfrequenz ist auf die Einfangstärke $\omega\ix{0}$ normiert.}
+						\end{figure}
 					
-					Die spektrale Energiedichte aus Gl. (\ref{eq:energiedicht}) wird in \ref{img:spektrum} für einen sehr simplen Cluster aus $N=3$ Teilchen dargestellt. Passend dazu sind in \ref{img:moden} die Modenvektoren der drei Staubpartikel eingezeichnet. Insbesondere sind dort Moden gezeigt, welche allgemein für alle Cluster auftreten: \tilt{breathing}, \tilt{slosh} und Rotation. $p=1$ zeigt die \tilt{breathing}-Mode: alle Teilchen entfernen sich vom Clusterschwerpunkt, wobei dieser jedoch fest bleibt. Die Frequenz $\omega\ix{breath}$ hängt schwach von $N$ ab und steigt mit der Abschirmung $\kappa$. Mode $p=2$ ist die Rotationsmode. Ihre Eigenfrequenz ist $0$, da es für diese keine rückstellenden Kräfte gibt. In $p=3$ und $p=4$ sind \tilt{kink}-Moden gezeigt. Nummer 5 und 6 stellen \tilt{slosh}-Moden dar: das System führt eine Schwerpunktstranslation aus, wobei alle Partikel sich in die selbe Richtung bewegen.
+					Die spektrale Energiedichte aus Gl. (\ref{eq:energiedicht}) wird in \ref{img:spektrum} für einen sehr simplen Cluster aus $N=3$ Teilchen dargestellt. Passend dazu sind in \ref{img:moden} die Modenvektoren der drei Staubpartikel eingezeichnet. Insbesondere sind dort Moden gezeigt, welche allgemein für alle Cluster auftreten: \tilt{breathing}, \tilt{slosh} und Rotation. $p=1$ zeigt die \tilt{breathing}-Mode: alle Teilchen entfernen sich vom Clusterschwerpunkt, wobei dieser jedoch fest bleibt. Die Frequenz $\omega\ix{breath}$ hängt schwach von $N$ ab und steigt mit der Abschirmung $\kappa$. Mode $p=2$ ist die Rotationsmode. Ihre Eigenfrequenz ist $0$, da es für diese keine rückstellenden Kräfte gibt. In $p=3$ und $p=4$ sind \tilt{kink}-Moden gezeigt. Nummer 5 und 6 stellen \tilt{slosh}-Moden dar: das System führt eine Schwerpunktstranslation aus, wobei alle Partikel sich in die selbe Richtung bewegen.\\
+					Diese \tilt{Normalmodenanalyse} ist ein geeignetes Mitte zur Analyse der Dynamik eines finiten Systems (siehe \cite{Melzer01},\cite{Melzer03}), vorausgesetztes genügt den gemachten Voraussetzungen: Yukawa-Wechselwirkung, starke Kopplung jedoch fluider Zustand, homogene Partikel \dots
 					
+				\subsubsection{Fluidmoden}
+				
+					Genau wie in der, diesem Teilgebiet übergeordneten Plasmaphysik, lässt sich ein finiter Cluster als hydrodynamische Gesamtheit auffassen. Ähnlich wie beim \tilt{Fluidmodell} und der Betrachtung durch die \tilt{magnetohydrodynamischen Gleichugen} (MHD), nimmt man hierbei das System als kontinuierliche Masse mit entsprechender Ladungsverteilung an. Daraus ergeben sich neue Möglichkeiten die Dynamik des Cluster zu beschreiben und nachzuvollziehen.\\
+					Eingangs muss das neue Potential $\Phi\left(\vec{r},t\right)$ des fluiden "`Tropfens"' beschrieben werden. Da der Cluster von Ladungsträgern abgeschirmt wird, welche sich um diesen auf Grund seiner elektrostatischen Wechselwirkung ansammeln - analog zu den vorherigen Abschnitten -, kann man die modifizierte Poissongleichung (Gl. (\ref{eq:poisson})) für die Ladungsdichte $\rho\left(\vec{r},t\right)$ des Systems benutzen. Deren Lösung erhält man mit der \tilt{Green-Funktion} $G\left(\vec{r}\right)$ aus Gl. (\ref{eq:green}) in (\ref{eq:fluid}). 
+					
+						\begin{align}
+							&\left(\Delta-\kappa^2\right)\Phi\left(\vec{r},t\right)=\frac{1}{\varepsilon\ix{0}}\rho\left(\vec{r},t\right) \label{eq:poisson} \\
+							\Phi\left(\vec{r}\right)&=\int_{\mathbb{R}^3}\frac{\rho\left(\vec{r}\,^\prime,t\right)}{4\pi\varepsilon\ix{0}|\vec{r}-\vec{r}\,^\prime|}\diff^{3}r^\prime \\
+							&\,\,\,\,\vdots\quad G\left(\vec{r}\right)=\frac{\exp\left(-\kappa|\vec{r}|\right)}{4\pi|\vec{r}|} \label{eq:green}\\
+							\Phi&=\int_{\mathbb{R}^3}\frac{\exp\left(-\kappa|\vec{r}-\vec{r}\,^\prime|\right)}{4\pi\varepsilon\ix{0}|\vec{r}-\vec{r}\,^\prime|}\rho\left(\vec{r}\,^\prime,t\right)\diff^{3}r^\prime \label{eq:fluid}
+						\end{align}
+						
+					Die Green-Funktion entspricht einem einheitenlosen Yukawa-Potential, welches man nach \cite{Arfken05} in eine Reihe von sphärisch-harmonischen \tilt{Kugelflächenfunktionen} $Y_{lm}$ und \tilt{modifizierten Besselfunktionen} $i_{l}$ und $k_{l}$ entwickeln kann. Dabei sind die minimalen bzw. maximalen Abstände $r\ix{min}=\min\left(|\vec{r}\,^\prime|,|\vec{r}|\right)$ und $r\ix{max}=\max\left(|\vec{r}\,^\prime|,|\vec{r}|\right)$.
 					
 										
 	\newpage
