@@ -1,3 +1,9 @@
+*.log
+*.pdf
+*.aux
+*.synctex.gz
+*.toc
+*.out
 */*.brf
 *.brf
 *.blg
