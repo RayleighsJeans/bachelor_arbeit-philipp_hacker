@@ -723,8 +723,13 @@
 							\Phi&=\int_{\mathbb{R}^3}\frac{\exp\left(-\kappa|\vec{r}-\vec{r}\,^\prime|\right)}{4\pi\varepsilon\ix{0}|\vec{r}-\vec{r}\,^\prime|}\rho\left(\vec{r}\,^\prime,t\right)\diff^{3}r^\prime \label{eq:fluid}
 						\end{align}
 						
-					Die Green-Funktion entspricht einem einheitenlosen Yukawa-Potential, welches man nach \cite{Arfken05} in eine Reihe von sphärisch-harmonischen \tilt{Kugelflächenfunktionen} $Y_{lm}$ und \tilt{modifizierten Besselfunktionen} $i_{l}$ und $k_{l}$ entwickeln kann. Dabei sind die minimalen bzw. maximalen Abstände $r\ix{min}=\min\left(|\vec{r}\,^\prime|,|\vec{r}|\right)$ und $r\ix{max}=\max\left(|\vec{r}\,^\prime|,|\vec{r}|\right)$.
+					Die Green-Funktion entspricht einem einheitenlosen Yukawa-Potential, welches man nach \cite{Arfken05},\cite{Yap10} in eine Reihe von sphärisch-harmonischen \tilt{Kugelflächenfunktionen} $Y_{lm}\left(\theta,\varphi\right)$ und \tilt{modifizierten Besselfunktionen} $i_{l}\left(x\right)$ und $k_{l}\left(x\right)$ entwickeln kann. Die Definitionen erfolgen in dreidimensionalen Kugelkoordinaten $\left(r,\theta,\varphi\right)$, wobei die minimalen bzw. maximalen Abstände $r\ix{<}=\min\left(r^\prime,r\right)$ und $r\ix{>}=\max\left(r^\prime,r\right)$ sind.
 					
+						\begin{align}
+							\frac{\exp\left(-\kappa|\vec{r}|\right)}{4\pi|\vec{r}|}=\sum_{l=0}^{\infty}\sum_{m=-l}^{l}\frac{r\ix{<}^l}{r\ix{>}^{l+1}}i_{l}\left(\kappa r\ix{<}\right)k_{l}\left(\kappa r\ix{>}\right)\exp\left(-\kappa r\ix{>}\right)Y_{lm}^*\left(\theta^\prime,\varphi\prime\right)Y_{lm}\left(\theta,\varphi\right) \label{eq:entwick}
+						\end{align}
+					
+					Nach \cite{Ivanov09} und \cite{Schella13} lassen sich aus Gl. (\ref{eq:entwick}) die Multipolmomente der Ladungsdichte des Clusters gewinnen (siehe Gl. (\ref{eq:multipol})). Die Indizes $lm$ geben die Modenzahlen an.
 										
 	\newpage
 	
