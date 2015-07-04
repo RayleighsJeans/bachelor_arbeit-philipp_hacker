@@ -840,22 +840,49 @@
 					Die Rekonstruktion mittels 3 \tilt{frames} senkt dabei die Wahrscheinlichkeit, dass aufgrund der thermischen Bewegung oder Manipulation (ggf. auch Clusterkonfiguration) Partikel hintereinander verschwinden und somit nicht mehr durchg\"angig aufgenommen werden k\"onnen (siehe \ref{img:rekonstruktion}). F\"ur einzelne Bilder, in denen sich Partikel \"uberdecken, lassen sich jedoch die Trajektorien durch Interpolation, was u.U. f\"ur Fehler in der Auswertung auf Grund von Artefakten sorgen kann, vervollst\"andigen.
 
 		\subsection{Analyse des Plasma-Glow} \label{sub:glow}
-		
-%			\begin{wrapfigure}{r}{0.4\textwidth}
-%				\centering
-%				\includegraphics[width=0.39\textwidth,height=0.3\textwidth]{figs/ringplasmglowoben.png}
-%				\caption{Ein \tilt{frame} der Oberkamera ohne Filter für das Licht der Argon-Entladung. Die Helligkeit in der Mitte des 4-segmentigen Ringes in einer Höhe von $\unit[1,2]{cm}$ ist geringer als außerhalb: die Randschicht ist dort deutlich vergrößert.}
-%				\label{img:glow}
-%			\end{wrapfigure}
-			
+
+			\begin{wrapfigure}{r}{0.4\textwidth}
+				\centering
+				\includegraphics[width=0.39\textwidth,height=0.3\textwidth]{figs/ringplasmglowoben.png}
+				\caption{Ein \tilt{frame} ohne Filter für das Licht der Argon-Entladung. Die Helligkeit in der Mitte ist geringer als außerhalb.}
+				\label{img:glow}
+                \vspace{-0.5cm}
+			\end{wrapfigure}
+
 		Im Zuge der Untersuchung einer Quadrupolschwingung bemerkt man leicht, dass die Teilchen des Clusters, zusätzlich zu ihrer Auslenkung in der Ebene, eine bananenartige Bahn mit vertikaler Komponente durchlaufen. Die radiale Anregung dieser Mode enthält jedoch keine solchen Anteile. Diese Beobachtung legt demnach nahe, dass die Randschichtveränderung durch das Einfangpotential nicht vernachlässigbar für die Kinematik des Cluster ist.\\
-		Aus den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} wissen wir,  dass sich um elektrische leitfähige Objekte in einem Plasma eine Grenzschicht ausbildet. Weiterhin ist deren Ausdehnung und Eigenschaften abhängig vom Potential des lokalen Plasmas bzw. des Objektes selber. Deswegen ist die Manipulation eines Yukawa-Clusters nicht nur als elektrische Kraft (siehe \ref{img:potential}) durch die Signale der Ring-Segmente zu verstehen, sondern viel mehr als Summe dessen und der Veränderung der lokalen Randschicht, in welcher sich Staubpartikel befinden.\\
-		Ein Maß für die Ausdehnung, und somit daraus folgend ihre weiteren Eigenschaften, ist das Leuchten der Neutralgasatome des Argons. Dieses ist intensiver, je größer die vorliegende Elektronendichte ist (siehe \ref{sub:rand}).  Auf Grund dessen erhält man aus einer Intensitätsanalyse des Bereiches aus \ref{img:glow} Informationen über die Stärke der Randschichtveränderungen.
+		Aus den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} wissen wir,  dass sich um elektrische leitfähige Objekte in einem Plasma eine Grenzschicht ausbildet. Weiterhin ist deren Ausdehnung und Eigenschaften abhängig vom Potential des lokalen Plasmas bzw. des Objektes selber. Deswegen ist die Manipulation eines Yukawa-Clusters nicht nur als elektrische Kraft (siehe \ref{img:potential}) durch die Signale der Ring-Segmente zu verstehen, sondern viel mehr als Summe dessen und der Veränderung der lokalen Randschicht, in welcher sich die Staubpartikel befinden.\\
+		Ein Maß für ihre Ausdehnung, und somit daraus folgend ihre weiteren Eigenschaften, ist das Leuchten der Neutralgasatome des Argons. Dieses ist intensiver, je größer die vorliegende Elektronendichte ist (siehe \ref{sub:rand}).  Auf Grund dessen erhält man aus einer Intensitätsanalyse des Bereiches aus \ref{img:glow} Informationen über die Stärke der Randschichtveränderungen.\\
+        Ohne die, während der restlichen Messungen an den Kameras angebrachten Filter für das Plasmaleuchten, wurden Aufnahmen für Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung gemacht. Bei 200 \tilt{fps} wurden jeweils 2000 \tilt{frames} bei einer Frequenz von 3 und $\unit[10]{Hz}$ gemacht. Von Interesse sind dabei jedoch nur die Bilder der Oberkamera ('grün', siehe \ref{img:glow}). Die \tilt{bitmaps} werden für die Analyse zuerst auf ein \tilt{range of interest} - ein Kreis bzw. eine Kreisscheibe, in welcher das Leuchten ausgewertet werden soll - beschnitten. Anschließend wird das \tilt{ROI} in Radius- und Winkelabschnitte eingeteilt, welche in ihrer Intensität gemittelt werden. Ein anschauliches Beispiel für die Darstellung des Intensitätsverlaufs, in radialer und polarer Auflösung, einer Rotationsschwingung wird in \ref{img:glowanalys} gezeigt.
+
+            \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.8\textwidth,height=0.25\textheight]{figs/glowbeispielrotation3Hzang.png}
+            \end{figure}
+
+        \vspace{-0.5cm}
+
+            \begin{figure}[H]
+                    \centering
+                    \includegraphics[width=0.8\textwidth,height=0.25\textheight]{figs/glowbeispielrotation3Hzrad.png}
+                    \caption{\underline{\fett{oben}}: Winkelaufgelöste Rotationsanregung. Bei $\unit[250]{\degree}$ ist eine Asymmetrie zu erahnen. \underline{\fett{unten}}: Radiale Auflösung. Die Randschichtveränderung ist innen stärker als außen.}
+                    \label{img:glowanalys}
+            \end{figure}
 
 	\newpage
 
 	\section{Auswertung}\label{sec:auswert}
 
+        \subsection{Randschichtuntersuchungen}
+        
+            \subsubsection{Inhomogenität}
+        
+        \subsection{Elektrische Manipulation}
+        
+            \subsubsection{}
+
+            \subsubsection{}
+            
+            \
 	\newpage
 
 	\section{Literatur}\label{sec:lit}
