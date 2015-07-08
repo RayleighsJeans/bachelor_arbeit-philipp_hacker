@@ -939,7 +939,7 @@
 
 		Wie bereits erwähnt, erfolgte die Analyse des Plasma-Glow über die Aufsummierung der Intensitäten in einem selbst gewählten Bildbereich, welcher beliebig polar und radial unterteilt werden konnte. Aus dieser Summe wurde anschließend der Mittelwert der Intensität durch Division der Anzahl an Pixeln, mit einer Helligkeit $>0$ in dem jeweiligen Bereich, berechnet. \ref{img:randmaske} zeigt, schematisch, die erstellte Maske für eine solche Auswertung. Der maximale Radius $R\ix{max}$ sollte dabei, günstiger Weise, immer noch vollständig innerhalb des Ringes liegen, damit keine falschen Helligkeitsinformationen hinzugezogen werden. Die Bildverarbeitung erfolgte nicht, wie es \ref{img:glow} zeigt, sondern im invertieren Zustand. Dies hat zur Folge, das geringe Kontraständerungen als große Differenzen in den Intensitätswerten aufgenommen werden können. \\
 		Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss auf die Randschicht der unteren Elektrode beobachten zu können, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Die relativ hohe Watt-Zahl - bei Untersuchungen von Staub-Clustern betrug diese nur $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronentemperaturen. \\
-		In \ref{img:randungest} sind die Daten der ersten Messung, in radialer und polarer Auflösung, bei abgeschalteter Anregung und "`hoher"' Elektrode dargestellt. Zuerst fällt der Intensitätsabfall in der Winkeldarstellung bei $\varphi\approx\unit[140-180]{\degree}$ auf: dieser Bereich entspricht nach \ref{img:randmaske} in etwa der Richtung des Arm der Elektrode. Dort ist das Plasma-Leuchten schwächer als am übrigen Ring bzw. die Randschicht ist dort vergrößert. Hinzu kommt ein Helligkeits-Gradient von eben diesem Bereich in Richtung $\unit[0/360]{\degree}$. Das entspricht der gegenüberliegenden Seite des Rings. In radialer Darstellung zeigt sich, dass im Inneren der Elektrode der Glow, im Vergleich zu Außen, wesentlich intensiver ist.\\
+		In \ref{img:randungest} sind die Daten der ersten Messung, in radialer und polarer Auflösung, bei abgeschalteter Anregung und "`hoher"' Elektrode dargestellt. Zuerst fällt der Intensitätsabfall in der Winkeldarstellung bei $\varphi\approx\unit[140-180]{\degree}$ auf: dieser Bereich entspricht, nach \ref{img:randmaske}, in etwa der Richtung des Arm der Elektrode. Dort ist das Plasma-Leuchten schwächer als am übrigen Ring bzw. die Randschicht ist dort vergrößert. Hinzu kommt ein Helligkeits-Gradient von eben diesem Bereich in Richtung $\unit[0/360]{\degree}$. Das entspricht der gegenüberliegenden Seite des Rings. In radialer Darstellung zeigt sich, dass im Inneren der Elektrode der Glow, im Vergleich zu Außen, wesentlich intensiver ist.\\
 		Die \ref{img:randfrequenz} stellt eine Dipol-Anregung bei den 2 unterschiedlichen Frequenzen dar (s.o.).  Sehr anschaulich und gut erkennbar sind die, sich abwechselnden, Maxi- und Minima der Intensität, welche mit der Frequenz der Anregung für einen Winkel (bspw. $\varphi=\unit[150]{\degree}$) "`durch schwingen"'. Im Bereich $\unit[50-220]{\degree}$ sind die Extrema sehr gut ausgeprägt, wohin gegen um $\unit[330]{\degree}$ der Kontrast zwischen den Schwingungszuständen sich weniger stark abzeichnet. Für eine höhere Frequenz der Manipulation verändert sich, bis auf die Zeitskalen der Variation der Helligkeiten, nichts.
 
 		        \begin{figure}[!t]
@@ -948,14 +948,17 @@
 		        	\caption{\underline{\fett{links}:} Winkeldarstellung der Dipol-Anregung bei $\unit[3]{Hz}$ für $\unit[1]{s}$. \underline{\fett{rechts}:} Bei $\unit[10]{Hz}$.}
 		        	\label{img:randfrequenz}
 		        \end{figure}
-%
-%				\begin{figure}[H]
-%					\centering
-%					\includegraphics[width=\textwidth,height=0.35\textwidth]{figs/auswertung/randhochutiefquad3Hz1sekwink.png}
-%					\caption{}
-%					\label{img:randhochutiefwink}
-%				\end{figure}
-%
+
+                \begin{figure}[!hb]
+                    \centering
+                    \includegraphics[width=\textwidth,height=0.35\textwidth]{figs/auswertung/randhochutiefquad3Hz1sekwink.png}
+                    \caption{Quadrupol-Anregung bei $\unit[3]{Hz}$. \underline{\fett{links}:} für eine Höhe von $\unit[1,8]{cm}$. \underline{\fett{rechts}:} Für $\unit[1,2]{cm}$}
+                    \label{img:randhochutiefwink}
+                \end{figure}
+
+        In \ref{img:randhochutiefwink} ist der Unterschied für die unterschiedlichen Höhen der Elektrode an einer Quadrupol-Anregung mit $\unit[3]{Hz}$ gezeigt. Bei einer Höhe von $\unit[1,8]{cm}$ (\ref{img:randhochutiefwink}:\underline{\fett{links}}) fällt einerseits eine Asymmetrie zwischen den Maxima bzw. Minima einer Schwingungsachse auf. Jeweils 2, für einen Zeitschritt wie etwa 250 bis 275 \tilt{frames} zusammen auftretende, Extrema gehören zu einer Anregungsrichtung: zwischen $\unit[0/360]{\degree}$ und $\unit[180]{\degree}$, hier einmal $\Pi$ genannt, sowie $\unit[90]{\degree}$ und $\unit[270]{\degree}$,$\Sigma$. Andererseits - und dieser Unterschied ist wesentlich signifikanter - sind die Differenzen zwischen den Maxima und Minima der beiden Achsen. Die größten Intensitäten der Schwingungsrichtung $\Pi$ sind deutlich höher, als die der Achse $\Sigma$. Außerdem sind die Minima auf $\Sigma$ niedriger, als auf $\Pi$. In der Zeit, in welcher keiner der 4 Segmente die Amplitude der Anregung trägt, zeichnet sich ein Übergang von einem Extremum zum anderen ab. Beispielsweise für die \tilt{frames} 335 bis 345 stellt sich im gesamten Ringbereich eine,näherungsweise gleiche Helligkeit ein.\\
+        Für eine niedriger angebrachte Elektrode (\ref{img:randhochutiefwink}:\underline{\fett{rechts}}) findet man in etwa den gleichen Intensitätsverlauf wie zuvor.
+
 %				\begin{figure}[H]
 %					\centering
 %					\includegraphics[width=\textwidth,height=0.35\textwidth]{figs/auswertung/randhochutiefquad3Hz1sekrad.png}
