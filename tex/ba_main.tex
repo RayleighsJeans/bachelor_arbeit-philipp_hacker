@@ -257,7 +257,7 @@
 		Die negative Aufladung einer Wand in einem Plasma soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll k\ix{B}T\ix{e}/e\,$. Die Betrachtung in einer Dimension soll hier genügen - es lässt sich leicht der dreidimensionale Zusammenhang daraus erweitern. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ ("`\tilt{boltzmann-artige}"' Elektronen) wie
 
 			\begin{align}
-				n\ix{e}\left(x\right)=n\ix{e}\left(-d\right)f\ix{B}\left(\Phi\right)=n\ix{e}\left(-d\right)\exp\left(\frac{e\left(\Phi\left(x\right)-\Phi\left(-d\right)\right)}{k\ix{B}T\ix{e}}\right) \, .
+				n\ix{e}\left(x\right)=n\ix{e}\left(-d\right)f\ix{B}\left(\Phi\right)=n\ix{e}\left(-d\right)\exp\left(\frac{e\left(\Phi\left(x\right)-\Phi\left(-d\right)\right)}{k\ix{B}T\ix{e}}\right) \, . \label{eq:randschichtdichte}
 			\end{align}
 
 		Die Elektronendichte fällt damit exponentiell in Richtung der Wand ab. Das bedeutet, dass nur noch vorrangig Ionen ungehindert einströmen können. Es ist anzunehmen, dass die Randschichtausdehnung $d\ll\lambda\ix{mfp}$ die mittlere freie Weglänge des Plasma ist und die Ionen stoßfrei darin eintreten.\\
@@ -880,7 +880,7 @@
 		Im Zuge der Untersuchung einer Quadrupolschwingung bemerkt man leicht, dass die Teilchen des Clusters, zusätzlich zu ihrer Auslenkung in der Ebene, eine bananenartige Bahn mit vertikaler Komponente durchlaufen. Die radiale Anregung dieser Mode enthält jedoch keine solchen Anteile. Diese Beobachtung legt demnach nahe, dass die Randschichtveränderung durch das Einfangpotential nicht vernachlässigbar für die Kinematik des Cluster ist.\\
 		Aus den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} wissen wir,  dass sich um elektrische leitfähige Objekte in einem Plasma eine Grenzschicht ausbildet. Weiterhin ist deren Ausdehnung und Eigenschaften abhängig vom Potential des lokalen Plasmas bzw. des Objektes selber. Deswegen ist die Manipulation eines Yukawa-Clusters nicht nur als elektrische Kraft (siehe \ref{img:potential}) durch die Signale der Ring-Segmente zu verstehen, sondern viel mehr als Summe dessen und der Veränderung der lokalen Randschicht, in welcher sich die Staubpartikel befinden.\\
 		Ein Maß für ihre Ausdehnung, und somit daraus folgend ihre weiteren Eigenschaften, ist das Leuchten der Neutralgasatome des Argons. Dieses ist intensiver, je größer die vorliegende Elektronendichte und/oder -temperatur ist (siehe \ref{sub:rand}).  Auf Grund dessen erhält man aus einer Intensitätsanalyse des Bereiches aus \ref{img:glow} Informationen über die Stärke der Randschichtveränderungen.\\
-        Ohne die, während der restlichen Messungen an den Kameras angebrachten Filter für das Plasmaleuchten, wurden Aufnahmen für verschiedenste Anregungegemacht. Von Interesse sind dabei jedoch nur die Bilder der Oberkamera ('grün', siehe \ref{img:glow}). Die \tilt{bitmaps} werden für die Analyse zuerst auf ein \tilt{range of interest} - ein Kreis bzw. eine Kreisscheibe, in welcher das Leuchten ausgewertet werden soll - beschnitten. Anschließend wird das \tilt{ROI} in Radius- und Winkelabschnitte eingeteilt, welche in ihrer Intensität aufsummiert werden. Ein anschauliches Beispiel für die Darstellung des Intensitätsverlaufs einer Rotationsschwingung, in radialer und polarer Auflösung, wird in \ref{img:glowanalys} gezeigt.
+        Ohne die, während der restlichen Messungen an den Kameras angebrachten Filter für das Plasmaleuchten, wurden Aufnahmen für verschiedenste Anregungen gemacht. Das heißt: die 4 Segment des Ringes wurden, entsprechend der gewünschten Symmetrie, mit einer festen Phase zueinander und Frequenz mit einem sinusoidalen Signal der Amplitude $\unit[10]{V}$ beschaltet. Von Interesse sind dabei jedoch nur die Bilder der Oberkamera ('grün', siehe \ref{img:glow}). Die \tilt{bitmaps} werden für die Analyse zuerst auf ein \tilt{range of interest} - ein Kreis bzw. eine Kreisscheibe, in welcher das Leuchten ausgewertet werden soll - beschnitten. Anschließend wird das \tilt{ROI} in Radius- und Winkelabschnitte eingeteilt, welche in ihrer Intensität aufsummiert werden. Ein anschauliches Beispiel für die Darstellung des Intensitätsverlaufs einer Rotationsschwingung, in radialer und polarer Auflösung, wird in \ref{img:glowanalys} gezeigt.
 
             \begin{figure}[H]
                     \centering
@@ -934,7 +934,7 @@
 		Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss auf die Randschicht der unteren Elektrode beobachten zu können, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Die relativ hohe Watt-Zahl - bei Untersuchungen von Staub-Clustern betrug diese nur $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronentemperaturen. \\
 		Es schließt sich die Beschreibung einer Auswahl der einsichtigsten und am besten nachvollziehbaren Messdaten an. 
 
-			\subsubsection*{Messwerte}
+			\subsubsection{Messwerte}
 
 					\begin{figure}[!t]
 						\centering
@@ -971,20 +971,88 @@
 				\end{figure}
 
 			Die \ref{img:randhochutiefrad} zeigt die exakt gleiche Messung wie die vorherige aus \ref{img:randhochutiefwink}, nur in radialer Auflösung. Das linke Bild zeigt die Daten aus der Messung bei einer höheren Elektrode. Für die Zeiten um 225, 290 und 360 \tilt{frames} ist jeweils das gesamte Innere des Ringes hell. Das heißt, dass über den gesamten radialen Bereich ein Maximum zu finden ist. Zwischen diesen können weitere erahnt werden. Jedoch sind diese Extrema, sowohl die maximalen als auch minimalen, sehr flach bzw. kaum erkennbar. Sie heben sich lediglich auf Grund der kleinen Bereiche um 210, 245, 275 310, 340 und 375 \tilt{frames} bei großen Radien, wie etwa $\unit[15-20]{px}$, von den übrigen Intensitäts-Maxima ab. Weiterhin ist insgesamt ein schwacher Gradient in der Helligkeit von innen $R=0$ bis $R=\unit[20]{px}$ zu erkennen. Für den kleinsten Radius kommt es jedoch für alle Zeiten zu einer Abnahme der Intensität im Vergleich zum nächstgrößeren radialen Bereich. Außerdem ist ein Unterschied in der Intensität zwischen dem ersten, zweiten und dritten, sichtbaren Maximum zu sehen.\\
-			Bei einer tiefen Elektrode zeigt sich ein anderes Bild: alle Extrema sind scharf und eindeutig erkennbar. Für diese Einstellung zeigt sich die zuletzt benannte Diskrepanz zwischen den Schwingungsachsen nun wesentlich deutlicher. Demnach können die Schwingungen aus der vorherigen Beschreibung mit denen dieser Darstellung identifiziert werden. Das 1. Maximum gehört zu $\Pi$ und das 2. zu $\Sigma$ usw. Außerdem stellt man fest, dass die Helligkeit der Maxima von $\Sigma$ geringer ist, als die von $\Pi$. Interessant ist hingegen jedoch, dass die minimalen Intensitäten keine systematischen Differenzen mehr zueinander ausweisen. Für große Radien verschwimmen die Intensitäten und der Gradient nimmt, in Hinblick auf $R=0$, mit wachsendem Abstand zum Mittelpunkt zwischen den Extrema ab. Die Anomalie im kleinsten, radialen Bereich gibt es nicht mehr.\\
-			Abschließend ist in \ref{img:randhochutiefrotat} eine Rotations-Anregung mit Hilfe der Intensitätsanalyse visualisiert. Sehr anschaulich kann hier das Maximum bei seiner Wanderung von $\unit[360]{\degree}$, im Bereich um 235 \tilt{frames} (und um $200/3$ \tilt{frames} fortsetzend), über $\unit[180]{\degree}$ bei ca. 260 \tilt{frames}, bis hin zu $\unit[0]{\degree}$ bei 300 \tilt{frames} verfolgt werden. Im Zuge dessen können über das gesamte Winkelintervall mehr oder weniger stark ausgeprägte Inhomogenitäten der Intensität beobachtet werden: insbesondere bei $\unit[240-250]{\degree}$ ist ein stärkerer Abfall in der Helligkeit des Maximums zu vermerken. Um $\unit[180]{\degree}$ liegt die größte Intensität. Das Minimum zwischen den Bahnen der Rotationsanregung ist, bis auf eine Aufhellung und ein "`Verschmieren"' im Bereich des schwachen Maximums, gleichbleibend. \\
-			Das rechte Bild der \ref{img:randhochutiefrotat} zeigt die gleiche Anregung bei einer tiefen Elektrode. Der Verlauf des Helligkeits-Maximums ist beinahe vollständig unkenntlich geworden. Um $\unit[180]{\degree}$ ist wiederum die größte Intensität zu finden. Die, zwischen den, nunmehr kaum erkennbaren Bahnen liegenden Minima sind jetzt stark verschmiert und besonders in den Bereichen um $\unit[360]{\degree}$ nicht vom Rest unterscheidbar. Interessant ist jedoch, dass sich etwas ähnliches wie \tilt{hot-spots} des Leuchtens ausbilden: bei $\unit[90]{\degree}$ und 250 \tilt{frames}, $\unit[0]{\degree}$ und 275 \tilt{frames} sowie $\unit[270]{\degree}$ und 225 \tilt{frames} finden sich, aus dem verbliebenen Verlauf der Rotation herausstechende Intensitäten. 
+			Bei einer tiefen Elektrode zeigt sich ein anderes Bild: alle Extrema sind scharf und eindeutig erkennbar. Für diese Einstellung zeigt sich die zuletzt benannte Diskrepanz zwischen den Schwingungsachsen nun wesentlich deutlicher. Demnach können die Schwingungen aus der vorherigen Beschreibung mit denen dieser Darstellung identifiziert werden. Das 1. Maximum gehört zu $\Pi$ und das 2. zu $\Sigma$ usw. Außerdem stellt man fest, dass die Helligkeit der Maxima von $\Sigma$ geringer ist, als die von $\Pi$. Interessant ist hingegen jedoch, dass die minimalen Intensitäten keine systematischen Differenzen mehr zueinander ausweisen. Für große Radien verschwimmen die Intensitäten und der Gradient nimmt, in Hinblick auf $R=0$, mit wachsendem Abstand zum Mittelpunkt zwischen den Extrema ab. Die Anomalie im kleinsten, radialen Bereich gibt es nicht mehr.
 
 				\begin{figure}[!t]
+					\centering\vspace{-0.5cm}
 					\includegraphics[width=\textwidth,height=0.35\textwidth]{figs/auswertung/randrotathochutief3Hz1sekwink.png}
-					\caption{}
+					\caption{Intensitätsverlauf der Anregung einer Rotation bei $\unit[3]{Hz}$ und einer Zeit von $\unit[1]{s}$. \underline{\fett{links}:} Hohe Elektrode. \underline{\fett{rechts}:} Tief.}
 					\label{img:randhochutiefrotat}
 				\end{figure}
 
-			\subsubsection*{Auswertung}
+			Abschließend ist in \ref{img:randhochutiefrotat} eine Rotations-Anregung mit Hilfe der Intensitätsanalyse visualisiert. Sehr anschaulich kann hier das Maximum bei seiner Wanderung von $\unit[360]{\degree}$, im Bereich um 235 \tilt{frames} (und um $200/3$ \tilt{frames} fortsetzend), über $\unit[180]{\degree}$ bei ca. 260 \tilt{frames}, bis hin zu $\unit[0]{\degree}$ bei 300 \tilt{frames} verfolgt werden. Im Zuge dessen können über das gesamte Winkelintervall mehr oder weniger stark ausgeprägte Inhomogenitäten der Intensität beobachtet werden: insbesondere bei $\unit[240-250]{\degree}$ ist ein stärkerer Abfall in der Helligkeit des Maximums zu vermerken. Um $\unit[180]{\degree}$ liegt die größte Intensität. Das Minimum zwischen den Bahnen der Rotationsanregung ist, bis auf eine Aufhellung und ein "`Verschmieren"' im Bereich des schwachen Maximums, gleichbleibend.\\
+			Das rechte Bild der \ref{img:randhochutiefrotat} zeigt die gleiche Anregung bei einer tiefen Elektrode. Der Verlauf des Helligkeits-Maximums ist beinahe vollständig unkenntlich geworden. Um $\unit[180]{\degree}$ ist wiederum die größte Intensität zu finden. Die, zwischen den, nunmehr kaum erkennbaren Bahnen liegenden Minima sind jetzt stark verschmiert und besonders in den Bereichen um $\unit[360]{\degree}$ nicht vom Rest unterscheidbar. Interessant ist jedoch, dass sich etwas ähnliches wie \tilt{hot-spots} des Leuchtens ausbilden: bei $\unit[90]{\degree}$ und 250 \tilt{frames}, $\unit[0]{\degree}$ und 275 \tilt{frames} sowie $\unit[270]{\degree}$ und 225 \tilt{frames} finden sich, aus dem verbliebenen Verlauf der Rotation herausstechende Intensitäten. 
 
-				Im folgenden werden, im Hinblick auf den Beobachtungen des vorherigen Abschnitts, konkrete Analysen und Interpretationen vorgenommen.\\
-                
+			\subsubsection{Auswertung}
+
+				Mit den Ergebnissen der \ref{img:randfrequenz} bis \ref{img:randhochutiefrotat} ist die Methodik der Versuche um das Plasma-Glow prinzipiell bestätigt. Liegt ein positives Potential auf einem Segment an, so verkleinert sich - nach \ref{sub:rand} und insbesondere \ref{subsub:childlang} sowie den Gl. (\ref{eq:childlang}) und (\ref{eq:randschichtdichte}) - die Randschicht des Ringes und der, in der Nähe befindlichen Metalloberflächen (Elektrode). Somit können die Elektronen, im Falle des Ringes, ungehindert auf diesen einströmen und damit ebenso die, in dessen nächster Umgebung befindlichen Neutralgasatome zum Leuchten anregen. Ein positives Segment bedeutet demnach eine hohe Intensität. Des weiteren verkleinert sich dadurch ebenso die Randschicht naher Metall- bzw. Elektrodenoberflächen: die Potentialdifferenz von Grenze zu Objekt wird geringer, weswegen der Bereich, in den die Elektronen quasi nicht eindringen können, schmaler wird. Analog sorgt ein negatives Potential auf einem Segment zur Vergrößerung der Randschicht um das Ringelement und naher Metallobjekte. Der Glow verschwindet oder wird schwächer.\\
+				Auf Grundlagen dessen sollen nun, mit Rücksicht auf die Beobachtungen des vorherigen Abschnitts, konkrete Analysen und Interpretationen vorgenommen werden.\\
+
+				\paragraph{Dipol-Anregung}
+
+						\begin{figure}[!b]
+							\centering
+							\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{figs/auswertung/intensdipol181u3313Hz1sek.png}
+							\caption{Vergleich der Intensitätsverläufe bei $\unit[181]{\degree}$  und $\unit[331]{\degree}$ der Dipol-Anregung von \ref{img:randfrequenz} bei $\unit[3]{Hz}$ für $\unit[1]{s}$.}
+							\label{img:intensdipol}
+						\end{figure}
+
+					Die für \ref{img:randfrequenz} besprochenen Unterschiede zwischen den Extrema der beiden Pole lassen sich leicht in einem direkten Vergleich ablesen. Dabei werden die zeitlichen Verläufe der Helligkeit der Winkel $\unit[181]{\degree}$, genannt $\Phi$, und $\unit[331]{\degree}$, als $\Theta$ bezeichnet, mit ihren Maxima und Minima übereinander gelegt, damit direkt die Differenzen zwischen den Intensitäten eingesehen werden können. In \ref{img:intensdipol} ist , für das gleiche Zeitintervall wie es in \ref{img:randfrequenz} dargestellt wurde, dieser Vergleich vorgenommen worden. Man erkennt leicht die Unterschiede zwischen den Amplituden der Intensität: sowohl maximale als auch minimale Helligkeit in Richtung von $\Phi$ sind stärker ausgebildet als die von $\Theta$. Jedoch ist die Differenz zwischen den Minima größer als die der Maxima. Der Übergang dieser, d.h. der Verlauf zwischen den Extrema beider Pole $\Phi$ und $\Theta$, ist in etwa gleich.\\
+					Vergleicht man die Winkelanordnung der zwei benannten Pole mit der Maske aus \ref{img:randmaske}, so sieht man, dass diese, ebenso wie bei einem "`echten"' Dipol, 2 gegenüberliegenden Segmenten des Ringes entsprechen. Diese Feststellung ist in Einklang mit den Erwartungen an diese Untersuchung. Hingegen weniger diesen entsprechend, ist die Differenz zwischen den Extrema der Intensität, welche zu jeweils 2 zusammen gelegten Segmenten gehörten. Wie bereits erwähnt, manipuliert der Pol $\Phi$ die Randschicht in seiner Umgebung stärker als $\Theta$. In der Richtung von $\Phi$ findet sich außerdem der Arm der Ring-Elektrode. Eine Möglichkeit ist die, wonach die Randschicht der Befestigung in den Ring hinein ragt und in die anliegenden Segmente über geht. Damit verändert sich offensichtlich deren Randschicht und damit auch der Glow in diesen Bereichen. Außerdem ist, nach \cite{Bonitz10} und insbesondere \cite{Child11}, die effektive Fläche - und daraus folgend auch dessen Potential und Einfluss auf die Randschicht - des Ringes aufgrund der elektrostatischen Wechselwirkung vergrößert (analog: in \ref{sub:ströme} die Fläche eines Staubpartikels). Diese Vermutung erklärt demnach besonders gut die stärkere Ausprägung der Minima von $\Phi$ im Vergleich zu der Differenz der Maxima, da der Arm näher an $\Phi$ liegt und dessen Randschichtausdehnung begünstigt. Andererseits erklärt diese nicht, warum ebenso in den Maxima ein Unterschied besteht.  Eine Idee ist, dass die Isolierung der Befestigung nicht lückenlos bzw. der Ring nicht vollkommen symmetrisch war. Demnach handelt es sich bei dieser Inhomogenität um einen systematischen Fehler.
+
+				\paragraph{Quadrupol-Anregung}
+
+						\begin{figure}[!t]
+							\centering
+							\includegraphics[width=0.8\textwidth,height=0.4\textwidth]{figs/auswertung/intens0u180quad3Hz1sek.png}
+							\caption{Intensitätsverläufe bei $\unit[181]{\degree}$  und $\unit[0]{\degree}$ der Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{links}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+							\label{img:intensquad180u360}
+						\end{figure}
+
+					Für den Verlauf der Helligkeit aus \ref{img:randhochutiefwink}:\underline{\fett{links}} sind \ref{img:intensquad180u360} und \ref{img:intensquad180u83} die, analog zur Analyse der Dipol-Schwingung, entsprechenden Grafiken. Für die beiden Vergleiche - einerseits zwischen den Achsen $\Sigma$ und $\Pi$ in \ref{img:intensquad180u83}, als auch für eine Achse $\Pi$ in \ref{img:intensquad180u360} - zeigen sich ähnliche Verhältnisse wie im vorherigen Abschnitt. In Richtung des Elektroden-Armes um $\varphi\approx\unit[180]{\degree}$ findet man allgemein stärkere Extrema vor. Was jedoch die Vermutung der signifikanten Randschichtvergrößerung durch den Ausleger bestätigt, ist der Unterschied zwischen den Differenzen in den beiden Bildern: für $I(\varphi=\unit[83]{\degree})$ finden sich näherungsweise gleiche Minima wie für $I(\varphi=\unit[181]{\degree})$. Dies ist jedoch nicht der Fall bei $I(\unit[0]{\degree})$. Außerdem wird die zweite Theorie über die Unterschiede in der Randschichtausdehnung ebenso bekräftigt. Da für die Quadrupol-Anregung jedes Segment um jeweils $\unit[90]{\degree}$ in der Phase des Sinus-Signals verschoben worden war, sind die Extrema eindeutig den Ursachen zuzuordnen. Daher kann aus den Unterschieden der vergleichenden Graphen auf die Asymmetrie des Ringes bzw. Fehler in der Fertigung dessen geschlossen werden.
+
+						\begin{figure}[!t]
+							\centering
+							\includegraphics[width=0.8\textwidth,height=0.4\textwidth]{figs/auswertung/intens83u180quadinphase3Hz1sek.png}
+							\caption{Intensitätsverläufe bei $\unit[181]{\degree}$  und $\unit[331]{\degree}$ der Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{links}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+							\label{img:intensquad180u83}
+						\end{figure}
+
+						\begin{figure}[!b]
+							\centering
+							\includegraphics[width=0.8\textwidth,height=0.45\textwidth]{figs/auswertung/intensquad91269u1782603Hz1sek.png}
+							\caption{Intensitätsverläufe der Achsen $\Sigma$ und $\Phi$ bei Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{rechts}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+							\label{img:intensquadalles}
+						\end{figure}
+
+					In \ref{img:intensquadalles} sind die, in den vorherigen beiden Abbildungen gezeigten Vergleiche, für eine tiefer hängende Elektrode zusammen dargestellt worden. Auch hier zeichnen sich wiederum ähnliche Verhältnisse ab. Gut ist der Unterschied zwischen den Extrema der Achse $\Pi$ zu erkennen. Auf $\Sigma$ hingegen sind die Differenzen nur marginal. Insgesamt verlaufen die Intensitäten für eine um $\unit[6]{mm}$ tiefere Elektrode symmetrischer. Daraus lässt sich folgern, dass der Ring sich in diesem Fall dicht genug über der Elektrode befindet, um dessen Randschicht derart zu verändern, dass die zusätzliche Verdrängung der Elektronen um $\unit[91]{\degree}$ durch das Potential des Armes keine Rolle mehr spielt. Andererseits bestehen weiterhin nicht-verschwindende Unterschiede zwischen den Achsen der Anregung: speziell die Extrema bei $\varphi=\unit[178]{\degree}$ sind stärker als alle anderen. Das - von der Befestigung an gezählt -  erste Segment muss deswegen einen "`Vorteil"' gegenüber den anderen besitzen, da diese in etwa das gleiche Potential haben und damit eine ähnliche Randschichtveränderung bewirken (\ref{img:intensquadalles}).\\
+					Mit \ref{img:intensquadhochutief} schließt sich der Vergleich zweier ausgewählter Richtungen (Segment 4 und 2) für unterschiedliche Ring-Höhen an. Deutlich erkennt man die insgesamt niedrigere Intensität für einen tiefen Ring. Auch ist die verschwindend geringe Differenz zwischen den Intensitäten der gegenüberliegenden Segment auffällig - was in Einklang mit den vorherigen Ausführen ist. Eine Überraschung stellt jedoch das zusätzliche Maximum dar, welches anstelle der Minima, im Vergleich zu den Graphen der hohen Elektrode, auftaucht. Dieses wurde bereits in \ref{img:randhochutiefwink}:\underline{\fett{rechts}} beobachtet und kann somit hier bestätigt werden. Hängt der Ring nahe genug über der Elektrode (einer Metalloberfläche), so kann eine Oszillation des Glows mit der doppelten Frequenz der Anregung in der Mitte beobachtet werden. Eine Idee: die negativsten Potentiale sind groß genug, um die Randschicht so zu verändern, dass auch die Elektronen aus der Ringmitte vertrieben werden. Diese Elektronen-Leere im gesamten Elektroden-Inneren manifestiert sich als Minimum (in \ref{img:randhochutiefwink}:\underline{\fett{rechts}}) vor und nach dem neuen Maximum (\ref{img:intensquadhochutief}). Liegen nun wiederum kurzzeitig nur schwache oder keine Potentiale auf den Segmenten, so zieht sich die Randschicht stark zusammen und es können Elektronen das Plasma innerhalb zum Leuchten bringen. Dies geschieht gerade mit der doppelten Frequenz der Anregung. Grund dafür sind die zeitlichen Verläufe der, um $\unit[180]{\degree}$ phasenverschobenen sinusoidalen Potentiale: 2 mal während jeder Periode sind alle Signale klein gegen das \tilt{floating}- bzw. Wand-Potential. Diese Beobachtung bzw. Entdeckung wird im weiteren Verlauf der Auswertung eine wichtige Rolle spielen.
+
+						\begin{figure}[!t]
+							\centering
+							\includegraphics[width=0.8\textwidth,height=0.45\textwidth]{figs/auswertung/intens270u90hochutiefquad3Hz1sek.png}
+							\caption{Intensitätsverläufe bei $\unit[91]{\degree}$ und $\unit[269]{\degree}$ der Quadrupol-Anregung aus \ref{img:randhochutiefwink} für einen hohen und tiefen Ring, bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+							\label{img:intensquadhochutief}
+						\end{figure}
+
+						\begin{figure}[!b]
+							\centering
+							\begin{subfigure}{0.49\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.6\textwidth]{figs/auswertung/intenshochutiefquadin3Hz1sek.png}
+								\caption{}
+								\label{img:intensquadhochutiefin}
+							\end{subfigure}
+							\begin{subfigure}{0.49\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.6\textwidth]{figs/auswertung/intenshochutiefquadout3Hz1sek.png}
+								\caption{}
+								\label{img:intensquadhochutiefout}
+							\end{subfigure}
+							\caption{Radialer Vergleich der Intensitätsverläufe für eine Quadrupol-Anregung bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+						\end{figure}
+
+					
 
         \subsection{Elektrische Manipulation}
 
