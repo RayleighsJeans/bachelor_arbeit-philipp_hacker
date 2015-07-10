@@ -7,8 +7,7 @@ N = modenumber;
     for i=N
         figure
         clear VX VY VZ
-
-        %scale = 0;        
+        
         VX = result_finiyukawa.sort_V_x(:,i);
         VY = result_finiyukawa.sort_V_y(:,i);
         VZ = result_finiyukawa.sort_V_z(:,i);
