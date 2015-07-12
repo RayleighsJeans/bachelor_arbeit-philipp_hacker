@@ -1,0 +1,59 @@
+1. 2D Erkennung für jede Kamera:
+
+par_detec_2d_mmf('C:\Users\Matthias\Desktop\Messung05_gruen','gruen','.bmp',0.4,2,1.05,9999,[1 1000 2000 3000 4000 5000 6000 7000 8000],1);
+
+--> ggf. Auflösung im Script, Zeile 32 " I_2 = zeros(...,...,'uint8') " an Auflösung der Messbilder anpassen
+
+
+
+2. 3D Rekonstruktion
+
+combinations = combine_2d_data_mod('D:\Messwerte_Matthias\Auswertung\20130312\Messung01\result',1,9999,0);
+save('result_combine_2d.mat','combinations');
+
+
+3. 3D Tracking
+
+par_finding_3d('D:\Messwerte_Matthias\Auswertung\20130312\Messung01\result',1,9999,0,0.3,0.8,0);
+
+
+4. Auswertung
+
+4.1 Allgmein
+
+result_finiyukawa = fini_yukawa_new(100,29986,0.6,4.86,1514,0,1,0,78,1,0);
+save('result_finiyukawa.mat','result_finiyukawa');
+
+--> Allgemeine Auswertung, mag keine NaNs, also interpolierte tracks benutzen, ggf. mit findnans nach NaNs suchen und die entsprechenden Zeitschritte und/oder Partikel aus dem tracking resultfile schmeißen
+
+
+4.2 Fluidmodenauswertung bei Einzelmessung pro Anregungsfrequenz (Kameras sind NICHT an Anregung gekoppelt sondern laufen "frei")
+
+mode_eval_1to6_mod;
+save('result_fluidmodes.mat','out');
+
+--> Berechnet automatisch aus dem result_tracking file alle Fluidmoden von q00 bis q55 und speichert sowohl figures als auch daten 
+
+
+
+fluid_arr = fluid_exc_eval_mod(100,2,2,[1 ; 2 ; 3 ; 4],1,1,5,5,20);
+
+--> Visualisiert die Resonanzkurve bei Einzelmessungen pro Frequenz, funktioniert eher mäßig, Phasenaufgelöst ist deutlich besser
+
+
+
+4.3 Fluidmodenauswertung bei Phasenaufgelöster Messung (Kameras sind an Anregung gekoppelt)
+
+result_q22 = q22phaseeval('ab',1.6,6.4,0.1,50,0,1);
+save('result_q22phaseeval.mat','result_q22');
+
+--> Plottet jeweils eine Resonanzkurven für die Schwingungsachsen U und V sowie eine gemittelte Kurve, 
+--> Am Anfang muss man die Schwingungsachse manuell wählen, sollten die Kurven dann komisch aussehen (bspw. läuft eine der Kurven im negativen Bereich) am Besten die andere Achse wählen.
+
+
+result_q11 = q11phaseeval('ab',1.6,6.4,0.1,50,'auto',1);
+save('result_q11phaseeval.mat','result_q11');
+
+
+--> Gleiche Funktion für q11 Fluidmode, im 'auto' Modus wird die Schwingungsachse automatisch erkannt, man kann sie aber auch selbst wählen (setze phi auf 0)
+
