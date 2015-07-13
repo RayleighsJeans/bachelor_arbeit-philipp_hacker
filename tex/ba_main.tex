@@ -922,7 +922,7 @@
 
 		In diesem Kapitel werden im Detail die einzelnen Versuche betrachtet und ausgewertet. Dabei wird mit der Analyse des Randschichtverhaltens bei einer Manipulation mit einer 4-Segment-Elektrode begonnen. In den darauf folgenden Abschnitten zur Auswertung der Clusterdynamik und dessen Moden werden insbesondere diese Ergebnisse herangezogen.
 
-        \subsection{Untersuchungen der Randschicht}
+        \subsection{Untersuchungen der Randschicht}\label{sub:glowanalyse}
 
                 \begin{wrapfigure}{r}{0.4\textwidth}
                     \centering
@@ -1090,134 +1090,106 @@
 
 		\subsection{Elektrische Manipulation}
 
-			\subsubsection{Normalmoden-Analyse}
+			In diesem Abschnitt werden die Messergebnisse der Beobachtungen der unterschiedlichen Manipulationen eines finiten Yukawa-Clusters präsentiert. Dabei wird zuerst auf die Analyse bezüglich der Normalmoden nach Kapitel \ref{subsub:moden} eigegangen. Dem schließt sich entsprechend die Fluidmoden-Betrachtung an. Differenziert wird zusätzlich zwischen den Anregungen mit einer 4- bzw. 6-segmentigen Ring-Elektrode. Die Auswertung der erhaltenen Daten erfolgt mit Rückblick auf die Ergebnisse des vorherigen Abschnitts, da in diesem essentielle Informationen über die Manipulationen mittels der Ring-Elektrode erlangt wurden.
 
-				\subsubsection*{Quadrupol-Anregung}
+			\subsubsection{Normalmoden-Analyse}
 
 					\begin{figure}[!b]
 						\centering
 						\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/ersteungestpowerdens.png}
-						\caption{heading}\label{img:powerdensersteungest}
+						\caption{Spektrale Energiedichte $S\ix{l}\left(\omega\right)$ für einen ungestörten Cluster von $N=26$ Teilchen. Die besonders angeregten Moden sind mit Pfeilen und den Nummern markiert.}\label{img:powerdensersteungest}
 					\end{figure}
 
-					\begin{figure}[!t]
-						\centering
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr42.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr19.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr43.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr7.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr8.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr9.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr10.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/erstensungestModeNr23.png}
-						\end{subfigure}
-						\caption{heading}\label{modenersteungest}
-					\end{figure}
+				Die Auswertungen der Normalmoden-Anteile in der Bewegung des Clusters erfolgt über die Betrachtung der spektralen Leistungsdichte $S\ix{p}\left(\omega\right)$. Die daraus ermittelten Eigenmoden, in welchen verstärkt Energie enthalten ist, werden daraufhin einzeln betrachtet und analysiert.\\
+				Bei den gemachten Messungen lag der Argon-Gasdruck zwischen $\unit[6,42-10]{Pa}$. Die eingespeisten Leistungen des rf-Generatos lagen, für die Quadrupol-Anregung, bei $\unit[0,5]{W}$ und, in den Versuchen mit der 6-Segment-Elektrode, bei $\unit[1,4]{W}$. Alle drei Kameras nahmen mit einer Auflösung von $\unit[1280]{px}\times\unit[1024]{px}$ bei 100 \tilt{fps} auf. Die Blendenöffnungszeit, dass heißt wie lange Licht auf den \tilt{CCD}-Chip treffen kann, betrug $\unit[8]{\upmu s}$. Kamera 'rot' und 'gelb' nahmen jeweils durch $\unit[60]{mm}$, 'gruen' durch ein $\unit[150]{mm}$ Objektiv auf. Jede Messreihe entsprach 10000 Bildern, was bei der gegebenen Frequenz $\unit[100]{s}$ gleich kam.\\
+				Die \ref{img:powerdensersteungest} zeigt die Dichte für einen ungestörten Cluster von $N=26$ bei den oben genannten Parametern. Mit Pfeilen sind die, entweder für einzelne Frequenzen oder über das gesamte dargestellte Spektrum ($\unit[0-50,5]{Hz}$), energiereichsten Moden hervorgehoben. Im allgemeinen sind für Frequenzen bis $\unit[10]{Hz}$ alle Moden gut angeregt. Deren Energiegehalt ist dabei in Relationen zu den Moden mit dem größten Anteil an der kollektiven Bewegungen des Clusters dargestellt. Diese Verteilung ist Folge des "`thermischen Chaos"': die zufälligen \tilt{brownschen} Bewegungen der levitierenden Staubpartikel, welche mit bloßem Auge als Zittern wahrnehmbar waren, enthalten viele Moden gleicher Maßen. Die Eigenmoden bzw. -vektoren, welche der Cluster nach Gl.(\ref{eq:ewp}) enthält, sind orthogonal zueinander. Die $v\ix{th}\left(t\right)$ thermischen Geschwindigkeitsvektoren erfüllen diese Eigenschaft insbesondere nicht, weswegen diese für die Konstruktion der Kollektivbewegung aus vielen verschiedenen Moden zusammengesetzt werden müssen. Speziell die Moden mit der Nummer 35 und höher enthalten mehr Energie. Sie entsprechen chaotischen, voneinander unabhängigen Translationen.\\
+				Interessant sind die markierten Nummern (siehe \ref{img:modenersteungest}), welche, über den genannten Bereich hinaus, signifikante Werte der spektralen Dichte haben. Die Moden 8 und 9 entsprechen Cluster-Rotationen mit einer, zur xy-Ebene parallelen  Drehachse. Sie sind zueinander konjugiert, dh. links- und rechts-drehend (damit orthogonal). Die Moden 19, 42 und 43 bilden ein, im Sinne eines kartesischen Koordinatensystems, rechtwinkliges Tripel der Clusterbewegung. Jeweils eine dieser Lösungen des Eigenwertproblems zeigt in Richtung einer Achse des Raumes. Des Weiteren stellt Nummer 23 eine Rotation um eine, zur z-Richtung parallelen Achse dar. Die Moden 56, 61 und 65 sind chaotische Bewegungen: die Eigenvektoren haben keine "`besondere"' Anordnung.\\
+				Die rechtwinkligen Moden 19, 42 und 43 spiegeln die chaotisch-thermischen Bewegungen der Partikel wieder: aus ihnen kann jede beliebe Bewegung konstruiert werden. Die Nummern 8, 9 und 23 kommen durch die Anordnung der Laserstrahlen zustande: die Strahlen sind nicht exakt auf den Mittelpunkt des Clusters fokussiert. Da über deren Querschnitt ein Photonendichte-Gradient existiert, erfahren einige Teile des Yukawa-Balls andere Kräfte durch den unterschiedlichen Strahlungsdruck. Daraus resultiert eine Rotation vom Strahlungsmaximum weg. Da zwei Laser auf den Cluster gerichtet sind, ist es u.U. möglich, dass er um mehrere Achsen rotiert oder seine Gesamtrotation aus verschiedenen zusammengesetzt ist. Daher finden sich mehrere angeregte, dafür zuständige Moden im Spektrum. Der Kontrast zwischen den Energien niedriger Frequenzen bis $\unit[10]{Hz}$ und darüber resultiert aus den Eigenschaften der \tilt{brownschen} Bewegung.
 
-					\begin{figure}[!b]
-						\centering
-						\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1Hzpowerdens.png}
-						\caption{heading}\label{img:powerdensquadrupol1Hz}
-					\end{figure}
+						\begin{figure}[!t]
+							\centering
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/erstensungestModeNr42.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/erstensungestModeNr19.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/erstensungestModeNr43.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/erstensungestModeNr9.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/erstensungestModeNr23.png}
+							\end{subfigure}
+							\caption{Die Eigenvektoren (blau) der Moden mit den entsprechenden Nummern. In schwarz sind die zu erkennenden Kollektivbewegungen eingezeichnet. Die Auswahl bezieht sich auf die Betrachtungen zu \ref{img:powerdensersteungest}. Die erste Reihe zeigt die Moden 19, 42, 43. Reihe zwei enthält Nummer 9 und 23.}\label{img:modenersteungest}
+						\end{figure}
 
-					\begin{figure}[!t]
-						\centering
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr17.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr45.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr46.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr6.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr24.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr26.png}
-						\end{subfigure}
-						\caption{heading}\label{img:modenquadrupol1Hz}
-					\end{figure}
+				\subsubsection*{Quadrupol-Anregung}
 
-					\begin{figure}[!b]
-						\centering
-						\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol3Hzpowerdens.png}
-						\caption{heading}\label{img:powerdensquadrupol3Hz}
-					\end{figure}
+					Mit der 4-Segment-Elektrode sind 4 Messungen zur Quadrupol-Anregung bei unterschiedlichen Frequenzen und einer Teilchenzahl von $N=26$ gemacht worden. Spezielle Moden, die anschließend diskutiert werden, sind in den Energiedichten mit Pfeilen hervorgehoben.
 
-					\begin{figure}[!t]
-						\centering
-						\begin{subfigure}[t]{0.325\textwidth}
+				\paragraph{Schwingungen bei 1\,Hz}
+
+						\begin{figure}[!t]
 							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr17.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
+							\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1Hzpowerdens.png}
+							\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[1]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[2]{Hz}$ zu sehen.}\label{img:powerdensquadrupol1Hz}
+						\end{figure}
+
+						\begin{figure}[!b]
 							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr45.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr6.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr24.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr26.png}
+							\end{subfigure}
+							\caption{Auszug der, für \ref{img:powerdensquadrupol1Hz} betrachteten Moden. Insbesondere stehen hier die neuen Rotationen mit mehreren Drehachsen und die \tilt{breathing}-Mode im Fokus.}\label{img:modenquadrupol1Hz}
+						\end{figure}
+
+					In \ref{img:powerdensquadrupol1Hz} ist die Energiedichte zu sehen. Die Nummern 17, 45 und 46 entsprechen hier den rechtwinkligen Kollektionen der Eigenvektoren wie in \ref{img:modenersteungest}. In diesem Fall enthalten sie im Vergleich zum übrigen Spektrum mehr Energie. Das ist offensichtlich Resultat der Anregung: die Quadrupol-Mode besteht aus Translationen bzw. Cluster-Deformationen auf den Schwigungsachsen. Im speziellen enthält die Nummer 17 eine vergleichbare Energie wie ihre "`Partner"'. Jedoch kommt in einer zweidimensionalen Quadrupol-Anregung keine vertikale Komponente vor. Die Schwingung in z-Richtung ist demnach Folge der Randschichtvernichtung und -erzeugung in der Mitte des Ringes durch dessen elektrostatische Wechselwirkung mit dem Plasma. Als Referenz sei der vorherige Abschnitt \ref{sub:glowanalys} der Analyse des Plasma-Glow angegeben.\\
+					Sehr scharfe Maxima der Dichte sind bei der Anregungsfrequenz $\unit[1]{Hz}$ zu sehen. Das zweite, bei einem natürlichen (zwei) Vielfachen der Frequenz auftauchende Maximum entspricht einer höheren Harmonischen der Schwingung. Diese sind gut bei den Moden 24, 26, 29, 45 und 46 zu erkennen. Die Nummern 6, 24 und 29 sind entsprechend Rotationsmoden - siehe \ref{img:modenquadrupol1Hz}. Anders ist hierbei jedoch, dass es nicht nur eine Drehachse pro Mode gibt, sondern auch beispielsweise gegenläufige Rotationen in einer zusammenkommen (Nummer 6, 26). Neu ist die \tilt{breathing}-Mode 24: sie entspricht einer Ausdehnung des Yukawa-Balls in der Ebene des Quadrupols (parallele zur xy-Ebene). Diese ist schwächer angeregt, da, während der Schwingung auf einer der beiden Achsen dieser Anregung, der Cluster nur minimal senkrecht dazu gestaucht wird. Die Stauchung hat jedoch, als konjugierte Mode zur Ausdehnung, bei der Projektion auf die Deformation einen großen Anteil an der Bewegung. Die Nummer 11 hat kein scharfes Maximum und enthält nur chaotische Eigenvektor-Anordnungen.
+
+				\paragraph{Schwingungen bei 3\,Hz}
+
+						\begin{figure}[!t]
 							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr44.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
+							\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol3Hzpowerdens.png}
+							\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[3]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[6]{Hz}$ zu sehen.}\label{img:powerdensquadrupol3Hz}
+						\end{figure}
+
+						\begin{figure}[!b]
 							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr25.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr38.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr52.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr55.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr72.png}
-						\end{subfigure}
-						\begin{subfigure}[t]{0.325\textwidth}
-							\centering
-							\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr73.png}
-						\end{subfigure}
-						\caption{heading}\label{img:modenquadrupol3Hz}
-					\end{figure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr52.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr55.png}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.325\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr73.png}
+							\end{subfigure}
+							\caption{heading}\label{img:modenquadrupol3Hz}
+						\end{figure}
+
+					In \ref{img:powerdensquadrupol3Hz} sieht man die Energiedichte für eine Quadrupol-Anregung mit $\unit[3]{Hz}$. Neben der Ähnlichkeit zur Energie-Verteilung \ref{img:powerdensquadrupol1Hz} fällt auf, dass der Bereich niedriger Frequenzen (bis $\unit[10]{Hz}$) immer weniger eine Rolle spielt: die Dichte ist dort, in Relationen zu den Maxima bei der Anregungsfrequenz, wesentlich geringer. Das heißt, dass die thermische Bewegung innerhalb des Clusters sehr klein gegen die Auslenkungen durch die Anregung ist.\\
+					Insbesondere haben die Moden 17, 44 und 45, als rechtwinklige Cluster-Translationen, gute Extrema bei der ein- und zweifachen Frequenz. Die Nummer 25 ist eine Rotation um eine, zur z-Richtung parallelen Achse. Die Moden 38 und 72 sind beides einatmende \title{breathing}-Moden, das heißt sie stellen Cluster-Ausdehnungen dar.
 
 				\subsubsection*{6-Segment-Elektrode}
 
