@@ -51,25 +51,37 @@ for i = 1:length
 
         delta(i,j) = (sqrt(double((i-mid(1)).^2+(j-mid(2)).^2)));
 
-        winkel(i,j)=(atan2(double(j-mid(2)),double(i-mid(1))));
-
-        ang_bin(i,j)=floor(winkel(i,j)/res_ang)+N/2+1;
-        
-        rad_bin(i,j)=floor(delta(i,j)/res_rad)+1;
-
     end
 
 end
 
 mask=(((delta.^2>rin.^2) & (delta.^2<rout.^2)));
 
+delta2 = delta.*mask;
+
+for i = 1:length
+    
+    for j = 1:height
+
+        winkel(i,j)=(atan2(double(j-mid(2)),double(i-mid(1))));
+
+        ang_bin(i,j)=floor(winkel(i,j)/res_ang)+N/2+1;
+        
+        rad_bin(i,j)=floor(delta2(i,j)/res_rad)+1;
+
+    end
+
+end
+
+%keyboard
+
 data = zeros(N,nn+1, 'double');
 
-data2 = zeros(N,nn+1, 'double');
+data2 = zeros(M,nn+1, 'double');
 
 intens1=zeros(N,2, 'double');
 
-intens2=zeros(N,2, 'double');
+intens2=zeros(M,2, 'double');
 
 frames = floor(fps/frequenz)+1;
 
@@ -93,7 +105,7 @@ for k = 2:nn
     fnamein=strcat(pathname,'/',name,nstr,format);
     I = double(imcomplement(imread(fnamein)));
     intens1=zeros(N,2);
-    intens2=zeros(N,2);
+    intens2=zeros(M,2);
 
     tmp = I'.*mask;
     
@@ -128,7 +140,7 @@ end
 
 data1(:,nn+1) = 360*linspace(0,1,N);
 
-data2(:,nn+1) = rout*linspace(0,1,N);
+data2(:,nn+1) = rout*linspace(0,1,M);
 
 X = linspace(1,nn,nn);
 
