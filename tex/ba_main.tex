@@ -932,7 +932,7 @@
                 \end{wrapfigure}
 
 		Wie bereits erwähnt, erfolgte die Analyse des Plasma-Glow über die Aufsummierung der Intensitäten in einem selbst gewählten Bildbereich, welcher beliebig polar und radial unterteilt werden konnte. Aus dieser Summe wurde anschließend der Mittelwert der Intensität durch Division der Anzahl an Pixeln, mit einer Helligkeit $>0$ in dem jeweiligen Bereich, berechnet. \ref{img:randmaske} zeigt, schematisch, die erstellte Maske für eine solche Auswertung. Der maximale Radius $R\ix{max}$ sollte dabei, günstiger Weise, immer noch vollständig innerhalb des Ringes liegen, damit keine falschen Helligkeitsinformationen hinzugezogen werden. Die Bildverarbeitung erfolgte nicht, wie es \ref{img:glow} zeigt, sondern im invertieren Zustand. Dies hat zur Folge, das geringe Kontraständerungen als große Differenzen in den Intensitätswerten aufgenommen werden können. \\
-		Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss auf die Randschicht der unteren Elektrode beobachten zu können, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Die relativ hohe Watt-Zahl - bei Untersuchungen von Staub-Clustern betrug diese nur $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronentemperaturen. \\
+		Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss der Manipulation zu verstehen, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Die relativ hohe Watt-Zahl - bei Untersuchungen von Staub-Clustern betrug diese nur $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronentemperaturen. \\
 		Es schließt sich die Beschreibung einer Auswahl der einsichtigsten und am besten nachvollziehbaren Messdaten an. 
 
 			\subsubsection{Messwerte}
@@ -940,12 +940,12 @@
 					\begin{figure}[!t]
 						\centering
 						\includegraphics[width=\textwidth,height=0.4\textwidth]{figs/auswertung/plasmaglw/randungest3sekwinkurad.png}
-						\caption{\underline{\fett{links}:} Polar aufgelöster Intensitätsverlauf für eine Periode von $\unit[3]{s}$ (600 \tilt{frames}). Die Intensität (siehe rechts) ist auf einen Durchschnittswert normiert. \underline{\fett{rechts}:} Die selbe Messung wie \underline{\fett{links}}, nur radial aufgelöst. }
+						\caption{\underline{\fett{links}:} Polar aufgelöster Intensitätsverlauf für eine Zeit von $\unit[3]{s}$ (600 \tilt{frames}) ohne Anregung. Die Intensität (siehe rechts) ist auf einen Durchschnittswert normiert. \underline{\fett{rechts}:} Die selbe Messung wie \underline{\fett{links}}, nur radial aufgelöst. }
 						\label{img:randungest}
 					\end{figure}
 
-			In \ref{img:randungest} sind die Daten der ersten Messung, in radialer und polarer Auflösung, bei abgeschalteter Anregung und "`hoher"' Elektrode dargestellt. Zuerst fällt der Intensitätsabfall in der Winkeldarstellung bei $\varphi\approx\unit[140-180]{\degree}$ auf: dieser Bereich entspricht, nach \ref{img:randmaske}, in etwa der Richtung des Arm der Elektrode. Dort ist das Plasma-Leuchten schwächer als am übrigen Ring. Hinzu kommt ein Helligkeits-Gradient von eben diesem Bereich in Richtung $\unit[0/360]{\degree}$. Das entspricht der gegenüberliegenden Seite des Rings. In radialer Darstellung zeigt sich, dass im Inneren der Elektrode, im Vergleich zu Außen, die Intensität wesentlich größer ist.\\
-			Die \ref{img:randfrequenz} stellt eine Dipol-Anregung bei den 2 unterschiedlichen Frequenzen dar (s.o.).  Sehr anschaulich und gut erkennbar sind die, sich abwechselnden, Maxi- und Minima der Intensität, welche mit der Frequenz der Anregung für einen Winkel (bspw. $\varphi=\unit[150]{\degree}$) "`durch schwingen"'. Im Bereich $\unit[50-220]{\degree}$ sind die Extrema sehr gut ausgeprägt, wohin gegen um $\unit[330]{\degree}$ der Kontrast zwischen den Schwingungszuständen sich weniger stark abzeichnet. Für eine höhere Frequenz der Manipulation verändert sich, bis auf die Zeitskalen der Variation der Helligkeiten, nichts.
+			In \ref{img:randungest} sind die Daten der ersten Messung, in radialer und polarer (Winkel-) Auflösung, bei abgeschalteter Anregung und "`hoher"' Elektrode dargestellt. Zuerst fällt der Intensitätsabfall in der Winkeldarstellung bei $\varphi\approx\unit[140-180]{\degree}$ auf: dieser Bereich entspricht, nach \ref{img:randmaske}, in etwa der Richtung des Arm der Elektrode. Dort ist das Plasma-Leuchten schwächer als am übrigen Ring. Hinzu kommt ein Helligkeits-Gradient von eben diesem Bereich in Richtung $\unit[0/360]{\degree}$. Das entspricht der gegenüberliegenden Seite des Rings. In radialer Darstellung zeigt sich, dass im Inneren der Elektrode, im Vergleich zu Außen, die Intensität wesentlich größer ist.\\
+			Die \ref{img:randfrequenz} stellt eine Dipol-Anregung bei den 2 unterschiedlichen Frequenzen dar (s.o.).  Sehr anschaulich und gut erkennbar sind die, sich abwechselnden, Maxi- und Minima der Intensität, welche mit der Frequenz der Anregung für einen Winkel (bspw. $\varphi=\unit[150]{\degree}$) "`durchschwingen"'. Im Bereich $\unit[50-220]{\degree}$ sind die Extrema sehr gut ausgeprägt, wohin gegen um $\unit[330]{\degree}$ der Kontrast zwischen den Schwingungszuständen sich weniger stark abzeichnet. Für eine höhere Frequenz der Manipulation verändert sich, bis auf die Zeitskalen der Variation der Helligkeiten, nichts.
 
 				\begin{figure}[!b]
 			       	\centering
@@ -961,8 +961,8 @@
 					 \label{img:randhochutiefwink}
 				\end{figure}
 
-	        In \ref{img:randhochutiefwink} ist der Unterschied für die unterschiedlichen Höhen der Elektrode an einer Quadrupol-Anregung mit $\unit[3]{Hz}$ gezeigt. Bei einer Höhe von $\unit[1,8]{cm}$ (\ref{img:randhochutiefwink}:\underline{\fett{links}}) fällt einerseits eine Asymmetrie zwischen den Maxima bzw. Minima einer Schwingungsachse auf. Jeweils 2, für einen Zeitschritt wie etwa 250 bis 275 \tilt{frames} zusammen auftretende, Extrema gehören zu einer Anregungsrichtung: zwischen $\unit[0/360]{\degree}$ und $\unit[180]{\degree}$, hier einmal $\Pi$ genannt, sowie $\unit[90]{\degree}$ und $\unit[270]{\degree}$, als $\Sigma$ bezeichnet. Andererseits - und dieser Unterschied ist wesentlich signifikanter - sind die Differenzen zwischen den Maxima und Minima der beiden Achsen. Die größten Intensitäten der Schwingungsrichtung $\Pi$ sind deutlich höher, als die der Achse $\Sigma$. Außerdem sind die Minima auf $\Sigma$ niedriger, als auf $\Pi$. In der Zeit, in welcher keiner der 4 Segmente eine Amplitude (max. oder min.) der Anregung trägt, zeichnet sich ein Übergang von einem Extremum zum anderen ab. Beispielsweise für die \tilt{frames} 335 bis 345 stellt sich im gesamten Ringbereich eine,näherungsweise gleiche Helligkeit ein.\\
-			Für eine niedriger angebrachte Elektrode (\ref{img:randhochutiefwink}:\underline{\fett{rechts}}) findet man in etwa den gleichen Intensitätsverlauf wie zuvor. Es fallen Unterschiede sowohl zwischen den Maxima und Minima auf einer Schwingungsachse, als auch im Vergleich der beiden auf. Jedoch erkennt man weiterhin, im Kontrast zur Aufnahme bei einer hohen Elektrode, dass diese weniger scharf abgezeichnet sind. Das heißt: die Grenzen bzw. Übergänge der Extrema zwischen $\Sigma$ und $\Pi$ haben einen geringeren Intensitäts-Gradienten. Besonders gut ist dies im Bereich um 250 \tilt{frames} (und 100 \tilt{frames}-periodisch fortlaufend) zu erkennen - die Maxima dieser Phase der Anregung sind sehr verwaschen und verlaufen sich über den gesamten Winkelbereich. Jedoch zeichnet sich in den Momenten zwischen den Amplituden ein klares Tief in der Intensität ab, welches die Extrema unterschiedlicher Phasen der Anregung voneinander trennt. Für das Beispiel bei 250 \tilt{frames} liegen diese zwischen 230 und 245, sowie 255 und 225 \tilt{frames}. Demnach kann der Umschicht-Vorgang, welcher in \ref{img:randhochutiefwink}:\underline{\fett{links}} zu erkennen ist, im zeitlichen Verlauf nicht beobachtet werden. Lediglich gewinnen die Maxima auf $\Sigma$ geringfügig an Intensität, wohin gegen die Minima sowohl auf $\Sigma$ als auch $\Pi$ weniger ausgebildet sind.
+	        In \ref{img:randhochutiefwink} ist der Unterschied für die unterschiedlichen Höhen der Elektrode an einer Quadrupol-Anregung mit $\unit[3]{Hz}$ gezeigt. Bei einer Höhe von $\unit[1,8]{cm}$ (\ref{img:randhochutiefwink}:\underline{\fett{links}}) fällt einerseits eine Asymmetrie zwischen den Maxima bzw. Minima einer Schwingungsachse auf. Jeweils 2, für einen Zeitschritt wie etwa für die \tilt{frames} 250 bis 275 zusammen auftretende, Extrema gehören zu einer Anregungsrichtung: zwischen $\unit[0/360]{\degree}$ und $\unit[180]{\degree}$, hier einmal $\Pi$ genannt, sowie $\unit[90]{\degree}$ und $\unit[270]{\degree}$, als $\Sigma$ bezeichnet. Andererseits - und dieser Unterschied ist wesentlich signifikanter - sind die Differenzen zwischen den Maxima und Minima der beiden Achsen. Die größten Intensitäten der Schwingungsrichtung $\Pi$ sind deutlich höher, als die der Achse $\Sigma$. Außerdem sind die Minima auf $\Sigma$ niedriger, als auf $\Pi$. In der Zeit, in welcher keiner der 4 Segmente eine Amplitude (max. oder min.) der Anregung trägt, zeichnet sich ein Übergang von einem Extremum zum anderen ab. Beispielsweise für die \tilt{frames} 335 bis 345 stellt sich im gesamten Ringbereich eine,näherungsweise gleiche Helligkeit ein.\\
+			Für eine niedriger angebrachte Elektrode (\ref{img:randhochutiefwink}:\underline{\fett{rechts}}) findet man in etwa den gleichen Intensitätsverlauf wie zuvor. Es fallen Unterschiede sowohl zwischen den Maxima und Minima auf einer Schwingungsachse, als auch im Vergleich der beiden auf. Jedoch erkennt man weiterhin, im Kontrast zur Aufnahme bei einer hohen Elektrode, dass diese weniger scharf abgezeichnet sind. Das heißt: die Grenzen bzw. Übergänge der Extrema zwischen $\Sigma$ und $\Pi$ haben einen geringeren Intensitäts-Gradienten. Besonders gut ist dies im Bereich um \tilt{frame} 250 (und 100 \tilt{frames}-periodisch fortlaufend) zu erkennen - die Maxima dieser Phase der Anregung sind sehr verwaschen und verlaufen sich über den gesamten Winkelbereich. Jedoch zeichnet sich in den Momenten zwischen den Amplituden ein klares Tief in der Intensität ab, welches die Extrema unterschiedlicher Phasen der Anregung voneinander trennt. Für das Beispiel bei  \tilt{frame} 250 liegen diese zwischen \tilt{frame} 230 und 245, sowie 255 und 225. Demnach kann der Umschicht-Vorgang, welcher in \ref{img:randhochutiefwink}:\underline{\fett{links}} als heller Übergang zwischen den Maxima der Achsen zu erkennen ist, im zeitlichen Verlauf nicht beobachtet werden. Lediglich gewinnen die Maxima auf $\Sigma$ geringfügig an Intensität, wohin gegen die Minima sowohl auf $\Sigma$ als auch $\Pi$ weniger ausgebildet sind.
 
 				\begin{figure}[!b]
 					\centering
@@ -971,7 +971,7 @@
 					\label{img:randhochutiefrad}
 				\end{figure}
 
-			Die \ref{img:randhochutiefrad} zeigt die exakt gleiche Messung wie die vorherige aus \ref{img:randhochutiefwink}, nur in radialer Auflösung. Das linke Bild zeigt die Daten aus der Messung bei einer höheren Elektrode. Für die Zeiten um 225, 290 und 360 \tilt{frames} ist jeweils das gesamte Innere des Ringes hell. Das heißt, dass über den gesamten radialen Bereich ein Maximum zu finden ist. Zwischen diesen können weitere erahnt werden. Jedoch sind diese Extrema, sowohl die maximalen als auch minimalen, sehr flach bzw. kaum erkennbar. Sie heben sich lediglich auf Grund der kleinen Bereiche um 210, 245, 275 310, 340 und 375 \tilt{frames} bei großen Radien, wie etwa $\unit[15-20]{px}$, von den übrigen Intensitäts-Maxima ab. Weiterhin ist insgesamt ein schwacher Gradient in der Helligkeit von innen $R=0$ bis $R=\unit[20]{px}$ zu erkennen.\\
+			Die \ref{img:randhochutiefrad} zeigt die exakt gleiche Messung wie die vorherige aus \ref{img:randhochutiefwink}, nur in radialer Auflösung. Das linke Bild zeigt die Daten aus der Messung bei einer höheren Elektrode. Für die Zeiten um die \tilt{frames} 225, 290 und 360 ist jeweils das gesamte Innere des Ringes hell. Das heißt, dass über den gesamten radialen Bereich ein Maximum zu finden ist. Zwischen diesen können weitere erahnt werden. Jedoch sind diese Extrema, sowohl die maximalen als auch minimalen, sehr flach bzw. kaum erkennbar. Sie heben sich lediglich auf Grund der kleinen Bereiche um \tilt{frame} 210, 245, 275 310, 340 und 375 bei großen Radien, wie etwa $\unit[150-200]{px}$, von den übrigen Intensitäts-Maxima ab. Weiterhin ist insgesamt ein schwacher Gradient in der Helligkeit von innen $R=0$ bis $R=\unit[200]{px}$ zu erkennen.\\
 			Bei einer tiefen Elektrode zeigt sich ein anderes Bild: alle Extrema sind scharf und eindeutig erkennbar. Für diese Einstellung zeigt sich die zuletzt benannte Diskrepanz zwischen den Schwingungsachsen nun wesentlich deutlicher. Demnach können die Schwingungen aus der vorherigen Beschreibung mit denen dieser Darstellung identifiziert werden. Das 1. Maximum gehört zu $\Pi$ und das 2. zu $\Sigma$ usw. Außerdem stellt man fest, dass die Helligkeit der Maxima von $\Sigma$ geringer ist, als die von $\Pi$. Interessant ist hingegen jedoch, dass die minimalen Intensitäten keine systematischen Differenzen mehr zueinander ausweisen. Für große Radien verschwimmen die Intensitäten und der Gradient nimmt, in Hinblick auf $R=0$, mit wachsendem Abstand zum Mittelpunkt zwischen den Extrema ab.
 
 				\begin{figure}[!t]
@@ -981,12 +981,12 @@
 					\label{img:randhochutiefrotat}
 				\end{figure}
 
-			Abschließend ist in \ref{img:randhochutiefrotat} eine Rotations-Anregung mit Hilfe der Intensitätsanalyse visualisiert. Sehr anschaulich kann hier das Maximum bei seiner Wanderung von $\unit[360]{\degree}$, im Bereich um 235 \tilt{frames} (und um $200/3$ \tilt{frames} fortsetzend), über $\unit[180]{\degree}$ bei ca. 260 \tilt{frames}, bis hin zu $\unit[0]{\degree}$ bei 300 \tilt{frames} verfolgt werden. Im Zuge dessen können über das gesamte Winkelintervall mehr oder weniger stark ausgeprägte Inhomogenitäten der Intensität beobachtet werden: insbesondere bei $\unit[240-250]{\degree}$ ist ein stärkerer Abfall in der Helligkeit des Maximums zu vermerken. Um $\unit[180]{\degree}$ liegt die größte Intensität. Das Minimum zwischen den Bahnen der Rotationsanregung ist, bis auf eine Aufhellung und ein "`Verschmieren"' im Bereich des schwachen Maximums, gleichbleibend.\\
-			Das rechte Bild der \ref{img:randhochutiefrotat} zeigt die gleiche Anregung bei einer tiefen Elektrode. Der Verlauf des Helligkeits-Maximums ist beinahe vollständig unkenntlich geworden. Um $\unit[180]{\degree}$ ist wiederum die größte Intensität zu finden. Die, zwischen den, nunmehr kaum erkennbaren Bahnen liegenden Minima sind jetzt stark verschmiert und besonders in den Bereichen um $\unit[360]{\degree}$ nicht vom Rest unterscheidbar. Interessant ist jedoch, dass sich etwas ähnliches wie \tilt{hot-spots} des Leuchtens ausbilden: bei $\unit[90]{\degree}$ und 250 \tilt{frames}, $\unit[0]{\degree}$ und 275 \tilt{frames} sowie $\unit[270]{\degree}$ und 225 \tilt{frames} finden sich, aus dem verbliebenen Verlauf der Rotation herausstechende Intensitäten. 
+			Abschließend ist in \ref{img:randhochutiefrotat} eine Rotations-Anregung mit Hilfe der Intensitätsanalyse visualisiert. Sehr anschaulich kann hier das Maximum bei seiner Wanderung von $\unit[360]{\degree}$, im Bereich um \tilt{frame} 235 (und um $200/3$ \tilt{frames} fortsetzend), über $\unit[180]{\degree}$ bei ca. \tilt{frame} 260 , bis hin zu $\unit[0]{\degree}$ bei \tilt{frame} 300 verfolgt werden. Im Zuge dessen können über das gesamte Winkelintervall mehr oder weniger stark ausgeprägte Inhomogenitäten der Intensität beobachtet werden: insbesondere bei $\unit[240-250]{\degree}$ ist ein stärkerer Abfall in der Helligkeit des Maximums zu vermerken. Um $\unit[180]{\degree}$ liegt die größte Intensität. Das Minimum zwischen den Bahnen der Rotationsanregung ist, bis auf eine Aufhellung und ein "`Verschmieren"' im Bereich des schwachen Maximums, gleichbleibend.\\
+			Das rechte Bild der \ref{img:randhochutiefrotat} zeigt die gleiche Anregung bei einer tiefen Elektrode. Der Verlauf des Helligkeits-Maximums ist beinahe vollständig unkenntlich geworden. Um $\unit[180]{\degree}$ ist wiederum die größte Intensität zu finden. Die, zwischen den, nunmehr kaum erkennbaren Bahnen liegenden Minima sind jetzt stark verschmiert und besonders in den Bereichen um $\unit[360]{\degree}$ nicht vom Rest unterscheidbar. Interessant ist jedoch, dass sich etwas ähnliches wie \tilt{hot-spots} des Leuchtens ausbilden: bei $\unit[90]{\degree}$ und \tilt{frame} 250 , $\unit[0]{\degree}$ und  \tilt{frame} 275 sowie $\unit[270]{\degree}$ und \tilt{frame} 225 finden sich, aus dem verbliebenen Verlauf der Rotation herausstechende Intensitäten. 
 
 			\subsubsection{Auswertung}
 
-				Mit den Ergebnissen der \ref{img:randfrequenz} bis \ref{img:randhochutiefrotat} ist die Methodik der Versuche um das Plasma-Glow prinzipiell bestätigt. Liegt ein positives Potential auf einem Segment an, so verkleinert sich - nach \ref{sub:rand} und insbesondere \ref{subsub:childlang} sowie den Gl. (\ref{eq:childlang}) und (\ref{eq:randschichtdichte}) - die Randschicht des Ringes und der, in der Nähe befindlichen Metalloberflächen (Elektrode). Somit können die Elektronen, im Falle des Ringes, ungehindert auf diesen einströmen und damit ebenso die, in dessen nächster Umgebung befindlichen Neutralgasatome zum Leuchten anregen. Ein positives Segment bedeutet demnach eine hohe Intensität. Des weiteren verkleinert sich dadurch ebenso die Randschicht naher Metall- bzw. Elektrodenoberflächen: die Potentialdifferenz von Grenze zu Objekt wird geringer, weswegen der Bereich, in den die Elektronen quasi nicht eindringen können, schmaler wird. Analog sorgt ein negatives Potential auf einem Segment zur Vergrößerung der Randschicht um das Ringelement und naher Metallobjekte. Der Glow verschwindet oder wird schwächer.\\
+				Mit den Ergebnissen der \ref{img:randfrequenz} bis \ref{img:randhochutiefrotat} ist die Methodik der Versuche um das Plasma-Glow prinzipiell bestätigt. Die Potentiale der Segmente der Ring-Elektrode beeinflussen die Randschicht in dessen näherer Umgebung. Dies ist der, damit einher gehenden Veränderung des Leuchtens der Neutralgasatome zu entnehmen. 
 				Auf Grundlagen dessen sollen nun, mit Rücksicht auf die Beobachtungen des vorherigen Abschnitts, konkrete Analysen und Interpretationen vorgenommen werden.\\
 
 				\paragraph{Dipol-Anregung}
@@ -994,7 +994,7 @@
 						\begin{figure}[!b]
 							\centering
 							\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{figs/auswertung/plasmaglw/intensdipol181u3313Hz1sek.png}
-							\caption{Vergleich der Intensitätsverläufe bei $\unit[181]{\degree}$  und $\unit[331]{\degree}$ der Dipol-Anregung von \ref{img:randfrequenz} bei $\unit[3]{Hz}$ für $\unit[1]{s}$.}
+							\caption{Vergleich der Intensitätsverläufe bei $\unit[181]{\degree}$  und $\unit[331]{\degree}$ der Dipol-Anregung von \ref{img:randfrequenz} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. $I\left(\varphi=\unit[331]{\degree}\right)$ ist um 66 \tilt{frames} verzögert, damit die Extrema übereinander liegen.}
 							\label{img:intensdipol}
 						\end{figure}
 
@@ -1007,26 +1007,26 @@
 							\centering
 							\begin{subfigure}{0.49\textwidth}
 								\centering
-								\includegraphics[width=\textwidth,height=0.65\textwidth]{figs/auswertung/plasmaglw/intens0u180quad3Hz1sek.png}
+								\includegraphics[width=\textwidth,height=0.65\textwidth]{figs/auswertung/plasmaglw/intens83u180quadinphase3Hz1sek.png}
 							\end{subfigure}
 							\begin{subfigure}{0.49\textwidth}
 								\centering
-								\includegraphics[width=\textwidth,height=0.65\textwidth]{figs/auswertung/plasmaglw/intens83u180quadinphase3Hz1sek.png}
+								\includegraphics[width=\textwidth,height=0.65\textwidth]{figs/auswertung/plasmaglw/intens0u180quad3Hz1sek.png}
 							\end{subfigure}
-							\caption{Intensitätsverläufe der Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{links}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. \underline{\fett{links}:} Bei $\unit[181]{\degree}$ und $\unit[331]{\degree}$. \underline{\fett{rechts}:} Für $\unit[181]{\degree}$  und $\unit[0]{\degree}$.}
+							\caption{Intensitätsverläufe der Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{links}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. \underline{\fett{links}:} Bei $\unit[181]{\degree}$ und $\unit[83]{\degree}$. \underline{\fett{rechts}:} Für $\unit[181]{\degree}$  und $\unit[0]{\degree}$. }
 							\label{img:intensquadhochwink}
 						\end{figure}
 
 					Für den Verlauf der Helligkeit aus \ref{img:randhochutiefwink}:\underline{\fett{links}} \ref{img:intensquadhochwink} die, analog zur Analyse der Dipol-Schwingung, entsprechende Grafik. Für die beiden Vergleiche - einerseits zwischen den Achsen $\Sigma$ und $\Pi$ in \ref{img:intensquadhochwink}:\underline{\fett{links}}, als auch für eine Achse $\Pi$ in \ref{img:intensquadhochwink}:\underline{\fett{rechts}} - zeigen sich ähnliche Verhältnisse wie im vorherigen Abschnitt. In Richtung des Elektroden-Armes um $\varphi\approx\unit[180]{\degree}$ findet man allgemein stärkere Extrema vor. Konkret liegen die Intensitäten 3\%-5\% auseinander. Was jedoch die Vermutung der signifikanten Randschichtvergrößerung durch den Ausleger bestätigt, ist der Unterschied zwischen den Differenzen in den beiden Bildern: für $I(\varphi=\unit[83]{\degree})$ finden sich näherungsweise gleiche Minima wie für $I(\varphi=\unit[181]{\degree})$. Dies ist jedoch nicht der Fall bei $I(\unit[0]{\degree})$. Außerdem wird die zweite Theorie über die Unterschiede in der Randschichtausdehnung ebenso bekräftigt. Da für die Quadrupol-Anregung jedes Segment um jeweils $\unit[90]{\degree}$ in der Phase des Sinus-Signals verschoben worden war, sind die Extrema eindeutig den Ursachen zuzuordnen. Daher kann aus den Unterschieden der vergleichenden Graphen auf die Asymmetrie des Ringes bzw. Fehler in der Fertigung dessen geschlossen werden.
 
-						\begin{figure}[!t]
-							\centering
-							\includegraphics[width=0.8\textwidth,height=0.45\textwidth]{figs/auswertung/plasmaglw/intensquad91269u1782603Hz1sek.png}
-							\caption{Intensitätsverläufe der Achsen $\Sigma$ und $\Phi$ bei Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{rechts}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
-							\label{img:intensquadalles}
-						\end{figure}
-
-					In \ref{img:intensquadalles} sind die, in den vorherigen beiden Abbildungen gezeigten Vergleiche, für eine tiefer hängende Elektrode zusammen dargestellt worden. Auch hier zeichnen sich wiederum ähnliche Verhältnisse ab. Gut ist der Unterschied zwischen den Extrema der Achse $\Pi$ zu erkennen. Auf $\Sigma$ hingegen sind die Differenzen nur marginal. Insgesamt verlaufen die Intensitäten für eine um $\unit[6]{mm}$ tiefere Elektrode symmetrischer. Daraus lässt sich folgern, dass der Ring sich in diesem Fall dicht genug über der Elektrode befindet, um dessen Randschicht derart zu verändern, dass die zusätzliche Verdrängung der Elektronen um $\unit[91]{\degree}$ durch das Potential des Armes keine Rolle mehr spielt. Andererseits bestehen weiterhin nicht-verschwindende Unterschiede zwischen den Achsen der Anregung: speziell die Extrema bei $\varphi=\unit[178]{\degree}$ sind stärker als alle anderen. Das - von der Befestigung an gezählt -  erste Segment muss deswegen einen "`Vorteil"' gegenüber den anderen besitzen, da diese in etwa das gleiche Potential haben und damit eine ähnliche Randschichtveränderung bewirken (\ref{img:intensquadalles}).
+%						\begin{figure}[!t]
+%							\centering
+%							\includegraphics[width=0.8\textwidth,height=0.45\textwidth]{figs/auswertung/plasmaglw/intensquad91269u1782603Hz1sek.png}
+%							\caption{Intensitätsverläufe der Achsen $\Sigma$ und $\Phi$ bei Quadrupol-Anregung aus \ref{img:randhochutiefwink}:\underline{\fett{rechts}} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. }
+%							\label{img:intensquadalles}
+%						\end{figure}
+%
+%					In \ref{img:intensquadalles} sind die, in den vorherigen beiden Abbildungen gezeigten Vergleiche, für eine tiefer hängende Elektrode zusammen dargestellt worden. Auch hier zeichnen sich wiederum ähnliche Verhältnisse ab. Gut ist der Unterschied zwischen den Extrema der Achse $\Pi$ zu erkennen. Auf $\Sigma$ hingegen sind die Differenzen nur marginal. Insgesamt verlaufen die Intensitäten für eine um $\unit[6]{mm}$ tiefere Elektrode symmetrischer. Daraus lässt sich folgern, dass der Ring sich in diesem Fall dicht genug über der Elektrode befindet, um dessen Randschicht derart zu verändern, dass die zusätzliche Verdrängung der Elektronen um $\unit[91]{\degree}$ durch das Potential des Armes keine Rolle mehr spielt. Andererseits bestehen weiterhin nicht-verschwindende Unterschiede zwischen den Achsen der Anregung: speziell die Extrema bei $\varphi=\unit[178]{\degree}$ sind stärker als alle anderen. Das - von der Befestigung an gezählt -  erste Segment muss deswegen einen "`Vorteil"' gegenüber den anderen besitzen, da diese in etwa das gleiche Potential haben und damit eine ähnliche Randschichtveränderung bewirken (\ref{img:intensquadalles}).
 
 						\begin{figure}[!b]
 							\centering
@@ -1096,14 +1096,14 @@
 
 					\begin{figure}[!b]
 						\centering
-						\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/ersteungestpowerdens.png}
+						\includegraphics[width=\textwidth]{figs/auswertung/manipulation/ersteungestpowerdens.png}
 						\caption{Spektrale Energiedichte $S\ix{l}\left(\omega\right)$ für einen ungestörten Cluster von $N=26$ Teilchen. Die besonders angeregten Moden sind mit Pfeilen und den Nummern markiert.}\label{img:powerdensersteungest}
 					\end{figure}
 
 				Die Auswertungen der Normalmoden-Anteile in der Bewegung des Clusters erfolgt über die Betrachtung der spektralen Leistungsdichte $S\ix{p}\left(\omega\right)$. Die daraus ermittelten Eigenmoden, in welchen verstärkt Energie enthalten ist, werden daraufhin einzeln betrachtet und analysiert.\\
 				Bei den gemachten Messungen lag der Argon-Gasdruck zwischen $\unit[6,42-10]{Pa}$. Die eingespeisten Leistungen des rf-Generatos lagen, für die Quadrupol-Anregung, bei $\unit[0,5]{W}$ und, in den Versuchen mit der 6-Segment-Elektrode, bei $\unit[1,4]{W}$. Alle drei Kameras nahmen mit einer Auflösung von $\unit[1280]{px}\times\unit[1024]{px}$ bei 100 \tilt{fps} auf. Die Blendenöffnungszeit, dass heißt wie lange Licht auf den \tilt{CCD}-Chip treffen kann, betrug $\unit[8]{\upmu s}$. Kamera 'rot' und 'gelb' nahmen jeweils durch $\unit[60]{mm}$, 'gruen' durch ein $\unit[150]{mm}$ Objektiv auf. Jede Messreihe entsprach 10000 Bildern, was bei der gegebenen Frequenz $\unit[100]{s}$ gleich kam.\\
 				Die \ref{img:powerdensersteungest} zeigt die Dichte für einen ungestörten Cluster von $N=26$ bei den oben genannten Parametern. Mit Pfeilen sind die, entweder für einzelne Frequenzen oder über das gesamte dargestellte Spektrum ($\unit[0-50,5]{Hz}$), energiereichsten Moden hervorgehoben. Im allgemeinen sind für Frequenzen bis $\unit[10]{Hz}$ alle Moden gut angeregt. Deren Energiegehalt ist dabei in Relationen zu den Moden mit dem größten Anteil an der kollektiven Bewegungen des Clusters dargestellt. Diese Verteilung ist Folge des "`thermischen Chaos"': die zufälligen \tilt{brownschen} Bewegungen der levitierenden Staubpartikel, welche mit bloßem Auge als Zittern wahrnehmbar waren, enthalten viele Moden gleicher Maßen. Die Eigenmoden bzw. -vektoren, welche der Cluster nach Gl.(\ref{eq:ewp}) enthält, sind orthogonal zueinander. Die $v\ix{th}\left(t\right)$ thermischen Geschwindigkeitsvektoren erfüllen diese Eigenschaft insbesondere nicht, weswegen diese für die Konstruktion der Kollektivbewegung aus vielen verschiedenen Moden zusammengesetzt werden müssen. Speziell die Moden mit der Nummer 35 und höher enthalten mehr Energie. Sie entsprechen chaotischen, voneinander unabhängigen Translationen.\\
-				Interessant sind die markierten Nummern (siehe \ref{img:modenersteungest}), welche, über den genannten Bereich hinaus, signifikante Werte der spektralen Dichte haben. Die Moden 8 und 9 entsprechen Cluster-Rotationen mit einer, zur xy-Ebene parallelen  Drehachse. Sie sind zueinander konjugiert, dh. links- und rechts-drehend (damit orthogonal). Die Moden 19, 42 und 43 bilden ein, im Sinne eines kartesischen Koordinatensystems, rechtwinkliges Tripel der Clusterbewegung. Jeweils eine dieser Lösungen des Eigenwertproblems zeigt in Richtung einer Achse des Raumes. Des Weiteren stellt Nummer 23 eine Rotation um eine, zur z-Richtung parallelen Achse dar. Die Moden 56, 61 und 65 sind chaotische Bewegungen: die Eigenvektoren haben keine "`besondere"' Anordnung.\\
+				Interessant sind die markierten Nummern (siehe \ref{img:modenersteungest}), welche, über den genannten Bereich hinaus, signifikante Werte der spektralen Dichte haben. Die Moden 8 und 9 entsprechen Cluster-Rotationen mit einer, zur xy-Ebene parallelen  Drehachse. Sie sind zueinander konjugiert, dh. links- und rechts-drehend (damit orthogonal). Deren korrespondierender Eigenwert liegt, in Übereinstimmung mit Abschnitt \ref{subsub:moden}, bei verschwindend kleinen Frequenzen bzw. bei $\unit[0]{Hz}$. Die Moden 19, 42 und 43 bilden ein, im Sinne eines kartesischen Koordinatensystems, rechtwinkliges Tripel der Clusterbewegung. Jeweils eine dieser Lösungen des Eigenwertproblems zeigt in Richtung einer Achse des Raumes. Des Weiteren stellt Nummer 23 eine Rotation um eine, zur z-Richtung parallelen Achse dar. Die Moden 56, 61 und 65 sind chaotische Bewegungen: die Eigenvektoren haben keine "`besondere"' Anordnung.\\
 				Die rechtwinkligen Moden 19, 42 und 43 spiegeln die chaotisch-thermischen Bewegungen der Partikel wieder: aus ihnen kann jede beliebe Bewegung konstruiert werden. Die Nummern 8, 9 und 23 kommen durch die Anordnung der Laserstrahlen zustande: die Strahlen sind nicht exakt auf den Mittelpunkt des Clusters fokussiert. Da über deren Querschnitt ein Photonendichte-Gradient existiert, erfahren einige Teile des Yukawa-Balls andere Kräfte durch den unterschiedlichen Strahlungsdruck. Daraus resultiert eine Rotation vom Strahlungsmaximum weg. Da zwei Laser auf den Cluster gerichtet sind, ist es u.U. möglich, dass er um mehrere Achsen rotiert oder seine Gesamtrotation aus verschiedenen zusammengesetzt ist. Daher finden sich mehrere angeregte, dafür zuständige Moden im Spektrum. Der Kontrast zwischen den Energien niedriger Frequenzen bis $\unit[10]{Hz}$ und darüber resultiert aus den Eigenschaften der \tilt{brownschen} Bewegung.
 
 						\begin{figure}[!t]
@@ -1133,67 +1133,99 @@
 
 				\subsubsection*{Quadrupol-Anregung}
 
-					Mit der 4-Segment-Elektrode sind 4 Messungen zur Quadrupol-Anregung bei unterschiedlichen Frequenzen und einer Teilchenzahl von $N=26$ gemacht worden. Spezielle Moden, die anschließend diskutiert werden, sind in den Energiedichten mit Pfeilen hervorgehoben.
+					Mit der 4-Segment-Elektrode sind vier Messungen zur Quadrupol-Anregung bei unterschiedlichen Frequenzen und einer Teilchenzahl von $N=26$ gemacht worden. Jeweils zwei gegenüberliegende Segmente besaßen dabei das gleiche Potential, wobei insgesamt die beiden sinusoidalen Signale mit einer Amplitude von $U\ix{pp}=\unit[10]{V}$ um eine halbe Periode phasenverschoben waren. Speziell angeregte Moden, die anschließend diskutiert werden, sind in den Energiedichten mit Pfeilen hervorgehoben.
 
-				\paragraph{Schwingungen bei 1\,Hz}
+					\paragraph{Schwingungen bei 1\,Hz}
 
-						\begin{figure}[!t]
-							\centering
-							\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1Hzpowerdens.png}
-							\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[1]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[2]{Hz}$ zu sehen.}\label{img:powerdensquadrupol1Hz}
-						\end{figure}
-
-						\begin{figure}[!b]
-							\centering
-							\begin{subfigure}[t]{0.325\textwidth}
+							\begin{figure}[!t]
 								\centering
-								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr6.png}
-							\end{subfigure}
-							\begin{subfigure}[t]{0.325\textwidth}
-								\centering
-								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr24.png}
-							\end{subfigure}
-							\begin{subfigure}[t]{0.325\textwidth}
-								\centering
-								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr26.png}
-							\end{subfigure}
-							\caption{Auszug der, für \ref{img:powerdensquadrupol1Hz} betrachteten Moden. Insbesondere stehen hier die neuen Rotationen mit mehreren Drehachsen und die \tilt{breathing}-Mode im Fokus.}\label{img:modenquadrupol1Hz}
-						\end{figure}
+								\includegraphics[width=\textwidth]{figs/auswertung/manipulation/quadrupol1Hzpowerdens.png}
+								\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[1]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[2]{Hz}$ zu sehen.}\label{img:powerdensquadrupol1Hz}
+							\end{figure}
 
-					In \ref{img:powerdensquadrupol1Hz} ist die Energiedichte zu sehen. Die Nummern 17, 45 und 46 entsprechen hier den rechtwinkligen Kollektionen der Eigenvektoren wie in \ref{img:modenersteungest}. In diesem Fall enthalten sie im Vergleich zum übrigen Spektrum mehr Energie. Das ist offensichtlich Resultat der Anregung: die Quadrupol-Mode besteht aus Translationen bzw. Cluster-Deformationen auf den Schwigungsachsen. Im speziellen enthält die Nummer 17 eine vergleichbare Energie wie ihre "`Partner"'. Jedoch kommt in einer zweidimensionalen Quadrupol-Anregung keine vertikale Komponente vor. Die Schwingung in z-Richtung ist demnach Folge der Randschichtvernichtung und -erzeugung in der Mitte des Ringes durch dessen elektrostatische Wechselwirkung mit dem Plasma. Als Referenz sei der vorherige Abschnitt \ref{sub:glowanalys} der Analyse des Plasma-Glow angegeben.\\
-					Sehr scharfe Maxima der Dichte sind bei der Anregungsfrequenz $\unit[1]{Hz}$ zu sehen. Das zweite, bei einem natürlichen (zwei) Vielfachen der Frequenz auftauchende Maximum entspricht einer höheren Harmonischen der Schwingung. Diese sind gut bei den Moden 24, 26, 29, 45 und 46 zu erkennen. Die Nummern 6, 24 und 29 sind entsprechend Rotationsmoden - siehe \ref{img:modenquadrupol1Hz}. Anders ist hierbei jedoch, dass es nicht nur eine Drehachse pro Mode gibt, sondern auch beispielsweise gegenläufige Rotationen in einer zusammenkommen (Nummer 6, 26). Neu ist die \tilt{breathing}-Mode 24: sie entspricht einer Ausdehnung des Yukawa-Balls in der Ebene des Quadrupols (parallele zur xy-Ebene). Diese ist schwächer angeregt, da, während der Schwingung auf einer der beiden Achsen dieser Anregung, der Cluster nur minimal senkrecht dazu gestaucht wird. Die Stauchung hat jedoch, als konjugierte Mode zur Ausdehnung, bei der Projektion auf die Deformation einen großen Anteil an der Bewegung. Die Nummer 11 hat kein scharfes Maximum und enthält nur chaotische Eigenvektor-Anordnungen.
-
-				\paragraph{Schwingungen bei 3\,Hz}
-
-						\begin{figure}[!t]
-							\centering
-							\includegraphics[width=0.8\textwidth]{figs/auswertung/manipulation/quadrupol3Hzpowerdens.png}
-							\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[3]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[6]{Hz}$ zu sehen.}\label{img:powerdensquadrupol3Hz}
-						\end{figure}
-
-						\begin{figure}[!b]
-							\centering
-							\begin{subfigure}[t]{0.325\textwidth}
+							\begin{figure}[!b]
 								\centering
-								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr52.png}
-							\end{subfigure}
-							\begin{subfigure}[t]{0.325\textwidth}
-								\centering
-								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr55.png}
-							\end{subfigure}
-							\begin{subfigure}[t]{0.325\textwidth}
-								\centering
-								\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr73.png}
-							\end{subfigure}
-							\caption{heading}\label{img:modenquadrupol3Hz}
-						\end{figure}
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr6.png}
+								\end{subfigure}
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr24.png}
+								\end{subfigure}
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/auswertung/manipulation/quadrupol1HzModeNr26.png}
+								\end{subfigure}
+								\caption{Auszug der, für \ref{img:powerdensquadrupol1Hz} betrachteten Moden. Insbesondere stehen hier die neuen Rotationen mit mehreren Drehachsen und die \tilt{breathing}-Mode im Fokus.}\label{img:modenquadrupol1Hz}
+							\end{figure}
 
-					In \ref{img:powerdensquadrupol3Hz} sieht man die Energiedichte für eine Quadrupol-Anregung mit $\unit[3]{Hz}$. Neben der Ähnlichkeit zur Energie-Verteilung \ref{img:powerdensquadrupol1Hz} fällt auf, dass der Bereich niedriger Frequenzen (bis $\unit[10]{Hz}$) immer weniger eine Rolle spielt: die Dichte ist dort, in Relationen zu den Maxima bei der Anregungsfrequenz, wesentlich geringer. Das heißt, dass die thermische Bewegung innerhalb des Clusters sehr klein gegen die Auslenkungen durch die Anregung ist.\\
-					Insbesondere haben die Moden 17, 44 und 45, als rechtwinklige Cluster-Translationen, gute Extrema bei der ein- und zweifachen Frequenz. Die Nummer 25 ist eine Rotation um eine, zur z-Richtung parallelen Achse. Die Moden 38 und 72 sind beides einatmende \title{breathing}-Moden, das heißt sie stellen Cluster-Ausdehnungen dar.
+						In \ref{img:powerdensquadrupol1Hz} ist die Energiedichte zu sehen. Die Nummern 17, 45 und 46 entsprechen hier den rechtwinkligen Kollektionen der Eigenvektoren wie in \ref{img:modenersteungest}. In diesem Fall enthalten sie im Vergleich zum übrigen Spektrum mehr Energie. Das ist offensichtlich Resultat der Anregung: die Quadrupol-Mode besteht aus Translationen bzw. Cluster-Deformationen auf den Schwigungsachsen. Im speziellen enthält die Nummer 17 eine vergleichbare Energie wie ihre "`Partner"'. Jedoch kommt in einer zweidimensionalen Quadrupol-Anregung keine vertikale Komponente vor. Die Schwingung in z-Richtung ist demnach Folge der Randschichtvernichtung und -erzeugung in der Mitte des Ringes durch dessen elektrostatische Wechselwirkung mit dem Plasma. Als Referenz sei der vorherige Abschnitt \ref{sub:glowanalys} der Analyse des Plasma-Glow angegeben. Diese vertikale Oszillation enthält besonders viel Energie bei $\unit[2]{Hz}$, da das "`durchschwingen"' der Randschicht gerade mit der doppelten von $\omega$ geschieht.\\
+						Sehr scharfe Maxima der Dichte sind bei $\unit[1]{Hz}$ zu sehen. Das zweite, bei einem natürlichen (zwei) Vielfachen der Frequenz auftauchende Maximum entspricht einer höheren Harmonischen der Schwingung. Diese sind gut bei den Moden 24, 26, 29, 45 und 46 zu erkennen. Die Nummern 6, 24 und 29 sind entsprechend Rotationsmoden - siehe \ref{img:modenquadrupol1Hz}. Anders ist hierbei jedoch, dass es nicht nur eine Drehachse pro Mode gibt, sondern auch beispielsweise gegenläufige Rotationen in einer zusammenkommen (Nummer 6, 26). Ihre Resonanz liegt hierbei jedoch nicht mehr bei $\unit[0]{Hz}$, sonder ist in etwa um eine Anregungsfrequenz nach oben verschoben. Das legt die Vermutung nahe, dass deren Spektrum sich aus den Bewegungen des Quadrupols zusammensetzt und nicht auf Grund der Laser-Anordnung zustande kommt. Neu ist die \tilt{breathing}-Mode 24: sie entspricht einer Ausdehnung des Yukawa-Balls in der Ebene des Quadrupols (parallele zur xy-Ebene). Diese ist schwächer angeregt, da, während der Schwingung auf einer der beiden Achsen dieser Anregung, der Cluster nur minimal senkrecht dazu gestaucht wird. Die Stauchung hat jedoch, als konjugierte Mode zur Ausdehnung, bei der Projektion auf die Deformation einen großen Anteil an der Bewegung. Die Nummer 11 hat kein scharfes Maximum und enthält nur chaotische Eigenvektor-Anordnungen.
+
+					\paragraph{Schwingungen bei 3\,Hz}
+
+							\begin{figure}[!t]
+								\centering
+								\includegraphics[width=\textwidth]{figs/auswertung/manipulation/quadrupol3Hzpowerdens.png}
+								\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[3]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[6]{Hz}$ zu sehen.}\label{img:powerdensquadrupol3Hz}
+							\end{figure}
+
+							\begin{figure}[!b]
+								\centering
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr52.png}
+								\end{subfigure}
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr55.png}
+								\end{subfigure}
+								\begin{subfigure}[t]{0.325\textwidth}
+									\centering
+									\includegraphics[width=\textwidth,height=0.7\textwidth]{figs/auswertung/manipulation/quadrupol3HzModeNr73.png}
+								\end{subfigure}
+								\caption{Auswahl der angeregte Moden einer Quadrupol-Schwingung bei $\unit[3]{Hz}$. Neu sind Moden 52 un 55 als elliptische Deformationen während der Auslenkung auf einer Achse.}\label{img:modenquadrupol3Hz}
+							\end{figure}
+
+						In \ref{img:powerdensquadrupol3Hz} sieht man die Energiedichte für eine Quadrupol-Anregung mit $\unit[3]{Hz}$. Neben der Ähnlichkeit zur Energie-Verteilung \ref{img:powerdensquadrupol1Hz} fällt auf, dass der Bereich niedriger Frequenzen (bis $\unit[10]{Hz}$) immer weniger eine Rolle spielt: die Dichte ist dort, in Relationen zu den Maxima bei der Anregungsfrequenz, wesentlich geringer. Das heißt, dass die thermische Bewegung innerhalb des Clusters sehr klein gegen die Auslenkungen durch die Anregung ist.\\
+						Insbesondere haben die Moden 17, 44 und 45, welche die rechtwinklige Cluster-Translationen sind, gute Extrema bei der ein- und zweifachen Frequenz. Die Nummer 25 ist eine Rotation um eine, zur z-Richtung parallelen Achse. Die Moden 38 und 72 sind beides einatmende \title{breathing}-Moden, das heißt sie stellen Cluster-Ausdehnungen dar. Die Nummer 73 ist die zur 72 konjugierte: eine ausatmende, zusammenziehende \tilt{breathing}-Mode.\\
+						Wie bereits besprochen, erfährt der Cluster während der Schwingung entlang einer Achse des Quadrupols eine Deformation auf der anderen. In dieser Richtung wird er gestaucht und verformt sich somit elliptisch.  Die Moden dieser Bewegung sind 52 und 55, welche weiterhin in \ref{img:modenquadrupol3Hz} gezeigt werden. Diese enthält offensichtlich immer mehr Energie, umso näher die Frequenz an der Eigenfrequenz liegt, weil der Cluster dort die größte Resonanz zeigt. In den Moden der elliptische Deformation ist deswegen signifikant Energie gespeichert: die $\unit[3]{Hz}$ der Anregung liegen in der Nähe von $\omega\ix{0}$. Dies wird ebenso durch den verstärkten Kontrast zu den restlichen Moden bekräftigt. Deren Energiedichte ist, im Vergleich zu den explizit besprochenen sowie der Anregung mit $\unit[1]{Hz}$, viel geringer.
+
+					\paragraph{Anregung mit 5\,Hz}
+
+							\begin{figure}[!b]
+								\centering
+								\includegraphics[width=\textwidth]{figs/auswertung/manipulation/quadrupol5Hzpowerdens.png}
+								\caption{Spektrale Energiedichte für einen Cluster von $N=26$ Teilchen bei einer Quadrupol-Anregung mit $\unit[5]{Hz}$. Es sind angeregte, höhere Harmonische der Schwingung bei $\unit[10]{Hz}$  und $\unit[15]{Hz}$ zu sehen.}\label{img:powerdensquadrupol5Hz}
+							\end{figure}
+
+						Die \ref{img:powerdensquadrupol5Hz} liefert keine zusätzlichen Informationen über neue, angeregte Moden. Die Nummern 7, 12, 33, 37, 39, 62 und 66 sind chaotisch angeordnete Eigenvektor-Kollektionen. Sie tragen auch hier wiederum signifikant Energie, weil auch aus ihnen alle Cluster-Bewegungen anteilig zusammengesetzt werden können. Analog dazu sind mit 18, 44 und 45 die rechtwinkligen Moden eingetragen. Sie enthalten, der Anregung entsprechend, die meiste Energie. Die Nummern 5, 6 und 32 stellen im Spektrum die Rotationsbewegungen dar.  Hinzu kommen mit 53, 56 und 58 die Quadrupol-Deformationen nach Vorbild von \ref{img:modenquadrupol3Hz}. Die Nummer 31, 70 und 75 enthalten schließlich ein- bzw. ausatmende (relaxierend, kontrahierend) \tilt{breathing}-Moden.\\
+						Die 42 entspricht einer, aus der rechtwinkligen Mode und dessen Konjugiertem zusammengesetzte Bewegung. Der Cluster schwingt dabei entlang einer Achse auf seinen Schwer- bzw. Mittelpunkt zu. Das liefert jedoch keine neuen Informationen über die Kinematik des Systems, da diese Bewegung bereits durch die kollektive Translation in einer Richtung (Nummer 44, 45 und siehe die Moden 42, 43 aus \ref{img:modenersteungest}) ausgedrückt wird. Sowohl die Resonanz bei der Anregungsfrequenz, als auch der nächsten (bzw. für die Mode 44 übernächsten) Harmonischen sind gut im Spektrum zu sehen.\\
+						Insgesamt hat die Dichte im niederfrequenten Bereich, im Vergleich zu \ref{img:powerdensquadrupol3Hz}, zugenommen, woraus sich schließen lässt, dass der Schritt zu $\unit[5]{Hz}$ die Entfernung zur Resonanzfrequenz $\omega\ix{0}$ vergrößert hat. Ebenso ist auch mehr Energie, als bei einer Anregung von $\unit[3]{Hz}$, in den "`chaotischen"' Moden gespeichert. Das ist als direkte Folge der größeren Differenz zur Eigenfrequenz des Clusters zu verzeichnen. 
 
 				\subsubsection*{6-Segment-Elektrode}
 
-         \subsection{Zusammenfassung}
+						\begin{figure}[!b]
+							\centering
+							\includegraphics[width=\textwidth]{figs/auswertung/manipulation/zweiteungestpowerdens.png}
+							\caption{Spektrale Energiedichte für einen ungestörten Cluster von $N=31$ Teilchen.}\label{img:powerdenszweiteungest}
+						\end{figure}
+
+					Die Versuche mit der Ring-Elektrode mit 6 Segmenten umfasste Anregungen einer Dipol- und rotieren Dipol-Schwingung. Für den ersten Fall wurden jeweils die Segmente einer Ringhälfte zusammengelegt, sowie mit einer Phasenverschiebung von $\unit[180]{\degree}$ zueinander und Amplitude von $\unit[10]{V}$ \tilt{peak-to-peak} bei verschiedenen Frequenzen versehen. Für die Realisierung eines rotierenden Dipols trugen jeweils 2 gegenüberliegende Segmente das gleiche, sinusoidale Signal. Aufeinander folgende Segmentpaare hatten zueinander eine Phasendifferenz von $\unit[120]{\degree}$, woraus eine Rotationsgeschwindigkeit von einem Ringumfang pro Periode resultierte. \\
+					Die \ref{img:powerdenszweiteungest} zeigt die spektrale Energiedichte für einen ungestörten Cluster im 6-Segment-Ring. Analog zu \ref{img:powerdensersteungest} ist bei niedrigen Frequenzen ein großer Teil der Moden gleichmäßig angeregt. Die Nummern 24, 56 und 57 sind die bekannten rechtwinkligen aus \ref{img:modenersteungest}. Sie stechen mit ihrem Energie-Dichte-Verlauf, im Vergleich zu den restlichen Moden, heraus. Die Nummern 58, 59, 97-99 und 103 sowie 104 beinhalten chaotisch angeordnete Teilchenbewegungen. Das Rotationsspektrum erstreckt sich über die Moden 2-15, 21, 23, sowie 33-36, wobei die Drehungen um verschiedenste Achsen stattfinden (siehe \ref{img:modenersteungest} und \ref{img:modenquadrupol1Hz}). Deren entsprechende Eigenfrequenz liegt, wie zu erwarten, bei $\unit[0]{Hz}$. Schließlich enthalten Nummer 52 und 100-102 Kontraktions- und Ausdehnungs-Moden.
+
+						\paragraph{Dipol-Anregung bei 1\,Hz}
+
+								\begin{figure}[!t]
+									\centering
+									\includegraphics[width=\textwidth]{figs/auswertung/manipulation/dipol1Hzpowerdens.png}
+									\caption{Spektrale Energiedichte für eine Dipol-Anregung  bei $\unit[1]{Hz}$ eines Cluster von $N=31$ Teilchen.}\label{img:powerdensdipol1Hz}
+								\end{figure}
+
+							
+
+		\subsection{Zusammenfassung}
 
 	\newpage
 
