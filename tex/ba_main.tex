@@ -5,8 +5,9 @@
 % with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 % The lincense itself can be found at <https://www.gnu.org/licenses/fdl-1.3>.
 
-\documentclass[numbers=noenddot,a4paper]{scrartcl}
+\documentclass[numbers=noenddot,a4paper,notitlepage,twoside,BCOR15mm]{scrbook}
 
+%\usepackage[left=35mm,right=20mm,top=20mm,bottom=20mm]{geometry}
 \usepackage[greek,ngerman]{babel}
 \usepackage[T1]{fontenc}
 %\usepackage[applemac]{inputenc}
@@ -14,7 +15,6 @@
 \usepackage{fullpage}
 \usepackage{scrpage2}
 \usepackage{libertine}
-%\usepackage{braket}
 \usepackage{ziffer}
 \usepackage{graphicx}
 \usepackage{units}
@@ -31,13 +31,12 @@
 \usepackage{lscape}
 \usepackage[backref=page]{hyperref}
 \usepackage{csquotes}
-\usepackage[printonlyused,withpage,footnote]{acronym}
 
 \renewcommand{\thefigure}{Abb. \arabic{figure}}
-%\renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
 
-%\captionsetup[wrapfigure]{name=}
 \captionsetup[figure]{name=}
+
+\setlength{\parindent}{0pt}
 
 \newcommand{\nummat}[1]{\left[\text{#1}\right]}
 \newcommand{\num}[1]{$\left[\text{#1}\right]$}
@@ -122,25 +121,33 @@
 	\tableofcontents
 
 	\newpage
-	\thispagestyle{empty}
-	\begin{align*}
-	\,
-	\end{align*}
-	\newpage
 
-	\section{Motivation}\label{sec:einleitung}
+	\chapter{Motivation}\label{sec:einleitung}
 
-	\newpage
+		Das Wort Plasma (altgriechisch  \greek{πλάσμα}) steht für ein Gebilde, welches aus verschiedenen Einzel-Komponenten zusammengesetzt ist und eine kollektive, "`lebendige"' Dynamik besitzt. Ebenso wie in Lösungen von Salzen verändern kolloidale Teilchen in Plasmen die Eigenschaften dieses Kollektivismus. Viele Phänomene wie Wellen oder besondere Ladungsträger-Wechselwirkungen in Gasentladungen können, mit Hilfe der Physik \tilt{kolloidaler (komplexer) Plasmen} besser verstanden und untersucht werden. Zudem entdeckt man, durch das Einbringen makroskopischer Festkörper in die Entladung, zusätzlich neue Effekte innerhalb dieser staubigen Plasmen. Die hydrodynamische Beschreibung von Gasen im sog. \tilt{vierten Aggregatzustand} erleichtert insbesondere das theoretische Verständnis der Dynamik der aufgeladenen Partikel. Angelehnt an dieses Prinzip ist auch die Interpretation der, in diesem Experiment erzeugten \tilt{finiten Yukawa-Cluster} - u.a. auf Grund elektrostatischer Wechselwirkungen levitierende Gruppen von bis zu 50 Staub-Partikel - als "`Tropfen"' vor dem Hintergrund des Plasmas.\\
+		Das Feld der Physik komplexer Plasmen vergrößert sich rasant: nicht nur für Versuche im Labor, sonder auch Experimente in Schwerelosigkeit oder Optimierungen der Elektronik-Industrie sind staubige Gasentladungen von großem Interesse. Im Speziellen ist das Schema komplexer Plasmen in der Astrophysik sehr wichtig, da sich 99\% des beobachtbaren Volumens im Weltall im Plasma-Zustand befindet. Interstellare Gaswolken, Kometen-Schweife und planetare Ringe wie um Saturn sind alles staubige Plasmen.\\
+		Ziel dieser Arbeit soll die präzise Manipulation eines solchen finiten Yukawa-Systems sein. Im Zuge dessen werden dafür wichtige Bedingungen der lokalen Entladung um den eingefangenen "`Ball"' untersucht. Die Anregung und Beobachtung verschiedenster Schwingungen liefert dabei Aufschluss über die Beschaffenheit des Clusters. Von besonderem Gewicht war dabei die Methodik der Stereoskopie und des elektrischen Einfangs. Bei ersterem handelt es sich um die dreidimensionale Rekonstruktion aus zweidimensionalen Informationen verschiedener Kamera-Blickwinkel. Letzteres beschreibt die Art und Weise, wie die Manipulation der Cluster vorgenommen wurde. Hierfür wurden eigens verschiedenen, segmentierte Ring-Elektroden aus Kupfer für die Experimente dieser Arbeit konzipiert und konstruiert.\newline
 
-	\section{Physikalische Grundlagen}\label{sec:physg}
+		\begin{figure}[!h]
+		\centering
+			\begin{minipage}{0.49\textwidth}
+				\centering
+				\includegraphics[scale=1.25]{figs/cluster.png}
+			\end{minipage}
+			\begin{minipage}{0.48\textwidth}
+				\caption{Mit grünen Nd:YAG-Lasern ausgeleuchteter Yukawa-Ball. Der verwendete Staub  betsteht aus homogenen, Malamin-Formaldehyd-Kügelchen mit einem Radius im $\upmu$m-Bereich}
+			\end{minipage}
+		\end{figure}
 
-		In diesem ersten Abschnitt soll der Hintergrund f\"ur den sich anschlie{\ss}nenden Versuch gegeben werden. Dabei wird einerseits auf grundlegendes aus der Plasmaphysik sowie komplexer Plasmen eingegangen, andererseits aber auch auf die theoretischen Modelle, welche essentiell f\"ur das Verst\"andnis der Ph\"anomene dieses Experiments sind.
+	\chapter{Physikalische Grundlagen}\label{sec:physg}
 
-		\subsection{Kapazitiv gekoppelte Radiofrequenz-Plasmen} \label{sub:kaprfplasm}
+		In diesem ersten Abschnitt soll der Hintergrund f\"ur den, sich anschlie{\ss}nenden Versuch gegeben werden. Dabei wird einerseits auf grundlegendes aus der Plasmaphysik sowie komplexer Plasmen eingegangen, andererseits aber auch auf die theoretischen Modelle, welche essentiell f\"ur das Verst\"andnis der Ph\"anomene dieses Experiments sind.
+
+		\section{Kapazitiv gekoppelte Radiofrequenz-Plasmen} \label{sub:kaprfplasm}
 
 			Der in diesem Versuch genutzte Aufbau entspricht dem eines kapazitiv gekoppelten Niederdruck-Radiofreuquenz-Plasmas.\\
-			Ein Plasma ist ein quasineutrales Gas aus freien Ladungsträgern und, dem Ionisierungsgrad der Entladung entsprechend, neutralen Atomen oder Molekülen. Die Spezies der Ladungen sind im allgemeinen Elektronen und Ionen, wobei der Begriff quasineutral die Bedingung $n\ix{e}=n\ix{I}$ der Dichten auf einer speziellen Längenskala fordert (siehe unten). Für ein Plasma gibt es verschiedene physikalischen Kenngrößen, welche in Tabelle \ref{tab:kenngroessen} inklusive ihrer Bedeutungen einmal zusammengefasst wurden.\\
-			Befindet sich ein Fremdteilchen, ein Festkörper oder eine weitere Ladungsträgerspezies in der Entladung, so spricht man von komplexen Plasmen. Für das Experiment dieser Arbeit ist dies der Fall, da hierbei in das Plasma homogene Melamin-Formaldehyd-Partikel in der Größenordnung einiger $\unit{\upmu m}$ eingebracht werden. Diese erfahren, in Abhängigkeit der Parameter, verschiedenste Wechselwirkungen mit den Entladungsspezies und externen Feldern.
+			Ein Plasma ist ein quasineutrales Gas aus freien Ladungsträgern und, dem Ionisierungsgrad der Entladung entsprechend, neutralen Atomen oder Molekülen. Die Spezies der Ladungen sind im Allgemeinen Elektronen und Ionen, wobei der Begriff quasineutral die Bedingung $n\ix{e}=n\ix{I}$ der Dichten auf einer speziellen Längenskala fordert (siehe unten). Für ein Plasma gibt es verschiedene physikalische Kenngrößen, welche in Tabelle \ref{tab:kenngroessen} inklusive ihrer Bedeutungen einmal zusammengefasst wurden.\\
+			Befindet sich ein Fremdteilchen, ein Festkörper oder eine weitere Ladungsträgerspezies in der Entladung, so spricht man von komplexen Plasmen. Für das Experiment dieser Arbeit ist dies der Fall, da hierbei in das Plasma homogene Melamin-Formaldehyd-Partikel in der Größenordnung einiger $\unit{\upmu m}$ eingebracht werden. Diese erfahren, in Abhängigkeit der Parameter der Gasentladung, verschiedenste Wechselwirkungen mit den Ladungsträgern und externen Feldern.
 
 				\begin{table}[H]
 					\centering
@@ -161,32 +168,31 @@
 							\hline
 
 						\end{tabular}
-					\caption{Plasmaphysikalische Kenngrößen. Der Index $j$ bestimmt die Ladungsträgerspezies mit den entsprechenden Massen und Ladungen.}
+					\caption{Plasmaphysikalische Kenngrößen. Der Index $j$ bestimmt die Ladungsträgerspezies. Dabei sind $m\ix{j}$ Massen, $n\ix{j}$ Dichten, $v\ix{th,j}$ thermische Geschwindigkeiten und $T\ix{j}$ Temperaturen. Die Indizees $I$ und $e$ kennzeichnen im Folgenden die Größen der Ionen und Elektronen}
 					\label{tab:kenngroessen}
 				\end{table}
 
-			Wie bereits erwähnt greift dieses Experiment auf die Erzeugung einer Gasentladung zurück. Hierbei ist der Versuch wie ein horizontal ausgerichteter, paralleler Plattenkondensator angeordnet (siehe \ref{img:ungleichesplasma}), wobei das Dielektrikum das Plasma sei, die untere Elektrode mit einem Signal im $\unit{MHz}$-Bereich betrieben wird und die andere auf Massepotential liegt. Das elektrische Feld resultiert hierbei aus den Oberflächenladungen der Elektroden, wobei mit unterschiedlichen \tilt{rf}-Signalen (\tilt{radio frequency}) auch verschiedene Betriebsregime realisiert, e.g. Ladungsträger erzeugt bzw. vernichtet werden.\\
-			Die \tilt{rf}-Spannung sorgt weiterhin für die nötige Homogenität des Plasmas, da aufgrund dessen ein Verschiebungsstrom zwischen Entladungsvolumen und Elektrode fließt (siehe Abschn. \ref{subsub:self-bias}) und damit die Kontaktierung dieser sehr isotrop gestaltet. In Aufbauten, in welchen die Flächen der Elektroden nicht gleich sind, liegt wegen der unterschiedlichen Potentialverläufe in den Randschichten (siehe Abschn. \ref{sub:rand}) zusätzlich eine Gleichspannung an, die sogenannte \tilt{self-bias} - siehe Abschn. \ref{subsub:self-bias}. Das ist insbesondere der Fall für das Experiment dieser Arbeit, da hier die gesamte Kammer als Elektrode zur Masse dient und die andere entsprechend kapazitiv an die Erregung gekoppelt ist.
+			Wie bereits erwähnt, greift dieses Experiment auf die Erzeugung einer Gasentladung zurück. Hierbei ist der Versuch wie ein horizontal ausgerichteter, paralleler Plattenkondensator angeordnet (siehe \ref{img:ungleichesplasma}), wobei das Dielektrikum das Plasma sei, die untere Elektrode mit einem Signal im $\unit{MHz}$-Bereich betrieben wird und die andere auf Massepotential liegt. Das elektrische Feld resultiert hierbei aus den Oberflächenladungen der Elektroden. Mit unterschiedlichen \tilt{rf}-Signalen können (\tilt{radio frequency}) auch verschiedene Betriebsregime realisiert werden: die Erzeugung und Vernichtung der Ladungsträger verändert sich.\\
+			Die \tilt{rf}-Spannung sorgt weiterhin für einen Verschiebungsstrom zwischen Entladungsvolumen und Elektrode (siehe Abschn. \ref{subsub:self-bias}). In Aufbauten, in welchen die Flächen der Elektroden nicht gleich sind, liegt außerdem wegen der unterschiedlichen Potentialverläufe in den Randschichten (siehe Abschn. \ref{sub:rand}) zusätzlich eine Gleichspannung an, die sogenannte \tilt{self-bias} - siehe Abschn. \ref{subsub:self-bias}. Das ist insbesondere der Fall für das Experiment dieser Arbeit, da hier die gesamte Kammer als Elektrode zur Masse dient und die andere entsprechend kapazitiv an die Erregung gekoppelt ist.
 
-				\subsubsection{Verschiebungsstrom} \label{subsub:verschieb}
+				\subsection{Verschiebungsstrom} \label{subsub:verschieb}
 
-					\begin{wrapfigure}{r}{0.4\textwidth}
+					\begin{wrapfigure}{l}{0.45\textwidth}
 						\centering
-						\includegraphics[width=0.47\textwidth,height=0.54\textwidth]{figs/verschiebpiel.png}
+						\includegraphics[width=0.42\textwidth,height=0.55\textwidth]{figs/verschiebpiel.png}
 						\caption{Verlauf der Dichten, des Elektrischen Feldes und des zug. Potentials (eindimensional) in einer Entladung mit zwei gegenüberliegenden Randschichten (nach \cite{Piel10}).}
 						\label{img:verschieb}
 					\end{wrapfigure}
 
-				Die Elektronen eines Plasmas über einer \tilt{rf}-getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$ der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$. Nimmt man an, dass die Randschicht der Dicke $a$ frei von Elektronen ist (siehe Abschn. \ref{sub:rand}) und die Ionendichte dort konstant $n\ix{0,I}$ ist, so folgt für das elektrische Feld der positiven Raumladungszone an der Kammerwand $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$ - siehe \ref{img:verschieb}. Lädt sich die Entladungsbegrenzung nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasmavolumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält (nach \cite{Godyak90d}).\\
-				Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdicke $s\ix{0}$ schwingen und während einer jeden Schwingung einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Letztendlich ergibt sich daraus ein Spannungsabfall über das Plasma aus den Potentialdifferenzen der Randschichten $U\ix{1/2}$ nach \cite{Piel10}:
+				Die Elektronen eines Plasmas über einer, mit Radiofrequenz getriebenen Elektrode können, aufgrund ihrer Beweglichkeit und hohen Plasmafrequenz $\omega\ix{P,e}$, der Anregung problemlos folgen. Die Ionen sollen in diesem Fall als stationär betrachtet werden, da $\omega\ix{P,I}\ll\omega\ix{P,e}\,$ gilt. Nimmt man an, dass die Randschicht der Dicke $a$ vor einer negativ geladenen Wand frei von Elektronen ist (siehe Abschn. \ref{sub:rand}) und die Ionendichte dort konstant $n\ix{0,I}$ beträgt, so folgt für das elektrische Feld der positiven Raumladungszone $E\ix{0}=-en\ix{0,I}a/\varepsilon\ix{0}\,\,$ - siehe \ref{img:verschieb}. Lädt sich die Kammerwand nun stärker negativ auf, so dehnt sich die Randschicht als Folge dessen aus und wandert dabei mit der Geschwindigkeit $v=\diff s\ix{1}/\diff t$ in das Plasma-Volumen hinein. Dies führt zum bereits erwähnten Verschiebungstrom in der Randschicht $j\ix{V}=-en\ix{0,I}v$, welcher zusammen mit dem Strom der, aus der Schicht "`verdrängten"' Elektronen $j\ix{L}=-en\ix{0,I}v$ die Kontinuität im Plasma erhält (nach \cite{Godyak90d}). Da im Hauptvolumen der Entladung die Quasineutralität erhalten ist, dh. $n\ix{e}=n\ix{0,I}$ gilt, müssen die zusätzlichen Elektronen aus der pos. Ladungszone in $x\in\left[0,s\ix{1}+\diff s\ix{1}\right]$ in den Teil des Plasmas, in welchem zu diesem Zeitpunkt die Randschicht schrumpft und $\diff s\ix{1}=-\diff s\ix{2}$ gilt. Daraus folgt wiederum, dass die Randschichten eines harmonisch getriebenen Plasmas sinusoidal um eine Gleichgewichtsdicke $s\ix{0}$ schwingen und während einer jeden Periode einmal vollständig verschwinden, e.g. $s\ix{1/2,max}=s\ix{0}\,$.  Für den Spannungsabfall über das Plasma zwischen den Randschichten gilt nach \cite{Piel10} Gl. (\ref{eq:spannungsdiff}), wobei $U\ix{1/2}$ die Potentiale in den Randbereichen sind. 
 
 					\begin{align}
-						\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,.
+						\Delta U=U\ix{1}-U\ix{2}=-\frac{2en\ix{0,I}s\ix{0}}{\varepsilon\ix{0}}\exp\left(\imag\omega t\right)\,\,. \label{eq:spannungsdiff}
 					\end{align}
 
-				\subsubsection{\tilt{self-bias}}  \label{subsub:self-bias}
+				\subsection{\tilt{self-bias}}  \label{subsub:self-bias}
 
-						\begin{figure}
+						\begin{figure}[!t]
 							\centering
 							\begin{subfigure}[b]{0.48\textwidth}
 								\centering
@@ -203,7 +209,7 @@
 							\caption{\fett{(a)}:Schema eines Plasmas mit ungleichen Elektrodenflächen. Die obere ist hierbei kleiner und gleichzeitig mit dem \tilt{rf}-Signal betrieben. \fett{(b)}:Ersatzschaltbild einer Entladung mit der \tilt{bulk}-Impedanz $Z\ix{P}$ (Hauptvolumen) und den Randschichten: eine Diode als Symbol für den "`Elektronenfluss"' aus der Schicht hinaus, der Widerstand $R\ix{j}$ als Ionenstrom und die Kapazität $C\ix{j}$ der pos. Raumladungszone (nach \cite{Piel10}).}
 						\end{figure}
 
-					Einem Plasma kann man eine, für \tilt{rf}-Spannungen der Frequenz $\omega$ nicht verschwindende Impedanz $Z\ix{P}$ zuordnen. Für das Entladungsvolumen der Permittivität $\varepsilon\ix{P}$, der Kapazität $C\ix{P}$ auf der Querschnittsfläche $A$ und Dicke $b$, in welcher die freien Elektronen mit der Frequenz $\nu\ix{e,N}$ mit den Neutralgasatomen stoßen, gilt (\cite{Piel10}):
+					Einem Plasma kann man eine, für \tilt{rf}-Spannungen der Frequenz $\omega$ nicht verschwindende Impedanz $Z\ix{P}$ zuordnen. Für das Entladungsvolumen der Permittivität $\varepsilon\ix{P}$, der Kapazität $C\ix{P}$ eines Quaders der Querschnittsfläche $A$ und Dicke $b$, in welcher die freien Elektronen mit der Frequenz $\nu\ix{e,N}$ mit den Neutralgasatomen stoßen, gilt (\cite{Piel10}):
 
 					\begin{align}
 					\varepsilon\ix{P}=1-&\frac{\omega\ix{P,e}^2}{\omega\left(\omega-\imag\nu\ix{e,N}\right)} \quad \quad C\ix{P}=\varepsilon\ix{P}C\ix{0}=\varepsilon\ix{P}\varepsilon\ix{0}\frac{A}{b} \\
@@ -211,73 +217,73 @@
 					\label{eq:bulkimpedanz}
 					\end{align}
 
-					Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`elektronisches Schaltkreises"' der Entladung gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
-					Betrachtet man zuerst den Fall hoher Anregungsfrequenzen, so kann man die Impedanz des \tilt{bulk} (siehe Gl. (\ref{eq:bulkimpedanz}), \cite{Kay85}) vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$. Es folgt für die Spannung $U$ über die Entladung und das Plasmapotential $\Phi\ix{P}$:
+					Die Induktivität $\imag\omega/\left(\omega\ix{P,e}^2C\ix{0}\right)$ des "`Schaltkreises der Entladung"' gibt die Trägheit der Elektronen in Bezug auf ein Signal $\omega$ wieder, wohingegen der reele Widerstand $\nu\ix{e,N}/\left(\omega\ix{P,e}^2C\ix{0}\right)$ der Neutralgasreibung entspricht. Zusammen mit den Randschichten ergibt sich das Ersatzschaltbild eines Plasmas in \ref{img:ersatzschaltbild}.\\
+					Bei hohen Anregungsfrequenzen kann man die Impedanz des \tilt{bulk} (siehe Gl. (\ref{eq:bulkimpedanz}), \cite{Kay85}) vernachlässigen und es dominieren die Kapazitäten $C\ix{j}$ der Randschichten beider Elektroden. Es folgt für die Spannung über die Entladung $U$ und das Plasmapotential $\Phi\ix{P}$:
 
 						\begin{align}
 							U\left(t\right)=U\ix{GS}+U\ix{rf}\sin\left(\omega t\right) \quad \quad \Phi\ix{P}\left(t\right)=\overline{\Phi\ix{P}}+\Phi\ix{rf}\sin\left(\omega t\right) \label{eq:selfbiaseins}
 						\end{align}
 
-					Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es entsteht sozusagen ein Kurzschluss in der Region der Randschicht, wenn das Plasmapotential negativ im Vergleich zur Elektrode wird. Es folgt somit mit Gl. (\ref{eq:selfbiaseins}) zusammen (nach \cite{Piel10}):
+					Wie bereits erwähnt, verschwindet die Randschicht vollständig während einer Anregungsperiode. Als Folge dessen stellt sich, lokal, $\Phi\ix{P}$ auf das Potential der Elektrode ein, woraus wiederum ein Elektronenstrom auf diese folgt. Es kommt sozusagen zu einem Kurzschluss in der Randschicht, wenn das Plasma-Potential negativ im Vergleich zur Elektrode wird. Mit Gl. (\ref{eq:selfbiaseins}) zusammen (nach \cite{Piel10}) ergibt sich Gl. (\ref{eq:ungleichungen}).
 
 						\begin{align}
 							\Phi\ix{P,max}=\overline{\Phi\ix{P}}+\Phi\ix{rf}\geq U\ix{Gs}+U\ix{rf} \quad \quad \Phi\ix{P,min}=\overline{\Phi\ix{P}}-\Phi\ix{rf}\geq 0\, \, . \label{eq:ungleichungen}
 						\end{align}
 
-					Liegt die getriebene Elektrode ohne zwischengeschalteten ``Puffer'' direkt an der \tilt{rf}-Signalquelle, so gilt zumindest f\"ur eine Ungleichung aus (\ref{eq:ungleichungen}) die Gleichheit. Wird hingegen die Elektrode kapazitiv gekoppelt, dh. zwischen diese und den Generator ein Kondensator geschaltet, so kann in einer Periode der \tilt{rf}-Anregung kein Nettostrom von der Quelle flie{\ss}en. Deswegen gibt es gleiche Elektronenstr\"ome auf beide Elektroden, was zur Folge hat, dass das minimale Plasmapotential das Massepotential wird und das maximale zu dem der Anregung. F\"ur den Gleichspannungsanteil, \tilt{self-bias} $U\ix{GS}$ und das mittlere Plasmapotential $\overline{\Phi\ix{P}}$ folgt:
+					Liegt die getriebene Elektrode ohne zwischengeschalteten ``Puffer'' direkt an der \tilt{rf}-Signalquelle, so gilt zumindest f\"ur eine Ungleichung aus (\ref{eq:ungleichungen}) die Gleichheit. Wird hingegen die Elektrode kapazitiv gekoppelt, dh. zwischen diese und den Generator ein Kondensator geschaltet, so kann in einer Periode der \tilt{rf}-Anregung kein Nettostrom von der Quelle flie{\ss}en. Der Strom auf die Elektrode kann während eines \tilt{rf}-Zyklus die Kapazität nicht umladen. Deswegen gibt es gleiche Elektronenstr\"ome auf beide Elektroden, was zur Folge hat, dass das minimale Plasmapotential das Massepotential wird und das maximale zu dem der Anregung. F\"ur den Gleichspannungsanteil, \tilt{self-bias} $U\ix{GS}$ und das mittlere Plasmapotential $\overline{\Phi\ix{P}}$ folgt:
 
 						\begin{align}
 							\overline{\Phi\ix{P}}=\frac{1}{2}\left(U\ix{GS}+U\ix{rf}\right) \quad \quad U\ix{GS}=\frac{C\ix{1}-C\ix{2}}{C\ix{1}+C\ix{2}}U\ix{rf} \,\, .\label{eq:selfbiaszwei} 
 						\end{align}
 
-					Diese Zusammenh\"ange gelten allgemein f\"ur dieses Experiment.\\
-					Ist die Frequenz klein respektive \"ublicher Zeitskalen der Entladung, wie bspw. die Elektronen- oder Ionen-Plasmafrequenz (siehe \ref{tab:kenngroessen}), so wird der Strom aus den verdr\"angten Elektronen $j\ix{L}$ gr\"o{\ss}er als der Verschiebungsstrom durch die Randschichtschwankung $j\ix{V}\,$. Demzufolge wird der Strom aus Elektronen auf die getriebenen Elektrode, im Vergleich zu dem aus Ionen, durch einen Maxwell-Faktor in Abhängigkeit der angelegten Spannung verkleinert. Die Impedanz der Randschicht über der Elektrode ist demnach wesentlich größer als die der anderen bzw. der Wände. Mit den Gl. (\ref{eq:selfbiaseins}) und (\ref{eq:ungleichungen}) folgt, dass das Plasmapotential näherungsweise verschwindet und deswegen nur die Kontinuität für den Strom auf die getriebene Elektrode erhalten sein muss. Der \tilt{self-bias} bei kleinen Anregungsfrequenzen ergibt sich in Gl. (\ref{eq:selfbiasdrei}) ($\mathbf{J}\ix{0}$ \tilt{Bessel-Funktion}, nach \cite{Piel10}). 
+						\begin{figure}[!t]
+							\centering
+							\begin{subfigure}[t]{0.45\textwidth}
+								\centering
+								\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/selfbiasselbst.png}
+								\caption{}
+								\label{img:imagundreal}
+							\end{subfigure}
+							\begin{subfigure}[t]{0.45\textwidth}
+								\centering
+								\includegraphics[width=0.7\textwidth,height=0.7\textwidth]{figs/kapazitivekopplungohneschemapiel.png}
+								\vspace{-0.1cm}
+								\caption{}
+								\label{img:kapazitivgekoppelt}
+							\end{subfigure}
+							\caption{\fett{(a)}:Gleichspannungsanteil \tilt{self-bias} bei gegebenen Spannungen der Anregung $U\ix{rf}$, siehe Gl. (\ref{eq:selfbiasdrei}). \mbox{\fett{(b)}: Schema des} Potential- und Spannungsverlaufs einer direkt und kapazitiv gekoppelten \tilt{rf}-Elektrode (nach \cite{Piel10}).}
+						\end{figure}
+
+					Diese Zusammenh\"ange gelten im Allgemein f\"ur dieses Experiment.\\
+					Ist die Frequenz klein respektive \"ublicher Zeitskalen der Entladung, wie bspw. die Elektronen- oder Ionen-Plasmafrequenz (siehe \ref{tab:kenngroessen}), so wird der Strom aus den verdr\"angten Elektronen $j\ix{L}$ gr\"o{\ss}er als der Verschiebungsstrom durch die Randschichtschwankung $j\ix{V}\,$. Demzufolge wird der Strom aus Elektronen auf die getriebenen Elektrode, im Vergleich zu dem aus Ionen, durch einen Maxwell-Faktor in Abhängigkeit der angelegten Spannung verkleinert. Die Impedanz der Randschicht über der Elektrode ist deswegen wesentlich größer als die der anderen bzw. der Wände. Mit den Gl. (\ref{eq:selfbiaseins}) und (\ref{eq:ungleichungen}) folgt, dass das Plasma-Potential näherungsweise verschwindet und deswegen nur die Kontinuität für den Strom auf die getriebene Elektrode erhalten sein muss. Der \tilt{self-bias} bei kleinen Anregungsfrequenzen ergibt sich in Gl. (\ref{eq:selfbiasdrei}) ($\mathbf{J}\ix{0}$ \tilt{Bessel-Funktion}, nach \cite{Piel10}). 
 
 						\begin{align}
 							U\ix{GS}=\frac{k\ix{B}T\ix{e}}{e}\ln\left[\mathbf{J}\ix{0}\left(\frac{eU\ix{rf}}{k\ix{B}T\ix{e}}\right)\right] \label{eq:selfbiasdrei}
 						\end{align}
 
-					In \ref{img:imagundreal} ist der Spannungsverlauf beispielhaft dargestellt. Der \tilt{self-bias} verschwindet demnach nie für Elektrodenspannungen  $U\ix{rf}\neq0$ und ist damit eine feste Größe in einer Radiofrequenz-Entladung, welche über kapazitive Bauteile betrieben werden.
+					In \ref{img:imagundreal} ist der Spannungsverlauf beispielhaft dargestellt. Der \tilt{self-bias} verschwindet demnach nie für Elektrodenspannungen  $U\ix{rf}\neq0$ und ist damit eine feste Größe in Radiofrequenz-Entladungen, welche über kapazitive Bauteile betrieben werden.
 
-						\begin{figure}
-							\centering
-								\begin{subfigure}[t]{0.45\textwidth}
-									\centering
-									\includegraphics[width=\textwidth,height=0.8\textwidth]{figs/selfbiasselbst.png}
-									\caption{}
-									\label{img:imagundreal}
-								\end{subfigure}
-								\begin{subfigure}[t]{0.45\textwidth}
-									\centering
-									\includegraphics[width=0.7\textwidth,height=0.7\textwidth]{figs/kapazitivekopplungohneschemapiel.png}
-									\vspace{-0.1cm}
-									\caption{}
-									\label{img:kapazitivgekoppelt}
-								\end{subfigure}
-								\caption{\fett{(a)}:Gleichspannungsanteil \tilt{self-bias} bei gegebenen Spannungen der Anregung $U\ix{rf}$, siehe Gl. (\ref{eq:selfbiasdrei}). \mbox{\fett{(b)}: Schema des} Potential- und Spannungsverlauf einer direkt und kapazitiv gekoppelten \tilt{rf}-Elektrode (nach \cite{Piel10}).}
-						\end{figure}
+		\section{Grenzschichten einer Entladung}\label{sub:rand}
 
-		\subsection{Grenzschichten einer Entladung}\label{sub:rand}
+			Im Hauptvolumen eines Plasmas werden die Neutralgasatome durch Wechselwirkungen mit den Elektronen zum Leuchten angeregt. Die näheren Umgebungen von Objekten in Plasmen sind jedoch dunkler, als die eigentliche Entladung. Dies ist auf einen Elektronenmangel zur\"uckruf\"uhren, ähnlich wie in Abschn. \ref{subsub:verschieb} argumentiert. Jedoch können auch Bereiche mit verschwindenden Elektronendichten hell leuchten, da der sog. \tilt{Glow} auch von der kinetischen Energie und Stoßeffizienz der Ladungsträger abhängt. Die Quasineutralit\"at gilt in der Randschicht nicht mehr. Es folgt, dass diese eine positive Raumladungszone ist. \\
+			Auf Grund der wesentlich gr\"o{\ss}eren Beweglichtkeit $\upmu\ix{e}$ und thermischen Geschwindigkeit $v\ix{th,e}$, wird eine Wand in einem Plasma h\"aufiger von Elektronen getroffen, als von den korrespondierenden Ionen. Betrachtet man nur die Oberfl\"ache, so kann man dessen Aufladung und damit auch das Potential $\Phi$ als negativ annehmen.
 
-			Im Hauptvolumen eines Plasmas werden die Neutralgasatome durch Wechselwirkungen mit den Elektronen zum Leuchten angeregt. Die Grenzschichten von Gasentladung sind jedoch dunkler, als das eigentliche Plasma. Dies ist auf einen Elektronenmangel zur\"uckruf\"uhren, ähnlich wie in Abschn. \ref{subsub:verschieb} argumentiert. Jedoch können auch Bereiche mit verschwindenden Elektronendichten hell leuchten, da der sog. \tilt{Glow} auch von der kinetischen Energie und Stoßeffizienz der Ladungsträger abhängt. Die Quasineutralit\"at kann in einer Randschicht demnach nicht mehr gelten. Es folgt, dass diese automatisch eine positive Raumladungszone ist. \\
-			Auf Grund der wesentlich gr\"o{\ss}eren Beweglichtkeit $\upmu\ix{e}$ und thermischen Geschwindigkeit $v\ix{th,e}$, wird eine Wand in einem Plasma h\"aufiger von Elektronen getroffen, als von den korrespondierenden Ionen. Betrachtet man nur die Oberfl\"ache dieser, so kann man dessen Aufladung und damit auch das Potential $\Phi$ als negativ annehmen.
+		\subsection{Child-Langmuir-Gesetz} \label{subsub:childlang}
 
-		\subsubsection{Child-Langmuir-Gesetz} \label{subsub:childlang}
-
-		Die negative Aufladung einer Wand in einem Plasma soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll k\ix{B}T\ix{e}/e\,$. Die Betrachtung in einer Dimension soll hier genügen - es lässt sich leicht der dreidimensionale Zusammenhang daraus erweitern. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ ("`\tilt{boltzmann-artige}"' Elektronen) nach \cite{Piel10} wie
+		Die negative Aufladung einer Wand bei $x=0$ in einem Plasma soll nun eine große Potentialbarriere gegen thermische Elektronen erzeugen, e.g. $|\Phi\left(0\right)-\Phi\left(-d\right)|\ll k\ix{B}T\ix{e}/e\,$. Die Randschicht habe dabei die Dicke $d$. Die Betrachtung in einer Dimension soll hier genügen. Die Elektronendichte $n\ix{e}\left(x\right)$ geht mit dem Boltzmann-Faktor $f\ix{B}\left(\Phi\right)$ ("`\tilt{boltzmann-artige}"' Elektronen) nach \cite{Piel10} wie
 
 			\begin{align}
 				n\ix{e}\left(x\right)=n\ix{e}\left(-d\right)f\ix{B}\left(\Phi\right)=n\ix{e}\left(-d\right)\exp\left(\frac{e\left(\Phi\left(x\right)-\Phi\left(-d\right)\right)}{k\ix{B}T\ix{e}}\right) \, . \label{eq:randschichtdichte}
 			\end{align}
 
-		Die Elektronendichte fällt damit exponentiell in Richtung der Wand ab. Das bedeutet, dass nur noch vorrangig Ionen ungehindert einströmen können. Es ist anzunehmen, dass die Randschichtausdehnung $d\ll\lambda\ix{mfp}$ die mittlere freie Weglänge des Plasma ist und die Ionen stoßfrei darin eintreten.\\
+		Die Elektronendichte fällt damit exponentiell in Richtung der Wand ab. Das bedeutet, dass nur noch Ionen ungehindert einströmen können. Es ist anzunehmen, dass die Randschichtausdehnung $d\ll\lambda\ix{mfp}$ die mittlere freie Weglänge des Plasma ist und die Ionen stoßfrei darin eintreten.\\
 		An der Grenze zur Vorschicht (siehe \ref{img:dichterand}) haben die Ionen die Geschwindigkeit $v\ix{I,0}$ und das Potential der Wand verschwindet gerade an dieser Stelle. Für den Dichteverlauf der Ionen folgt:
 
 			\begin{align}
 				n\ix{I}\left(x\right)=n\ix{I}\left(-d\right)\left(1-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{\frac{1}{2}}
 			\end{align}
 
-		Nimmt man weiterhin an, dass die kinetische Energie $m\ix{I}v\ix{I,0}^2/2\ll |e\Phi\left(x\right)|$ die Beschleunigung in der Randschicht ist, folgt somit die Bestimmungsgleichung (\ref{eq:potential}) für $\Phi\left(x\right)$ nach Poisson. Um dabei das korrekte Potential in der Grenzschicht zu erhalten, muss die Rückwirkung der Ionen auf dieses beachtet werden.
+		Nimmt man weiterhin an, dass die kinetische Energie $m\ix{I}v\ix{I,0}^2/2\ll |e\Phi\left(x\right)|$ die Beschleunigung in der Randschicht ist,  so ergibt sich die Bestimmungsgleichung (\ref{eq:potential}) für $\Phi\left(x\right)$ nach Poisson. Um dabei das korrekte Potential in der Grenzschicht zu erhalten, muss die Rückwirkung der Ionen auf diese beachtet werden.
 
 			\begin{align}
 				\Delta\Phi\cong-\frac{en\ix{I}\left(-d\right)}{\varepsilon\ix{0}}\left(-\frac{2e\Phi\left(x\right)}{m\ix{I}v\ix{I,0}^2}\right)^{-\frac{1}{2}} \label{eq:potential}
@@ -289,7 +295,7 @@
 				\Phi\left(x\right)=\left(\left(\frac{3}{4}\left(x+d\right)\right)^4\left(\frac{j\ix{I}}{\varepsilon\ix{0}}\right)^2\frac{m\ix{I}}{2e}\right)^{\frac{1}{3}}  \label{eq:langmuirpot}
 			\end{align}
 
-		Die Auflösung von Gl. (\ref{eq:langmuirpot}) nach dem Ionenstrom $j\ix{I}$ ergibt das \tilt{Child-Langmuir-Gesetz} ( Gl. (\ref{eq:childlang})). Dieses gibt nunmehr an, wie der Ionenstrom in der Randschicht von den Eigenschaften des ungestörten Plasmas abhängt. Umgekehrt bedeutet das, dass die Grenzregion auf Variationen des Potentials und der Parameter mit Veränderungen der Schichtdicke reagiert und damit versucht, den Einschränkungen der positiven Raumladungszone und dessen Ionenstrom nach dem \tilt{Child-Langmuir-Gesetz} zu genügen.
+		Die Auflösung von Gl. (\ref{eq:langmuirpot}) nach dem Ionenstrom $j\ix{I}$ ergibt das \tilt{Child-Langmuir-Gesetz} (Gl. (\ref{eq:childlang})). Dieses gibt nunmehr an, wie der Ionenstrom in der Randschicht von den Eigenschaften des ungestörten Plasmas abhängt. Umgekehrt bedeutet dies, dass die Grenzschicht auf Variationen des Potentials und der Parameter mit Veränderungen der Schichtdicke reagiert und damit versucht, den Einschränkungen der positiven Raumladungszone und dessen Ionenstrom nach dem \tilt{Child-Langmuir-Gesetz} zu genügen.
 
 			\begin{align}
 				j\ix{I}=\frac{4}{9}\varepsilon\ix{0}\left(\frac{2e\left(\Phi\left(-d\right)-\Phi\left(0\right)\right)^3}{m\ix{I}d^2}\right)^{\frac{1}{2}} \label{eq:childlang}
@@ -312,39 +318,38 @@
 					\caption{\fett{(a)}: Dichten-Verlauf in der Grenzschicht zu einer Metalloberfläche. In einer bestimmten Entfernung $d$ zur Wand fällt die Elektronendichte praktisch auf 0, woraus die lokale Aufhebung der Quasineutralität folgt. \fett{(b)}: (Eindimensionales) Harmonisches Potential mit extremaler Instabilität. Kleine Auslenkungen sorgen für große Kräfte (nach \cite{Piel10}).}
 				\end{figure}
 
-		\subsubsection{Bohm-Kriterien}
+		\subsection{Bohm-Kriterien}
 
-			In Abschnitt (\ref{subsub:childlang}) wurde das Verhalten der Dichten der Ladungstr\"ager in einer Grenzschicht diskutiert. Diese erf\"ullen, in einem Abstand $d$ zur Wand in einem Plasma, die Eigenschaft der Quasineutralit\"at, welche weiterhin im Hauptvolumens gilt, nicht mehr. Es damit kein Kriterium f\"ur die Elektronen, welches sie daran hindert, auch aus weiten Teilen des Plasmas auf die Wand einzustr\"omen. Man stellt sich somit die Frage: Warum dehnt sich die Randschicht nicht in die gesamte Entladung aus? Wieso ist der Bereich der Elektronenersch\"opfung f\"ur eine Kombination der Plasmaparameter konstant? \\
-			Um dieses Problem zu L\"osen, stellt man sich ein (mechanisches) Ein-Teilchen-Problem vor (\cite{Piel10}), bei welchem eine Gleichgewichtsanalyse vorgenommen wird. Das Potential habe ein Extremum - maximal oder minimal - an welchem die Punktmasse sich befindet. F\"ur den vorliegenden Fall des Randschicht-Problems sind nur Potentiale mit umgekehrt-parabelartigen Maxima interessant (siehe \ref{img:parab}), womit aus einer kleinen St\"orung eine gro{\ss}e Kraft auf das Teilchen folgt. In diesem Fall kann man also von einer Instabilit\"at sprechen.\\
-			Der Bezug zur Plasmarandschicht wird deutlich, wenn man die Differentialgleichung des mechanischen Problems mit der Poissongleichung des Potentials in der Rand- bzw. Vorschicht - siehe Gl. (\ref{eq:pseudo}) vergleicht. Dabei stellt $\Psi\left(\Phi\right)$ ein Pseudopotential dar, welches in seiner Bedeutung vergleichbar mit der mechanischen Variante $V\left(\vec{r}\right)$ ist.
+			In Abschnitt (\ref{subsub:childlang}) wurde das Verhalten der Dichten der Ladungstr\"ager in einer Grenzschicht diskutiert. Diese erf\"ullen, in einem Abstand $d$ zu einer Wand in einem Plasma, die Quasineutralit\"atsbedingung nicht mehr. Bisher gab es jedoch noch kein Kriterium, welches die Elektronen daran hindert auch aus weiten Teilen des Plasmas auf die Wand einzustr\"omen. Man stellt sich somit die Frage: Warum dehnt sich die Randschicht nicht in die gesamte Entladung aus? Wieso ist der Bereich der Elektronenersch\"opfung f\"ur eine Kombination der Plasmaparameter konstant? \\
+			Um dieses Problem zu L\"osen, stellt man sich ein (mechanisches) Ein-Teilchen-Problem vor (\cite{Piel10}), bei welchem eine Gleichgewichtsanalyse vorgenommen wird. Dabei habe das Potential ein Extremum - maximal oder minimal - an welchem sich eine Punktmasse sich befindet. In diesem Fall sind nur Potentiale mit umgekehrt-parabelartigen Maxima interessant (siehe \ref{img:parab}). Aus einer kleinen St\"orung folgt eine gro{\ss}e Kraft auf das Teilchen. Es handelt sich um ein instabiles Gleichgewicht.\\
+			Der Bezug zum Plasma wird deutlich, wenn man die Differentialgleichung des mechanischen Problems mit der Poisson-Gleichung des Potentials in der Rand- bzw. Vorschicht - siehe Gl. (\ref{eq:pseudo}) vergleicht. Die Ladungsverteilung ist durch $\rho$ gekennzeichnet. Die Größe $\Psi\left(\Phi\right)$ stellt ein Pseudopotential dar, welches in seiner Bedeutung mit der mechanischen Variante $V\left(\vec{r}\right)$ vergleichbar ist.
 
 				\begin{align}
 					m\frac{\diff^{2}\vec{r}}{\diff t^{2}}=-\frac{\diff V}{\diff\vec{r}} \quad \Leftrightarrow \quad \Delta_{\vec{r}}\,\Phi=-\frac{\diff\Psi}{\diff\Phi}=f\left(\Phi\right)\hspace{-0.3cm}\overset{Poisson}{\overset{\mid}{=}}\hspace{-0.3cm}\frac{\rho}{\varepsilon\ix{0}} \label{eq:pseudo}
 				\end{align}
 
-			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung  in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der in Abschnitt (\ref{subsub:childlang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohm-Kriterium}.
+			Damit eine Instabilit\"at vorliegen kann, muss die, aus einer St\"orung des Pseudopotentials resultierende Kraft mit der Entfernung zum Gleichgewicht anwachsen. Die mathematisch \"aquivalente Formulierung ist die Ungleichung in (\ref{eq:beding}). Nach Gl. (\ref{eq:pseudo}) und der, in Abschnitt (\ref{subsub:childlang}) hergeleiteten Dichten in der Grenzschicht, kann die geforderte Bedingung \"uberpr\"uft werden. Aus ihr folgt das erste \tilt{Bohm-Kriterium}.
 
 				\begin{align}
-					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\varepsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\varepsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}v\ix{0,I}^{2}}\right) \label{eq:beding} \\
-					\Rightarrow \quad v\ix{0,I}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
+					0>\left.\frac{\diff^{2}\Psi}{\diff\Phi^{2}}\right|_{\Phi=0}\overset{Gl. (\ref{eq:pseudo})}{\overset{\mid}{=}}\left.\frac{\diff}{\diff\Phi}\left(\frac{n\ix{e}\left(x\right)-n\ix{I}\left(x\right)}{\varepsilon\ix{0}}\right)\right|_{\Phi=0}&=\frac{en\ix{e}\left(-d\right)}{\varepsilon\ix{0}}\left(\frac{e}{k\ix{b}T\ix{e}}-\frac{e}{m\ix{I}v\ix{I,0}^{2}}\right) \label{eq:beding} \\
+					\Rightarrow \quad v\ix{I,0}\ge v\ix{B,I}=\sqrt{\frac{k\ix{B}T\ix{e}}{m\ix{I}}}& \label{eq:bohmkriteins}
 				\end{align}
 
-			($v\ix{B,I}$ - \tilt{Bohm}-Geschwindigkeit; $v\ix{0,I}$ - Ionen-Driftgeschwindigkeit; $T\ix{e}$ - Elektronentemperatur; $m\ix{I}$ - Ionenmasse)\\
-			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=v\ix{0,I}/v\ix{B,I}$ angegeben werden.\\
-			Um zu erläutern, warum die Randschicht sich als Rückwirkung nicht in das Plasma ausdehnt, betrachten wir die Teilchenbewegung aus der Vor-Randschicht. Hier existiert ein elektrisches Feld, welches die Ionen auf die Geschwindigkeit $v\ix{B}$ in Richtung Wand beschleunigt. Außerdem gilt in ihr noch die Quasineutralitäts-Bedingung:
+
+			Für das Bohm-Kriterium in Gl. (\ref{eq:bohmkriteins}) kann auch analog die sog. \tilt{Machzahl} $M=v\ix{I,0}/v\ix{B,I}$ angegeben werden, wobei $v\ix{B,I}$ die Bohm-Geschwindigkeit der Ionen ist.\\
+			Um zu erläutern, warum sich die Randschicht nicht in das gesamte Plasma ausdehnt, betrachten wir die Teilchenbewegung aus dessen nächster Umgebung. Hier existiert ein elektrisches Feld, welches die Ionen auf die Geschwindigkeit $v\ix{B}$ in Richtung der Wand beschleunigt. Außerdem gilt in ihr noch die Quasineutralitätsbedingung:
 
 				\begin{align}
 					n\ix{I}\left(x\right)=n\ix{I,0}\exp\left(\frac{e\Phi\left(x\right)}{k\ix{B}T\ix{e}}\right)=n\ix{e}\left(x\right)\,\, . \label{eq:bohmquasineutral}
 				\end{align}
 
-			Hierbei ist $\Phi\left(x\right)$ das Potential der Vorschicht aus Abschnitt  (\ref{subsub:childlang}). 
-			Da Stöße der Frequenz $\nu\ix{N,I}$ der Ionen mit den Neutralgasatomen einen nicht vernachlässigbaren Einfluss auf deren Strom haben, muss die Geschwindigkeitsverteilung umgeschrieben werden.
+			Hierbei ist $\Phi\left(x\right)$ das Potential der Vorschicht aus Abschnitt (\ref{subsub:childlang}) und $n\ix{I,0}$ die ungestörte Ionendichte des \tilt{bulk}. Da Stöße der Frequenz $\nu\ix{N,I}$ der Ionen mit den Neutralgasatomen einen nicht vernachlässigbaren Einfluss auf deren Strom haben, muss die Geschwindigkeitsverteilung umgeschrieben werden.
 
 				\begin{align}
 					\frac{\diff v\ix{I}}{\diff x}=\frac{\nu\ix{N,I}v\ix{I}^2}{v\ix{B}^2-v\ix{I}^2} \label{eq:geschwindverteil}
 				\end{align}
 
-			Aus der Singularität von Gl. (\ref{eq:geschwindverteil}) in $v\ix{I}=v\ix{B}$ und der Kenntnis über das Wandpotential lässt sich die Ausdehnung der Randschicht $d$ bestimmen. Offensichtlich werden Ionen mit einer Geschwindigkeit $v\ix{I}<v\ix{B}$ in der Vorschicht beschleunigt. Geschwindigkeiten größer als die Bohm-Geschwindigkeit kommen dort nicht vor, da dies nach Gl (\ref{eq:bohmkriteins}) nur in der Randschicht der Fall sein darf. \\
+			Aus der Singularität von Gl. (\ref{eq:geschwindverteil}) in $v\ix{I}=v\ix{B}$ und der Kenntnis über das Wandpotential lässt sich die Ausdehnung der Randschicht $d$ bestimmen. Offensichtlich werden Ionen mit einer Geschwindigkeit $v\ix{I}<v\ix{B}$ in der Vorschicht beschleunigt. Geschwindigkeiten größer als die Bohm-Geschwindigkeit kommen dort jedoch nicht vor, da dies nach Gl (\ref{eq:bohmkriteins}) nur in der Randschicht der Fall sein darf. \\
 			Zusammen mit dem ersten \tilt{Bohm-Kriterium} folgt, dass am Übergang der Vor- zur Randschicht die Ionen $v\ix{B}$ erreichen müssen, damit sich eine positive Raumladungszone ausbilden kann.
 
 				\begin{align}
@@ -352,9 +357,9 @@
 				\end{align}
 
 			Lokal heißt das, dass bei $x=-d$ die Dichten bereits auf $\approx0,66n\ix{e,0}$ abgefallen sind (siehe \ref{eq:bohmquasineutral}, \ref{img:dichterand}) und das Potential durch die Aufladung der Wand circa $-k\ix{B}T\ix{e}/2e$ beträgt.\\
-			Ein Plasma "`sieht"' damit seine Randschicht nicht, da sich die notwendige Dynamik der entsprechenden Ladungsträger auf diese beschränkt und sich nicht beliebig ausdehnen kann. Mit anderen Worten: eine Randschicht bildet sich nur an Orten des Elektronenmangels und lokal negativer Potentiale aus.
+			Ein Plasma "`sieht"' damit seine Randschicht nicht, da sich die notwendige Dynamik der entsprechenden Ladungsträger auf diese beschränkt und sich nicht beliebig ausdehnen kann. Mit anderen Worten: eine Randschicht bildet sich nur an Orten des Elektronenmangels und externer, negativer Potentiale aus.
 
-		\subsection{Aufladung von Staubpartikeln}\label{sub:ströme}
+		\section{Aufladung von Staubpartikeln}\label{sub:ströme}
 
 			Die Ladung eines Fremdteilchens (Staub) in einem Plasma ist eine dynamische Größe. Sie ist sowohl zeitlich veränderlich, als auch abhängig von den Plasmaparametern, den Partikeleigenschaften sowie deren Trajektorie in der Entladung. Die Ladung eines Teilchens zum Zeitpunkt $t$ ergibt sich, näherungsweise, aus den Ladungsströmen $I\ix{k}$ der Plasmaspezies auf das Partikel bis zu diesem Zeitpunkt. Im folgenden genügt es, dieses Problem auf einer Zeitskala zu betrachten, in der man die Ladung als konstant unter dem Einfluss der Ströme annehmen kann. Damit werden diese ebenfalls stationär und es gilt für ein einzelnes Teilchens die \tilt{Kirchhoff'sche Knotenregel}, wobei der Staub ein Knoten sei:
 
@@ -364,17 +369,10 @@
 
 		Die Elektronen und Ionen im Plasma strömen aufgrund ihrer thermischen Bewegung auf das Fremdteilchen und verleihen diesem über Stöße eine Ladung $Q\ix{S}$, wobei sich für das Partikel ein elektrostatisches Potential $\Phi\ix{fl}$, das sog. \tilt{floating} Potential, einstellt, für welches Gl. (\ref{eq:float}) gilt. Die Ladungsspezies können aus Sekundär-,Photo-, oder Feldemissionen kommen, wobei die dominanten Ströme die des Plasmas selbst sind. Hier soll es ausreichen, die Plasmaströme nach  \tilt{Langmuir} und \tilt{Mott-Smith} mit dem sog. \tilt{orbital motion limit}-Modell \cite{Langmuir26} zu beschreiben. 
 
-			\subsubsection{OML-Modell}\label{subsub:oml}
+			\subsection{OML-Modell}\label{subsub:oml}
 
-						\begin{figure}
-							\centering
-							\includegraphics[width=0.7\textwidth, height=0.3\textwidth]{figs/orbitalmotionlimitmelzer.png}
-							\caption{OML-Beschreibung eines, auf ein Staubpartikel einströmendes Ions. Der kritische Stoßparameter, für welcher eine Kollision stattfindet, ist $b\ix{k}$. Er ist im Vergleich zum geometrischen Querschnitt aufgrund der Coulomb-Wechselwirkung vergrößert (nach \cite{Melzer12}).}
-							\label{img:oml}
-						\end{figure}
-
-			Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<b\ix{k}$ landet dieses auf dem Staubteilchen, siehe \ref{img:oml}.\\
-			Da vorausgesetzt wurde, dass keine Stöße vor dem Target geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt (hier aus \cite{Melzer12}):
+			Dabei wird angenommen, dass sich ein strömendes Teilchen, welches zu $Q\ix{S}$ beiträgt bzw. damit elektrostatisch wechselwirkt, stoßlos aus dem Unendlichen (durch die Entladung) darauf zu bewegen kann. Aufgrund der, im Allgemeinen höheren Elektronentemperatur und -beweglichkeit wird $\Phi\ix{fl}<0$, woraus eine veränderte Wechselwirkung mit den Teilchen der Ladungsströme folgt. Man definiert folglich einen kritischen Stoßparameter $b\ix{k}$, welcher dem Abstand eines Ions zur Target-Achse entspricht, bei dem dieses durch die Coulomb-Anziehung des Partikels gerade noch dessen Oberfläche tangiert. Für Parameter $b>b\ix{k}$ wird ein eintreffendes Ion auf seiner Trajektorie nur abgelenkt, für $b<b\ix{k}$ landet dieses auf dem Staubteilchen, siehe \ref{img:oml}.\\
+			Da vorausgesetzt wurde, dass keine Stöße vor dem Target mit dem Radius $a$ geschehen, kann die Impulserhaltung zusammen mit der Energieerhaltung für ein einzelnes Projektil aufgestellt werden, welches sich im Abstand $b\ix{k}$ darauf zu bewegt (hier aus \cite{Melzer12}):
 
 				\begin{align}
 					|\vec{L}|=|\vec{r}\times\vec{p}|=m\ix{I}v\ix{I}a=m\ix{i}v\ix{i,0}b\ix{k} \label{eq:impulserhaltung} \\
@@ -383,12 +381,19 @@
 
 			In Gl.(\ref{eq:impulserhaltung}) und (\ref{eq:energieerhaltung}) stehen jeweils die linken Seiten für den Zeitpunkt des Auftreffens und die rechten für das Einlaufen aus dem Unendlichen. Durch Umformungen lässt sich ein Ausdruck für den kritischen Stoßparameter, in Abhängigkeit vom Partikelradius und dem \tilt{floating}-Potential aufgestellt werden.
 
+						\begin{figure}[!t]
+							\centering
+							\includegraphics[width=0.7\textwidth, height=0.3\textwidth]{figs/orbitalmotionlimitmelzer.png}
+							\caption{OML-Beschreibung eines, auf ein Staubpartikel einströmendes Ions. Der kritische Stoßparameter, für welcher eine Kollision stattfindet, ist $b\ix{k}$. Er ist im Vergleich zum geometrischen Querschnitt aufgrund der Coulomb-Wechselwirkung vergrößert (nach \cite{Melzer12}).}
+							\label{img:oml}
+						\end{figure}
+
 				\begin{align}
 					b\ix{k}^2=a^2\left(1-\frac{e\Phi\ix{fl}}{\frac{m\ix{I}}{2}v\ix{I,0}^2}\right) \label{eq:krit}
 				\end{align}
 
 			Der zugehörige Streuquerschnitt für die Streuung eines Teilchenstroms an einem Staubpartikel wird damit zu $\sigma\ix{k}=\pi b\ix{k}^2$, welcher größer als die geometrische Querschnittsfläche $\pi a^2$ ist. Dem liegt die Coulomb-Wechselwirkung der Stoßpartner zu Grunde.\\
-			Der (differentielle) Ladungsträgerstrom $\diff I\ix{j}$, welcher schließlich den Parameter der Partikelladung bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten von Teilchen der Geschwindigkeiten $v\ix{j}$, gewichtet mit ihren zugehörigen Wechselwirkungsquerschnitten $\sigma\ix{j}$ und (hier: maxwellartigen) Verteilungen $f\left(v\ix{j}\right)$ (\cite{Melzer12}):
+			Der (differentielle) Ladungsträgerstrom $\diff I\ix{j}$, welcher schließlich die Partikelladung bzw. -potential $\Phi\ix{P}$ bestimmt, ergibt sich aus der Aufsummierung aller Stromdichten von Teilchen der Geschwindigkeiten $v\ix{j}$, gewichtet mit ihren zugehörigen Wechselwirkungsquerschnitten $\sigma\ix{j}$ und (hier: maxwellartigen) Verteilungen $f\left(v\ix{j}\right)$ (\cite{Melzer12}) der Geschwindigkeiten:
 
 				\begin{align}
 					\diff I\ix{j}=\sigma\ix{j}&\left(v\ix{j}\right)n\ix{j}v\ix{j}f\left(v\ix{j}\right)\diff v\ix{j} \nonumber \\
@@ -396,20 +401,19 @@
 					\text{Elektronen: } I\ix{e}&=-\pi a^2n\ix{e}e\sqrt{\frac{8k\ix{B}T\ix{e}}{\pi m\ix{e}}}\exp\left(\frac{e\Phi\ix{P}}{k\ix{B}T\ix{e}}\right) \label{eq:elektronenstrom}
 				\end{align}
 
-			($T\ix{e,I}$ - Elektronen-/Ionentemperatur; $n\ix{e,I}$ - Elektronen-/Ionendichte, $\Phi\ix{P}$ - Partikelpotential; $k\ix{B}$ - \tilt{Boltzmann}-Konstante )\\
 			Der Unterschied zwischen Gl. (\ref{eq:ionenstrom}) und (\ref{eq:elektronenstrom}) resultiert aus den unterschiedlichen Arten der Wechselwirkung mit dem Staubteilchen. Da $\Phi\ix{P}<0$ ist, werden Ionen aller Geschwindigkeiten in Richtung des Partikels gelenkt und könnten theoretisch damit stoßen (mit Rücksicht auf die Geschwindigkeitsverteilung und den Streuquerschnitt). Die Elektronen hingegen müssen mindestens eine Geschwindigkeit $v\ix{min}=\sqrt{-2e\Phi\ix{P}/m\ix{e}}$ besitzen, damit sie die Potentialbarriere zum Partikel überwinden und damit stoßen können. Au{\ss}erdem finden sich mit $\sqrt{8k\ix{B}T\ix{j}/\pi m\ix{j}}$ die thermischen Geschwindigkeiten der jeweiligen Spezies $j$ als Vorfaktoren wieder. Damit werden die Gesamtstr\"ome letztendlich zum Produkt aus ungest\"orter, thermischer Stromdichte und der angepassten Wechselwirkungsfl\"ache des Partikels. \\
 			Es sei erwähnt, dass aufgrund der hohen Teilchendichten in einem Plasma die OML-Theorie nicht der Realität entspricht. Die mittlere freie Weglänge eines Ions oder Elektrons hat in etwa die Dimension der Debyelänge $\lambda\ix{D}$ und ist nicht, wie vorausgesetzt, unendlich groß. Des weiteren entsprechen die $f\left(v\ix{j}\right)$ in der Praxis nicht isotropen Maxwell-Geschwindigkeitsverteilungen.
 
-			\subsubsection{Neutralgas-Ionen-Stöße}
+			\subsection{Neutralgas-Ionen-Stöße}
 
 			Auf Grundlage der OML-Theorie lässt sich ein erweiterter Ausdruck für den Ionenstrom mit Rücksicht auf Stöße des Neutralgases aufstellen. Offensichtlich geht, mit dem Durchgang eines Projektils durch das Neutralgas einer Entladung, der Verlust kinetischer Energie einher. Es ist nun leicht nachzuvollziehen, dass sich Ionen, aufgrund der Ablenkungen durch Stöße und Wechselwirkung, um das negativ geladene Staubpartikel sammeln (\cite{Goree92}).\\
             In einer Sphäre mit dem Radius $R$ um das Teilchen ist die Stoßwahrscheinlichkeit zwischen Ionen und Neutralgasatomen
 
 				\begin{align}
-					\frac{R}{l\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
+					\frac{R}{\lambda\ix{mfp}}=Rn\ix{N}\sigma\ix{I,N} \,\, . \label{eq:wahrschein}
 				\end{align}
 
-			($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße; \mbox{$\lambda\ix{mfp}$ - mittlere freie Wegl\"ange})\\
+			($n\ix{N}$ - Neutralgasdichte; $\sigma\ix{I,N}$ - Stoßparameter für Ion-Neutralgas-Stöße)\\
 			Durch eine Sph\"are mit diesem Radius flie{\ss}t nun neben dem thermischen Ionenstrom $I\ix{th}$ noch ein weiterer Strom $I\ix{S}$ auf Grund der St\"o{\ss}e mit dem Neutralgas. Die Ionen der Geschwindigkeit $v\ix{th,I}$, welche sich ohne Wechselwirkung mit dem Gas der Entladung am Target vorbei bewegen w\"urden, werden mit der Sto{\ss}wahrscheinlichkeit aus Gl. (\ref{eq:wahrschein}) in Richtung des Staubteilchens abgelenkt und tragen somit zum Ladungsstrom auf dieses bei. Der Gesamtladungsstrom durch Ionen entspricht nach \cite{Lampe01} der Summe der beiden Str\"ome:
 
 				\begin{align}
@@ -417,7 +421,7 @@
 					&I\ix{ges}=\pi a^{2}n\ix{I}ev\ix{th,I}\left(1-\frac{e\Phi\ix{P}}{k\ix{B}T\ix{I}}+\frac{R^{3}}{\lambda\ix{mfp}a^{3}}\right)
 				\end{align}
 
-			Auf der Oberfl\"ache der '\tilt{Sto{\ss}sph\"are}' $\mathbb{S}\ix{R}$ hat das \tilt{Yukawa}-Potential des Staubteilchens gerade die Energie der thermischen Ionenbewegung (Gl. (\ref{eq:bestimmR})), womit diese gerade noch in dessen Einfang geraten. Mit dem daraus bestimmten $R$ folgt nach (\cite{Melzer12},\cite{Khrapak05a}) ein diskreter Ionenstrom auf das Partikel mit R\"ucksicht auf die Ionen-Neutralgaswechselwirkung (Gl. (\ref{eq:ionstromkorr})).
+			Auf der Oberfl\"ache der '\tilt{Sto{\ss}sph\"are}' $\mathbb{S}\ix{R}$ hat das \tilt{Yukawa}-Potential des Staubteilchens der Ladungszahl $Z\ix{S}$ gerade die Energie der thermischen Ionenbewegung (Gl. (\ref{eq:bestimmR})), womit diese gerade noch in dessen Einfang geraten. Mit dem daraus bestimmten $R$ folgt nach (\cite{Melzer12},\cite{Khrapak05a}) ein diskreter Ionenstrom auf das Partikel mit R\"ucksicht auf die Ionen-Neutralgaswechselwirkung (Gl. (\ref{eq:ionstromkorr})).
 
 				\begin{align}
 					\frac{k\ix{B}T\ix{I}}{e}=&\frac{Z\ix{S}e}{4\pi\varepsilon\ix{0}R}\exp\left(\frac{R}{\lambda\ix{D}}\right) \label{eq:bestimmR} \\
@@ -425,7 +429,7 @@
 				\end{align}
 
 			Im Vergleich zum Ergebnis des OML-Modells aus Gl. (\ref{eq:ionenstrom}) ist dieser Ladungstrom in Abh\"angikeit des Partikelpotentials und Ionentemperatur vergr\"o{\ss}ert. Die Wechselwirkung mit dem Neutralgas sorgt also, \"uber die St\"o{\ss}e und Erzeugung einer \tilt{Ionenwolke} um ein Teilchen, f\"ur einen gr\"o{\ss}eren pos. Ladungsstrom, welcher respektive wiederum f\"ur eine Steigerung des Elektronenstromes auf Grund des ver\"anderten Partikelpotentials sorgt. Eine selbstkonsistente L\"osung der, an den Anfang gestellte Problematik in Gl. (\ref{eq:float}) um das \tilt{floating}-Potential gestaltet sich jedoch als \"uberaus schwierig, da schon der OML-Theorie mehrere falsche Annahmen vorausgingen und dessen Eigenr\"uckwirkungen nicht-trivial sind.\\
-			Um abschließend die Staubladung zu bestimmen, kann man das Modell eines Kugelkondensators hernehmen und dieses mit einer Abschirmung $a/\lambda\ix{D}$ verknüpfen (nach \cite{Melzer12}).
+			Um abschließend die Staubladung zu bestimmen, kann man das Modell eines Kugelkondensators der Kapazität $C\ix{S}$ hernehmen und dieses mit einer Abschirmung $a/\lambda\ix{D}$ verknüpfen (nach \cite{Melzer12}).
 
 				\begin{align}
 					Q\ix{S}=Z\ix{S}e=C\ix{S}\Phi\ix{fl}=4\pi\varepsilon\ix{0}a\left(1+\frac{a}{\lambda\ix{D}}\right)\Phi\ix{fl} \label{eq:ladung}
@@ -433,11 +437,11 @@
 
 			Für typische Laborplasmen kann das \tilt{floating}-Potential zu $\Phi\ix{fl}\approx-2k\ix{B}T\ix{e}/e$ genähert werden, woraus die Ladungszahl sich zu $Z\ix{S}\approx1400\cdot a/\unit[1]{\upmu m}\cdot T\ix{e}/\unit[1]{eV}$ ergibt.
 
-		\subsection{Staub-Dynamik}\label{sub:dynamik}
+		\section{Staub-Dynamik}\label{sub:dynamik}
 
 			In einem Plasma wirken viele, u.U. nicht-triviale Kräfte auf den eingefangenen Staub. Im Folgenden werden die wichtigsten Einflüsse und Kenngrößen der Dynamik komplexer Plasmen vorgestellt und beschrieben (nach \cite{Melzer10}). Insbesondere ist dieser Abschnitt wichtig für das Verständnis über die Bildung und Stabilität sog. \tilt{Yukawa-Cluster}. Dabei handelt es sich um ein System aus wenigen Staubteilchen, welche sich in einem äußeren, harmonischen Potential auf konzentrischen Kugelschalen anordnen. Diese sollen des Weiteren genauer in Abschnitt \ref{sub:yukawaclust} beschrieben werden.
 
-			\subsubsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
+			\subsection{Gravitation und elektrische Feldstärke}\label{subsub:grav}
 
 			Betrachtet man ein Experiment, welches am Erdboden durchgeführt wird, so muss die vollständige Gravitationskraft berücksichtigt werden. Dies gilt beispielsweise nicht für Versuche unter Mikrogravitation während Parabelflügen oder auf der \tilt{International Space Station}.
 
@@ -445,17 +449,16 @@
 					F\ix{g}=m\ix{S} g=\frac{4}{3}\pi a^3 \rho\ix{S} g
 				\end{align}
 
-			($m\ix{S}$ - Masse der Staubteilchen; $a$ - Partikelradius; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - \mbox{Erdbeschleunigung})\\
+			($m\ix{S}$ - Masse der Staubteilchen; $\rho\ix{S}$ - Massendichte des Staubes; $g$ - Erdbeschleunigung)\\
 			Natürlich wirkt auf die, durch das ionisierte Gas elektrisch geladenen Partikel eine elektrische Kraft $F\ix{E}$, welche aus dem äußeren Feld $E$ der \tilt{rf}-Elektroden folgt. Eine elektrische Wechselwirkung mit dem Plasma tritt aufgrund der Quasineutralität nicht auf: innerhalb einer \tilt{Debye-Kugel} sind die Veränderung zu schnell, als dass das träge Staubteilchen diesen folgen könnte. 
 
 				\begin{align}
 				F\ix{E}=Q\ix{S} E=4 \pi \varepsilon\ix{0} a \Phi\ix{fl} E
 				\end{align}
 
-			($Q\ix{S}$ - Staubladung; $\Phi\ix{fl}$ - \tilt{floating}-Potential)\\
 			Diese beiden Kräfte heben sich gerade in der Randschicht einer Radiofrequenz-Entladung auf, da sie antiparallel zueinander stehen. Zu beachten ist hierbei der stark unterschiedliche Einfluss des Teilchenradius - $F\ix{g}\propto a^3$ und $F\ix{E}\propto a$.\\
 
-			\subsubsection{Abschirmung und Polarisationskräfte}\label{subsub:abschirm}
+			\subsection{Abschirmung und Polarisationskräfte}\label{subsub:abschirm}
 
 			Die große negative Aufladung der Staubteilchen sorgt über die Coulomb-Wechselwirkung mit den auf das Partikel zuströmenden Ionen dafür, das sich die Konzentration derer lokal stark ändert. Es entsteht eine Wolke aus langsamen Ionen die quasi in der näheren Umgebung um das Teilchen verbleiben, jedoch nicht mit diesem interagiert und es nach außen hin vor dem Einfall schnellerer pos. Ladungen abschirmen. Somit gibt es keine direkte Rückwirkung der Wolke auf das Partikel, sofern dessen sphärische Symmetrie gegeben ist. Gilt dies nicht, so entsteht ein Multipol- bzw. Dipolmoment $\vec{p}$, welches danach strebt, sich in Richtung des Feldes $\vec{E}$ auszurichten. Damit wirkt eine Kraft $F\ix{Dip}$ (für ein Dipolmoment) auf das Staubteilchen zurück, welche mit dem Gradienten der Richtungsdifferenz zwischen $\vec{p}$ und $\vec{E}$ geht.
 
@@ -476,7 +479,7 @@
 			Sind die Ionen jedoch schneller, womit $u\ix{I}>>v\ix{th,I}$ wird, so können sie nicht mehr vom Feld des Partikels 'gefangen' werden und damit die Ionenwolke bilden. So gilt folglich $\lambda\ix{D}\left(\vec{r}\right)\approx\lambda\ix{D,e}$.\\
 			Insgesamt ist der Einfluss der Polarisation vernachlässigbar klein, solange die Teilchen eine Größe von einigen hundert $\unit{\upmu m}$ nicht übersteigen.
 
-		\subsubsection{Ionen-Reibung}\label{subsub:reibung}
+		\subsection{Ionen-Reibung}\label{subsub:reibung}
 
 			Aufgrund der hohen negativen Ladung des Staubteilchens und der daraus resultierenden elektrostatischen Wechselwirkung existiert ein, relativ auf das Partikel zufließender, Ionenstrom oder auch "`Ionenwind"'. Weiterhin bewegen sich Neutralgasatome durch das Plasma und stoßen mit anderen Teilchen. Die Zahl der Stöße $\diff N$ einer Spezies mit einem Target mit dem Streuparameter $\sigma$ im Zeitintervall $\diff t$ ist somit über deren relative Geschwindigkeit $v\ix{rel}$ zu diesem in $\diff N=n\sigma v\ix{rel}\diff t$ gegeben. Hierbei kennzeichnet $n$ die Stromdichte der strömenden Teilchen. Aus diesem Strom folgt ein gewisser Impulsübertrag $\Delta p$ auf das Target. Hieraus lässt sich eine Kraft $F\ix{drag}$ ziehen, die einer Reibung bzw. einer Impulsaufnahme entspricht.
 
@@ -494,8 +497,8 @@
 						F\ix{dir}=\pi a^2m\ix{I}\tilde{v}n\ix{I}u\ix{I}\left(1-\frac{2e\Phi\ix{fl}}{m\ix{I}\tilde{v}^2}\right)\,\,.
 					\end{align}
 
-				($n\ix{I}$ - Ionenkonzentration; $u\ix{I}$ - Ionen-Driftgeschwindigkeit; $m\ix{I}$ - Ionenmasse)\\
-				Das Produkt aus Masse und mittlerer Geschwindigkeit der Ionen $m\ix{I}\tilde{v}=m\ix{I}\sqrt{u\ix{I}^2+v\ix{th,I}^2}$ entspricht dem Impulsübertrag.\\
+
+				Das Produkt aus Masse und mittlerer Geschwindigkeit der Ionen $m\ix{I}\tilde{v}=m\ix{I}\sqrt{u\ix{I}^2+v\ix{th,I}^2}$ entspricht dem Impulsübertrag ($u\ix{I}$ - Ionen-Driftgeschwindigkeit).\\
 				Für die Coulomb-Streuung müssen alle diejenigen Ionen miteinbezogen werden, welche mit dem Feld des Staubes 'stoßen'. Hierfür wird der Streuquerschnitt $\tilde{\sigma}$ nach \cite{Barnes92} der Ionen-Elektronen-Wechselwirkung auf den aktuellen Fall angepasst.
 
 					\begin{align}
@@ -521,7 +524,7 @@
 						\label{img:ionkräfte}
 					\end{figure}
 
-		\subsubsection{Neutralgasreibung}
+		\subsection{Neutralgasreibung}
 
 			Die Stöße mit den Neutralgasatomen können, ebenso wie die mit Ionen, als Kraft durch Reibung aufgefasst werden. Diese sorgen insbesondere für eine Verlangsamung der Bewegung der Staubteilchen. Die Kraft $F\ix{N}$ wird, in ähnlicher Weise wie $F\ix{dir}$, durch einen Impulsübertrag über einen Strom von Neutralgasteilchen auf einen effektiven Querschnitt ausgedrückt (\cite{Epstein24}).
 
@@ -531,13 +534,13 @@
 
 			($m\ix{N}$ - Neutralgasatommasse; $v\ix{th,N}$ - thermische Geschw. der Neutralgasatome; $n\ix{N}$ - Neutralgasdichte; $v\ix{S}$ - Staubteilchengeschw.)\\
 			Der Faktor $\delta$ beschreibt hierbei die Art, wie die Neutralgasatome mit dem Staub stoßen. Eine spiegelnde Reflexion tritt für ein $\delta=1$ auf. Mit steigendem $\delta$ wird die Kollision immer diffuser, bis hin zu einem Wert von $\delta=1,44$.\\
-			Für den berühmten \tilt{Milikan}-Öltropfen-Versuch zur Bestimmung der Ladung eines Elektrons wurde, 1924 von \tilt{P. S. Epstein}, ebenso ein Ausdruck für die Kraft durch Neutralgasreibung bestimmt. Dabei ist $\beta$ der Reibungskoeffiziént und $\rho\ix{S}$ die Dichte des Staubmediums.
+			Für den berühmten \tilt{Milikan}-Öltropfen-Versuch zur Bestimmung der Ladung eines Elektrons wurde, 1924 von \tilt{P. S. Epstein}, ebenso ein Ausdruck für die Kraft durch Neutralgasreibung bestimmt. Dabei ist $\beta$ der Reibungskoeffizient und $\rho\ix{S}$ die Dichte des Staubmediums.
 
 				\begin{align}
 					F\ix{N}=-m\ix{S}\beta v\ix{S}=-m\ix{S}v\ix{S}\delta\frac{8}{\pi}\frac{p}{a\rho\ix{S}v\ix{th,N}}
 				\end{align}
 
-		\subsubsection{Thermophoretische Kraft}\label{subsub:therm}
+		\subsection{Thermophoretische Kraft}\label{subsub:therm}
 
 			In einer Plasmakammer kann, durch Aufheizung oder Abkühlung einer der Elektroden bzw. Kammerbegrenzungen ein, der Gravitation oder dem elektrischen Feld entgegen gerichteter Temperaturgradient angelegt werden.\\
 			Die Kraft kann folgendermaßen erklärt werden: auf der Seite der höheren Temperatur haben die Neutralgasteilchen im Mittel eine größere Geschwindigkeit und Impuls, woraus ein positiver Impulsübertrag in Richtung niedrigerer Temperaturen folgt.	Mit der Wärmeleitfähigkeit des Neutralgases $\kappa\ix{N}$ folgt für die thermophoretische Kraft $F\ix{th}$ Gl. (\ref{eq:therm}). Auf Grund $\propto a^2$ ist diese Kraft besonders wichtig für Teilchen mit einem Radius kleiner als $\unit{\upmu m}$. Sie wird für die Formation von sog. \tilt{Yukawa-Clustern} (siehe \ref{sub:yukawaclust}) oder zur Herstellung von "`Quasi-Schwerlosigkeit"' (siehe \cite{Rothermel02}) genutzt.
@@ -548,7 +551,9 @@
 
 			Es sei erwähnt -  über die Zustandsgleichung für ideale Gase $pV=Nk\ix{B}T$ ersichtlich -, dass bei einer höheren Temperatur die Dichte des Neutralgases sinkt. Experimentell findet man daher, dass die verminderte Dichte zu einer niedrigeren Stoßintensität führt und damit den Effekt der Thermophorese in etwa gerade kompensiert. Trotzdem bleibt die Methode des Temperaturgradienten ein wichtiges Mittel zum Einfang des Staubes und Ausgleich der Gravitationskraft.
 
-		\subsubsection{Kraft durch \tilt{Laser}-Einstrahlung}\label{subsub:laser}
+	\newpage
+
+		\subsection{Kraft durch \tilt{Laser}-Einstrahlung}\label{subsub:laser}
 
 			Der Einsatz von Laser hat in Versuchen zu kolloidalen Plasmen verschiedene Gründe: einerseits wird das Beobachtungsvolumen mit ihnen ausgeleuchtet, andererseits können unterschiedliche dynamische Eigenschaften des Staubes untersucht werden.\\
 			Die Manipulation von eingefangenen Teilchen wird bspw. durch die Fokussierung eines \tilt{Laser}strahls auf ein Partikel realisiert. Hierbei spielt der Impulsübertrag der Photonen mit Impuls $p\ix{Ph}$, welcher dem Strahlungsdruck $p\ix{Strahl}$ entspricht, und eine Kraft durch den Laser $F\ix{Strahl}$ \cite{Ashkin70} eine Rolle.
@@ -558,7 +563,7 @@
 					F\ix{Strahl}=&\gamma\frac{I\ix{L}}{c}\pi a^2 \label{eq:strahl}
 				\end{align}
 
-			($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$,$\nu$ - Lasergrößen; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
+			($N\ix{ph}$ - Anzahl der, die das Partikel treffenden Photonen; $\lambda$ - Wellenlänge; $A\ix{L}$ - Querschnittsfläche des \tilt{Laser}; $\gamma$ - Wechselwirkungskoeffizient für den Stoß Photon-Staub)\\
 			Für ein $\gamma=2$ in Gl. (\ref{eq:strahl}) liegt eine Totalreflexion vor, für $\gamma=1$ wird der Impuls der auftreffenden Photonen vollständig absorbiert. Im Zusammenhang mit dem Versuch dieser Arbeit ist die Kraft durch Laser jedoch nur ein unerwünschter Nebeneffekt - im Sinne einer zusätzlichen Kraft - der Beleuchtung des Yukawa-Balls.\\
 			Weiterhin sei angemerkt, dass auf Grund des anisotropen Profils der Photonendichte (\tilt{gaussian bandwidth}) über den Querschnitt eines Laser-Strahls, der Einfang von (einem) ausgewählten Staubpartikeln realisiert werden kann (\tilt{Laserpinzette}).
 
@@ -569,42 +574,37 @@
 %					F\ix{ph}=\frac{\pi a^2 p I\ix{L}}{6\left(pav\ix{th,N}+\kappa\ix{S}T\right)} \label{eq:photoph}
 %				\end{align}
 
-		\subsubsection{Einfang und Gleichgewicht}\label{subub:einfang}
+			\begin{figure}[!t]
+				\centering
+				\begin{subfigure}[t]{0.49\textwidth}
+					\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerlinks.png}
+					\caption{}
+					\label{img:linkseq}
+				\end{subfigure}
+				\begin{subfigure}[t]{0.49\textwidth}
+					\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerrechts.png}
+					\caption{}
+					\label{img:rechtseq}
+				\end{subfigure}
+				\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{15}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$, nach \cite{Melzer12}) }
+				\label{img:kräfte}
+			\end{figure}
 
-				\begin{figure}
-					\centering
-					\begin{subfigure}[t]{0.49\textwidth}
-						\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerlinks.png}
-						\caption{}
-						\label{img:linkseq}
-					\end{subfigure}
-					\begin{subfigure}[t]{0.49\textwidth}
-						\includegraphics[width=\textwidth,height=\textwidth]{figs/allforcesequlibriummelzerrechts.png}
-						\caption{}
-						\label{img:rechtseq}
-					\end{subfigure}
-					\caption{Kräfte als Funktion des Teilchenradius in einem Argon-Plasma (Parameter: $\kappa\ix{N}=\unit[0,016]{\frac{kg m}{s^3}}$;  \mbox{$\rho\ix{S}=\unit[1,5\cdot\tenpo{3}]{\frac{kg}{m^3}}$}; $T\ix{e}=\unit[2]{eV}$; $\Phi\ix{fl}=\unit[-4]{V}$; $E=\unit[1000]{\frac{V}{m}}$; $n\ix{I}=\unit[\tenpo{15}]{m^{-3}}$; $u\ix{I}=v\ix{th,I}=v\ix{th,N}=\unit[400]{\frac{m}{s}}$, nach \cite{Melzer12}) }
-					\label{img:kräfte}
-				\end{figure}
+		\subsection{Einfang und Gleichgewicht}\label{subub:einfang}
 
-			In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden.\\
-			Für Teilchen mit einem Radius im Bereich von einigen $\unit{\upmu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der (getriebenen) Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}/E\ll1$ ist, trifft das nur in einem kleinen Bereich zu. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
-			In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. Abbildungsteil \fett{(a)} zeigt dabei den Einfang von $\unit{\upmu m}$-großen Teilchen in der kleinen, lokalisierten Randschicht, wie es im diesem Experiment der Fall ist. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc} für ausgedehnte 3D-Cluster) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Die Ionen sind dabei bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer (siehe Abschn. \ref{sub:rand}). Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.
+			In \ref{img:kräfte} sind einige der bisher beschriebenen Kräfte für typische Parameter berechnet und mit einer doppelt-logarithmischen Skala dargestellt worden. Für Teilchen mit einem Radius im Bereich von einigen $\unit{\upmu m}$ sind die Kräfte des äußeren elektrischen Feldes $F\ix{E}$ und der Gravitation $F\ix{G}$ dominant. Daher müssen, für einen praktikablen Einfang, diese beiden Kräfte im Gleichgewicht sein, d.h. sich stationär aufheben. Dies ist gerade in der nahen Randschicht der (getriebenen) Elektrode der Fall, da dort $F\ix{E}$ stark genug ist. Weil $\grad{E}/E\ll1$ ist, trifft das nur in einem kleinen Bereich zu. Für die Neutralgasreibung $F\ix{N}$ gilt, dass diese bei großen thermischen Geschwindigkeiten des Staubes nahezu konstant wird, jedoch für "`kalten"' Staub mit zunehmendem Drift $v\ix{S}$ an Einfluss gewinnt. Die Ionenreibung $F\ix{ion}$ ist unter diesen Umständen vergleichsweise klein.\\
+			In \ref{img:kräfterichtungen} sind schematisch die Kräfte aus \ref{img:kräfte} mit ihren Orientierungen dargestellt worden. Abbildungsteil \fett{(a)} zeigt dabei den Einfang von $\unit{\upmu m}$-großen Teilchen in der kleinen, lokalisierten Randschicht, wie es im diesem Experiment der Fall ist. Diese ordnen sich dabei in ausgedehnten Schichten mit hexagonaler Struktur (\tilt{fcc} bzw. \tilt{bcc} für ausgedehnte 3D-Cluster) an. Die Kräfte der Thermophorese und des "`Ionenwindes"' ($F\ix{ion}$) zeigen dabei aus dem Plasma heraus in Richtung der Kammer bzw. der Elektroden. Die Ionen sind dabei bestrebt, aufgrund der ambipolaren Diffusion in der Randschicht auf die Kammerwand, den Ladungsunterschied (etwa innerhalb einer \tilt{Debye}-Länge) zwischen dem Plasma und dem Gehäuse auszugleichen. Das liegt u.a. an den unterschiedlichen Beweglichkeiten der Ladungsträger und deren Strömung auf die Kammer (siehe Abschn. \ref{sub:rand}). Weiterhin gilt ähnliches für die thermophoretische Kraft: das aufgeheizte Plasma erzeugt einen Impulsübertrag in Richtung der kühleren Kammer, woraus eine Kraft vom Plasma weg folgt. Der Staub wird somit in einem Teil der Entladung eingefangen, in dem diese Kräfte eine untergeordnete Rolle spielen. Die relevante elektrische Feldkraft ist besonders in der Nähe der Elektroden groß und kann damit dort Gravitationskraft bzw. $F\ix{th}$ und $F\ix{ion}$ kompensieren. Sie zeigt zudem in Richtung des Plasmas, da dieses in der Randschicht nicht mehr als neutral betrachtet werden kann.\\
+			Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Für detailliertere Ausführungen siehe \cite{Dorier95}, \cite{Morfill99} und \cite{Goree99a}.
 
-%			Für $a\gg\unit[1]{\upmu m}$ wird $F\ix{E}$ weniger relevant und es übt die Thermophorese eine immer größere Kraft auf den Staub aus. Genauer: $F\ix{th}$ ist in Experimenten, wie  sogar schon für $\grad{T}\approx \unit[2]{\frac{K}{m}}$ eine wichtige, nicht vernachlässigbare Größe.
-%			Sind die Staubpartikel klein, d.h. haben einen Radius $a\approx\unit[\tenpo{-9}]{m}$, so wird die Gravitationskraft mit ihrem Einfluss $\propto a^3$ sehr klein und spielt damit kaum noch eine Rolle. Damit muss die Kraft des elektrischen Feldes mit der Ionenreibung bzw. der Thermophorese balanciert werden.
-
-				\begin{figure}
+				\begin{figure}[!h]
 					\centering
 					\begin{subfigure}[b]{0.45\textwidth}
-						\hspace{0.3cm}
-						\includegraphics[width=\textwidth,height=\textwidth]{figs/directionsofforcesandtrappingmelzerlinks.png}
+						\includegraphics[width=0.9\textwidth,height=0.9\textwidth]{figs/directionsofforcesandtrappingmelzerlinks.png}
 						\caption{}
 						\label{img:linksdirection}
 					\end{subfigure}
 					\begin{subfigure}[b]{0.45\textwidth}
-						\hspace{-0.2cm}
-						\includegraphics[width=\textwidth,height=\textwidth]{figs/directionsofforcesandtrappingmelzerrechts.png}
+						\includegraphics[width=0.9\textwidth,height=0.9\textwidth]{figs/directionsofforcesandtrappingmelzerrechts.png}
 						\caption{}
 						\label{img:rechtsdirection}
 					\end{subfigure}
@@ -612,11 +612,7 @@
 					\label{img:kräfterichtungen}
 				\end{figure}
 
-			Im zweiten Teil (b) von \ref{img:kräfterichtungen} ist ein Plasma mit Staubteilchen im $\unit{nm}$-Bereich unter Schwerelosigkeit gezeigt. Dabei entsteht der sog. \tilt{void}, welcher ein Fremdteilchen-freier Bereich in Mitten der Entladung ist und aufgrund der relativen Orientierungen der Kräfte zustande kommt. Für detailliertere Ausführungen siehe \cite{Dorier95}, \cite{Morfill99} und \cite{Goree99a}.
-
-%            Thermophorese und Ionenwind-Kraft zeigen (selbe Argumentation wie zu Teil \fett{(a)}) aus der 'Mitte' des Plasma in Richtung der Kammer und der Elektroden, wobei von diesen aus die elektrische Feldkraft zum \tilt{void} zeigt. Da in diesem Fall $F\ix{G}$ sehr klein ist (wegen $\propto a^3$), muss für den Einfang des Staubes das starke $F\ix{E}$, welches zwischen Kammer und Plasma entsteht, mit $F\ix{th}$ und $F\ix{ion}$ im Gleichgewicht sein. Somit ist es m\"oglich, Staub in dreidimensional ausgedehnten Bereichen in der gesamten Entladung einzufangen.\\ Es stellen sich sogar Dichte- bzw. Volumen- und Massegradienten aufgrund der empfindlichen Abhängigkeit von Gravitation und elektrischer Feldkraft ein. Das bedeutet, dass sich schwerere, größere Teilchen bzw. "`verschmolzene"' Partikelcluster am Rande des Einfangs wiederfinden, wohingegen kleinerer Staub sich dicht gepackt um den \tilt{void} herum befindet.
-
-		\subsection{Finite Yukawa-Cluster}\label{sub:yukawaclust}
+		\section{Finite Yukawa-Cluster}\label{sub:yukawaclust}
 
 				\begin{figure}
 					\centering
@@ -643,7 +639,7 @@
 
 			Bisher wurden in den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} allgemein gültige Charakteristika des für diesen Aufbau verwendeten Plasmas besprochen. Außerdem sind in \ref{sub:ströme} und \ref{sub:dynamik} die für komplexe bzw. staubige Plasmen spezifischen Kenngrößen und Prozesse, wie beispielsweise Aufladung und Einfang, beschrieben worden. Damit kennen wir die Dynamik eines einzelnen Staubteilchen in einem Plasma und unter welchen Bedingungen ein Einfang gegeben ist, jedoch wissen wir nichts über das kollektive Verhalten der bereits besprochenen \tilt{Yukawa-Cluster}. Wann und wo sind diese - falls ein solcher Zustand existiert - stabil? Wie ist ihr Verhalten bei Störungen des externen Potentials? Dieser Abschnitt soll sich mit diesen Fragen, in Bezug auf einen Versuch unter den Bedingugen aus \ref{img:linksdirection}, auseinander setzen.
 
-				 \subsubsection{Struktur}
+				 \subsection{Struktur}
 
 						 \begin{figure}
 						 	\centering
@@ -684,20 +680,19 @@
 							\Gamma=\frac{Z\ix{S}e^2}{4\pi\varepsilon\ix{0}b\ix{WS}k\ix{B}T\ix{S}}  \,\,; \quad \Gamma\ix{C,eff}=\Gamma\exp\left(-\frac{b\ix{WS}}{\lambda\ix{D}}\right) \label{eq:kopplung}
 						\end{align}
 
-						\begin{wrapfigure}{r}{0.25\textwidth}
+						\begin{wrapfigure}{l}{0.3\textwidth}
 							\centering
-							\vspace{-0.5cm}
 							\includegraphics[width=0.22\textwidth,height=0.55\textwidth]{figs/yukawaballN190.png}
-							\caption{\underline{\fett{oben}:} $N=190$-Cluster; Teilchen-Verteilung. \underline{\fett{unten}:} Vierte Schale mit penta- und hexagonalen Zellen, sowie Defekten (weiß) (nach \cite{Arp04}).}\label{img:strukturN190}
+							\caption{Teilchen-Verteilung und Schalenstruktur, $N=190$ (nach \cite{Arp04})}\label{img:strukturN190}
+							\vspace{-0.5cm}
 						\end{wrapfigure}
 
-                    Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund der Ionen und Elektronen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung eines Teilchens mit seinen Nachbarn in Einheiten der thermischen Energie.\\
+					 Um ein Maß für die Stabilität eines staubigen Plasmas zu erhalten, geht man, wie bei Festkörpern und deren Elektronengasen, von einer Punktladung $Q$ vor dem Hintergrund der Ionen und Elektronen aus (\tilt{one component plasma} - OCP). Der Kopplungsparameter $\Gamma$ in Gl. (\ref{eq:kopplung}) beschreibt somit die elektrostatische Wechselwirkung eines Teilchens mit seinen Nachbarn in Einheiten der thermischen Energie.\\
 					Für ein $\Gamma>1$ spricht man von einer starken Kopplung innerhalb des Clusters bzw. des Plasmas. Mit $\Gamma\geq\Gamma\ix{k}$ liegen kristalline Systeme vor. Bei einem kleineren Wert gehen die Cluster in einen flüssigen bzw. gasförmigen Zustand über (\ref{img:gamma}). Das heißt, dass ein System aus Staubpartikeln "`schmelzen"' kann, bringt man durch Lasereinstrahlung o.ä. gezielt Energie in den Cluster ein und verringert damit die Ordnung bzw. erhöht die thermische Bewegung. Dabei verschwindet zuerst die Winkelabhängigkeit, was das Auflösen der kristallartigen Strukturen innerhalb des Clusters zur Folge hat (zum Beispiel \cite{Thomas96}).\\
-					Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine korrektere Größe, da sich der Staub in hexagonalen bzw. pentagonalen Zellen auf den konzentrischen Sphären des Clusters anordnet. Die Zusammensetzung eines solchen \tilt{finiten Yukawa-Systems} ist in \ref{img:strukturN190} dargestellt. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme bei entsprechenden Umgebungsparametern eine energetisch günstige, kristallartige Struktur an. \\
-					Der effektive Parameter für Coulomb-Wechselwirkungen $\Gamma\ix{C,eff}$ entspricht einer modifizierten Kopplung mit Rücksicht auf die Abschirmung durch die Ionenwolke (\cite{Lampe00}, \cite{Schweigert00d}) um ein Partikel bzw. den Cluster. Aus diesem Grund führt man die Abschirmstärke $\kappa=b\ix{WS}/\lambda\ix{D}$ ein, welche angibt, um wie viel die elektrostatische Wechselwirkung mit einem Teilchen der Ladung $Q$ innerhalb einer Elementarzelle der Staubpartikel abgeschwächt ist. Außerdem folgt daraus der Zusammenhang für die Phasengrenze in \ref{img:gamma} $\Gamma\left(\kappa\right)$: für große \tilt{Wigner-Seitz}-Radien bzw. sehr kleine Debye-Längen verschwindet die Wechselwirkung zwischen den Staubteilchen nahezu vollständig. Das Potential geht für diesen Fall in das aus dem Modell harter Kugeln über (bspw. van-der-Waals-Gastheorie etc.).\\
+					Die größe $b\ix{WS}=\left(3/4\pi n\ix{S}\right)^{-1/3}$ ist der \tilt{Wigner-Seitz}-Radius: er ist analog zu $\overline{b}$ aus Tab. \ref{tab:kenngroessen} eine Skala für Teilchenabstände. Insbesondere ist $b\ix{WS}$ eine korrektere Größe, da sich der Staub in hexagonalen bzw. pentagonalen Zellen auf den konzentrischen Sphären des Clusters anordnet. Die Zusammensetzung eines solchen \tilt{finiten Yukawa-Systems} ist in \ref{img:strukturN190} dargestellt. Außerdem: sowohl aufgrund der bisher besprochenen Kräfte und der Coulomb-Wechselwirkung des Staubes, als auch wegen des nicht-reziproken \tilt{Ionenfokus} (siehe \cite{Melzer95c}) streben die Systeme bei entsprechenden Umgebungsparametern eine energetisch günstige, kristallartige Struktur an.  Der effektive Parameter für Coulomb-Wechselwirkungen $\Gamma\ix{C,eff}$ entspricht einer modifizierten Kopplung mit Rücksicht auf die Abschirmung durch die Ionenwolke (\cite{Lampe00}, \cite{Schweigert00d}) um ein Partikel bzw. den Cluster. Aus diesem Grund führt man die Abschirmstärke $\kappa=b\ix{WS}/\lambda\ix{D}$ ein, welche angibt, um wie viel die elektrostatische Wechselwirkung mit einem Teilchen der Ladung $Q$ innerhalb einer Elementarzelle der Staubpartikel abgeschwächt ist. Außerdem folgt daraus der Zusammenhang für die Phasengrenze in \ref{img:gamma} $\Gamma\left(\kappa\right)$: für große \tilt{Wigner-Seitz}-Radien bzw. sehr kleine Debye-Längen verschwindet die Wechselwirkung zwischen den Staubteilchen nahezu vollständig. Das Potential geht für diesen Fall in das aus dem Modell harter Kugeln über (bspw. van-der-Waals-Gastheorie etc.).\\
 					Abschließend sei erwähnt, das die bisher genannten Eigenschaften u.U. stark von der Art der Wechselwirkung bzw. der Teilchenzahl abhängen: die Betrachtungen gehen von reiner Coulomb- oder Yukawa-Wechselwirkung aus. Die Besetzungszahlen der Sphären des Clusters können jedoch für die verschiedenen Potentiale stark variieren, was u.a. eine Folge unterschiedlicher Abschirmungen ist.
 
-				\subsubsection{Dynamik- und Modenanalyse} \label{subsub:moden}
+				\subsection{Dynamik- und Modenanalyse} \label{subsub:moden}
 
 					Auf Grundlage der Überlegungen zur Wechselwirkung und des Einfangs eines finiten Yukawa-Systems, kann nun eine Analyse der dynamischen Eigenschaften dessen erfolgen. Diese beruht auf der Entwicklung eines \tilt{Modenspektrums} dieses Clusters, wobei im Gegensatz zu ausgedehnten System darin nur eine endliche Zahl von Moden vorhanden sind. Statt einer Dispersionsrelation für Wellen bestimmt man demnach Schwingungsmoden, welche den Grenzen und Randbedingungen des Clusters bzw. des Einfangs genügen.\\
 					Mit der Normierung auf Abstandseinheiten $r\ix{0}$ und Energieeinheiten $E\ix{0}$ folgt Gl. (\ref{eq:energie}). Die erste Summe stellt den kinetischen Anteil der Energie des $i$-ten Teilchens im Rahmen eines harmonischen Oszillators dar. Die Yukawa-Abstoßung im zweiten Teil kommt aus der elektrostatischen Wechselwirkung innerhalb des Staubkristalls, weswegen $\kappa=r\ix{0}/\lambda\ix{D}$ und $r\ix{ij}=|\vec{r}\ix{i}-\vec{r}\ix{j}|$ gilt.
@@ -754,7 +749,7 @@
 					Die spektrale Energiedichte aus Gl. (\ref{eq:energiedicht}) wird in \ref{img:spektrum} für einen sehr simplen Cluster aus $N=3$ Teilchen dargestellt. Passend dazu sind in \ref{img:moden} die Modenvektoren der drei Staubpartikel eingezeichnet. Insbesondere sind dort Moden gezeigt, welche allgemein für alle Cluster auftreten: \tilt{breathing}, \tilt{slosh} und Rotation. $p=1$ zeigt die \tilt{breathing}-Mode: alle Teilchen entfernen sich vom Clusterschwerpunkt, wobei dieser jedoch fest bleibt. Die Frequenz $\omega\ix{breath}$ hängt schwach von $N$ ab und steigt mit der Abschirmung $\kappa$. Mode $p=2$ ist die Rotationsmode. Ihre Eigenfrequenz ist $0$, da es für diese keine rückstellenden Kräfte gibt. In $p=3$ und $p=4$ sind \tilt{kink}-Moden gezeigt. Nummer 5 und 6 stellen \tilt{slosh}-Moden dar: das System führt eine Schwerpunktstranslation aus, wobei alle Partikel sich in die selbe Richtung bewegen.\\
 					Diese \tilt{Normalmodenanalyse} ist ein geeignetes Mitte zur Analyse der Dynamik eines finiten Systems (siehe \cite{Melzer01},\cite{Melzer03}), vorausgesetzt es genügt den gemachten Voraussetzungen: Yukawa-Wechselwirkung, starke Kopplung, homogene Partikel \dots
 
-				\subsubsection*{Fluidmoden}
+				\subsection*{Fluidmoden}
 
 					Genau wie in der, diesem Teilgebiet übergeordneten Plasmaphysik, lässt sich ein finiter Cluster als hydrodynamische Gesamtheit auffassen. Ähnlich wie beim \tilt{Fluidmodell} und der Betrachtung durch die \tilt{magnetohydrodynamischen Gleichugen} (MHD), nimmt man hierbei das System als kontinuierliche Masse mit entsprechender Ladungsverteilung an. Daraus ergeben sich neue Möglichkeiten die Dynamik des Cluster zu beschreiben und nachzuvollziehen.\\
 					Eingangs muss das neue Potential $\Phi\left(\vec{r},t\right)$ des fluiden "`Tropfens"' beschrieben werden. Da der Cluster von Ladungsträgern abgeschirmt wird, welche sich um diesen auf Grund seiner elektrostatischen Wechselwirkung ansammeln - analog zu den vorherigen Abschnitten -, kann man die modifizierte Poissongleichung (Gl. (\ref{eq:poisson})) für die Ladungsdichte $\rho\left(\vec{r},t\right)$ des Systems benutzen. Deren Lösung erhält man mit der \tilt{Green-Funktion} $G\left(\vec{r}\right)$ aus Gl. (\ref{eq:green}) in (\ref{eq:fluid}). 
@@ -789,13 +784,7 @@
                             \label{img:fluidmode}
                         \end{figure}
 
-	\newpage
-	\begin{align*}
-	\,
-	\end{align*}
-	\newpage
-
-	\section{Durchführung}\label{sec:durch}
+	\chapter{Durchführung}\label{sec:durch}
 
 		Im anschlie{\ss}ende Abschnitt wird der Aufbau, sowie die Durchf\"uhrung und die Messmethodik des Experiments dieser Arbeit umrissen. Es folgt eine vertiefenden Beschreibung der Plasmakammer, einschlie{\ss}lich der Kameraanordnung mit Beleuchtungslasern. Eine Betrachtung des sog. \tilt{Plasma-Glow} wird ebenso Teil dieses Abschnitts sein. Zus\"atzlich soll dabei die dreidimensionale Rekonstruktion der Partikelbewegungen aus den Kamerabildern kurz beschrieben werden.
 
@@ -806,7 +795,7 @@
 				\label{img:photo}
 			\end{figure}
 
-		\subsection{Aufbau}
+		\section{Aufbau}
 
 				\begin{figure}[!t]
 					\centering
@@ -817,7 +806,8 @@
 
 			Die in diesem Experiment verwendete Plasmakammer ist in \ref{img:plasmakammer} gezeigt. Den fertigen Aufbau, samt Beleuchtungslaser und elektrisch verschiebbaren Versuchstisch zeigt das Photo in \ref{img:photo}. Die Kammer hat einen Innendurchmesser von $\unit[25]{cm}$, wobei deren Deckel und Boden aus Edelstahl und die Wände aus Aluminium bestehen. Vier gro{\ss}e und 2 kleine, seitlich angebrachte, antireflexbeschichtete Fenster erm\"oglichen,  aus der Ebene den Blick auf den Yukawa-Ball. Im Deckel der Kammer befindet sich ein weiteres, kreisrundes Fenster mit einem Durchmesser von etwa $\unit[9]{cm}$. Die Beobachtung der Cluster wird durch drei zueinander orthogonale Kameras realisiert, wobei diese durch die genannten Glas-Einsätze in der Kammer schauen. Das daraus entstehende stereoskopische System nutzt man letztendlich zur Rekonstruktion der Teilchentrajektorien in 3D.\\
 			Wie im Abschnitt \ref{sub:kaprfplasm} beschrieben, wird in diesem Versuch ein kapazitiv gekoppeltes Niederdruck-Radiofrequenz-Plasma in einer asymmetrischen Entladungskammer erzeugt. Eine abgeschirmte Messingelektrode befindet sich im unteren Teil des Aufbaus und wird, \"uber die kapazitive Kopplung zur Anpassung von Gleistromanteilen, von einem Generator mit einer Leistung zwischen $\unit[1-3]{W}$ bei einer Frequenz von $\unit[13,56]{MHz}$ betrieben. Der \"ubrige Teil der Kammer liegt auf Massepotential und dient damit als, fl\"achenm\"a{\ss}ig um ein vielfaches gr\"o{\ss}ere Gegenelektrode. \"Uber eine Pumpe wird die Kammer bis auf einen Restdruck von etwa $\unit[\tenpo{-1}]{Pa}$ evakuiert, damit sie m\"oglichst frei von Umgebungsluft ist und anschlie{\ss}end eine Argon-Entladung bei $\unit[5-12]{Pa}$ erzeugt werden kann.
-			Weiterhin befinden sich im Deckel der Kammer Durchf\"uhrungen f\"ur den Staub aus MF (Melamin-Formaldehy) - $\unit[4,86\pm0,07]{\upmu m}$ im Radius - und die Einfang-Elektrode. Die Partikel werden \"uber ein Reservoir der Gr\"o{\ss}e eines 1 Cent-St\"uckes mit einer $\unit{\upmu m}$-gro{\ss}en Bohrung in die Entladung eingebracht. Die Befestigung der Ring-Elektrode aus \ref{img:eingefangenerball} ist h\"ohenverstellbar und l\"asst sich leicht drehen, damit eine optimale Positionierung des Cluster in der Randschicht \"uber der getriebenen Elektrode bzw. der Thermophorese-Zelle vorgenommen werden kann.
+			Weiterhin befinden sich im Deckel der Kammer Durchf\"uhrungen f\"ur den Staub aus MF (Melamin-Formaldehy) - $\unit[4,86\pm0,07]{\upmu m}$ im Radius - und die Einfang-Elektrode. Die Partikel werden \"uber ein Reservoir der Gr\"o{\ss}e eines 1 Cent-St\"uckes mit einer $\unit{\upmu m}$-gro{\ss}en Bohrung in die Entladung eingebracht. Die Befestigung der Ring-Elektrode aus \ref{img:eingefangenerball} ist h\"ohenverstellbar und l\"asst sich leicht drehen, damit eine optimale Positionierung des Cluster in der Randschicht \"uber der getriebenen Elektrode bzw. der Thermophorese-Zelle vorgenommen werden kann.\\
+			Die für den Einfang der Cluster genutzten Segmentringe (wie der in \ref{img:ring} aus Abschnitt \ref{sub:einfang}) sind \"uber Koaxialkabel und eine weitere, unten liegende Vakuum-Durchf\"uhrung (4- bzw. 8-polig) mit der Manipulationselektronik verbunden. Genauer ist damit ein PC mit einer externen \fett{National Instruments 6364}-Karte, welche via USB und das Programm \fett{LabView} angesteuert wird, gemeint. Das erm\"oglicht es, verschiedenste Signale auf die einzelnen Bereiche der Elektrode zu bringen und damit das System gezielt zu heizen bzw. Moden anzuregen (siehe \ref{img:ring}). 
 
 				\begin{figure}[!t]
 					\begin{subfigure}[t]{0.48\textwidth}
@@ -835,24 +825,21 @@
 					\caption{\fett{(a)}: Einfang eines Yukawa-Balls mit $N\approx40$ unter Beleuchtung mit Nd:YAG-Lasern. Der Cluster befindet sich, leicht abhängig von der Höhe des Rings in der Randschicht, circa $\unit[0,5-1]{cm} $ unterhalb der Elektrode. Im Hintergrund: Kamera 'rot' mit Filter für $\unit[532]{nm}$. \fett{(b)}: Draufsicht durch den Deckel der Kammer auf den Ring. Günstiger Weise befindet sich dieser in der Mitte der Thermophorese, damit aus Sicht des, relativ dazu kleinen Clusters, die Randschicht unendlich ausgedehnt ist.}
 				\end{figure}
 
-			Die für den Einfang der Cluster genutzten Segmentringe - wie der in \ref{img:ring} aus Abschnitt \ref{sub:einfang} - sind \"uber Koaxialkabel und eine weitere, unten liegende Vakuum-Durchf\"uhrung (4- bzw. 8-polig) mit der Manipulationselektronik verbunden. Genauer ist damit ein PC mit einer externen \fett{National Instruments 6364}-Karte, welche via USB und das Programm \fett{LabView} angesteuert wird, gemeint. Das erm\"oglicht es, verschiedenste Signale auf die einzelnen Bereiche der Elektrode zu bringen und damit das System gezielt zu heizen bzw. Moden anzuregen (siehe \ref{img:ring}). 
+		\section{Elektrischer Einfang} \label{sub:einfang}
 
-		\subsection{Elektrischer Einfang} \label{sub:einfang}
-
-			Hauptaugenmerk dieses Experiments ist die Manipulation finiter Yukawa-Systeme. Hierf\"ur wurden eigens mehrsegmentige Kupferplatinen konzipiert und konstruiert, siehe \ref{img:ring}. Deren - auf Skalen des Clusters- globaler Einflu{\ss} auf die Randschicht, welchen sie durch ihre zusätzlichen Potentiale erwirken, erm\"oglicht den Einfang eines Staubballs bei niedrigen Gasdr\"ucken und Plasmaleistungen. Weiterhin ist die Geometrie der Ring-Elektrode besonders g\"unstig f\"ur das vorliegende System, da sich somit ein sehr homogenes, sich der Symmetrie des Clusters angepasstes Einfangpotential einstellt.
-
-				\begin{wrapfigure}{r}{0.45\textwidth}
+				\begin{wrapfigure}{r}{0.5\textwidth}
 					\centering
-					\includegraphics[width=0.4\textwidth,height=0.55\textwidth]{figs/cam/ringelektrode.jpg}
+					\includegraphics[width=0.45\textwidth,height=0.58\textwidth]{figs/cam/ringelektrode.jpg}
 					\caption{Kupferring mit 4 Segmenten \underline{nach} der Benutzung (trotz Plastikumhüllung zeigt der Ring starke Abnutzungen durch Plasma). Am unteren Ende sind die weißen Vakuumkabel zu sehen.}
 					\label{img:ring}
+					\vspace{-0.5cm}
 				\end{wrapfigure}
 
-			Die verwendeten Ring-Elektroden bestehen aus einem $\unit[6]{mm}$ starken, $\unit[3,2]{cm}$ im Inneren messenden Ring mit 4, 6 oder 8 Segmenten aus Kupfer an der Unterseite, welche später in Richtung des Clusters in der Randschicht zeigen. Dieser Ring ist mit einem Arm, über den die Leiterbahnen der jeweiligen Segmente laufen, verbunden. Am Ende dessen befindet sich eine Bohrung, durch welche die Durchführung mit Schraubgewinde im Kammerdeckel geführt werden kann und somit die Positionierung bei geschlossenem Aufbau ermöglicht. Die gelöteten Kontaktierungen der Vakuumkabel für die Manipulation, von der Ober- auf die Unterseite führend, liegen knapp vor der Bohrung. Für einen Vergleich siehe \ref{img:ring}, sowie  \ref{img:eingefangenerball}  und \ref{img:topview}.\\
-			Ziel der Manipulation durch die segmentierte Ring-Elektrode ist es, verschiedene Moden mit unterschiedlichen Symmetrien - Dipol, Quadrupol usw. - gezielt anzuregen und in diese Energie zu bringen. Durch die Modentheorien aus Abschnitt  \ref{sub:yukawaclust} und deren Ausdrücke für die Energie pro Mode $Q_{lm}\left(\omega\right)$ bzw. $S\ix{p}\left(\omega\right)$ kann danach bestimmt werden, inwiefern die Störung erfolgreich war und welche Konsequenz dies nach sich zieht. Auf die Veränderung der Randschicht durch den Ring wird in \ref{sub:glow} eingegangen.
+			Hauptaugenmerk dieses Experiments ist die Manipulation finiter Yukawa-Systeme. Hierf\"ur wurden eigens mehrsegmentige Kupferplatinen konzipiert und konstruiert, siehe \ref{img:ring}. Deren - auf Skalen des Clusters- globaler Einflu{\ss} auf die Randschicht, welchen sie durch ihre zusätzlichen Potentiale erwirken, erm\"oglicht den Einfang eines Staubballs bei niedrigen Gasdr\"ucken und Plasmaleistungen. Weiterhin ist die Geometrie der Ring-Elektrode besonders g\"unstig f\"ur das vorliegende System, da sich somit ein sehr homogenes, sich der Symmetrie des Clusters angepasstes Einfangpotential einstellt.\\
+			Die verwendeten Ring-Elektroden bestehen aus einem $\unit[6]{mm}$ starken, $\unit[3,2]{cm}$ im Inneren messenden Ring mit 4, 6 oder 8 Segmenten aus Kupfer an der Unterseite, welche später in Richtung des Clusters in der Randschicht zeigen. Dieser Ring ist mit einem Arm, über den die Leiterbahnen der jeweiligen Segmente laufen, verbunden. Am Ende dessen befindet sich eine Bohrung, durch welche die Durchführung mit Schraubgewinde im Kammerdeckel geführt werden kann und somit die Positionierung bei geschlossenem Aufbau ermöglicht. Die gelöteten Kontaktierungen der Vakuumkabel für die Manipulation, von der Ober- auf die Unterseite führend, liegen knapp vor der Bohrung. Für einen Vergleich siehe \ref{img:ring}, sowie  \ref{img:eingefangenerball}  und \ref{img:topview}. Ziel der Manipulation durch die segmentierte Ring-Elektrode ist es, verschiedene Moden mit unterschiedlichen Symmetrien - Dipol, Quadrupol usw. - gezielt anzuregen und in diese Energie zu bringen. Durch die Modentheorien aus Abschnitt  \ref{sub:yukawaclust} und deren Ausdrücke für die Energie pro Mode $Q_{lm}\left(\omega\right)$ bzw. $S\ix{p}\left(\omega\right)$ kann danach bestimmt werden, inwiefern die Störung erfolgreich war und welche Konsequenz dies nach sich zieht. Auf die Veränderung der Randschicht durch den Ring wird in \ref{sub:glow} eingegangen.
 
 
-		\subsection{Strereoskopie und Bildrekonstruktion}
+		\section{Strereoskopie und Bildrekonstruktion}
 
 			Die Zeitskala der Dynamik der Staubteilchen erlauben eine strereoskopische Untersuchung des Systems. Die Beobachtung erfolgte \"uber 3, zueinander orthogonale High-Speed-CMOS-Kameras mit 60 bzw. $\unit[105]{mm}$ Objektiven. Deren Aufnahmen von bis zu 500 Bildern pro Sekunde ($\unit{fps}$ - \tilt{frames per second}) haben eine maximale Aufl\"osung von $\unit[1280x1024]{px}$. Dabei nimmt die \tilt{fps}-Zahl mit steigender Auflösung ab: je mehr Daten aufgenommen und verarbeitet werden müssen, umso niedriger ist die maximale, verlustfreie Aufnahmerate.\\
 			Für die Messreihen wurden jeweils Bilderserien von 10000 \tilt{frames} aufgenommen, wobei die Geschwindigkeit sich dem zu untersuchenden Sachverhalt anpasste. F\"ur eine "`freie"' Aufnahme lag diese bei 100 Bildern pro Sekunde: der Cluster war entweder ungest\"ort oder wurde bei einer festen Anregungsfrequenz manipuliert. Waren Informationen zu bestimmten Phasen gesucht, so wurde dementsprechend die Kamera mit der Anregung gekoppelt und dabei 4 Bilder pro Periode bei einer Frequenz von bis zu $\unit[6,5]{Hz}$ gemacht. \\
@@ -876,42 +863,41 @@
                     \label{img:rekonstruktion}
                 \end{figure}
 
-				\subsubsection{3D-Trajektorien}
+				\subsection{3D-Trajektorien}
 
 					Die Rekonstruktion der dreidimensionalen Informationen des Beobachtungsvolumen ist das Kernst\"uck der Stereoskopie (\cite{Bonitz10}). Eingangs m\"ussen aus den einzelnen \tilt{frames} der Kameras die Partikelpositionen gewonnen werden. Daf\"ur analysiert man das Bild durch einen (\tilt{gau{\ss}schen}) Bandpass der Breite des erwarteten Partikeldurchmessers (\cite{Crocker96a}, \cite{Ivanov07}). Au{\ss}erhalb liegende Objekte werden gegl\"attet und angepasst. F\"ur alle erkannten Teilchen wird anschlie{\ss}end, der Intensit\"atsverteilung \"uber diese entsprechend, deren Schwerpunkt ermittelt. Damit erhält man eine Auflösung im Sub-Pixel-Bereich. Es ergeben sich f\"ur alle Kameras die zweidimensionalen Informationen \"uber Partikelpositionen und Clusterausdehnung.\\
 					Die Zuordnung der Partikel in gleichzeitigen Kamera-Bildern ist in \ref{img:rekonstruktion}:\fett{(a)} schematisch dargestellt. F\"ur jeden Augenblick der Aufnahme stimmt eine Koordinate der gewonnenen Tupel (eines Partikels) mit einer in den anderen beiden zugeh\"origen \tilt{frames} \"uberein. Dies gilt gerade aufgrund der Orthogonalität des Systems. Durch Abgleich der Informationen von jeweils 2 Kameras und deren Kombination, kann aus den zwei- die dreidimensionalen Koordinaten der Teilchen gewonnen werden. Die letztendlich erhaltenen Partikel-Trajektorien ergeben sich durch die Verknüpfung der \tilt{nearest neighbors} in zwei aufeinander folgenden Bilder. Das heißt, dass die Zusammenführung der Teilchenkoordinaten aus den Aufnahmen zweier Kameras für einen weiteren Zeitschritt fortgesetzt wird. Es wird das Intensitäts-Maximum mit dem kleinsten Abstand zum Ort des betrachteten Partikels im vorherigen Bild gesucht und folglich mit diesem zum entsprechenden Zeitpunkt identifiziert. Die damit erhaltenen Punkte der Bewegung für die diskreten Zeiten der Aufnahme ergeben die Trajektorie.
 					Die Rekonstruktion mittels 3 Beobachtungsrichtungen senkt dabei die Wahrscheinlichkeit, dass aufgrund der thermischen Bewegung oder Manipulation (ggf. auch Clusterkonfiguration) Partikel hintereinander verschwinden und somit nicht mehr durchg\"angig aufgenommen werden k\"onnen (siehe \ref{img:rekonstruktion}:\fett{(b)}). F\"ur einzelne Bilder, in denen sich Partikel \"uberdecken, lassen sich jedoch die Trajektorien durch Interpolation, was u.U. f\"ur Fehler in der Auswertung auf Grund von Artefakten sorgen kann, vervollst\"andigen.
 
-		\subsection{Analyse des Plasma-Glow} \label{sub:glow}
-
-			\begin{wrapfigure}{r}{0.5\textwidth}
-				\centering
-				\vspace{0.25cm}
-				\includegraphics[width=0.45\textwidth,height=0.4\textwidth]{figs/ringplasmglowoben.png}
-				\caption{Ein \tilt{frame} ohne Filter für das Licht der Argon-Entladung. Die Helligkeit in der Mitte ist geringer als außerhalb.}
-				\label{img:glow}
-			\end{wrapfigure}
+		\section{Analyse des Plasma-Glow} \label{sub:glow}
 
 		Im Zuge der Untersuchung einer Quadrupolschwingung bemerkt man leicht, dass die Teilchen des Clusters, zusätzlich zu ihrer Auslenkung in der Ebene, eine vertikale Schwingung mit Maximum zum Zeitpunkt des Nulldurchgangs der sinusoidalen Signale ausführen. Die Anregung dieser Mode enthält jedoch keine solchen Anteile. Diese Beobachtung legt demnach nahe, dass die Randschichtveränderung durch das Einfangpotential nicht vernachlässigbar für die Kinematik des Cluster ist.\\
-		Aus den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} wissen wir,  dass sich beispielsweise um metallische Objekte in einem Plasma eine Grenzschicht ausbildet. Weiterhin ist deren Ausdehnung und Eigenschaften abhängig vom Potential des lokalen Plasmas bzw. des Objektes selbest. Deswegen ist die Manipulation eines Yukawa-Clusters nicht nur als elektrostatische Wechselwirkung Staub und Ring-Elektrode (siehe \ref{img:potential}) zu verstehen, sondern viel mehr als Summe dessen und der Veränderung der lokalen Randschicht, in welcher sich die Staubpartikel befinden. Letztenxdlich war der Einfang eines Staub-Balls als Balance mit der elektrischen Kraft zu verstehen, welche gerade durch das Feld in der Randschicht bei $\unit{\upmu m}$ bestimmt wurde.\\
-		Ein Maß für ihre Ausdehnung, und somit daraus folgend ihre weiteren Eigenschaften, ist das Leuchten der Neutralgasatome des Argons. Dieses ist intensiver, je größer die vorliegende Elektronendichte und/oder -temperatur ist (siehe \ref{sub:rand}).  Auf Grund dessen erhält man aus einer Intensitätsanalyse des Bereiches aus \ref{img:glow} Informationen über die Stärke der Randschichtveränderungen.\\
-        Ohne die, während der restlichen Messungen an den Kameras angebrachten Filter für das Plasmaleuchten, wurden Aufnahmen für verschiedenste Anregungen gemacht. Das heißt: die 4 Segment des Ringes wurden, entsprechend der gewünschten Symmetrie, mit einer festen Phase zueinander und Frequenz mit einem sinusoidalen Signal der Amplitude $\unit[10]{V}$ beschaltet. Von Interesse sind dabei jedoch nur die Bilder der Oberkamera ('grün', siehe \ref{img:glow}). Die \tilt{bitmaps} werden für die Analyse zuerst auf ein \tilt{range of interest} - ein Kreis bzw. eine Kreisscheibe, in welcher das Leuchten ausgewertet werden soll - beschnitten. Anschließend wird das \tilt{ROI} in Radius- und Winkelabschnitte eingeteilt, welche in ihrer Intensität aufsummiert werden. Ein anschauliches Beispiel für die Darstellung des Intensitätsverlaufs einer Rotationsschwingung, in radialer und polarer Auflösung, wird in \ref{img:glowanalys} gezeigt.
+		Aus den Abschnitten \ref{sub:kaprfplasm} und \ref{sub:rand} wissen wir,  dass sich beispielsweise um metallische Objekte in einem Plasma eine Grenzschicht ausbildet. Weiterhin ist deren Ausdehnung und Eigenschaften abhängig vom Potential des lokalen Plasmas bzw. des Objektes selbest. Deswegen ist die Manipulation eines Yukawa-Clusters nicht nur als elektrostatische Wechselwirkung Staub und Ring-Elektrode (siehe \ref{img:potential}) zu verstehen, sondern viel mehr als Summe dessen und der Veränderung der lokalen Randschicht, in welcher sich die Staubpartikel befinden. Letztenxdlich war der Einfang eines Staub-Balls als Balance mit der elektrischen Kraft zu verstehen, welche gerade durch das Feld in der Randschicht bei $\unit{\upmu m}$ bestimmt wurde. Ein Maß für ihre Ausdehnung, und somit daraus folgend ihre weiteren Eigenschaften, ist das Leuchten der Neutralgasatome des Argons. Dieses ist intensiver, je größer die vorliegende Elektronendichte und/oder -temperatur ist (siehe \ref{sub:rand}).  Auf Grund dessen erhält man aus einer Intensitätsanalyse des Bereiches aus \ref{img:glow} Informationen über die Stärke der Randschichtveränderungen.
 
-            \begin{figure}[H]
-                    \centering
-                    \includegraphics[width=0.8\textwidth,height=0.25\textheight]{figs/glowbeispielrotation3Hzang.png}
-            \end{figure}
+			\begin{wrapfigure}{l}{0.4\textwidth}
+				\centering
+				\includegraphics[width=0.36\textwidth,height=0.32\textwidth]{figs/ringplasmglowoben.png}
+				\caption{Ein \tilt{frame} ohne Filter für das Licht der Argon-Entladung. Die Helligkeit in der Mitte ist geringer als außerhalb.}
+				\label{img:glow}
+				\vspace{-0.5cm}
+			\end{wrapfigure}
 
-        \vspace{-0.5cm}
+		Ohne die, während der restlichen Messungen an den Kameras angebrachten Filter für das Plasmaleuchten, wurden Aufnahmen für verschiedenste Anregungen gemacht. Das heißt: die 4 Segment des Ringes wurden, entsprechend der gewünschten Symmetrie, mit einer festen Phase zueinander und Frequenz mit einem sinusoidalen Signal der Amplitude $\unit[10]{V}$ beschaltet. Von Interesse sind dabei jedoch nur die Bilder der Oberkamera ('grün', siehe \ref{img:glow}). Die \tilt{bitmaps} werden für die Analyse zuerst auf ein \tilt{range of interest} - ein Kreis bzw. eine Kreisscheibe, in welcher das Leuchten ausgewertet werden soll - beschnitten. Anschließend wird das \tilt{ROI} in Radius- und Winkelabschnitte eingeteilt, welche in ihrer Intensität aufsummiert werden. Ein anschauliches Beispiel für die Darstellung des Intensitätsverlaufs einer Rotationsschwingung, in radialer und polarer Auflösung, wird in \ref{img:glowanalys} gezeigt.
 
-            \begin{figure}[H]
-                    \centering
-                    \includegraphics[width=0.8\textwidth,height=0.25\textheight]{figs/glowbeispielrotation3Hzrad.png}
-                    \caption{\underline{\fett{oben}}: Winkelaufgelöste Rotationsanregung ($\unit[3]{Hz}$, max. Amplitude). Bei $\unit[250]{\degree}$ ist eine Asymmetrie zu erahnen. \underline{\fett{unten}}: Radiale Auflösung. Die Randschichtveränderung ist innen stärker als außen.}
-                    \label{img:glowanalys}
-            \end{figure}
-            
-		\subsection{Phasenaufgelöste Aufnahme}
+%			\begin{figure}[!h]
+%				\begin{subfigure}{0.49\textwidth}
+%					\centering
+%					\includegraphics[width=\textwidth]{figs/glowbeispielrotation3Hzang.png}
+%				\end{subfigure}
+%				\begin{subfigure}{0.49\textwidth}
+%				\centering
+%				\includegraphics[width=\textwidth]{figs/glowbeispielrotation3Hzrad.png}
+%				\end{subfigure}
+%				\caption{\underline{\fett{links}}: Winkelaufgelöste Rotationsanregung ($\unit[3]{Hz}$, max. Amplitude). Bei $\unit[250]{\degree}$ ist eine Asymmetrie zu erahnen. \underline{\fett{rechts}}: Radiale Auflösung. Die Randschichtveränderung ist innen stärker als außen.}
+%				\label{img:glowanalys}
+%			\end{figure}
+
+		\section{Phasenaufgelöste Aufnahme}\label{sec:phasen}
 
 			Die Anregung über die Ring-Elektrode aus \ref{sub:einfang} ist sinusoidal. Die Kraft durch das zusätzliche Potential hat demnach die Form $F\ix{ext}=K\sin\left(\omega t\right)$, wobei $K$ eine kleine Amplitude ist und $\omega$ die Anregungsfrequenz. Da aus den bisherigen Überlegungen klar ist, dass der Staub-Cluster Reibungskräfte erfährt, lässt sich dessen Schwingungsantwort $C\left(t\right)$ in Hinblick auf die Manipulation als, um den Faktor $\gamma$ gedämpfter, harmonischer Oszillator verstehen, siehe Gl. (\ref{eq:gedämpft}) nach \cite{Carstensen11}. Außerdem ist aus Abschnitt \ref{subsub:moden} bekannt, dass das System ebenso eine Eigenfrequenz $\omega\ix{0}$ besitzt. Diese zu bestimmen ist u.U. sehr aufwändig, muss man doch bei kontinuierlichen Messungen für relativ große Zeiten beobachten, um schließlich für eine einzelne Frequenz die Resonanzantwort zu bestimmen. Geht man hingegen von den Gl. (\ref{eq:gedämpft}) - (\ref{eq:amplitud}) aus, so reicht es, die Amplituden zu 4 verschiedenen Phasen - für $\phi\omega t=0\degree,90\degree,180\degree,270\degree$ verschwindet jeweils ein Teil in Gl. (\ref{eq:gedämpft}) - aufzunehmen, um daraus schließlich $\omega\ix{0}$ zu errechnen.
 
@@ -920,6 +906,8 @@
 					a\left(\omega\right)=-\frac{K\left(\omega\ix{0}^2-\omega^2\right)}{\left(\omega\ix{0}^2-\omega^2\right)^2+\left(2\gamma\omega\right)^2} \quad& b\left(\omega\right)=-\frac{2K\gamma\omega}{\left(\omega\ix{0}^2-\omega^2\right)^2+\left(2\gamma\omega\right)^2} \\
 					A\left(\omega\right)=\sqrt{a^2\left(\omega\right)+b^2\left(\omega\right)}=&\frac{K}{\sqrt{\left(\omega\ix{0}^2-\omega^2\right)^2+\left(2\gamma\omega\right)^2}} \label{eq:amplitud}
 				\end{align}
+
+	\newpage
 
 			Um eine phasenaufgelöste Aufnahme für verschiedene Frequenzen zu machen, wurde die Anregung an die Kameras als neuer Trigger gekoppelt. Das bedeutet, dass die Anregung einen digitalen Puls an die Kameras sendet, wenn sie die entsprechenden Phasen erreicht hat. Für einen Frequenzbereich von $1,6$ bis $\unit[6,5]{Hz}$, bei Inkrementen von $\unit[0,1]{Hz}$, wurden für jeweils 50 Schwingungen 4 Bilder gemacht. Die daraus erhaltenen Daten ergaben Graphen der Art von \ref{img:amplitud}.
 
@@ -930,32 +918,29 @@
 					\label{img:amplitud}
 				\end{figure}
 
-	\newpage
-
-	\section{Auswertung}\label{sec:auswert}
+	\chapter{Auswertung}\label{sec:auswert}
 
 		In diesem Kapitel werden im Detail die einzelnen Versuche betrachtet und ausgewertet. Dabei wird mit der Analyse des Randschichtverhaltens bei einer Manipulation mit einer 4-Segment-Elektrode begonnen. In den darauf folgenden Abschnitten zur Auswertung der Cluster-Dynamik und dessen Moden werden insbesondere diese Ergebnisse herangezogen.
 
-        \subsection{Untersuchungen der Randschicht}\label{sub:glowanalys}
+        \section{Untersuchungen der Randschicht}\label{sub:glowanalys}
 
-                \begin{wrapfigure}{r}{0.4\textwidth}
+                \begin{wrapfigure}{r}{0.43\textwidth}
                     \centering
                     \includegraphics[width=0.4\textwidth,height=0.4\textwidth]{figs/auswertung/plasmaglw/randanalysemaske.png}
                     \caption{Schema der Maske für die Auswertung des Randschicht-Leuchtens (invertiert).}
                     \label{img:randmaske}
                 \end{wrapfigure}
 
-		Wie bereits erwähnt, erfolgte die Analyse des Plasma-Glow über die Aufsummierung der Intensitäten in einem selbst gewählten Bildbereich, welcher beliebig polar und radial unterteilt werden konnte. Aus dieser Summe wurde anschließend der Mittelwert der Intensität durch Division der Anzahl an Pixeln, mit einer Helligkeit $>0$ in dem jeweiligen Bereich, berechnet. \ref{img:randmaske} zeigt, schematisch, die erstellte Maske für eine solche Auswertung. Der maximale Radius $R\ix{max}$ sollte dabei, günstiger Weise, immer noch vollständig innerhalb des Ringes liegen, damit keine falschen Helligkeitsinformationen hinzugezogen werden. Die Bildverarbeitung erfolgte nicht, wie es \ref{img:glow} zeigt, sondern im invertieren Zustand. Dies hat zur Folge, das geringe Kontraständerungen als große Differenzen in den Intensitätswerten aufgenommen werden können. \\
-		Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss der Manipulation zu verstehen, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Der relativ hohe Wert - bei Untersuchungen von Staub-Clustern lag dieser nur bei $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronendichten. \\
-		Es schließt sich die Beschreibung einer Auswahl der einsichtigsten und am besten nachvollziehbaren Messdaten an. 
+		Wie bereits erwähnt, erfolgte die Analyse des Plasma-Glow über die Aufsummierung der Intensitäten in einem selbst gewählten Bildbereich, welcher beliebig polar und radial unterteilt werden konnte. Aus dieser Summe wurde anschließend der Mittelwert der Intensität durch Division der Anzahl an Pixeln, mit einer Helligkeit $>0$ in dem jeweiligen Bereich, berechnet. \ref{img:randmaske} zeigt, schematisch, die erstellte Maske für eine solche Auswertung. Der maximale Radius $R\ix{max}$ sollte dabei, günstiger Weise, immer noch vollständig innerhalb des Ringes liegen, damit keine falschen Helligkeitsinformationen hinzugezogen werden. Die Bildverarbeitung erfolgte nicht, wie es \ref{img:glow} zeigt, sondern im invertieren Zustand. Dies hat zur Folge, das geringe Kontraständerungen als große Differenzen in den Intensitätswerten aufgenommen werden können. Insgesamt wurden 13 Messreihen von 2000 \tilt{frames} bei einer Bildrate von 200 \tilt{fps} aufgenommen, was demnach einer Messzeit von $\unit[10]{s}$ gleich kommt. Begonnen wurde mit einer ungestörten Messung: das heißt bei einer abgeschalteten Anregung. Dazu kommen jeweils Aufnahmen von Anregungen einer Dipol-, Quadrupol- und Rotationsschwingung bei 3 sowie  $\unit[10]{Hz}$. Diese insgesamt 6 Messungen mit Anregung wurden danach, um noch genauer den Einfluss der Manipulation zu verstehen, für eine niedrigere Ring-Höhe (über der Thermophorese-Zelle) wiederholt. Zuerst betrug diese $\unit[1,8]{cm}$, dann $\unit[1,2]{cm}$. Die Aufnahmen wurden alle bei einem Gasdruck von $\unit[10,6]{Pa}$ und einer \tilt{rf}-Generator-Leistung von $\unit[1,6]{W}$ gemacht. Der relativ hohe Wert - bei Untersuchungen von Staub-Clustern lag dieser nur bei $\unit[0,5]{W}$ - wurde bewusst gewählt, da bei größeren Leistungen das Leuchten ebenso stärker wird. Dies ist u.a. eine Folge der erhöhten Elektronendichten. 
 
-			\subsubsection{Messwerte}
+			\subsection{Messwerte}
 
 					\begin{figure}[!t]
 						\centering
 						\includegraphics[width=\textwidth,,height=0.38\textwidth]{figs/auswertung/plasmaglw/randungest3sekwinkurad.png}
 						\caption{\underline{\fett{links}:} Polar aufgelöster Intensitätsverlauf für eine Zeit von $\unit[3]{s}$ (600 \tilt{frames}) ohne Anregung. Die Intensität (siehe rechts) ist auf einen Durchschnittswert normiert. \underline{\fett{rechts}:} Die selbe Messung wie \underline{\fett{links}}, nur radial aufgelöst. }
 						\label{img:randungest}
+						\vspace{-0.5cm}
 					\end{figure}
 
 			In \ref{img:randungest} sind die Daten der ersten Messung, in radialer und polarer (Winkel-) Auflösung, bei abgeschalteter Anregung und "`hoher"' Elektrode dargestellt. Zuerst fällt der Intensitätsabfall in der Winkeldarstellung bei $\varphi\approx\unit[140-180]{\degree}$ auf: dieser Bereich entspricht, nach \ref{img:randmaske}, in etwa der Richtung des Arm der Elektrode. Dort ist das Plasma-Leuchten schwächer als am übrigen Ring. Hinzu kommt ein Helligkeits-Gradient von eben diesem Bereich in Richtung $\unit[0/360]{\degree}$. Das entspricht der gegenüberliegenden Seite des Rings. In radialer Darstellung zeigt sich, dass im Inneren der Elektrode, im Vergleich zu Außen, die Intensität wesentlich größer ist.\\
@@ -973,6 +958,7 @@
 					 \includegraphics[width=\textwidth,,height=0.38\textwidth]{figs/auswertung/plasmaglw/randhochutiefquad3Hz1sekwink.png}
 					 \caption{Winkelaufgelöste Quadrupol-Anregung bei $\unit[3]{Hz}$. \underline{\fett{links}:} für eine Höhe von $\unit[1,8]{cm}$. \underline{\fett{rechts}:} Für $\unit[1,2]{cm}$.}
 					 \label{img:randhochutiefwink}
+					 \vspace{-0.5cm}
 				\end{figure}
 
 	        In \ref{img:randhochutiefwink} ist der Unterschied für die unterschiedlichen Höhen der Elektrode an einer Quadrupol-Anregung mit $\unit[3]{Hz}$ gezeigt. Bei einer Höhe von $\unit[1,8]{cm}$ (\ref{img:randhochutiefwink}:\underline{\fett{links}}) fällt einerseits eine Asymmetrie zwischen den Maxima bzw. Minima einer Schwingungsachse auf. Jeweils 2, für einen Zeitschritt wie etwa für die \tilt{frames} 250 bis 275 zusammen auftretende, Extrema gehören zu einer Anregungsrichtung: zwischen $\unit[0/360]{\degree}$ und $\unit[180]{\degree}$, hier einmal $\Pi$ genannt, sowie $\unit[90]{\degree}$ und $\unit[270]{\degree}$, als $\Sigma$ bezeichnet. Andererseits - und dieser Unterschied ist wesentlich signifikanter - sind die Differenzen zwischen den Maxima und Minima der beiden Achsen. Die größten Intensitäten der Schwingungsrichtung $\Pi$ sind deutlich höher, als die der Achse $\Sigma$. Außerdem sind die Minima auf $\Sigma$ niedriger, als auf $\Pi$. In der Zeit, in welcher keiner der 4 Segmente eine Amplitude (max. oder min.) der Anregung trägt, zeichnet sich ein Übergang von einem Extremum zum anderen ab. Beispielsweise für die \tilt{frames} 335 bis 345 stellt sich im gesamten Ringbereich eine,näherungsweise gleiche Helligkeit ein.
@@ -989,20 +975,21 @@
 			Bei einer tiefen Elektrode zeigt sich ein anderes Bild: alle Extrema sind scharf und eindeutig erkennbar. Für diese Einstellung zeigt sich die zuletzt benannte Diskrepanz zwischen den Schwingungsachsen nun wesentlich deutlicher. Demnach können die Schwingungen aus der vorherigen Beschreibung mit denen dieser Darstellung identifiziert werden. Das 1. Maximum gehört zu $\Pi$ und das 2. zu $\Sigma$ usw. Außerdem stellt man fest, dass die Helligkeit der Maxima von $\Sigma$ geringer ist, als die von $\Pi$. Interessant ist hingegen jedoch, dass die minimalen Intensitäten keine systematischen Differenzen mehr zueinander aufweisen. Für große Radien verschwimmen die Intensitäten und der Gradient nimmt, in Hinblick auf $R=0$, mit wachsendem Abstand zum Mittelpunkt zwischen den Extrema ab.
 
 				\begin{figure}[!t]
-					\centering\vspace{-0.5cm}
+					\centering
 					\includegraphics[width=\textwidth]{figs/auswertung/plasmaglw/randrotathochutief3Hz1sekwink.png}
 					\caption{Intensitätsverlauf der Anregung einer Rotation bei $\unit[3]{Hz}$ und einer Zeit von $\unit[1]{s}$. \underline{\fett{links}:} Hohe Elektrode. \underline{\fett{rechts}:} Tief.}
 					\label{img:randhochutiefrotat}
+					\vspace{-0.5cm}
 				\end{figure}
 
 			Abschließend ist in \ref{img:randhochutiefrotat} eine Rotations-Anregung mit Hilfe der Intensitätsanalyse visualisiert. Sehr anschaulich kann hier das Maximum bei seiner Wanderung von $\unit[360]{\degree}$, im Bereich um \tilt{frame} 235 (und um $200/3$ \tilt{frames} fortsetzend), über $\unit[180]{\degree}$ bei ca. \tilt{frame} 260 , bis hin zu $\unit[0]{\degree}$ bei \tilt{frame} 300 verfolgt werden. Im Zuge dessen können über das gesamte Winkelintervall mehr oder weniger stark ausgeprägte Inhomogenitäten der Intensität beobachtet werden: insbesondere bei $\unit[240-250]{\degree}$ ist ein stärkerer Abfall in der Helligkeit des Maximums zu vermerken. Um $\unit[180]{\degree}$ liegt die größte Intensität. Das Minimum zwischen den Bahnen der Rotationsanregung ist, bis auf eine Aufhellung und ein "`Verschmieren"' im Bereich des schwachen Maximums, gleichbleibend.\\
 			Das rechte Bild der \ref{img:randhochutiefrotat} zeigt die gleiche Anregung bei einer tiefen Elektrode. Der Verlauf des Helligkeits-Maximums ist beinahe vollständig unkenntlich geworden. Um $\unit[180]{\degree}$ ist wiederum die größte Intensität zu finden. Die, zwischen den, nunmehr kaum erkennbaren Bahnen liegenden Minima sind jetzt stark verschmiert und besonders in den Bereichen um $\unit[360]{\degree}$ nicht vom Rest unterscheidbar. Interessant ist jedoch, dass sich etwas ähnliches wie \tilt{hot-spots} des Leuchtens ausbilden: bei $\unit[90]{\degree}$ und \tilt{frame} 250 , $\unit[0]{\degree}$ und  \tilt{frame} 275 sowie $\unit[270]{\degree}$ und \tilt{frame} 225 finden sich, aus dem verbliebenen Verlauf der Rotation herausstechende Intensitäten. 
 
-			\subsubsection{Auswertung}
+			\subsection{Auswertung}
 
 					\begin{figure}[!b]
 						\centering
-						\includegraphics[width=0.7\textwidth,height=0.4\textwidth]{figs/auswertung/plasmaglw/intensdipol181u3313Hz1sek.png}
+						\hspace{-0.7cm}\includegraphics[width=0.65\textwidth,height=0.4\textwidth]{figs/auswertung/plasmaglw/intensdipol181u3313Hz1sek.png}
 						\caption{Vergleich der Intensitätsverläufe bei $\unit[149]{\degree}$  und $\unit[331]{\degree}$ der Dipol-Anregung von \ref{img:randfrequenz} bei $\unit[3]{Hz}$ für $\unit[1]{s}$. $I\left(\varphi=\unit[331]{\degree}\right)$ ist um 33 \tilt{frames} verzögert, damit die Extrema übereinander liegen.}
 						\label{img:intensdipol}
 					\end{figure}
@@ -1062,7 +1049,7 @@
 								\centering
 								\includegraphics[width=\textwidth,height=0.65\textwidth]{figs/auswertung/plasmaglw/intenshochutiefquadout3Hz1sek.png}
 							\end{subfigure}
-							\caption{Intensitätsverläufe bei radialer Auflösung für eine Quadrupol-Anregung bei $\unit[3]{Hz}$ für $\unit[1]{s}$. \underline{\fett{links}:} Vergleich hoher und tiefer Elektrode bei $R=0$. \underline{\fett{rechts}:} Für $R=R\ix{max}$.}\label{img:intensquadhochutiefrad}
+							\caption{Intensitätsverläufe einer Quadrupol-Anregung bei $\unit[3]{Hz}$ für $\unit[1]{s}$. \underline{\fett{links}:} Vergleich hoher und tiefer Elektrode bei $R=0$. \underline{\fett{rechts}:} Für $R=R\ix{max}$.}\label{img:intensquadhochutiefrad}
 						\end{figure}
 
 					Mit \ref{img:intensquadhochutief} schließt sich der Vergleich zweier ausgewählter Richtungen (Segment 4 und 2) für unterschiedliche Ring-Höhen an. Deutlich erkennt man die insgesamt niedrigere Intensität für einen tiefen Ring. Auch ist die verschwindend geringe Differenz zwischen den Intensitäten der gegenüberliegenden Segmente auffällig. Das ist in Einklang mit den vorherigen Ausführen. Eine Überraschung stellt jedoch das zusätzliche Maximum dar, welches an Stelle der Minima der Graphen für eine hohe Elektrode auftaucht. Dieses wurde bereits in \ref{img:randhochutiefwink}:\underline{\fett{rechts}} beobachtet und kann somit hier bestätigt werden. Hängt der Ring nahe genug über der Elektrode (einer Metalloberfläche), so kann eine Oszillation des Glows mit der doppelten Frequenz der Anregung in der Mitte des Ringes beobachtet werden. Bei der Quadrupol-Anregung liegen dementsprechend, während einer Periode zwei mal, gleichzeitig Maxima und Minima auf den Segmenten der beiden Schwingungsachsen. Darauf baut die Vermutung auf, dass die Randschicht-Verformung dieser Potentiale groß genug ist, damit auch die Ring-Mitte dunkel wird. Das manifestiert sich als Minimum (in \ref{img:randhochutiefwink}:\underline{\fett{rechts}}) vor und nach dem neuen Maximum (\ref{img:intensquadhochutief}). Liegen wiederum nur schwache oder keine Potentiale auf den Segmenten, so kehrt das Plasma innerhalb des Ringes in den Ausgangszustand zurück und es kann wieder das Leuchten beobachtet werden. Die Schwingung des Plasma-Glow in der Mitte hat gerade die doppelte Frequenz der Anregung. Diese Beobachtung bzw. Entdeckung wird im weiteren Verlauf der Auswertung eine wichtige Rolle spielen, da sie mit dieser Art der Manipulation nicht beabsichtigt war.\\
@@ -1072,30 +1059,30 @@
 
 					Abschließend erfolgt eine Betrachtung der Intensitäten bei einer Rotations-Anregung. Hierbei werden einerseits in \ref{img:intensrotathochutief}:\underline{\fett{links}} die, für \ref{img:randhochutiefrotat} besprochenen, charakteristischen Winkel bei denen Inhomogenitäten auftraten, verglichen. Andererseits zeigt \ref{img:intensrotathochutief}:\underline{\fett{rechts}} den Verlauf der Helligkeit des selben Winkelelements bei verschiedenen Ring-Höhen. Die erste Grafik gibt deutlich die Asymmetrien der Segmente 1 und 3 wieder, wie sie zuvor mehrmals beobachtet wurden. Die Differenz in der Intensität liegt im Mittel zwischen 7\% und 8\%. Der zweite Vergleich zeigt die schwachen Extrema einer Rotation bei einem kleinen Abstand zur Randschicht der Elektrode. Da bei dieser Anregung jeweils nur eines der Segmente ein minimales Potential tr\"agt, w\"ahrend die anderen schwach negative bzw. maximale haben, ist der Intensitätsverlauf innerhalb des Ringes nicht-trivial. Im Bereich um das Element mit dem kleinsten Potential ist der Glow, auf Grund der in diesem Augenblick Massepotential tragenden angrenzenden Segmente, stark verändert. Das \"ubrige Segment hat zu dieser Zeit ein Maximum und zeigt das, zum Minimum umgekehrte Verhalten. Insgesamt ist das, auf einer Ring-Bahn ``wandernde'' Leuchten (bzw. Dunkel) wesentlich kontrast\"armer. Die \tilt{hot-spots} aus \ref{img:randhochutiefrotat} k\"onnen, mit der gewonnenen Kenntnis, in etwa als die Mittelpunkte der Segmente identifiziert werden, was nahe legt, dass dort die Glow-Manipulation am st\"arksten ist. Jedoch spricht dies nicht f\"ur die Qualit\"at des Ringes als symmetrische Multipol-Elektrode. Insbesondere findet kann stetiger Übergang zwischen den Segmenten statt, da dort ein etwa $\unit[1]{mm}$ breiter Bereich ohne Kupfer frei liegt.
 
-						\begin{figure}[!t]
-							\centering
-							\begin{subfigure}{0.49\textwidth}
-								\centering
-								\includegraphics[width=0.5\textwidth,height=0.5\textwidth]{figs/auswertung/plasmaglw/beispieldipolglownu.pdf}
-							\end{subfigure}
-							\begin{subfigure}{0.49\textwidth}
-								\centering
-								\includegraphics[width=0.5\textwidth,height=0.5\textwidth]{figs/auswertung/plasmaglw/beispieldipolglow.pdf}
-							\end{subfigure}
-							\caption{Ausschnitt aus zwei Bildern der oberen Kamera 'grün' bei einer Dipol-Anregung. Links erliegt die Manipulation. Rechts tragen zwei der vier Segmente, welche zusammengelegt wurden, ein Extremum.}
-						\end{figure}
+%						\begin{figure}[!t]
+%							\centering
+%							\begin{subfigure}{0.49\textwidth}
+%								\centering
+%								\includegraphics[width=0.5\textwidth,height=0.5\textwidth]{figs/auswertung/plasmaglw/beispieldipolglownu.pdf}
+%							\end{subfigure}
+%							\begin{subfigure}{0.49\textwidth}
+%								\centering
+%								\includegraphics[width=0.5\textwidth,height=0.5\textwidth]{figs/auswertung/plasmaglw/beispieldipolglow.pdf}
+%							\end{subfigure}
+%							\caption{Ausschnitt aus zwei Bildern der oberen Kamera 'grün' bei einer Dipol-Anregung. Links erliegt die Manipulation. Rechts tragen zwei der vier Segmente, welche zusammengelegt wurden, ein Extremum.}
+%						\end{figure}
 
-				\subsubsection*{Fazit}
+				\subsection*{Fazit}
 
 						Die Analyse des Plasma-Glow in der näheren Umgebung der Manipulations-Elektrode hat Aufschlüsse über die Veränderungen in der Randschicht ergeben. Insbesondere für eine niedrigere Höhe, in welcher später der Yukawa-Ball eingefangen wird, konnten interessante Beobachtungen gemacht werden. Insgesamt hat die Untersuchung einen Einblick dahin gehend ermöglicht, welche Effekte der Anregung und dem Einfang des Clusters zu Grunde liegen. Des Weiteren konnten bereits mögliche Fehlerquellen späterer Messungen erfasst werden.
 
 			\newpage
 
-		\subsection{Elektrische Manipulation}
+		\section{Elektrische Manipulation}
 
 			In diesem Abschnitt werden die Messergebnisse der Beobachtungen der unterschiedlichen Manipulationen eines finiten Yukawa-Clusters präsentiert. Dabei wird zuerst auf die Analyse bezüglich der Normalmoden nach Kapitel \ref{subsub:moden} eingegangen. Dem schließt sich entsprechend die Fluidmoden-Betrachtung an. Differenziert wird zusätzlich zwischen den Anregungen mit einer 4- bzw. 6-segmentigen Ring-Elektrode. Die Auswertung der erhaltenen Daten erfolgt mit Rückblick auf die Ergebnisse des vorherigen Abschnitts, da in diesem essentielle Informationen über die Manipulationen mittels der Ring-Elektrode erlangt wurden.
 
-			\subsubsection{Normalmoden-Analyse}
+			\subsection{Normalmoden-Analyse}
 
 				Die Auswertungen der Normalmoden-Anteile in der Bewegung des Clusters erfolgt über die Betrachtung der spektralen Leistungsdichte $S\ix{p}\left(\omega\right)$. Die daraus ermittelten Eigenmoden, in welchen verstärkt Energie enthalten ist, werden daraufhin einzeln betrachtet und analysiert.\\
 				Bei den gemachten Messungen lag der Argon-Gasdruck zwischen $\unit[6,42-10]{Pa}$. Die eingespeisten Leistungen des rf-Generatos lagen, für die Quadrupol-Anregung, bei $\unit[0,5]{W}$ und, in den Versuchen mit der 6-Segment-Elektrode, bei $\unit[1,4]{W}$. Alle drei Kameras nahmen mit einer Auflösung von $\unit[1280]{px}\times\unit[1024]{px}$ bei 100 \tilt{fps} auf. Die Blenden-Öffnungszeit, dass heißt wie lange Licht auf den \tilt{CCD}-Chip treffen kann, betrug $\unit[8]{\upmu s}$. Kamera 'rot' und 'gelb' nahmen jeweils durch $\unit[60]{mm}$, 'gruen' durch ein $\unit[150]{mm}$ Objektiv auf. Jede Messreihe entsprach 10000 Bildern, was bei der gegebenen Frequenz $\unit[100]{s}$ gleich kam.
@@ -1103,12 +1090,12 @@
 					\begin{figure}[!h]
 						\centering
 						\includegraphics[width=\textwidth]{figs/auswertung/manipulation/ersteungestpowerdens.png}
-						\caption{Spektrale Energiedichte $S\ix{l}\left(\omega\right)$ für einen ungestörten Cluster von $N=26$ Teilchen. Die besonders angeregten Moden sind mit Pfeilen und den Nummern markiert.}\label{img:powerdensersteungest}
+						\caption{Spektrale Energiedichte $S\ix{p}\left(\omega\right)$ für einen ungestörten Cluster von $N=26$ Teilchen. Die besonders angeregten Moden sind mit Pfeilen und den Nummern markiert.}\label{img:powerdensersteungest}
 					\end{figure}
 
 	\vspace{-0.4cm}
 
-					\subsubsection*{Ring-Elektrode mit 4 Segmenten}
+					\subsection*{Ring-Elektrode mit 4 Segmenten}
 
 						Mit diesem Ring sind vier Messungen zur Quadrupol-Anregung bei unterschiedlichen Frequenzen und einer Teilchenzahl von $N=26$ gemacht worden. Jeweils zwei gegenüberliegende Segmente besaßen dabei das gleiche Potential, wobei insgesamt die beiden sinusoidalen Signale mit einer Amplitude von $U\ix{pp}=\unit[10]{V}$ um eine halbe Periode phasenverschoben waren. Speziell angeregte Moden, die anschließend diskutiert werden, sind in den Energiedichten mit Pfeilen hervorgehoben.\\
 						Die \ref{img:powerdensersteungest} zeigt die Dichte für einen ungestörten Cluster von $N=26$ bei den oben genannten Parametern. Mit Pfeilen sind die, entweder für einzelne Frequenzen oder über das gesamte dargestellte Spektrum ($\unit[0-50,5]{Hz}$), energiereichsten Moden hervorgehoben. Im Allgemeinen sind für Frequenzen bis $\unit[10]{Hz}$ alle Moden gut angeregt. Deren Energiegehalt ist dabei in Relationen zu den Moden mit dem größten Anteil an der kollektiven Bewegungen des Clusters dargestellt. Diese Verteilung ist Folge des "`thermischen Chaos"': die zufälligen \tilt{brownschen} Bewegungen der levitierenden Staubpartikel, welche mit bloßem Auge als Zittern wahrnehmbar waren, enthalten viele Moden gleicher Maßen. Die Eigenmoden bzw. -vektoren, welche der Cluster nach Gl.(\ref{eq:ewp}) enthält, sind orthogonal zueinander. Die  thermischen Geschwindigkeitsvektoren $v\ix{th}\left(t\right)$ erfüllen diese Eigenschaft insbesondere nicht, weswegen diese für die Konstruktion der Kollektivbewegung aus vielen verschiedenen Moden zusammengesetzt werden müssen. Speziell die Moden mit der Nummer 35 und höher enthalten mehr Energie. Sie entsprechen chaotischen, voneinander unabhängigen Ein-Teilchen-Translationen.
@@ -1180,7 +1167,7 @@
 
 						In \ref{img:powerdensquadrupol3Hz} sieht man die Energiedichte für eine Quadrupol-Anregung mit $\unit[3]{Hz}$. Neben der Ähnlichkeit zur Energie-Verteilung \ref{img:powerdensquadrupol1Hz} fällt auf, dass der Bereich niedriger Frequenzen (bis $\unit[10]{Hz}$) immer weniger eine Rolle spielt: die Dichte ist dort, in Relationen zu den Maxima bei der Anregungsfrequenz, wesentlich geringer. Das heißt, dass die thermische Bewegung innerhalb des Clusters sehr klein gegen die Auslenkungen durch die Anregung ist.\\
 						Insbesondere haben die Moden 17, 44 und 45, welche die rechtwinklige Cluster-Translationen sind, gute Extrema bei der ein- und zweifachen Frequenz. Die Nummer 25 ist eine Rotation um eine, zur z-Richtung parallelen Achse. Die Moden 38 und 72 sind beides einatmende \title{breathing}-Moden, das heißt sie stellen Cluster-Ausdehnungen dar. Die Nummer 73 ist die zur 72 konjugierte: eine ausatmende, zusammenziehende \tilt{breathing}-Mode.\\
-						Wie bereits besprochen, erfährt der Cluster während der Schwingung entlang einer Achse des Quadrupols eine Deformation auf der anderen. In dieser Richtung wird er gestaucht und verformt sich somit elliptisch.  Die Moden dieser Bewegung sind 52 und 55, welche weiterhin in \ref{img:modenquadrupol3Hz} gezeigt werden. Diese enthält offensichtlich immer mehr Energie, umso näher die Frequenz an der Eigenfrequenz liegt, weil der Cluster dort die größte Resonanz zeigt. In den Moden der elliptische Deformation ist deswegen signifikant Energie gespeichert: die $\unit[3]{Hz}$ der Anregung liegen in der Nähe von $\omega\ix{0}$. Dies wird ebenso durch den verstärkten Kontrast zu den restlichen Moden bekräftigt. Deren Energiedichte ist, im Vergleich zu den explizit besprochenen sowie der Anregung mit $\unit[1]{Hz}$, viel geringer.
+						Wie bereits besprochen, erfährt der Cluster während der Schwingung entlang einer Achse des Quadrupols eine Deformation auf der anderen. In dieser Richtung wird er gestaucht und verformt sich somit elliptisch.  Die Moden dieser Bewegung sind 52 und 55, welche weiterhin in \ref{img:modenquadrupol3Hz} gezeigt werden. Diese enthält offensichtlich immer mehr Energie, umso näher die Frequenz an der Eigenfrequenz liegt, weil der Cluster dort die größte Resonanz zeigt. Zu den Eigenfrequenzen schließt sich eine eigene Analyse in Abschnitt \ref{subsec:phasenanal} an. Die Moden der elliptischen Deformation sind deswegen energiereicher: die $\unit[3]{Hz}$ der Anregung liegen in der Nähe von $\omega\ix{0}$. Dies wird ebenso durch den verstärkten Kontrast zu den restlichen Moden bekräftigt. Deren Energiedichte ist, im Vergleich zu den explizit besprochenen sowie der Anregung mit $\unit[1]{Hz}$, viel geringer.
 
 							\begin{figure}[!t]
 								\centering
@@ -1213,7 +1200,7 @@
 						Die 42 entspricht einer, aus der rechtwinkligen Mode und dessen Konjugiertem zusammengesetzte Bewegung. Der Cluster schwingt dabei entlang einer Achse auf seinen Schwer- bzw. Mittelpunkt zu. Das liefert jedoch keine neuen Informationen über die Kinematik des Systems, da diese Bewegung bereits durch die kollektive Translation in einer Richtung (Nummer 44, 45 und siehe die Moden 42, 43 aus \ref{img:modenersteungest}) ausgedrückt wird. Sowohl die Resonanz bei der Anregungsfrequenz, als auch der nächsten (bzw. für die Mode 44 übernächsten) Harmonischen sind gut im Spektrum zu sehen.\\
 						Insgesamt hat die Dichte im niederfrequenten Bereich, im Vergleich zu \ref{img:powerdensquadrupol3Hz}, zugenommen, woraus sich schließen lässt, dass der Schritt zu $\unit[5]{Hz}$ die Entfernung zur Resonanzfrequenz $\omega\ix{0}$ vergrößert hat. Ebenso ist auch mehr Energie, als bei einer Anregung von $\unit[3]{Hz}$, in den "`chaotischen"' Moden gespeichert. Das ist als direkte Folge der größeren Differenz zur Eigenfrequenz des Clusters zu verzeichnen. 
 
-				\subsubsection*{Ring-Elektrode mit 6 Segmenten}
+				\subsection*{Ring-Elektrode mit 6 Segmenten}
 
 %						\begin{figure}[!b]
 %							\centering
@@ -1265,44 +1252,33 @@
 								\caption{Auswahl der Moden einer Zwei-Teilchen-Verschiebung bei ruhendem Cluster.}\label{img:modendipol3Hz}
 							\end{figure}
 
-						\subsubsection*{Anregung einer rotierenden Dipol-Schwingung}
+						\subsection*{Anregung einer hexagonalen Rotation}
 
 								\begin{figure}[!b]
 									\centering
 									\includegraphics[width=\textwidth]{figs/auswertung/manipulation/rotdipol1Hzpowerdens.png}
-									\caption{Spektrale Energiedichte für eine Überlagerung von Dipol- und Rotations-Schwingung bei $\unit[1]{Hz}$.}\label{img:rotdipol1Hzpowerdens}
+									\caption{Spektrale Energiedichte für eine Überlagerung von Rotations- und Deformations-Schwingung bei $\unit[1]{Hz}$.}\label{img:rotdipol1Hzpowerdens}
 								\end{figure}
 
-							Nach dem Vorbild der bisherigen Anregungen, wurde mit Hilfe der 6-Segment-Elektrode eine Überlagerung einer Rotation und einer Dipol-Schwingung realisiert. Zwei gegenüberliegende Segmente entsprachen dabei einem von drei Dipolen, welche bei der Manipulation um jeweils $\unit[120]{\degree}$ phasenverschoben mit einer Spannung von $\unit[35]{V}$ \tilt{peak-to-peak} und Frequenz von $\unit[1]{Hz}$ betrieben wurden. Dadurch vollführt der Cluster, neben der Deformation auf der Dipol-Achse, zusätzlich eine Torsion im Uhrzeigersinn. Die Messparameter entsprachen dabei denen der bereits besprochenen Versuche. Für einen Cluster aus $N=42$ Teilchen ist in \ref{img:rotdipol1Hzpowerdens} die spektrale Energie-Dichte dieser Messung dargestellt.\\
+							Nach dem Vorbild der bisherigen Anregungen, wurde mit Hilfe der 6-Segment-Elektrode eine Überlagerung einer Rotation und einer Deformation auf 3 Achsen realisiert. Zwei gegenüberliegende Segmente entsprachen dabei einer Schwingungsrichtung, welche bei der Manipulation um jeweils $\unit[120]{\degree}$ phasenverschoben mit einer Spannung von $\unit[35]{V}$ \tilt{peak-to-peak} und Frequenz von $\unit[1]{Hz}$ betrieben wurden. Dadurch vollführt der Cluster, neben der Deformation auf der Achse, zusätzlich eine Torsion im Uhrzeigersinn. Die Messparameter entsprachen dabei denen der bereits besprochenen Versuche. Für einen Cluster aus $N=42$ Teilchen ist in \ref{img:rotdipol1Hzpowerdens} die spektrale Energie-Dichte dieser Messung dargestellt.\\
 							Mit Blick auf das Spektrum dieses Experiments kann der Versuch einer gleichzeitigen Anregung zweier unterschiedlicher Moden als Erfolg betrachtet werden. Mit den Moden 39, 72 und 73 sind die rechtwinkligen, kollektiven Cluster-Verschiebungen verstärkt vertreten. Ihre Energie-Dichte liegt sogar, im Vergleich zu den bisherigen Messungen, besonders weit über dem Mittel. Zusätzlich stechen die Bereiche 1-18, 40-53 und 126-138 vor dem "`Hintergrund"' der niederfrequent angeregten, thermischen Bewegungen hervor. Im ersten Fall handelt es sich um eine Kollektion von vertikalen Oszillationen, wobei jedoch im Kontrast zur Mode 39, die Eigenvektoren der Teilchen u.a. nicht vollständig oder sogar anti-parallel zueinander sind. Für sehr niedrige Nummern finden sich sogar die Moden aus \ref{img:modendipol3Hz} wieder. Diese Anteile sind, analog zu den bis jetzt gemachten Ausführungen, Resultat der Randschicht-Veränderung in der Ring-Mitte.\\
-							Der Bereich 40-53 enthält Rotations-Moden. Speziell die Drehung um eine, zur z-Richtung parallele Achse kommt häufiger vor und ist stärker angeregt. Das Ergebnis der phasenverschobenen Dipol-Schwingungen ist demnach ein Impulsübertrag der Staub-Partikel in radialer Richtung auf die nachfolgende Achse zu. Vergleicht man mit den anderen Bereichen, so fällt auf, dass insbesondere hier diskret für die Anregungsfrequenz und dessen Vielfache eine höhere Dichte vorliegt. Im Bereich 126-138 finden sich verschiedenste \tilt{breathing}-Moden, dh. Ausdehnungen und Kontraktionen. Diese treten im Spektrum auf Grund der, über den ganzen Umfang des Clusters stattfindenden Deformationen verstärkt auf. In Kontrast zu einer einfachen Dipol-Schwingung aus \ref{img:powerdensdipol1Hz} finden, wegen der Drehung der Achse, aus- und einatmende Bewegungen in alle Richtungen gleicher Maßen statt.
+							Der Bereich 40-53 enthält Rotations-Moden. Speziell die Drehung um eine, zur z-Richtung parallele Achse kommt häufiger vor und ist stärker angeregt. Das Ergebnis der phasenverschobenen Dipol-Schwingungen ist demnach ein Impulsübertrag der Staub-Partikel in radialer Richtung auf die nachfolgende Achse zu. Vergleicht man mit den anderen Bereichen, so fällt auf, dass insbesondere hier diskret für die Anregungsfrequenz und dessen Vielfache eine höhere Dichte vorliegt. Im Bereich 126-138 finden sich verschiedenste \tilt{breathing}-Moden, dh. Ausdehnungen und Kontraktionen. Diese treten im Spektrum auf Grund der, über den ganzen Umfang des Clusters stattfindenden Deformationen verstärkt auf. In Kontrast zu einer Quadrupol-Schwingung aus \ref{img:powerdensquadrupol1Hz} finden, wegen der Drehung der Achsen zueinander, aus- und einatmende Bewegungen in alle Richtungen gleicher Maßen statt.
+
+				\subsection{Phasenaufgelöste Analyse einer Dipol-/Quadrupol-Schwingung}
+
+					Nach dem Vorbild der Methode aus Abschnitt \ref{sec:phasen} fanden phasenaufgelöste Messungen zur Dipol-, Quadrupol-, und hexagonaler Rotations-Schwigung statt. Zwischen $\unit[1,6-6,5]{Hz}$, mit Inkrementen von $\unit[0,1]{Hz}$, und bei einer Spannung von $\unit[10]{V}$ peak-to-peak sind 4 Bilder à 50 Schwingungen gemacht worden. Die Aufnhame bei entsprechenden Phasen ermöglicht die Auswertung der Resonanz, das heißt der Schwingungsamplituden des Clusters in Abhängigkeit von $\omega$.\\
+
+					\paragraph{Dipol-Schwingung}
+
+						Bestimmt man die (feste) Schwingungsachse, so lassen sich für $a\left(\omega\right)$ und $b\left(\omega\right)$ aus den Zuständen der Phasen $0\degree$, $90\degree$, $180\degree$ und $270\degree$ diskrete Werte bestimmen. 
 
 	\newpage
 
-		\subsection{Zusammenfassung}
+		\section{Zusammenfassung}
 
-	\newpage
-	\thispagestyle{empty}
-	\begin{align*}
-		\,
-	\end{align*}
-	\newpage
-
-	\section{Literatur}\label{sec:lit}
-
-		\renewcommand\refname{}
-		\vspace{-1.cm}
 		\bibliography{all_melzer2.bib}
 		\bibliographystyle{unsrt}
 
-%	\section{Anhang}\label{sec:anhang}
-%
-%    \listoffigures
-
-%		\subsection{Abkürzungsverzeichnis}\label{subsec:abkurz}
-%		
-%			\begin{acronym}
-%
-%			\end{acronym}
+%	\chapter{Anhang}\label{sec:anhang}
 
 \end{document}
