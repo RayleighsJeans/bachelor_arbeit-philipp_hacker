@@ -42,3 +42,14 @@ tex/*.aux
 tex/*.log
 tex/*.out
 tex/*.brf
+
+.DS*
+*\.DS*
+*/.DS*
+*/**/.DS*
+*\**\.DS*
+
+tmp/*
+*/tmp/*
+tmp\*
+*\tmp\*
