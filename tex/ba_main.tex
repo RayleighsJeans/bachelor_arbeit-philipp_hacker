@@ -28,9 +28,12 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subcaption}
 \usepackage{lscape}
-\usepackage[backref=page]{hyperref}
+\usepackage{hyperref}
 \usepackage{cleveref}
-\usepackage{csquotes}
+\usepackage[autostyle=true]{csquotes}
+
+\usepackage[backend=bibtex,natbib=true]{biblatex}
+\addbibresource{all_melzer2.bib}
 
 \renewcaptionname{ngerman}{\figurename}{Abb. }
 \renewcaptionname{ngerman}{\tablename}{Tab.}
@@ -41,7 +44,7 @@
 \newcommand{\num}[1]{$\left[\text{#1}\right]$}
 \newcommand{\degree}{^\circ}
 \newcommand{\diff}{\textnormal{d}}
-\newcommand{\tenpo}[1]{ 10^{#1}}
+\newcommand{\tenpo}[1]{10^{#1}}
 \newcommand{\greek}[1]{\greektext#1\latintext}
 \newcommand{\ix}[1]{_\text{#1}}
 \newcommand{\imag}{\mathbf{i}}
@@ -105,7 +108,12 @@
 	\include{content/chapter_procedure}
 		
 	\include{content/chapter_results}
-	
+
+	\printbibliography[heading=bibintoc]
+	%%\bibliography{all_melzer2.bib}
+	%%\bibliographystyle{unsrt}
+
+
 	\include{content/chapter_appendix}
 
 \end{document}
